@@ -2,6 +2,6 @@
 
 Музыкальный плеер с визуализациями в одном HTML-файле. Играет файлы с компьютера, ничего никуда не загружает.
 
-Открыть: https://mayaznvch-hue.github.io/vertushka/
+Открыть: https://egm-demo.github.io/vertushka/
 
 Или скачать `Vertushka.html` и открыть двойным кликом в Chrome.
