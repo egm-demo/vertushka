@@ -1,4 +1,4 @@
-#glc{display:none}
+#glc,#g3{display:none}
 .vpick{display:flex;align-items:center;gap:4px;min-width:0}
 .grow{flex:1}
 .chip{white-space:nowrap}

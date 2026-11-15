@@ -28,7 +28,7 @@ rep('<nav class="tabs" id="tabs"></nav>', '''<div class="vpick">
     <button class="chip" id="autoTab" title="Менять визуализацию каждые 25 секунд (A)">Авто</button>
   </div><div class="grow"></div>''')
 rep('<div class="dots" id="themes" title="Оформление"></div>', '<button class="chip" id="thBtn" title="Оформление">Тема</button>')
-rep('<canvas id="cv"></canvas>', '<canvas id="glc"></canvas><canvas id="cv"></canvas>')
+rep('<canvas id="cv"></canvas>', '<canvas id="glc"></canvas><canvas id="g3"></canvas><canvas id="cv"></canvas>')
 rep('<div class="list" id="list"></div>', '''<div class="svcs"><div class="svt">Звук из сервиса</div><div class="svb"><button class="btn" data-svc="vk">VK Музыка</button><button class="btn" data-svc="ya">Яндекс</button><button class="btn" data-svc="sp">Spotify</button></div></div>
     <div class="list" id="list"></div>''')
 rep('<div class="toast" id="toast"></div>', '''<div class="pop" id="vPop"></div><div class="pop" id="thPop"></div>
@@ -46,14 +46,17 @@ rep("PS[i]='rgb('+PR[i]+','+PG[i]+','+PB[i]+')'}}", "PS[i]='rgb('+PR[i]+','+PG[i
 rep('const sw=640,sh=256;', 'const sw=1280,sh=512;')
 rep('sg.drawImage(S.c,-2,0);', 'sg.drawImage(S.c,-3,0);')
 rep('sg.fillRect(sw-2,y,2,1)}', 'sg.fillRect(sw-3,y,3,1)}')
-cut('let vizIdx=0,auto=false,autoT=0,vnT;', '/* ---------- теги ID3 ---------- */', rd('viz2d.js') + rd('gl.js') + rd('games.js') + rd('core.js'))
+cut('let vizIdx=0,auto=false,autoT=0,vnT;', '/* ---------- теги ID3 ---------- */', rd('viz2d.js') + rd('gl.js') + rd('drive.js') + rd('core.js'))
 rep('cur=i;audio.src=t.url;renum();', 'cur=i;dropCapture();seedRoll();audio.src=t.url;renum();')
 rep('function toggle(){if(cur<0){', 'function toggle(){if(cap){dropCapture();return}if(cur<0){')
 rep("$('#stop').onclick=()=>stopAll();", "$('#stop').onclick=()=>{dropCapture();stopAll()};")
 cut("const THEMES=[['arbuz'", "$('#palBtn').onclick=()=>setPal(palIdx+1);", rd('ui.js'))
-rep("if(e.ctrlKey||e.altKey||e.metaKey)return;const c=e.code;let ok=true;", "if(e.ctrlKey||e.altKey||e.metaKey)return;const c=e.code;let ok=true;if(c==='Escape'){closePops();$('#svc').classList.remove('open');return}if(gameKey(c,true)){e.preventDefault();return}")
+rep("if(e.ctrlKey||e.altKey||e.metaKey)return;const c=e.code;let ok=true;", "if(e.ctrlKey||e.altKey||e.metaKey)return;const c=e.code;let ok=true;if(c==='Escape'){closePops();$('#svc').classList.remove('open');setAdd(false);return}if(gameKey(c,true,e.repeat)){e.preventDefault();return}")
 rep('/* ---------- запуск ---------- */', rd('services.js') + '/* ---------- запуск ---------- */')
 rep("setViz(LS.get('viz',0),true)", "setViz(Math.max(0,VIZ.findIndex(v=>v.name===LS.get('vizn','Столбики'))),true)")
-rep('get actx(){return actx}};', 'get actx(){return actx},attachStream,dropCapture,get cap(){return cap},get glScale(){return glScale},get glOn(){return glOn},glc,THEMES,get vizIdx(){return vizIdx},get dpr(){return dpr}};')
+rep('get actx(){return actx}};', 'get actx(){return actx},attachStream,dropCapture,get cap(){return cap},get glScale(){return glScale},get glOn(){return glOn},glc,THEMES,get vizIdx(){return vizIdx},get dpr(){return dpr},g3,keys,get cvMode(){return cvMode}};')
+three = (D.parent / 'vendor' / 'three.min.js').read_text(encoding='utf-8')
+assert '</script' not in three
+rep('<script>', '<script>' + three + '</script>\n<script>')
 (D.parent / 'Vertushka.html').write_text(s, encoding='utf-8', newline='\n')
 print('built', len(s), 'bytes')
