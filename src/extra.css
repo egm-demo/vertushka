@@ -1,0 +1,29 @@
+#glc{display:none}
+.vpick{display:flex;align-items:center;gap:4px;min-width:0}
+.grow{flex:1}
+.chip{white-space:nowrap}
+.chip.big{min-width:170px;max-width:260px;text-align:left;font-weight:600;overflow:hidden;text-overflow:ellipsis}
+.chip.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:600}
+.pop{position:fixed;top:52px;z-index:8;background:var(--panel);border:1px solid var(--border);border-radius:calc(var(--rad) + 4px);padding:12px;display:none;max-height:calc(100vh - 170px);overflow:auto;box-shadow:0 12px 40px rgba(0,0,0,.45)}
+.pop.open{display:block}
+#vPop{left:12px;width:min(960px,calc(100vw - 24px))}
+#thPop{right:12px;width:min(660px,calc(100vw - 24px))}
+.ph{color:var(--muted);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin:10px 2px 6px}
+.ph:first-child{margin-top:0}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(176px,1fr));gap:6px}
+.vz,.thi{padding:8px 10px;border-radius:var(--rad);border:1px solid var(--border);background:var(--card);text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.vz:hover,.thi:hover{border-color:var(--accent)}
+.vz.on,.thi.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:600}
+.thi{display:flex;align-items:center;gap:8px}
+.sw{flex:none;width:30px;height:20px;border-radius:4px;border:1px solid rgba(128,128,128,.6)}
+.svcs{padding:8px 10px;border-bottom:1px solid var(--border)}
+.svt{color:var(--muted);font-size:12px;margin-bottom:6px}
+.svb{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.svb .btn{padding:6px 2px;font-size:13px;white-space:nowrap}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;place-items:center;z-index:20}
+.modal.open{display:grid}
+.mbox{background:var(--panel);color:var(--ink);border:1px solid var(--border);border-radius:calc(var(--rad) + 6px);padding:22px 24px;max-width:520px;margin:16px;user-select:text}
+.mbox h2{margin:0 0 10px;font-size:20px}
+.mbox ol{margin:0 0 12px;padding-left:20px;line-height:1.55}
+.mnote{color:var(--muted);margin:0 0 16px;line-height:1.5}
+.mbox .acts{display:flex;gap:8px;flex-wrap:wrap}
