@@ -53,11 +53,11 @@ function carGeo(k,noWheels){const key=k+(noWheels?'_nw':'');if(geos[key])return 
     wheel(wr,.24,W/2-.04,ax[0]);wheel(wr,.24,W/2-.04,ax[1]);
     if(k==='taxi')add(pb(-.35,.1,H,H+.16,.55),3);
     if(k==='sport'){add(pb(-2.25,-1.9,1.02,1.07,W*.9),0);pair(-2.15,-2,.86,1.02,.06,W*.3,2)}}
-  else if(k==='van'){W=2;L=4.95;H=2.2;wr=.36;ax=[1.5,-1.45];mass=2300;hy=1;ty=1.15;
+  else if(k==='van'){W=2;L=4.95;H=2.2;wr=.38;ax=[1.5,-1.78];mass=2300;hy=1;ty=1.15;
     add(ext([[-2.4,.42],[-2.42,2],[-2.3,2.12],[.85,2.12],[1.2,2.02],[1.7,1.3],[2.34,1.12],[2.42,.8],[2.4,.42]],W,.05),0);
     add(quad([[-.86,2.04,-1.317],[.86,2.04,-1.317],[.86,1.44,-1.747],[-.86,1.44,-1.747]]),1);
     pair(.5,1.15,1.38,1.92,.03,W/2+.005,1);pair(-2,.3,1.42,1.92,.03,W/2+.005,1);pair(-2.5,-2.46,1.35,1.9,.7,.42,1);
-    add(pb(-2.44,2.46,.32,.46,W*.88),2);pair(2.38,2.5,.9,1.08,.34,.74,3);pair(-2.5,-2.42,.9,1.4,.14,.92,4);
+    add(pb(-2.44,2.46,.4,.5,W*.88),2);pair(2.38,2.5,.9,1.08,.34,.74,3);pair(-2.5,-2.42,.9,1.4,.14,.92,4);
     wheel(wr,.26,W/2-.04,ax[0]);wheel(wr,.26,W/2-.04,ax[1])}
   else if(k==='truck'){W=2.5;L=8.6;H=3.6;wr=.5;ax=[3.3,-2.9];mass=9000;hy=.95;ty=1;
     add(pb(2.3,4.2,.6,2.75,2.4),0);add(pb(4.2,4.24,1.65,2.55,2.1),1);pair(2.9,3.9,1.7,2.5,.03,1.21,1);
@@ -217,7 +217,7 @@ function make(cfg){
     else{dl.castShadow=true;dl.shadow.mapSize.set(2048,2048);const c=dl.shadow.camera;c.left=-45;c.right=45;c.top=45;c.bottom=-45;c.near=20;c.far=340;dl.shadow.bias=-.0004;dl.shadow.normalBias=.04}
     const S=o=>new T.MeshStandardMaterial(o);
     w.m={glass:S({color:0x5a6c80,roughness:.05,metalness:1,side:T.DoubleSide}),dark:S({color:0x1b1c20,roughness:.8}),head:S({color:0xffffff,emissive:0xfff0c8,emissiveIntensity:night?2.2:.35,roughness:.3}),
-      tail:S({color:0x550808,emissive:0xff1a10,emissiveIntensity:night?1.6:.2,roughness:.4}),aux:S({color:0xc4c8ce,roughness:.45,metalness:.7}),rim:S({color:0x1a1b1e,roughness:.4,metalness:.8}),paint:{}};
+      tail:S({color:0x550808,emissive:0xff1a10,emissiveIntensity:night?1.6:.2,roughness:.4}),aux:S({color:0xc4c8ce,roughness:.45,metalness:.7}),rim:S({color:0x6e737b,roughness:.4,metalness:.7}),paint:{}};
     w.paint=hex=>w.m.paint[hex]||(w.m.paint[hex]=S({color:hex,roughness:.34,metalness:.35}));
     w.root=new T.Group();sc.add(w.root);w.dyn=new T.Group();sc.add(w.dyn);
     w.mkPts=(n,size,color,vc,parent)=>{const ge=new T.BufferGeometry();ge.setAttribute('position',new T.BufferAttribute(new Float32Array(n*3),3));if(vc)ge.setAttribute('color',new T.BufferAttribute(new Float32Array(n*3),3));ge.setDrawRange(0,0);
@@ -229,7 +229,7 @@ function make(cfg){
     w.pp=[];for(let i=0;i<PN;i++)w.pp.push({x:0,y:0,z:0,vx:0,vy:0,vz:0,l:0,m:1,r:0,g:0,b:0,gr:0});w.pi=0;
     const pg=carGeo(cfg.player.kind,true);w.pg=pg;w.ptail=w.m.tail.clone();w.car=new T.Group();w.car.rotation.order='YXZ';
     w.body=new T.Mesh(pg.geo,[w.paint(cfg.player.col),w.m.glass,w.m.dark,w.m.head,w.ptail,w.m.aux]);w.body.castShadow=true;w.car.add(w.body);sc.add(w.car);
-    const wg=wheelGeo(pg.wr,.26);w.wh=[];for(let i=0;i<4;i++){const piv=new T.Group(),m=new T.Mesh(wg,[w.m.dark,w.m.rim,w.m.aux]);m.castShadow=true;piv.position.set((i%2?1:-1)*(pg.W/2-.03),pg.wr,-(i<2?pg.ax[0]:pg.ax[1]));piv.add(m);w.car.add(piv);w.wh.push([piv,m])}}
+    const wg=wheelGeo(pg.wr,.26);w.wh=[];for(let i=0;i<4;i++){const piv=new T.Group(),m=new T.Mesh(wg,[w.m.dark,w.m.rim,w.m.aux]);m.castShadow=true;piv.position.set((i%2?1:-1)*(pg.W/2+.05),pg.wr,-(i<2?pg.ax[0]:pg.ax[1]));piv.add(m);w.car.add(piv);w.wh.push([piv,m])}}
   function emit(x,y,z,vx,vy,vz,life,r,gg,b,gr){const p=w.pp[w.pi];w.pi=(w.pi+1)%PN;p.x=x;p.y=y;p.z=z;p.vx=vx;p.vy=vy;p.vz=vz;p.l=p.m=life;p.r=r;p.g=gg;p.b=b;p.gr=gr||0}
   function sparks(x,y,z,n,sp){for(let i=0;i<n;i++)emit(x,y,z,(Math.random()-.5)*sp,Math.random()*sp*.5,(Math.random()-.5)*sp-st.vt*.3,.25+Math.random()*.45,1,.7+Math.random()*.3,.25,12)}
   function say(m,tm){st.msg=m;st.msgT=tm||1.6}
