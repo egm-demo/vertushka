@@ -15,4 +15,4 @@
 - Игры в 3D: машиной рулишь сам (стрелки или WASD, пробел ручник, Shift нитро, C вид).
 - Окно «Закинь сюда музыку» открывается кнопкой с папкой вверху справа (или клавишей O).
 
-Сборка: `python src/build.py` собирает `Vertushka.html` из `src/`. Внутрь вшит three.js r (MIT, `vendor/three.LICENSE`).
+Сборка: `python src/build.py` собирает `Vertushka.html` из `src/`. Внутрь вшит three.js r149 (MIT, `vendor/three.LICENSE`).
