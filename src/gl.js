@@ -12,9 +12,9 @@ function glInit(){if(gl)return gl;if(!glOK)return null;
   const mk=()=>{const t=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,t);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);return t};
   glTexS=mk();glTexP=mk();palDirty=true;glProg={};return gl}
 const GLH=`precision highp float;
-uniform vec2 R;uniform float T,P,BASS,MID,TRE,LVL,BEAT;uniform vec4 SEED;uniform sampler2D SP,PL;
+uniform vec2 R;uniform float T,P,BASS,MID,TRE,LVL,BEAT,KICK,SNR,HAT,SYN,MEL,NOTE;uniform vec4 SEED;uniform sampler2D SP,PL;
 vec3 pal(float t){return texture2D(PL,vec2(clamp(t,0.,1.)*.992+.004,.5)).rgb;}
-vec3 palc(float t){t=fract(t);return pal(1.-abs(2.*t-1.));}
+vec3 palc(float t){t=fract(t+(NOTE-.5)*.3*MEL);return pal(1.-abs(2.*t-1.));}
 float spec(float x){return texture2D(SP,vec2(clamp(x,0.,1.)*.992+.004,.25)).r;}
 float wav(float x){return texture2D(SP,vec2(clamp(x,0.,1.)*.992+.004,.75)).r*2.-1.;}
 float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
@@ -23,14 +23,15 @@ float fbm(vec2 p){float a=.5,s=0.;for(int i=0;i<5;i++){s+=a*noise(p);p=p*2.03+ve
 mat2 rot(float a){float c=cos(a),s=sin(a);return mat2(c,-s,s,c);}
 `;
 const GLM=`
-void main(){vec2 uv=gl_FragCoord.xy/R;vec2 p=(gl_FragCoord.xy*2.-R)/R.y;vec3 c=img(uv,p);c*=1.-.5*dot(uv-.5,uv-.5);c+=(hash(gl_FragCoord.xy+fract(T))-.5)/255.;gl_FragColor=vec4(clamp(c,0.,1.),1.);}`;
+void main(){vec2 uv=gl_FragCoord.xy/R;vec2 p=(gl_FragCoord.xy*2.-R)/R.y;float zk=1.-KICK*.03;p*=zk;uv=(uv-.5)*zk+.5;vec3 c=img(uv,p);
+ c+=pal(.97)*HAT*.5*step(.9925,hash(floor(gl_FragCoord.xy/3.)+floor(T*30.)));c*=1.+SNR*.2+SYN*.08;c+=palc(.35+NOTE*.5)*MEL*.07*(1.-.4*length(p));c*=1.-.5*dot(uv-.5,uv-.5);c+=(hash(gl_FragCoord.xy+fract(T))-.5)/255.;gl_FragColor=vec4(clamp(c,0.,1.),1.);}`;
 function glProgram(key,src){if(glProg[key]!==undefined)return glProg[key];
   const sh=(type,s)=>{const o=gl.createShader(type);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS)){console.error('shader '+key+': '+gl.getShaderInfoLog(o));return null}return o};
   const v=sh(gl.VERTEX_SHADER,'attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}'),f=sh(gl.FRAGMENT_SHADER,GLH+src+GLM);
   if(!v||!f)return glProg[key]=null;
   const p=gl.createProgram();gl.attachShader(p,v);gl.attachShader(p,f);gl.bindAttribLocation(p,0,'a');gl.linkProgram(p);
   if(!gl.getProgramParameter(p,gl.LINK_STATUS)){console.error('link '+key+': '+gl.getProgramInfoLog(p));return glProg[key]=null}
-  const u={};for(const n of ['R','T','P','BASS','MID','TRE','LVL','BEAT','SEED','SP','PL'])u[n]=gl.getUniformLocation(p,n);
+  const u={};for(const n of ['R','T','P','BASS','MID','TRE','LVL','BEAT','KICK','SNR','HAT','SYN','MEL','NOTE','SEED','SP','PL'])u[n]=gl.getUniformLocation(p,n);
   return glProg[key]={p,u}}
 function glDraw(v,t){if(!glInit()||gl.isContextLost())return false;const pr=glProgram(v.name,v.frag);if(!pr)return false;
   const tw=Math.max(2,Math.round(cv.width*glScale)),th=Math.max(2,Math.round(cv.height*glScale));if(glc.width!==tw||glc.height!==th){glc.width=tw;glc.height=th}
@@ -39,26 +40,26 @@ function glDraw(v,t){if(!glInit()||gl.isContextLost())return false;const pr=glPr
   gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,glTexS);gl.texImage2D(gl.TEXTURE_2D,0,gl.LUMINANCE,256,2,0,gl.LUMINANCE,gl.UNSIGNED_BYTE,specTex);
   gl.activeTexture(gl.TEXTURE1);gl.bindTexture(gl.TEXTURE_2D,glTexP);
   if(palDirty){for(let i=0;i<256;i++){palTex[i*4]=PR[i];palTex[i*4+1]=PG[i];palTex[i*4+2]=PB[i];palTex[i*4+3]=255}gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,256,1,0,gl.RGBA,gl.UNSIGNED_BYTE,palTex);palDirty=false}
-  const u=pr.u;gl.uniform2f(u.R,tw,th);gl.uniform1f(u.T,t%3600);gl.uniform1f(u.P,aPhase);gl.uniform1f(u.BASS,A.bass);gl.uniform1f(u.MID,A.mid);gl.uniform1f(u.TRE,A.tre);gl.uniform1f(u.LVL,A.level);gl.uniform1f(u.BEAT,A.beat);
+  const u=pr.u;gl.uniform2f(u.R,tw,th);gl.uniform1f(u.T,t%3600);gl.uniform1f(u.P,aPhase);gl.uniform1f(u.BASS,A.bass);gl.uniform1f(u.MID,A.mid);gl.uniform1f(u.TRE,A.tre);gl.uniform1f(u.LVL,A.level);gl.uniform1f(u.BEAT,A.beat);gl.uniform1f(u.KICK,A.kick);gl.uniform1f(u.SNR,A.snare);gl.uniform1f(u.HAT,A.hat);gl.uniform1f(u.SYN,A.syn);gl.uniform1f(u.MEL,A.mel);gl.uniform1f(u.NOTE,A.note);
   gl.uniform4f(u.SEED,seed[0],seed[1],seed[2],seed[3]);gl.uniform1i(u.SP,0);gl.uniform1i(u.PL,1);
   gl.bindBuffer(gl.ARRAY_BUFFER,glBuf);gl.enableVertexAttribArray(0);gl.vertexAttribPointer(0,2,gl.FLOAT,false,0,0);gl.drawArrays(gl.TRIANGLES,0,3);return true}
 
 const VIZGL=[
-{name:'Плазма',frag:`vec3 img(vec2 uv,vec2 p){vec2 q=p*(1.6+BASS*.6);float t=P;
+{name:'Плазма',frag:`vec3 img(vec2 uv,vec2 p){vec2 q=p*(1.6+BASS*.6)+vec2(sin(P*.7),cos(P*.5))*MID*.3;float t=P;
  float v=sin(q.x*3.+t)+sin(q.y*4.-t*1.2)+sin((q.x+q.y)*2.5+t*.6)+sin(length(q-vec2(sin(t*.3),cos(t*.23))*.8)*6.-t*1.6);
- v+=fbm(q*2.+t*.2)*1.5;return palc(v*.11+T*.03)*(.55+LVL*.6+BEAT*.15);}`},
+ v+=fbm(q*2.+t*.2)*1.5+sin(q.x*11.+q.y*7.+T*4.)*TRE*.9;return palc(v*.11+T*.03)*(.55+LVL*.6+BEAT*.15);}`},
 {name:'Туннель',frag:`vec3 img(vec2 uv,vec2 p){p+=vec2(sin(T*.4),cos(T*.31))*.18;float r=length(p)+1e-4,a=atan(p.y,p.x);
- float z=.35/r+P*.9,u=a/3.14159265,s=spec(abs(u));
+ a+=sin(.35/r*2.+P)*MID*.5;float z=.35/r+P*.9,u=a/3.14159265,s=spec(abs(u));
  float rings=smoothstep(0.,.9,sin(z*8.)*.5+.5);
  float ribs=smoothstep(.75,1.,sin(u*3.14159*12.+sin(z*2.)*1.5)*.5+.5);
  vec3 c=palc(z*.12+u*.5)*(.25+.75*rings)+pal(.9)*ribs*s*1.6;c*=.4+s*1.4;
  c*=smoothstep(0.,.5,r)*1.2;c+=pal(1.)*BEAT*.3*exp(-r*5.);return c;}`},
 {name:'Фрактал',frag:`vec3 img(vec2 uv,vec2 p){vec2 z=rot(T*.05)*p*(1.25-BASS*.15);float a=P*.35;
- vec2 c=vec2(-.78+.12*cos(a)+BASS*.05,.16+.14*sin(a*1.3));float m=0.,n=0.;
+ vec2 c=vec2(-.78+.12*cos(a)+BASS*.05,.16+.14*sin(a*1.3)+(MID-.3)*.03);float m=0.,n=0.;
  for(int i=0;i<90;i++){z=vec2(z.x*z.x-z.y*z.y,2.*z.x*z.y)+c;m=dot(z,z);if(m>64.)break;n+=1.;}
  if(m<=64.)return pal(.05)*.3*(1.+BEAT);
  float sn=n+1.-log2(log2(m)*.5);
- return palc(sn*.035+T*.04)*(.5+.5*smoothstep(0.,12.,sn))*(.8+LVL*.6);}`},
+ return palc(sn*.035+T*.04)*(.5+.5*smoothstep(0.,12.,sn))*(.8+LVL*.6+TRE*.5);}`},
 {name:'Калейдоскоп',frag:`vec3 img(vec2 uv,vec2 p){float r=length(p),a=atan(p.y,p.x),seg=6.2831853/8.;a=mod(a+T*.1,seg);a=abs(a-seg*.5);
  vec2 q=vec2(cos(a),sin(a))*r;q=q*(2.5+BASS)+vec2(P*.4,sin(P*.3));
  float f=fbm(q+fbm(q*1.7+P*.2)*1.5),e=fbm(q*3.-P*.3);
@@ -68,7 +69,7 @@ const VIZGL=[
  for(int i=0;i<4;i++){float fi=float(i),x=p.x*(1.2+fi*.35)+fi*3.7;
   float w=fbm(vec2(x*.9+P*.15*(1.+fi*.3),fi*5.+P*.07)),base=-.25+fi*.16+(w-.5)*.9,s=spec(fract(abs(p.x)*.45+fi*.13)),d=p.y-base;
   float cur=smoothstep(0.,.03,d)*exp(-max(d,0.)*max(.3,2.6-s*1.4-BASS));
-  float rays=.55+.45*noise(vec2(x*14.+w*8.,P*.6+fi));
+  float rays=.55+.45*noise(vec2(x*14.+w*8.,P*.6+fi))+TRE*.4;
   c+=pal(.3+fi*.2+w*.3)*cur*rays*(.45+s*1.2+BEAT*.2);}
  float hill=-.72+.08*noise(vec2(p.x*2.2,3.))+.03*noise(vec2(p.x*9.,7.));c*=smoothstep(hill,hill+.01,p.y);return c;}`},
 {name:'Лава',frag:`vec3 img(vec2 uv,vec2 p){float f=0.;
@@ -100,8 +101,8 @@ const VIZGL=[
 {name:'Чернила',frag:`vec3 img(vec2 uv,vec2 p){vec2 q=p*1.4;float t=P*.25;
  vec2 a=vec2(fbm(q+vec2(0.,t)),fbm(q+vec2(5.2,-t*1.3)));
  vec2 b=vec2(fbm(q+4.*a+vec2(1.7,9.2)+t*.5),fbm(q+4.*a+vec2(8.3,2.8)-t*.4));
- float f=fbm(q+(3.5+BASS*2.)*b);
- vec3 c=mix(pal(.1),pal(.55),clamp(f*f*3.,0.,1.));c=mix(c,pal(.85),clamp(length(a),0.,1.)*.6);c=mix(c,pal(1.),clamp(b.x*b.x*1.2,0.,1.)*.7);
+ float f=fbm(q+(3.5+BASS*2.+MID*1.5)*b);
+ vec3 c=mix(pal(.1),pal(.55),clamp(f*f*3.,0.,1.));c=mix(c,pal(.85),clamp(length(a),0.,1.)*.6);c=mix(c,pal(1.),clamp(b.x*b.x*(1.2+TRE*1.5),0.,1.)*.7);
  return c*(f*f*f*2.2+f*.9+.15)*(.8+LVL*.8+BEAT*.15);}`},
 {name:'Чёрная дыра',frag:`vec3 img(vec2 uv,vec2 p){float r=length(p),rs=.16+BASS*.02;
  vec2 q=p*(1.-rs*rs/(r*r+1e-4)*.9);vec3 c=vec3(0.);
@@ -150,7 +151,7 @@ const VIZRND={name:'Рандом',grp:'Рандом и игры',enter(){seedRol
  if(md>.66)q=vec2(log(r+.03)*1.2-P*.3,a*1.5);else if(md>.33)q=q/(dot(q,q)+.15);
  q*=1.5+SEED.w*3.;float t=P*(.2+SEED.x*.4);
  float w1=fbm(q+vec2(t,-t*.6)+SEED.xy*20.);
- vec2 q2=q+vec2(cos(w1*6.28+SEED.z*6.),sin(w1*6.28))*(.3+SEED.y+BASS*.8);
+ vec2 q2=q+vec2(cos(w1*6.28+SEED.z*6.),sin(w1*6.28))*(.3+SEED.y+BASS*.8+MID*.5);
  float f=fbm(q2*(1.+SEED.z)+SEED.zw*30.-t*.5),bn=3.+floor(SEED.w*9.);
  float v=mix(f,abs(sin(f*bn*3.1416+t)),step(.5,fract(SEED.x*7.3)));
  float cells=mix(1.,smoothstep(0.,.15,abs(fract(f*bn)-.5)),step(.6,fract(SEED.y*5.7)));

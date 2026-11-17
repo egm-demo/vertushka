@@ -145,6 +145,7 @@ body.immersive.idle{cursor:none}
 <div class="main">
   <aside class="side">
     <div class="sidehead">
+      <div class="libt"><svg viewBox="0 0 24 24"><path d="M3 22a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1zM15.5 2.134A1 1 0 0014 3v18a1 1 0 001 1h6a1 1 0 001-1V6.464a1 1 0 00-.5-.866l-6-3.464zM9 2a1 1 0 00-1 1v18a1 1 0 102 0V3a1 1 0 00-1-1z"/></svg><b>Моя медиатека</b></div>
       <button class="btn pri" id="addFolder">+ Папка</button>
       <button class="btn" id="addFiles">+ Файлы</button>
       <input class="search" id="search" placeholder="Поиск по списку" autocomplete="off">
@@ -171,18 +172,19 @@ body.immersive.idle{cursor:none}
 </div>
 
 <footer class="bar">
-  <div class="seek"><span id="tCur">0:00</span><input type="range" id="seek" min="0" max="1000" value="0" aria-label="Перемотка"><span id="tDur">0:00</span></div>
   <div class="ctl">
     <div class="now">
       <div class="cover" id="cover"><svg viewBox="0 0 24 24"><path d="M12 3v10.55A4 4 0 1014 17V7h4V3h-6z"/></svg></div>
       <div class="meta"><b id="nTitle">Ничего не играет</b><span id="nArtist">Добавь треки в список</span></div>
     </div>
-    <div class="mid">
+    <div class="mid"><div class="btns">
       <button class="icon tog" id="shuf" title="Вперемешку (S)"><svg viewBox="0 0 24 24"><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg></button>
       <button class="icon" id="prev" title="Предыдущий (P)"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zM9.5 12l8.5 6V6z"/></svg></button>
       <button class="play" id="play" title="Играть / пауза (пробел)"><svg viewBox="0 0 24 24"><path id="playPath" d="M8 5v14l11-7z"/></svg></button>
       <button class="icon" id="next" title="Следующий (N)"><svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM6 18l8.5-6L6 6z"/></svg></button>
       <button class="icon tog" id="rep" title="Повтор (R)"><svg viewBox="0 0 24 24"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/></svg><span class="badge" id="repBadge"></span></button>
+    </div>
+  <div class="seek"><span id="tCur">0:00</span><input type="range" id="seek" min="0" max="1000" value="0" aria-label="Перемотка"><span id="tDur">0:00</span></div>
     </div>
     <div class="right">
       <button class="icon stopb" id="stop" title="Стоп"><svg viewBox="0 0 24 24"><path d="M6 6h12v12H6z"/></svg></button>
@@ -211,26 +213,64 @@ let freq=new Uint8Array(FFT/2),wave=new Uint8Array(FFT);
 const NB=64;let bLo=new Int32Array(NB),bHi=new Int32Array(NB);
 function calcBins(sr){for(let b=0;b<NB;b++){const f0=35*Math.pow(16000/35,b/NB),f1=35*Math.pow(16000/35,(b+1)/NB);const lo=Math.floor(f0/(sr/2)*(FFT/2)),hi=Math.ceil(f1/(sr/2)*(FFT/2));bLo[b]=Math.min(FFT/2-1,Math.max(1,lo));bHi[b]=Math.min(FFT/2,Math.max(bLo[b]+1,hi))}}
 calcBins(48000);
-function initAudio(){if(actx)return;actx=new (window.AudioContext||window.webkitAudioContext)();const src=actx.createMediaElementSource(audio);analyser=actx.createAnalyser();analyser.fftSize=FFT;analyser.smoothingTimeConstant=0.62;analyser.minDecibels=-90;analyser.maxDecibels=-18;src.connect(analyser);analyser.connect(actx.destination);calcBins(actx.sampleRate);an2=actx.createAnalyser();an2.fftSize=2048;an2.smoothingTimeConstant=0;src.connect(an2);f2=new Float32Array(1024);p2=new Float32Array(1024);const bw=actx.sampleRate/2048;oL0=Math.max(1,Math.round(30/bw));oL1=Math.round(190/bw)+1;oM1=Math.round(4000/bw)}
-const A={bands:new Float32Array(NB),bass:0,mid:0,tre:0,level:0,beat:0,hit:0,live:false};
-let an2=null,f2=null,p2=null,oL0=1,oL1=9,oM1=171,ohI=0,oPk=0,lastBeat=0;const OH=new Float32Array(90);
+function initAudio(){if(actx)return;actx=new (window.AudioContext||window.webkitAudioContext)();const src=actx.createMediaElementSource(audio);analyser=actx.createAnalyser();analyser.fftSize=FFT;analyser.smoothingTimeConstant=0.62;analyser.minDecibels=-90;analyser.maxDecibels=-18;src.connect(analyser);analyser.connect(actx.destination);calcBins(actx.sampleRate);an2=actx.createAnalyser();an2.fftSize=N2*2;an2.smoothingTimeConstant=0;src.connect(an2);calc2(actx.sampleRate)}
+/* Разбор звука как в студийных анализаторах: несглаженный спектр, логарифмические полосы с наклоном 4,5 дБ на октаву
+   (иначе верх всегда тише баса), автоподстройка громкости, быстрая атака и спад, отдельные датчики бочки, малого, тарелок и синта. */
+const N2=1024;
+const A={bands:new Float32Array(NB),rel:new Float32Array(NB),g:new Float32Array(6),bass:0,mid:0,tre:0,level:0,beat:0,hit:0,kick:0,snare:0,hat:0,syn:0,mel:0,note:.5,punch:0,energy:0,wide:0,live:false};
+let an2=null,oS0=13,oS1=77,oL0=1,oL1=9,oM1=171,oH0=213,oH1=683,ohI=0,oPk=0,lastBeat=0,snT=0,syT=0,agc=-64,lvPk=.05,eF=0,eS=0;
+const f2=new Float32Array(N2),p2=new Float32Array(N2),OH=new Float32Array(90),bC=new Float32Array(NB),bT=new Float32Array(NB),bA=new Float32Array(NB),bD=new Float32Array(NB),bL2=new Int32Array(NB),bH2=new Int32Array(NB),bP=new Float32Array(NB).fill(-140),gPk=new Float32Array(3).fill(.3);
+function calc2(sr){const bw=sr/(N2*2);oL0=Math.max(1,Math.round(30/bw));oL1=Math.round(190/bw)+1;oM1=Math.round(4000/bw);oH0=Math.round(5000/bw);oS0=Math.round(300/bw);oS1=Math.round(1800/bw);oH1=Math.min(N2-1,Math.round(16000/bw));
+  for(let b=0;b<NB;b++){const f0=35*Math.pow(16000/35,b/NB),f1=35*Math.pow(16000/35,(b+1)/NB),fc=Math.sqrt(f0*f1);bC[b]=Math.min(N2-2,fc/bw);bL2[b]=Math.max(1,Math.ceil(f0/bw));bH2[b]=Math.min(N2,Math.ceil(f1/bw));bT[b]=Math.max(-7,Math.min(13,4.5*Math.log2(fc/1000)))}}
+calc2(48000);
+const mkD=()=>({h:new Float32Array(60),i:0,pk:0,last:0,m:0}),dK=mkD(),dM=mkD(),dH=mkD(),sD=new Float32Array(N2).fill(-140);
+function det(d,o,t,dt,gap,eps,pr){let m=0,q=0;const h=d.h,n=h.length;for(let i=0;i<n;i++){m+=h[i];q+=h[i]*h[i]}m/=n;const sd=Math.sqrt(Math.max(0,q/n-m*m));h[d.i]=o;d.i=(d.i+1)%n;d.pk*=Math.exp(-dt*.8);d.m=m;
+  if(o>m*1.4+sd*1.7+eps&&o>d.pk*pr&&t-d.last>gap){d.last=t;if(o>d.pk)d.pk=o;return true}return false}
+const gp=(a,b)=>{let s=0,m=0;for(let i=a;i<b;i++){const v=A.bands[i];s+=v;if(v>m)m=v}return .55*s/(b-a)+.45*m};
 function analyse(t,dt){
   const live=!!analyser&&!audio.paused;A.live=live;
   if(live){analyser.getByteFrequencyData(freq);analyser.getByteTimeDomainData(wave)}
   else{for(let i=0;i<freq.length;i++){const f=i/freq.length;freq[i]=Math.max(0,84*Math.pow(1-f,3)*(0.55+0.45*Math.sin(t*1.1+i*0.045))+16*Math.sin(t*0.6+i*0.19))}
        for(let i=0;i<wave.length;i++)wave[i]=128+20*Math.sin(i*0.012+t*1.8)*Math.sin(t*0.45)+7*Math.sin(i*0.05-t*2.6)}
-  let sb=0,sm=0,st=0;
-  for(let b=0;b<NB;b++){let s=0;for(let i=bLo[b];i<bHi[b];i++)s+=freq[i];let v=s/((bHi[b]-bLo[b])*255);v=Math.pow(v,1.35)*(1+b/NB*0.8);if(v>1)v=1;A.bands[b]=v;if(b<8)sb+=v;else if(b<36)sm+=v;else st+=v}
-  A.bass=sb/8;A.mid=sm/28;A.tre=st/28;
+  const kd=Math.exp(-dt*7);A.beat*=Math.exp(-dt*6);A.kick*=kd;A.snare*=kd;A.syn*=kd;A.hat*=Math.exp(-dt*12);A.mel*=Math.exp(-dt*3.5);
   let e=0;for(let i=0;i<wave.length;i+=4){const d=wave[i]-128;e+=d*d}
-  A.level=Math.min(1,Math.sqrt(e/(wave.length/4))/128*2.2);
-  // ритм: ловим резкий прирост энергии (удар бочки, малый), а не просто громкий бас
-  A.beat*=Math.exp(-dt*6);
-  if(live&&an2){an2.getFloatFrequencyData(f2);let lo=0,mi=0;
-    for(let i=oL0;i<oM1;i++){const c=f2[i]>-100?Math.pow(10,f2[i]/40):0,d=c-p2[i];p2[i]=c;if(d>0){if(i<oL1)lo+=d;else mi+=d}}
-    const o=lo/(oL1-oL0)+1.6*mi/(oM1-oL1);let m=0,q=0;for(let i=0;i<OH.length;i++){m+=OH[i];q+=OH[i]*OH[i]}m/=OH.length;const sd=Math.sqrt(Math.max(0,q/OH.length-m*m));
+  const rms=Math.sqrt(e/(wave.length/4))/128;
+  if(live&&an2){an2.getFloatFrequencyData(f2);
+    // атаки по трём зонам: низ (бочка), середина (малый, синт, голос), верх (тарелки)
+    let lo=0,mi=0,hi=0,wide=0;
+    for(let i=oL0;i<oH1;i++){const c=f2[i]>-100?Math.pow(10,f2[i]/40):0,d=c-p2[i];p2[i]=c;if(d>0){if(i<oL1)lo+=d;else if(i<oM1)mi+=d;else if(i>=oH0)hi+=d}}
+    lo/=oL1-oL0;mi/=oM1-oL1;hi/=oH1-oH0;
+    // шум малого поднимает почти все частоты сразу, нота синта или голоса только свои гармоники
+    for(let i=oS0;i<oS1;i++){const v=f2[i]>-140?f2[i]:-140;if(v-sD[i]>9&&v>agc-27)wide++;sD[i]+=(v-sD[i])*.4}wide/=oS1-oS0;A.wide=wide;
+    const o=lo+1.6*mi;let m=0,q=0;for(let i=0;i<OH.length;i++){m+=OH[i];q+=OH[i]*OH[i]}m/=OH.length;const sd=Math.sqrt(Math.max(0,q/OH.length-m*m));
     OH[ohI]=o;ohI=(ohI+1)%OH.length;oPk*=Math.exp(-dt*1.1);
-    if(o>m*1.35+sd*1.6+.006&&o>oPk*.42&&t-lastBeat>.13){A.hit=Math.min(1,o/(oPk||o));A.beat=1;lastBeat=t;if(o>oPk)oPk=o}}
+    if(o>m*1.35+sd*1.6+.006&&o>oPk*.42&&t-lastBeat>.13){A.hit=Math.min(1,o/(oPk||o));A.beat=1;lastBeat=t;if(o>oPk)oPk=o}
+    // полосы
+    let top=-200;
+    for(let b=0;b<NB;b++){let d;const l=bL2[b],h=bH2[b];
+      if(h-l<1){const c=bC[b],i=c|0,fr=c-i;d=f2[i]*(1-fr)+f2[i+1]*fr}else{d=-200;for(let i=l;i<h;i++)if(f2[i]>d)d=f2[i]}
+      if(!(d>-140))d=-140;d+=bT[b];bD[b]=d;if(d>top)top=d}
+    agc=Math.max(agc-dt*2.2,top,-64);
+    // малый шумит широко (растёт сразу много полос), синт и голос узко (несколько полос-гармоник)
+    let ton=0;for(let b=16;b<50;b++){const r=bD[b]-bP[b];if(r>6&&bD[b]>agc-30&&r-Math.max(bD[b-2]-bP[b-2],bD[b+2]-bP[b+2])>3)ton++}for(let b=0;b<NB;b++)bP[b]+=(bD[b]-bP[b])*.4;
+    if(det(dK,lo,t,dt,.14,.004,.35))A.kick=1;
+    if(det(dH,hi,t,dt,.07,.0012,.12))A.hat=1;
+    if(wide>.3){if(t-snT>.12){A.snare=1;snT=t}}else if(ton>=1&&wide<.15&&t-syT>.09&&t-snT>.05){A.syn=1;syT=t}
+    for(let b=0;b<NB;b++){let v=(bD[b]-agc+50)/50;v=v<0?0:v>1?1:v;v=Math.pow(v,1.7);const p=A.bands[b];
+      v=v>p?p+(v-p)*Math.min(1,dt*50):Math.max(v,p*Math.exp(-dt*8));A.bands[b]=v;bA[b]+=(v-bA[b])*Math.min(1,dt*.5);A.rel[b]=Math.max(0,v-bA[b]*1.1)}
+    // мелодия: какая полоса середины сейчас выделяется сильнее всего
+    let bi=-1,bs=.035;for(let b=17;b<52;b++)if(A.rel[b]>bs){bs=A.rel[b];bi=b}
+    if(bi>=0){A.note+=((bi-17)/34-A.note)*Math.min(1,dt*14);A.mel=Math.max(A.mel,Math.min(1,bs*3.2))}
+    lvPk=Math.max(lvPk*Math.exp(-dt*.05),rms,.05);A.level=Math.min(1,.82*Math.pow(rms/lvPk,1.3));
+  }else{
+    for(let b=0;b<NB;b++){let s=0;for(let i=bLo[b];i<bHi[b];i++)s+=freq[i];let v=s/((bHi[b]-bLo[b])*255);v=Math.pow(v,1.35)*(1+b/NB*0.8);if(v>1)v=1;A.bands[b]=v;A.rel[b]=0}
+    A.level=Math.min(1,rms*2.2);A.note=.5+.35*Math.sin(t*.4);agc=-64;
+  }
+  const G=A.g;G[0]=gp(0,6);G[1]=gp(6,15);G[2]=gp(15,28);G[3]=gp(28,42);G[4]=gp(42,54);G[5]=gp(54,64);
+  // у каждой зоны своя автогромкость: тихий синт на фоне жирного баса всё равно раскачивает картинку
+  const zn=(i,v)=>{gPk[i]=Math.max(gPk[i]*Math.exp(-dt*.12),v,.12);return live?Math.min(1,v*.45+.55*Math.pow(v/gPk[i],1.6)):v};
+  A.bass=zn(0,gp(0,15));A.mid=zn(1,Math.max(G[2],G[3])*.6+(G[2]+G[3])*.2);A.tre=zn(2,Math.max(G[4],G[5])*.6+(G[4]+G[5])*.2);
+  eF+=(rms-eF)*Math.min(1,dt*30);eS+=(rms-eS)*Math.min(1,dt*2.5);A.punch=Math.max(0,Math.min(1,(eF-eS)/(lvPk*.5)));A.energy+=(A.level-A.energy)*Math.min(1,dt/1.5);
   A.bass=Math.min(1,A.bass*(.82+.45*A.beat)+.1*A.beat);A.level=Math.min(1,A.level*(1+.22*A.beat));
 }
 
@@ -291,17 +331,17 @@ const VIZ=[
   g.fillStyle='rgba('+BGR+',0.07)';g.fillRect(0,0,w,h);
   const R=m*(0.13+A.level*0.06),k=220,hue=tri(t*0.06);
   g.beginPath();for(let i=0;i<=k;i++){const v=(wave[((i%k)*9)|0]-128)/128,a=i/k*Math.PI*2+t*0.3,r=R+v*m*0.16;const x=cx+Math.cos(a)*r,y=cy+Math.sin(a)*r;i?g.lineTo(x,y):g.moveTo(x,y)}
-  g.strokeStyle=col(0.25+hue*0.75);g.lineWidth=2+A.beat*3;g.lineJoin='round';g.stroke();
-  for(let i=0;i<6;i++){const v=A.bands[4+i*9],a=t*(0.5+i*0.07)+i*1.047,r=m*(0.3+0.08*Math.sin(t*0.7+i));g.fillStyle=col(tri(hue*0.5+i/6));g.beginPath();g.arc(cx+Math.cos(a)*r,cy+Math.sin(a)*r,2+v*m*0.02,0,7);g.fill()}
+  g.strokeStyle=col(tri(0.25+hue*0.75+A.note*A.mel*.6));g.lineWidth=2+A.beat*3+A.syn*2;g.lineJoin='round';g.stroke();
+  for(let i=0;i<6;i++){const v=Math.max(A.bands[4+i*9],A.g[i]),a=t*(0.5+i*0.07)+i*1.047,r=m*(0.3+0.08*Math.sin(t*0.7+i));g.fillStyle=col(tri(hue*0.5+i/6));g.beginPath();g.arc(cx+Math.cos(a)*r,cy+Math.sin(a)*r,2+v*m*0.02,0,7);g.fill()}
 }},
 {name:'Звёзды',draw(w,h,t,dt){
   g.fillStyle='rgba('+BGR+',0.35)';g.fillRect(0,0,w,h);
   const n=420,cx=w/2,cy=h/2;
   if(!S.s){S.s=[];for(let i=0;i<n;i++)S.s.push({x:Math.random()*2-1,y:Math.random()*2-1,z:Math.random(),c:Math.random()})}
-  const sp=(0.12+A.level*0.9+A.beat*0.7)*dt;g.lineCap='round';
+  const sp=(0.12+A.level*0.9+A.beat*0.7+A.kick*.4)*dt;g.lineCap='round';
   for(const s of S.s){const pz=s.z;s.z-=sp;if(s.z<=0.02){s.x=Math.random()*2-1;s.y=Math.random()*2-1;s.z=1;continue}
     const x1=cx+s.x/pz*cx,y1=cy+s.y/pz*cy,x2=cx+s.x/s.z*cx,y2=cy+s.y/s.z*cy;if(x2<-50||x2>w+50||y2<-50||y2>h+50){s.z=0;continue}
-    g.strokeStyle=cola(0.3+s.c*0.7,Math.min(1,1.3-s.z));g.lineWidth=(1-s.z)*3+0.4;g.beginPath();g.moveTo(x1,y1);g.lineTo(x2,y2);g.stroke()}
+    g.strokeStyle=cola(Math.min(1,0.25+s.c*0.5+A.note*A.mel*.5+A.hat*.3*s.c),Math.min(1,1.3-s.z));g.lineWidth=(1-s.z)*3+0.4;g.beginPath();g.moveTo(x1,y1);g.lineTo(x2,y2);g.stroke()}
   const r=Math.min(w,h)*(0.03+A.bass*0.09);const gr=g.createRadialGradient(cx,cy,0,cx,cy,r*3);gr.addColorStop(0,cola(0.9,0.5+A.beat*0.4));gr.addColorStop(1,cola(0.5,0));g.fillStyle=gr;g.fillRect(cx-r*3,cy-r*3,r*6,r*6);
 }},
 {name:'Плазма',draw(w,h,t,dt){
@@ -494,8 +534,8 @@ addEventListener('keydown',e=>{if(e.target.id==='search'){if(e.key==='Escape'){e
   if(ok){e.preventDefault();if(document.activeElement&&document.activeElement!==document.body)document.activeElement.blur()}});
 
 /* ---------- запуск ---------- */
-setTheme(LS.get('theme','arbuz'));setPal(LS.get('pal',0));setList(LS.get('list',true));setVol(LS.get('vol',80));paintModes();
-resize();setViz(LS.get('viz',0),true);setAuto(LS.get('auto',false));renum();showNow();requestAnimationFrame(frame);
+setTheme(LS.get('theme3','spot'));setPal(LS.get('pal',0));setList(LS.get('list',true));setVol(LS.get('vol',80));paintModes();
+resize();setViz(LS.get('viz',0),true);setAuto(LS.get('auto',false),true);renum();showNow();requestAnimationFrame(frame);
 window.__vt={get tracks(){return tracks},get cur(){return cur},A,audio,get frames(){return frames},setViz,setTheme,setPal,VIZ,addFiles,get actx(){return actx}};
 </script>
 </body>

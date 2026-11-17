@@ -1,6 +1,8 @@
 const TH=(id,name,bg,panel,card,ink,muted,accent,ai,border,track,cur,pal,font,rad)=>({id,name,bg,panel,card,ink,muted,accent,ai,border,track,cur,pal,font:font||'"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif',rad:rad===undefined?6:rad});
 const MONO='Consolas,"Cascadia Mono","Courier New",monospace',SERIF='Georgia,"Times New Roman",serif';
 const THEMES=[
+TH('spot','Светлая','#e6e6e6','#ffffff','#efefef','#121212','#585858','#1f1f1f','#ffffff','#e2e2e2','#c9c9c9','#121212',['#3b2bd6','#e0349a','#ff9a3c','#fff3c4']),
+TH('spotdark','Тёмная','#000000','#121212','#1f1f1f','#ffffff','#b3b3b3','#ffffff','#000000','#2a2a2a','#4d4d4d','#ffffff',['#3b2bd6','#e0349a','#ff9a3c','#fff3c4']),
 TH('arbuz','Арбуз','#141c16','#1a241c','#223024','#e6eedd','#a3b5a0','#b5d86a','#17200f','#2f3f31','#46584a','#b5d86a',['#1a542c','#7ac848','#d6f080','#ff6080']),
 TH('asiimov','Азимов','#f1efea','#fbfaf7','#ffffff','#151515','#5d5a55','#ff6a00','#151515','#d6d1c7','#aaa398','#b84700',['#464646','#ff6a00','#ffb040','#ffffff']),
 TH('night','Ночь','#0d1320','#121a2b','#1a2540','#e4ebf7','#9aa9c4','#4cc2ff','#06121f','#263453','#3d4f78','#4cc2ff',['#2446d6','#2cbeff','#9670ff','#ff7cdc']),
@@ -26,7 +28,7 @@ const hex3=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
 THEMES.forEach(t=>THEME_PAL[t.id]=t.pal.map(hex3));
 function setTheme(id){const t=THEMES.find(x=>x.id===id)||THEMES[0];theme=t.id;const st=document.documentElement.style;
   for(const [k,v] of [['bg',t.bg],['panel',t.panel],['card',t.card],['ink',t.ink],['muted',t.muted],['accent',t.accent],['accent-ink',t.ai],['border',t.border],['track',t.track],['cur',t.cur],['rad',t.rad+'px'],['font',t.font]])st.setProperty('--'+k,v);
-  document.querySelectorAll('.thi').forEach(d=>d.classList.toggle('on',d.dataset.id===theme));$('#thBtn').textContent='Тема: '+t.name;LS.set('theme',theme);buildPal()}
+  document.querySelectorAll('.thi').forEach(d=>d.classList.toggle('on',d.dataset.id===theme));$('#thBtn').textContent='Тема: '+t.name;LS.set('theme3',theme);buildPal()}
 function setPal(i){palIdx=((i%PALS.length)+PALS.length)%PALS.length;$('#palBtn').textContent='Цвет: '+PALS[palIdx].name;LS.set('pal',palIdx);buildPal()}
 function closePops(){document.querySelectorAll('.pop.open').forEach(p=>p.classList.remove('open'))}
 function togglePop(id){const p=$(id),o=p.classList.contains('open');closePops();if(!o)p.classList.add('open')}

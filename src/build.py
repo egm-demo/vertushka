@@ -25,10 +25,10 @@ rep('<nav class="tabs" id="tabs"></nav>', '''<div class="vpick">
     <button class="icon" id="vPrev" title="Предыдущая (←)"><svg viewBox="0 0 24 24"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
     <button class="chip big" id="vBtn" title="Все визуализации">Столбики ▾</button>
     <button class="icon" id="vNext" title="Следующая (→)"><svg viewBox="0 0 24 24"><path d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg></button>
-    <button class="chip" id="autoTab" title="Менять визуализацию каждые 25 секунд (A)">Авто</button>
+    <button class="chip" id="autoTab" title="Клип: сам подбираю и чередую визуализации под музыку (A)">Клип</button>
   </div><div class="grow"></div>''')
 rep('<div class="dots" id="themes" title="Оформление"></div>', '<button class="chip" id="thBtn" title="Оформление">Тема</button>')
-rep('<canvas id="cv"></canvas>', '<canvas id="glc"></canvas><canvas id="g3"></canvas><canvas id="cv"></canvas>')
+rep('<canvas id="cv"></canvas>', '<canvas id="glc"></canvas><canvas id="g3"></canvas><canvas id="cv"></canvas><div id="fx"></div>')
 rep('<div class="list" id="list"></div>', '''<div class="svcs"><div class="svt">Звук из сервиса</div><div class="svb"><button class="btn" data-svc="vk">VK Музыка</button><button class="btn" data-svc="ya">Яндекс</button><button class="btn" data-svc="sp">Spotify</button></div></div>
     <div class="list" id="list"></div>''')
 rep('<div class="toast" id="toast"></div>', '''<div class="pop" id="vPop"></div><div class="pop" id="thPop"></div>
@@ -54,7 +54,7 @@ cut("const THEMES=[['arbuz'", "$('#palBtn').onclick=()=>setPal(palIdx+1);", rd('
 rep("if(e.ctrlKey||e.altKey||e.metaKey)return;const c=e.code;let ok=true;", "if(e.ctrlKey||e.altKey||e.metaKey)return;const c=e.code;let ok=true;if(c==='Escape'){closePops();$('#svc').classList.remove('open');setAdd(false);return}if(gameKey(c,true,e.repeat)){e.preventDefault();return}")
 rep('/* ---------- запуск ---------- */', rd('services.js') + '/* ---------- запуск ---------- */')
 rep("setViz(LS.get('viz',0),true)", "setViz(Math.max(0,VIZ.findIndex(v=>v.name===LS.get('vizn','Столбики'))),true)")
-rep('get actx(){return actx}};', 'get actx(){return actx},attachStream,dropCapture,get cap(){return cap},get glScale(){return glScale},get glOn(){return glOn},glc,THEMES,get vizIdx(){return vizIdx},get dpr(){return dpr},g3,keys,get cvMode(){return cvMode}};')
+rep('get actx(){return actx}};', 'get actx(){return actx},attachStream,dropCapture,get cap(){return cap},get glScale(){return glScale},get glOn(){return glOn},glc,THEMES,get vizIdx(){return vizIdx},get dpr(){return dpr},g3,keys,get cvMode(){return cvMode},CL,get auto(){return auto},setAuto,get agc(){return agc}};')
 three = (D.parent / 'vendor' / 'three.min.js').read_text(encoding='utf-8')
 assert '</script' not in three
 rep('<script>', '<script>' + three + '</script>\n<script>')
