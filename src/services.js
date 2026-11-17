@@ -15,7 +15,8 @@ async function connectService(){const name=SVC[svcCur][0];
   if(!stream.getAudioTracks().length){stream.getTracks().forEach(t=>t.stop());toast('Звук не пришёл. В окне выбора включи «Также поделиться звуком»');return}
   attachStream(stream,name);$('#svc').classList.remove('open');toast('Подключено: '+name)}
 document.querySelectorAll('[data-svc]').forEach(b=>b.onclick=()=>{svcCur=b.dataset.svc;const [n]=SVC[svcCur];$('#svcT').textContent=n+' в Вертушке';$('#svcOpen').textContent='Открыть '+n;$('#svc').classList.add('open')});
-$('#svcOpen').onclick=()=>window.open(SVC[svcCur][1],'_blank','noopener');
+const isChrome=()=>{const u=navigator.userAgentData;if(u&&u.brands)return u.brands.some(b=>b.brand==='Google Chrome')&&!u.brands.some(b=>/Edge|Opera|Yandex/i.test(b.brand));return /Chrome\//.test(navigator.userAgent)&&!/Edg\/|OPR\/|YaBrowser/.test(navigator.userAgent)};
+$('#svcOpen').onclick=()=>{if(!isChrome()){const l=location.href;try{navigator.clipboard.writeText(l)}catch(e){}toast('Вертушка открыта не в Google Chrome. Открой её в Chrome (ссылка скопирована), иначе звук сервиса не подключится');return}window.open(SVC[svcCur][1],'_blank','noopener')};
 $('#svcGo').onclick=connectService;$('#svcX').onclick=()=>$('#svc').classList.remove('open');
 $('#svc').addEventListener('pointerdown',e=>{if(e.target.id==='svc')e.target.classList.remove('open')});
 
