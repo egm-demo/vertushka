@@ -11,6 +11,7 @@ function setViz(i,quiet){vizIdx=((i%VIZ.length)+VIZ.length)%VIZ.length;const v=V
   if(v.enter)v.enter();showCanvas(v.three&&v.world?2:!!v.frag&&!!glInit());
   $('#vBtn').textContent=v.name+' ▾';document.querySelectorAll('.vz').forEach(e=>e.classList.toggle('on',+e.dataset.i===vizIdx));LS.set('vizn',v.name);
   if(!quiet){const e=$('#vizname');e.textContent=v.name;e.classList.add('show');clearTimeout(vnT);setTimeout(()=>{e.textContent=vizLabel()},120);vnT=setTimeout(()=>e.classList.remove('show'),2200)}}
+function stepViz(d){let i=vizIdx;for(let k=0;k<VIZ.length;k++){i=(i+d+VIZ.length)%VIZ.length;if(!VIZ[i].game)break}setViz(i);if(auto)setAuto(false)}
 function setAuto(v){auto=v;autoT=performance.now()/1000;$('#autoTab').classList.toggle('on',auto);LS.set('auto',auto)}
 function resize(){const r=$('#stage').getBoundingClientRect(),d=window.devicePixelRatio||1;W=Math.max(10,r.width);H=Math.max(10,r.height);
   dpr=Math.max(d,Math.min(2,1080/H));dpr=Math.min(dpr,2.5,Math.sqrt(4.2e6/(W*H)));dpr=Math.max(dpr,Math.min(d,1));

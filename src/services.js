@@ -5,7 +5,7 @@ function paintCap(){document.querySelectorAll('[data-svc]').forEach(b=>b.classLi
   if(cap){$('#nTitle').textContent='Звук из: '+cap.name;$('#nArtist').textContent='Вертушка слушает. «Стоп» отключает';$('#playPath').setAttribute('d','M6 6h12v12H6z');document.title=cap.name+' · Вертушка'}
   else{showNow();$('#playPath').setAttribute('d',audio.paused?PLAY:PAUSE)}}
 function attachStream(stream,name){dropCapture();initAudio();if(actx.state==='suspended')actx.resume();audio.pause();
-  const node=actx.createMediaStreamSource(stream);node.connect(analyser);cap={stream,node,name};
+  const node=actx.createMediaStreamSource(stream);node.connect(analyser);if(an2)node.connect(an2);cap={stream,node,name};
   stream.getAudioTracks().forEach(tr=>tr.addEventListener('ended',()=>{if(cap&&cap.stream===stream)dropCapture()}));paintCap()}
 function dropCapture(){if(!cap)return;try{cap.node.disconnect()}catch(e){}cap.stream.getTracks().forEach(t=>t.stop());cap=null;paintCap()}
 async function connectService(){const name=SVC[svcCur][0];

@@ -22,9 +22,9 @@ s = s.replace('border-radius:6px', 'border-radius:var(--rad)')
 rep('</style>', rd('extra.css') + '</style>')
 # --- html
 rep('<nav class="tabs" id="tabs"></nav>', '''<div class="vpick">
-    <button class="icon" id="vPrev" title="Предыдущая (Shift+V)"><svg viewBox="0 0 24 24"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
+    <button class="icon" id="vPrev" title="Предыдущая (←)"><svg viewBox="0 0 24 24"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>
     <button class="chip big" id="vBtn" title="Все визуализации">Столбики ▾</button>
-    <button class="icon" id="vNext" title="Следующая (V)"><svg viewBox="0 0 24 24"><path d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg></button>
+    <button class="icon" id="vNext" title="Следующая (→)"><svg viewBox="0 0 24 24"><path d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4 4.6 4.6z"/></svg></button>
     <button class="chip" id="autoTab" title="Менять визуализацию каждые 25 секунд (A)">Авто</button>
   </div><div class="grow"></div>''')
 rep('<div class="dots" id="themes" title="Оформление"></div>', '<button class="chip" id="thBtn" title="Оформление">Тема</button>')
