@@ -1,0 +1,74 @@
+==  src/g.glb nodes 38 meshes 18 mats 16 tex 19 imgs 305325,60684,26010,7496,4068,29387,7992,33628,961,16944,38454,5434,5933,90012,770,283,9194,51472,136
+  M 0:red_glass col=0.45,0.00,0.00,0.89 tex=0 met=0.364191586107691 r=0 a=BLEND em=0.01819642581192124,0,0
+  M 1:car_mercedesbenz_gclass_2013_Meshtire col=0.02,0.02,0.02,1.00 tex=0 met=0.6689544196706123 r=0.38857261279272465 a= em=
+  M 2:chassis col=0.00,0.00,0.00,1.00 tex=0 met=0 r=0.6994307030269045 a= em=
+  M 3:chrome col=0.61,0.61,0.61,1.00 tex=0 met=0.7299069863831965 r=0.11428606258609549 a= em=
+  M 4:glass col=0.00,0.00,0.00,0.25 tex=0 met=0 r=0 a=BLEND em=
+  M 5:car_mercedesbenz_gclass_2013_Meshbadges col= tex=1 met=0.5165730028891516 r=0.4190488961490168 a=BLEND em=
+  M 6:car_mercedesbenz_gclass_2013_MeshDisk col= tex=1 met=undefined r=0.2971437627238483 a= em=
+  M 7:standardSurface1 col=0.08,0.08,0.08,1.00 tex=0 met=0.5592397995879607 r=0.35809632943643255 a= em=
+  M 8:grille col=0.09,0.09,0.09,1.00 tex=0 met=0.7238117297119381 r=0.778669039753264 a= em=
+  M 9:Light_R col= tex=1 met=0.6750496763418707 r=0.11428606258609549 a= em=
+  M 10:Light col= tex=1 met=undefined r=0.09600029257232022 a= em=
+  M 11:carpaint col=0.45,0.47,0.53,1.00 tex=0 met=0.6750496763418707 r=0.08380977922980336 a= em=
+  M 12:car_mercedesbenz_gclass_2013_Meshrim col= tex=1 met=undefined r=0.21790542599748874 a= em=
+  M 13:plastic col=0.02,0.02,0.02,1.00 tex=0 met=0.4556204361765674 r=0.42514415282027523 a= em=
+  M 14:internal col= tex=1 met=0.5409540295741854 r=0.5287635162316685 a= em=
+  M 15:car_mercedesbenz_gclass_2013_MeshGlass_surr col=0.00,0.00,0.00,1.00 tex=0 met=0 r=0.07771452255854494 a= em=
+  mesh0 car_mercedesbenz_gclass_2013_Mesh:M_GlassColor_High_red_glass_0 mat=0 tri=746 min=-0.78,0.16,-2.13 max=0.78,0.46,-2.09
+  mesh1 car_mercedesbenz_gclass_2013_Mesh:M_Tire_High_car_mercedesbenz_gclass_2013_Mesh:tire_0 mat=1 tri=1800 min=-0.82,-0.24,-1.73 max=0.82,0.51,1.85
+  mesh2 car_mercedesbenz_gclass_2013_Mesh:M_Opaque_Chrome_High_chassis_0 mat=2 tri=868 min=-0.99,0.12,-2.16 max=0.99,1.57,2.23
+  mesh3 car_mercedesbenz_gclass_2013_Mesh:M_Opaque_Chrome_High_chrome_0 mat=3 tri=1260 min=-0.82,0.13,-2.36 max=0.82,1.14,2.20
+  mesh4 car_mercedesbenz_gclass_2013_Mesh:M_GlassLights_High_glass_0 mat=4 tri=1738 min=-0.99,0.16,-2.13 max=0.99,1.46,2.18
+  mesh5 car_mercedesbenz_gclass_2013_Mesh:M_Badges_High_car_mercedesbenz_gclass_2013_Mesh:badges_0 mat=5 tri=12 min=-0.80,0.09,-2.41 max=0.80,0.86,2.02
+  mesh6 car_mercedesbenz_gclass_2013_Mesh:M_BrakeDisc_High_car_mercedesbenz_gclass_2013_Mesh:Disk_0 mat=6 tri=1024 min=-0.73,-0.03,-1.51 max=0.73,0.29,1.63
+  mesh7 car_mercedesbenz_gclass_2013_Mesh:M_Caliper_High_standardSurface1_0 mat=7 tri=672 min=-0.76,-0.00,-1.28 max=0.76,0.27,1.66
+  mesh8 car_mercedesbenz_gclass_2013_Mesh:M_Chassis_High_chassis_0 mat=2 tri=170 min=-0.80,-0.04,-2.06 max=0.79,0.77,2.09
+  mesh9 car_mercedesbenz_gclass_2013_Mesh:M_Grille_A_High_grille_0 mat=8 tri=66 min=-0.40,0.47,2.11 max=0.40,0.73,2.15
+  mesh10 car_mercedesbenz_gclass_2013_Mesh:M_LightRefracted_High_Light_R_0 mat=9 tri=380 min=-0.76,0.16,-2.12 max=0.76,0.82,2.18
+  mesh11 car_mercedesbenz_gclass_2013_Mesh:M_LightCluster_High_Light_0 mat=10 tri=1828 min=-0.99,0.21,-2.12 max=0.99,1.04,2.18
+  mesh12 car_mercedesbenz_gclass_2013_Mesh:M_Paint_Metal_High_carpaint_0 mat=11 tri=13883 min=-0.99,0.05,-2.40 max=0.99,1.65,2.25
+  mesh13 car_mercedesbenz_gclass_2013_Mesh:M_Rim_High_car_mercedesbenz_gclass_2013_Mesh:rim_0 mat=12 tri=8420 min=-0.80,-0.11,-1.60 max=0.80,0.38,1.72
+  mesh14 car_mercedesbenz_gclass_2013_Mesh:M_LicensePlate_High_plastic_0 mat=13 tri=144 min=-0.22,0.16,-2.09 max=0.22,0.30,-2.07
+  mesh15 car_mercedesbenz_gclass_2013_Mesh:M_Internal_Interior_High_internal_0 mat=14 tri=3796 min=-0.80,0.18,-2.10 max=0.80,1.57,1.97
+  mesh16 car_mercedesbenz_gclass_2013_Mesh:M_GlassSurround_High_car_mercedesbenz_gclass_2013_Mesh:Glass_surr_0 mat=15 tri=62 min=-0.99,0.95,0.48 max=0.99,1.46,0.63
+  mesh17 car_mercedesbenz_gclass_2013_Mesh:M_Opaque_PlasticSmooth_High_plastic_0 mat=13 tri=7839 min=-0.99,0.01,-2.40 max=0.99,1.68,2.19
+tri 44708
+N0 Sketchfab_model M
+  N1 FINAL_MODEL_13.fbx M
+    N2 RootNode
+      N3 car_mercedesbenz_gclass_2013_Mesh:M_GlassColor_High
+        N4 car_mercedesbenz_gclass_2013_Mesh:M_GlassColor_High_red_glass_0 mesh0
+      N5 car_mercedesbenz_gclass_2013_Mesh:M_Tire_High
+        N6 car_mercedesbenz_gclass_2013_Mesh:M_Tire_High_car_mercedesbenz_gclass_2013_Mesh:tire_0 mesh1
+      N7 car_mercedesbenz_gclass_2013_Mesh:M_Opaque_Chrome_High
+        N8 car_mercedesbenz_gclass_2013_Mesh:M_Opaque_Chrome_High_chassis_0 mesh2
+        N9 car_mercedesbenz_gclass_2013_Mesh:M_Opaque_Chrome_High_chrome_0 mesh3
+      N10 car_mercedesbenz_gclass_2013_Mesh:M_GlassLights_High
+        N11 car_mercedesbenz_gclass_2013_Mesh:M_GlassLights_High_glass_0 mesh4
+      N12 car_mercedesbenz_gclass_2013_Mesh:M_Badges_High
+        N13 car_mercedesbenz_gclass_2013_Mesh:M_Badges_High_car_mercedesbenz_gclass_2013_Mesh:badges_0 mesh5
+      N14 car_mercedesbenz_gclass_2013_Mesh:M_BrakeDisc_High
+        N15 car_mercedesbenz_gclass_2013_Mesh:M_BrakeDisc_High_car_mercedesbenz_gclass_2013_Mesh:Disk_0 mesh6
+      N16 car_mercedesbenz_gclass_2013_Mesh:M_Caliper_High
+        N17 car_mercedesbenz_gclass_2013_Mesh:M_Caliper_High_standardSurface1_0 mesh7
+      N18 car_mercedesbenz_gclass_2013_Mesh:M_Chassis_High
+        N19 car_mercedesbenz_gclass_2013_Mesh:M_Chassis_High_chassis_0 mesh8
+      N20 car_mercedesbenz_gclass_2013_Mesh:M_Grille_A_High
+        N21 car_mercedesbenz_gclass_2013_Mesh:M_Grille_A_High_grille_0 mesh9
+      N22 car_mercedesbenz_gclass_2013_Mesh:M_LightRefracted_High
+        N23 car_mercedesbenz_gclass_2013_Mesh:M_LightRefracted_High_Light_R_0 mesh10
+      N24 car_mercedesbenz_gclass_2013_Mesh:M_LightCluster_High
+        N25 car_mercedesbenz_gclass_2013_Mesh:M_LightCluster_High_Light_0 mesh11
+      N26 car_mercedesbenz_gclass_2013_Mesh:M_Paint_Metal_High
+        N27 car_mercedesbenz_gclass_2013_Mesh:M_Paint_Metal_High_carpaint_0 mesh12
+      N28 car_mercedesbenz_gclass_2013_Mesh:M_Rim_High
+        N29 car_mercedesbenz_gclass_2013_Mesh:M_Rim_High_car_mercedesbenz_gclass_2013_Mesh:rim_0 mesh13
+      N30 car_mercedesbenz_gclass_2013_Mesh:M_LicensePlate_High
+        N31 car_mercedesbenz_gclass_2013_Mesh:M_LicensePlate_High_plastic_0 mesh14
+      N32 car_mercedesbenz_gclass_2013_Mesh:M_Internal_Interior_High
+        N33 car_mercedesbenz_gclass_2013_Mesh:M_Internal_Interior_High_internal_0 mesh15
+      N34 car_mercedesbenz_gclass_2013_Mesh:M_GlassSurround_High
+        N35 car_mercedesbenz_gclass_2013_Mesh:M_GlassSurround_High_car_mercedesbenz_gclass_2013_Mesh:Glass_surr_0 mesh16
+      N36 car_mercedesbenz_gclass_2013_Mesh:M_Opaque_PlasticSmooth_High
+        N37 car_mercedesbenz_gclass_2013_Mesh:M_Opaque_PlasticSmooth_High_plastic_0 mesh17

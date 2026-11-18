@@ -46,7 +46,7 @@ rep("PS[i]='rgb('+PR[i]+','+PG[i]+','+PB[i]+')'}}", "PS[i]='rgb('+PR[i]+','+PG[i
 rep('const sw=640,sh=256;', 'const sw=1280,sh=512;')
 rep('sg.drawImage(S.c,-2,0);', 'sg.drawImage(S.c,-3,0);')
 rep('sg.fillRect(sw-2,y,2,1)}', 'sg.fillRect(sw-3,y,3,1)}')
-cut('let vizIdx=0,auto=false,autoT=0,vnT;', '/* ---------- теги ID3 ---------- */', rd('viz2d.js') + rd('gl.js') + rd('drive.js') + rd('core.js'))
+cut('let vizIdx=0,auto=false,autoT=0,vnT;', '/* ---------- теги ID3 ---------- */', rd('viz2d.js') + rd('gl.js') + rd('drive.js').replace('};w.mkWh();\n', '};w.mkWh();\n' + rd('models.js') + 'w.useMdl();\n', 1) + rd('core.js'))
 rep('cur=i;audio.src=t.url;renum();', 'cur=i;dropCapture();seedRoll();audio.src=t.url;renum();')
 rep('function toggle(){if(cur<0){', 'function toggle(){if(cap){dropCapture();return}if(cur<0){')
 rep("$('#stop').onclick=()=>stopAll();", "$('#stop').onclick=()=>{dropCapture();stopAll()};")
@@ -57,6 +57,9 @@ rep("setViz(LS.get('viz',0),true)", "setViz(Math.max(0,VIZ.findIndex(v=>v.name==
 rep('get actx(){return actx}};', 'get actx(){return actx},attachStream,dropCapture,get cap(){return cap},get glScale(){return glScale},get glOn(){return glOn},glc,THEMES,get vizIdx(){return vizIdx},get dpr(){return dpr},g3,keys,get cvMode(){return cvMode},CL,get auto(){return auto},setAuto,get agc(){return agc}};')
 three = (D.parent / 'vendor' / 'three.min.js').read_text(encoding='utf-8')
 assert '</script' not in three
-rep('<script>', '<script>' + three + '</script>\n<script>')
+gl = (D.parent / 'vendor' / 'gltf.js').read_text(encoding='utf-8')
+import base64, json
+mods = {f.stem: base64.b64encode(f.read_bytes()).decode() for f in sorted((D.parent / 'models' / 'out').glob('*.glb'))}
+rep('<script>', '<script>' + three + '</script>\n<script>' + gl + '</script>\n<script>window.VT_MODELS=' + json.dumps(mods) + ';</script>\n<script>')
 (D.parent / 'Vertushka.html').write_text(s, encoding='utf-8', newline='\n')
 print('built', len(s), 'bytes')

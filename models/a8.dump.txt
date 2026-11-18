@@ -1,0 +1,154 @@
+==  src/a8.glb nodes 89 meshes 41 mats 22 tex 16 imgs 185495,240496,687505,316805,687505,185495,18531,240496,18535,316805,69920,31281,118,87,6443,3419
+  M 0:Meshpart23Mtl col=0.67,0.17,0.04,0.00 tex=0 met=0 r=undefined a=BLEND em=
+  M 1:material_0 col= tex=1 met=0 r=0 a= em=
+  M 2:material_1 col= tex=1 met=0 r=0 a= em=
+  M 3:material_2 col= tex=1 met=0 r=undefined a= em=
+  M 4:Meshpart17Mtl col=0.10,0.11,0.14,1.00 tex=0 met=0 r=0 a= em=
+  M 5:material_3 col= tex=1 met=0 r=undefined a= em=
+  M 6:Meshpart2Mtl col=0.02,0.02,0.02,1.00 tex=0 met=0 r=0 a= em=
+  M 7:Translucent col=0.00,0.00,0.00,0.52 tex=0 met=0 r=0 a=BLEND em=
+  M 8:material_4 col= tex=1 met=0 r=0 a= em=
+  M 9:material_5 col=1.00,1.00,1.00,0.00 tex=1 met=0 r=undefined a=BLEND em=
+  M 10:Meshpart4Mtl col=0.35,0.36,0.42,1.00 tex=0 met=undefined r=0.4656761636728226 a= em=
+  M 11:material_6 col= tex=1 met=0 r=0.245714 a= em=
+  M 12:Meshpart70Mtl col=0.80,0.80,0.84,1.00 tex=0 met=undefined r=0 a= em=
+  M 13:material_7 col=1.00,1.00,1.00,0.00 tex=1 met=0 r=undefined a=BLEND em=
+  M 14:material_8 col= tex=1 met=0 r=undefined a= em=
+  M 15:material_9 col= tex=1 met=0 r=0 a= em=
+  M 16:Meshpart9Mtl col= tex=0 met=undefined r=0 a= em=
+  M 17:Meshpart6Mtl col=0.00,0.00,0.00,1.00 tex=0 met=0 r=0 a= em=
+  M 18:Meshpart24Mtl col=0.60,0.53,0.37,1.00 tex=0 met=0 r=0.24129775251454477 a= em=
+  M 19:material_10 col= tex=1 met=undefined r=undefined a= em=
+  M 20:material_11 col= tex=1 met=undefined r=undefined a= em=
+  M 21:material_12 col= tex=1 met=undefined r=undefined a= em=
+  mesh0 Object_0 mat=0 tri=264 min=-36.85,-26.25,2.58 max=-30.37,-25.65,3.06
+  mesh1 Object_1 mat=1 tri=44 min=-36.03,-8.42,3.25 max=-31.20,-7.96,3.96
+  mesh2 Object_2 mat=2 tri=4 min=-35.45,-7.99,3.04 max=-35.16,-7.93,3.10
+  mesh3 Object_3 mat=3 tri=22 min=-30.62,-20.57,3.16 max=-30.51,-17.97,3.71
+  mesh4 Object_4 mat=3 tri=118 min=-36.64,-20.75,2.95 max=-30.58,-20.09,3.69
+  mesh5 Object_5 mat=4 tri=4384 min=-37.60,-27.70,0.67 max=-29.62,-7.58,5.71
+  mesh6 Object_6 mat=5 tri=8 min=-30.71,-16.83,3.73 max=-30.64,-13.69,4.00
+  mesh7 Object_7 mat=3 tri=22 min=-36.66,-16.85,3.16 max=-36.51,-13.70,3.81
+  mesh8 Object_8 mat=3 tri=22 min=-30.71,-16.85,3.16 max=-30.56,-13.70,3.81
+  mesh9 Object_9 mat=6 tri=14426 min=-37.29,-27.70,0.64 max=-29.93,-7.68,5.61
+  mesh10 Object_10 mat=7 tri=72 min=-36.90,-27.20,2.50 max=-30.32,-25.73,3.07
+  mesh11 Object_11 mat=8 tri=80 min=-32.94,-21.14,3.52 max=-31.25,-20.94,4.04
+  mesh12 Object_12 mat=9 tri=44 min=-36.03,-8.42,3.25 max=-31.20,-7.96,3.96
+  mesh13 Object_13 mat=10 tri=7880 min=-36.90,-27.20,1.71 max=-30.32,-23.56,3.61
+  mesh14 Object_14 mat=5 tri=7 min=-30.64,-20.60,3.48 max=-30.58,-17.97,3.85
+  mesh15 Object_15 mat=3 tri=22 min=-36.71,-20.57,3.16 max=-36.60,-17.97,3.71
+  mesh16 Object_16 mat=2 tri=10 min=-33.97,-17.31,1.89 max=-33.25,-17.06,2.38
+  mesh17 Object_17 mat=11 tri=92 min=-36.53,-20.92,3.36 max=-30.69,-20.55,3.76
+  mesh18 Object_18 mat=7 tri=288 min=-36.77,-22.34,3.52 max=-30.45,-10.08,5.40
+  mesh19 Object_19 mat=5 tri=8 min=-36.58,-16.83,3.73 max=-36.51,-13.69,4.00
+  mesh20 Object_20 mat=12 tri=65 min=-30.54,-21.95,2.26 max=-29.65,-17.36,4.31
+  mesh21 Object_21 mat=5 tri=7 min=-36.64,-20.60,3.48 max=-36.58,-17.97,3.85
+  mesh22 Object_22 mat=1 tri=50 min=-36.71,-8.97,3.24 max=-30.51,-8.15,3.94
+  mesh23 Object_23 mat=13 tri=2 min=-34.76,-20.85,3.55 max=-34.45,-20.79,3.61
+  mesh24 Object_24 mat=14 tri=90 min=-34.33,-26.16,3.16 max=-32.91,-23.70,3.56
+  mesh25 Object_25 mat=15 tri=331 min=-36.62,-21.10,2.32 max=-30.60,-17.59,4.17
+  mesh26 Object_26 mat=16 tri=4463 min=-37.57,-27.70,0.89 max=-29.93,-7.58,5.52
+  mesh27 Object_27 mat=17 tri=32 min=-31.26,-21.71,3.75 max=-30.42,-17.26,5.38
+  mesh28 Object_28 mat=18 tri=9941 min=-37.18,-22.71,1.16 max=-30.19,-9.93,5.59
+  mesh29 Object_29 mat=19 tri=204 min=0.01,0.00,-0.00 max=0.01,0.01,0.00
+  mesh30 Object_30 mat=20 tri=901 min=0.01,0.00,-0.00 max=0.01,0.01,0.00
+  mesh31 Object_31 mat=21 tri=144 min=0.01,0.00,-0.00 max=0.01,0.01,0.00
+  mesh32 Object_32 mat=19 tri=204 min=0.01,0.00,-0.00 max=0.01,0.01,0.00
+  mesh33 Object_33 mat=20 tri=901 min=0.01,0.00,-0.00 max=0.01,0.01,0.00
+  mesh34 Object_34 mat=21 tri=144 min=0.01,0.00,-0.00 max=0.01,0.01,0.00
+  mesh35 Object_35 mat=19 tri=204 min=0.01,0.00,-0.00 max=0.01,0.01,0.00
+  mesh36 Object_36 mat=20 tri=901 min=0.01,0.00,-0.00 max=0.01,0.01,0.00
+  mesh37 Object_37 mat=21 tri=144 min=0.01,0.00,-0.00 max=0.01,0.01,0.00
+  mesh38 Object_38 mat=19 tri=204 min=0.01,0.00,-0.00 max=0.01,0.01,0.00
+  mesh39 Object_39 mat=20 tri=901 min=0.01,0.00,-0.00 max=0.01,0.01,0.00
+  mesh40 Object_40 mat=21 tri=144 min=0.01,0.00,-0.00 max=0.01,0.01,0.00
+tri 47794
+N0 Sketchfab_model M
+  N1 root
+    N2 GLTF_SceneRootNode M
+      N3 _0 M
+        N4 Object_4 mesh0
+      N5 _1 M
+        N6 Object_6 mesh1
+      N7 _2 M
+        N8 Object_8 mesh2
+      N9 _3 M
+        N10 Object_10 mesh3
+      N11 _4 M
+        N12 Object_12 mesh4
+      N13 _5 M
+        N14 Object_14 mesh5
+      N15 _6 M
+        N16 Object_16 mesh6
+      N17 _7 M
+        N18 Object_18 mesh7
+      N19 _8 M
+        N20 Object_20 mesh8
+      N21 _9 M
+        N22 Object_22 mesh9
+      N23 _10 M
+        N24 Object_24 mesh10
+      N25 _11 M
+        N26 Object_26 mesh11
+      N27 _12 M
+        N28 Object_28 mesh12
+      N29 _13 M
+        N30 Object_30 mesh13
+      N31 _14 M
+        N32 Object_32 mesh14
+      N33 _15 M
+        N34 Object_34 mesh15
+      N35 _16 M
+        N36 Object_36 mesh16
+      N37 _17 M
+        N38 Object_38 mesh17
+      N39 _18 M
+        N40 Object_40 mesh18
+      N41 _19 M
+        N42 Object_42 mesh19
+      N43 _20 M
+        N44 Object_44 mesh20
+      N45 _21 M
+        N46 Object_46 mesh21
+      N47 _22 M
+        N48 Object_48 mesh22
+      N49 _23 M
+        N50 Object_50 mesh23
+      N51 _24 M
+        N52 Object_52 mesh24
+      N53 _25 M
+        N54 Object_54 mesh25
+      N55 _26 M
+        N56 Object_56 mesh26
+      N57 _27 M
+        N58 Object_58 mesh27
+      N59 _28 M
+        N60 Object_60 mesh28
+      N61 _29
+        N62 _30 M
+          N63 Object_63 mesh29
+        N64 _31 M
+          N65 Object_65 mesh30
+        N66 _32 M
+          N67 Object_67 mesh31
+      N68 _33
+        N69 _34 M
+          N70 Object_70 mesh32
+        N71 _35 M
+          N72 Object_72 mesh33
+        N73 _36 M
+          N74 Object_74 mesh34
+      N75 _37
+        N76 _38 M
+          N77 Object_77 mesh35
+        N78 _39 M
+          N79 Object_79 mesh36
+        N80 _40 M
+          N81 Object_81 mesh37
+      N82 _41
+        N83 _42 M
+          N84 Object_84 mesh38
+        N85 _43 M
+          N86 Object_86 mesh39
+        N87 _44 M
+          N88 Object_88 mesh40

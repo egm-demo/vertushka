@@ -452,7 +452,7 @@ function make(cfg){
       const k=1-Math.min(1,h*cfg.wallDrag);vx*=k;vz*=k;fx=Math.sin(s.psi);fz=-Math.cos(s.psi);rx=-fz;rz=fx;s.u=vx*fx+vz*fz;s.v=vx*rx+vz*rz}}
   function selCar(sel){const pd=PCARS[sel&&sel.i]||PCARS[0],ci=clamp((sel&&sel.c)|0,0,pd.cols.length-1);w.sel={i:PCARS.indexOf(pd),c:ci};w.pd=Object.assign({},pd,{hex:pd.cols[ci][1]});
     const pg=carGeo(pd.kind,true),wb=pg.ax[0]-pg.ax[1],k=pg.mass/cfg.car.m;C=Object.assign({},cfg.car,pd.ph,{m:pg.mass,a:wb*.48,b:wb*.52,Cf:cfg.car.Cf*k,Cr:cfg.car.Cr*k,rw:pg.wr});return pg}
-  function applyCar(sel){const pg=selCar(sel);w.pg=pg;w.body.geometry=pg.geo;w.body.material[0]=w.ppaint();w.plth.color.setHex(w.pd.cab.seat);plateTex(PLATES[w.pd.id]||'',w.pplate.map);w.csh.scale.set(pg.W*1.3,1,pg.L*1.12);w.mkWh();w.mkCab()}
+  function applyCar(sel){const pg=selCar(sel);w.pg=pg;w.body.geometry=pg.geo;w.body.material[0]=w.ppaint();w.plth.color.setHex(w.pd.cab.seat);plateTex(PLATES[w.pd.id]||'',w.pplate.map);w.csh.scale.set(pg.W*1.3,1,pg.L*1.12);w.mkWh();w.mkCab();if(w.useMdl)w.useMdl()}
   function garToggle(){if(!w||!st)return;gar=!gar;for(const k in keys)keys[k]=false;
     if(gar){for(const c of st.cars)w.sc.remove(c.mesh);st.cars.length=0}else{w.garL.intensity=0;w.garR.intensity=0;w.garH.intensity=0;w.garF.intensity=0;LS.set('car_'+cfg.id,w.sel);reset();say(w.pd.name,1.8)}}
   function garKey(c,down,rep){if(c==='KeyG'){if(down&&!rep)garToggle();return true}if(!gar)return false;
@@ -462,7 +462,7 @@ function make(cfg){
   function garCam(t,wd,hh){const s=st,cam=w.cam,pg=w.pg,a=t*.3,R=pg.L*.95+2.4,gy=groundY(s.s,s.d);
     w.body.visible=true;w.glow.visible=true;w.wh.forEach(([p,m])=>{p.visible=m.visible=true});
     cam.position.set(s.x+Math.sin(a)*R,gy+1.15+pg.H*.3,s.z+Math.cos(a)*R);cam.fov=38;cam.aspect=wd/hh;cam.updateProjectionMatrix();cam.up.set(0,1,0);cam.lookAt(s.x,gy+pg.H*.42,s.z);
-    w.garL.position.set(s.x+Math.sin(a+1.2)*3.5,gy+4.2,s.z+Math.cos(a+1.2)*3.5);w.garL.intensity=24;w.garR.position.set(s.x-Math.sin(a+1.2)*4,gy+2.2,s.z-Math.cos(a+1.2)*4);w.garR.intensity=20;w.garH.intensity=.9;w.garF.position.set(s.x+Math.sin(a)*2.2,gy+.55,s.z+Math.cos(a)*2.2);w.garF.intensity=6;w.sky.position.copy(cam.position)}
+    w.garL.position.set(s.x+Math.sin(a+1.2)*3.5,gy+4.2,s.z+Math.cos(a+1.2)*3.5);w.garL.intensity=14;w.garR.position.set(s.x-Math.sin(a+1.2)*4,gy+2.2,s.z-Math.cos(a+1.2)*4);w.garR.intensity=11;w.garH.intensity=.9;w.garF.position.set(s.x+Math.sin(a)*2.2,gy+.55,s.z+Math.cos(a)*2.2);w.garF.intensity=3;w.sky.position.copy(cam.position)}
   function vig(wd,hh){if(!w.vg||w.vgW!==wd||w.vgH!==hh){w.vgW=wd;w.vgH=hh;const gr=g.createRadialGradient(wd/2,hh*.55,Math.min(wd,hh)*.38,wd/2,hh*.55,Math.hypot(wd,hh)*.62);gr.addColorStop(0,'rgba(0,0,0,0)');gr.addColorStop(1,'rgba(0,8,16,.5)');w.vg=gr}g.fillStyle=w.vg;g.fillRect(0,0,wd,hh)}
   function garUI(wd,hh,t){const pd=w.pd,f='"Segoe UI",sans-serif',fs=clamp(Math.min(hh*.032,wd*.024),12,26),O='#ff7a1a',P=24;
     g.save();g.shadowBlur=0;g.textBaseline='middle';
@@ -631,7 +631,7 @@ function make(cfg){
     else if(s.msgT>0){g.globalAlpha=Math.min(1,s.msgT*2.5);box([s.msg],hh*.16,1.5);g.globalAlpha=1}
     g.textAlign='start';g.textBaseline='alphabetic'}
   return {name:cfg.name,grp:'Рандом и игры',game:true,three:true,get st(){return st},get world(){return w},dcx,
-    garKey,get garage(){return gar},get car(){return w&&w.sel},pick(i,c){if(w)applyCar({i,c})},
+    garKey,get garage(){return gar},get car(){return w&&w.sel},get mdlInfo(){if(!w||!w.mdl)return null;const r={paint:w.mdl.userData.paint.length,mats:{}};w.mdl.traverse(o=>{if(o.isMesh){const n=o.material.name||'?';r.mats[n]=(r.mats[n]||0)+o.geometry.index.count/3|0}});return r},pick(i,c){if(w)applyCar({i,c})},
     enter(){if(!r3init())return;const first=!w;if(!w)build();reset();if(first&&LS.get('car_'+cfg.id,null)===null)gar=true},
     restart(){if(w&&st&&(st.crashed?st.crashT>.7:true))reset()},gas(){if(w&&st&&st.crashed&&st.crashT>1.2)reset()},
     nextCam(){camMode=(camMode+1)%4;LS.set('cam_'+cfg.id,camMode);if(st)say(['Вид: сзади','Вид: от руля','Вид: с капота','Вид: издалека'][camMode],1.2)},get cam(){return camMode},

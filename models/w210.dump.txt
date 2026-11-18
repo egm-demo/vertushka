@@ -1,0 +1,146 @@
+==  src/w210.glb nodes 87 meshes 42 mats 15 tex 34 imgs 217883,110,191316,218414,149474,111672,146,137290,537,82,3057,90,7953,57012,135,39571,26844,402,53095,36151,98,161585,11686,90,18347,18364,123207,2494,106084,48103,90,8581,310085,696286
+  M 0:mMAT_E320_W210_4matic_Sedan_2001_Metallic_Grey1 col=0.42,0.42,0.42,1.00 tex=0 met=0.13257183259987076 r=0.15085760261364606 a= em=
+  M 1:mMAT_E320_W210_4matic_Sedan_2001_Black1 col=0.01,0.01,0.01,1.00 tex=0 met=0.4556204361765674 r=0.08990503590106179 a= em=
+  M 2:mMAT_Lights1 col= tex=1 met=undefined r=0.19352439931245502 a= em=0.10666699174702246,0.10666699174702246,0.10666699174702246
+  M 3:mMAT_Glass1 col=0.00,0.00,0.00,0.25 tex=0 met=0 r=0.08380977922980336 a=BLEND em=
+  M 4:mMAT_Details_EXT1 col= tex=1 met=undefined r=0.3520010727651741 a= em=
+  M 5:mMAT_Details_MAT1 col= tex=1 met=undefined r=0.22400068266874718 a= em=
+  M 6:mMAT_Tire_Brake1 col= tex=1 met=undefined r=0.4739062061903426 a= em=
+  M 7:mMAT_Tire_Disk1 col= tex=1 met=undefined r=0.364191586107691 a= em=
+  M 8:mMAT_Details_Chassis_0000_006 col= tex=1 met=undefined r=0.6689544196706123 a= em=
+  M 9:mMAT_Details_Grid_02 col= tex=1 met=undefined r=0.5531445429167022 a= em=
+  M 10:mMAT_Tire_Hub1 col= tex=1 met=undefined r=0.5897160829442527 a= em=
+  M 11:mMAT_Tire_Hub_010 col= tex=1 met=undefined r=0.5897160829442527 a= em=
+  M 12:mMAT_Details_INT1 col= tex=1 met=undefined r=0.43123940949153367 a= em=
+  M 13:mMAT_Details_Add_02 col= tex=1 met=undefined r=0.19961965598371345 a= em=
+  M 14:tire1 col= tex=1 met=0.5592397995879607 r=0.3154295327376236 a= em=
+  mesh0 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_m:MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey1_0 mat=0 tri=5596 min=-0.99,0.09,-0.37 max=0.99,1.17,0.79
+  mesh1 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey1_m:MAT_E320_W210_4matic_Sedan_2001_Black1_0 mat=1 tri=164 min=-0.82,0.71,-0.37 max=0.82,1.14,0.49
+  mesh2 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey2_m:MAT_Lights1_0 mat=2 tri=454 min=-0.99,0.78,0.43 max=0.99,0.84,0.49
+  mesh3 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey3_m:MAT_Glass1_0 mat=3 tri=370 min=-0.99,0.72,-0.32 max=0.99,1.14,0.49
+  mesh4 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey4_m:MAT_Details_EXT1_0 mat=4 tri=24 min=-0.88,0.62,-0.24 max=0.88,0.63,-0.23
+  mesh5 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey5_m:MAT_Details_MAT1_0 mat=5 tri=754 min=-0.98,0.30,-0.31 max=0.98,0.85,0.78
+  mesh6 m:SM_Brake_FL_0000_001_SM_Brake_FL_0000_001_MAT_Tire_Brake_m:MAT_Tire_Brake1_0 mat=6 tri=260 min=-0.05,0.01,0.05 max=0.06,0.15,0.18
+  mesh7 m:SM_Brake_FR_0000_001_SM_Brake_FR_0000_001_MAT_Tire_Brake_011_m:MAT_Tire_Brake1_0 mat=6 tri=260 min=-0.06,0.01,0.05 max=0.05,0.15,0.18
+  mesh8 m:SM_Brake_RL_0000_001_SM_Brake_RL_0000_001_MAT_Tire_Brake_022_m:MAT_Tire_Brake1_0 mat=6 tri=486 min=-0.02,-0.06,-0.18 max=0.05,0.06,-0.09
+  mesh9 m:SM_Brake_RR_0000_001_SM_Brake_RR_0000_001_MAT_Tire_Brake_033_m:MAT_Tire_Brake1_0 mat=6 tri=486 min=-0.05,-0.06,-0.18 max=0.02,0.06,-0.09
+  mesh10 m:SM_Disk_L_0000_001_SM_Disk_L_0000_001_MAT_Tire_Disk_m:MAT_Tire_Disk1_0 mat=7 tri=288 min=-0.02,-0.15,-0.15 max=0.03,0.15,0.15
+  mesh11 m:SM_Disk_R_0000_001_SM_Disk_R_0000_001_MAT_Tire_Disk_011_m:MAT_Tire_Disk1_0 mat=7 tri=288 min=-0.03,-0.15,-0.15 max=0.02,0.15,0.15
+  mesh12 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_004_m:MAT_Glass1_0 mat=3 tri=1528 min=-0.86,0.10,1.83 max=0.86,0.59,2.15
+  mesh13 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_005_m:MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey1_0 mat=0 tri=8246 min=-0.89,-0.01,0.68 max=0.89,0.77,2.25
+  mesh14 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_006_m:MAT_Lights1_0 mat=2 tri=1646 min=-0.86,0.10,1.83 max=0.86,0.59,2.15
+  mesh15 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_007_m:MAT_Details_MAT1_0 mat=5 tri=496 min=-0.89,-0.01,0.77 max=0.89,0.49,2.22
+  mesh16 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_008_m:MAT_Details_Chassis_0000_006_0 mat=8 tri=92 min=-0.82,-0.01,1.04 max=0.82,0.04,2.16
+  mesh17 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_009_m:MAT_Details_Grid_02_0 mat=9 tri=76 min=-0.57,0.09,2.10 max=0.57,0.17,2.19
+  mesh18 m:SM_Hood_0000_001_SM_Hood_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_030_m:MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey1_0 mat=0 tri=2657 min=-0.73,0.36,0.79 max=0.73,0.77,2.15
+  mesh19 m:SM_Hood_0000_001_SM_Hood_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_031_m:MAT_Details_EXT1_0 mat=4 tri=24 min=-0.02,0.60,2.04 max=0.02,0.61,2.08
+  mesh20 m:SM_Hood_0000_001_SM_Hood_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_032_m:MAT_Details_MAT1_0 mat=5 tri=1451 min=-0.46,0.35,1.10 max=0.46,0.75,2.19
+  mesh21 m:SM_Hub_L_0000_001_SM_Hub_L_0000_001_MAT_Tire_Hub_m:MAT_Tire_Hub1_0 mat=10 tri=2868 min=-0.02,-0.24,-0.24 max=0.17,0.24,0.24
+  mesh22 m:SM_Hub_R_0000_001_SM_Hub_R_0000_001_MAT_Tire_Hub_009_m:MAT_Tire_Hub_010_0 mat=11 tri=2868 min=-0.17,-0.24,-0.24 max=0.02,0.24,0.24
+  mesh23 m:SM_Interior_0000_001_SM_Interior_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_043_m:MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey1_0 mat=0 tri=2309 min=-0.89,0.09,-0.39 max=0.89,1.17,0.85
+  mesh24 m:SM_Interior_0000_001_SM_Interior_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_044_m:MAT_Lights1_0 mat=2 tri=134 min=-0.15,0.85,-1.93 max=0.15,1.17,0.22
+  mesh25 m:SM_Interior_0000_001_SM_Interior_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_045_m:MAT_Details_MAT1_0 mat=5 tri=17467 min=-0.88,0.04,-2.03 max=0.88,1.22,0.96
+  mesh26 m:SM_Interior_0000_001_SM_Interior_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_046_m:MAT_Details_INT1_0 mat=12 tri=811 min=-0.84,0.09,-1.64 max=0.84,1.18,0.85
+  mesh27 m:SM_Interior_0000_001_SM_Interior_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_047_m:MAT_Details_Add_02_0 mat=13 tri=564 min=-0.75,0.18,-1.20 max=0.75,0.75,0.59
+  mesh28 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_049_m:MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey1_0 mat=0 tri=14754 min=-0.90,-0.01,-2.54 max=0.90,1.22,1.03
+  mesh29 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_050_m:MAT_E320_W210_4matic_Sedan_2001_Black1_0 mat=1 tri=1242 min=-0.82,0.73,-2.06 max=0.82,1.16,0.32
+  mesh30 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_051_m:MAT_Lights1_0 mat=2 tri=1642 min=-0.79,0.48,-2.48 max=0.79,0.66,-2.26
+  mesh31 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_052_m:MAT_Glass1_0 mat=3 tri=3800 min=-0.79,0.48,-2.48 max=0.79,1.22,0.96
+  mesh32 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_053_m:MAT_Details_EXT1_0 mat=4 tri=16 min=-0.55,0.44,-2.49 max=0.02,0.71,-2.46
+  mesh33 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_054_m:MAT_Details_MAT1_0 mat=5 tri=2883 min=-0.90,-0.01,-2.53 max=0.90,1.26,1.06
+  mesh34 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_055_m:MAT_Details_Chassis_0000_006_0 mat=8 tri=120 min=-0.84,-0.01,-2.48 max=0.84,0.15,1.04
+  mesh35 m:SM_Root_E320_W210_4Matic_Sedan_2001_001_SM_Root_E320_W210_4Matic_Sedan_2001_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_05_m:MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey1_0 mat=0 tri=12 min=-0.00,0.20,-0.00 max=0.00,0.21,0.00
+  mesh36 15_tire_map_c_tire1_0 mat=14 tri=5984 min=-174.72,1.26,-89.31 max=-111.88,64.11,89.31
+  mesh37 16_tire_map_c_tire1_0 mat=14 tri=5984 min=95.22,1.26,-89.31 max=158.07,64.11,89.31
+  mesh38 SM_Disk_R_0000_001_SM_Disk_R_0000_001_MAT_Tire_Disk_011_m:MAT_Tire_Disk1_0 mat=7 tri=288 min=-0.03,-0.15,-0.15 max=0.02,0.15,0.15
+  mesh39 SM_Hub_R_0000_001_SM_Hub_R_0000_001_MAT_Tire_Hub_009_m:MAT_Tire_Hub_010_0 mat=11 tri=2868 min=-0.17,-0.24,-0.24 max=0.02,0.24,0.24
+  mesh40 SM_Disk_L_0000_001_SM_Disk_L_0000_001_MAT_Tire_Disk_m:MAT_Tire_Disk1_0 mat=7 tri=288 min=-0.02,-0.15,-0.15 max=0.03,0.15,0.15
+  mesh41 SM_Hub_L_0000_001_SM_Hub_L_0000_001_MAT_Tire_Hub_m:MAT_Tire_Hub1_0 mat=10 tri=2868 min=-0.02,-0.24,-0.24 max=0.17,0.24,0.24
+tri 95416
+N0 Sketchfab_model M
+  N1 FINAL_MODEL_02.fbx M
+    N2 RootNode
+      N3 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey M
+        N4 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_m:MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey1_0 mesh0
+      N5 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey1 M
+        N6 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey1_m:MAT_E320_W210_4matic_Sedan_2001_Black1_0 mesh1
+      N7 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey2 M
+        N8 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey2_m:MAT_Lights1_0 mesh2
+      N9 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey3 M
+        N10 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey3_m:MAT_Glass1_0 mesh3
+      N11 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey4 M
+        N12 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey4_m:MAT_Details_EXT1_0 mesh4
+      N13 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey5 M
+        N14 m:SM_Base_0000_001_SM_Base_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey5_m:MAT_Details_MAT1_0 mesh5
+      N15 m:SM_Brake_FL_0000_001_SM_Brake_FL_0000_001_MAT_Tire_Brake M
+        N16 m:SM_Brake_FL_0000_001_SM_Brake_FL_0000_001_MAT_Tire_Brake_m:MAT_Tire_Brake1_0 mesh6
+      N17 m:SM_Brake_FR_0000_001_SM_Brake_FR_0000_001_MAT_Tire_Brake_011 M
+        N18 m:SM_Brake_FR_0000_001_SM_Brake_FR_0000_001_MAT_Tire_Brake_011_m:MAT_Tire_Brake1_0 mesh7
+      N19 m:SM_Brake_RL_0000_001_SM_Brake_RL_0000_001_MAT_Tire_Brake_022 M
+        N20 m:SM_Brake_RL_0000_001_SM_Brake_RL_0000_001_MAT_Tire_Brake_022_m:MAT_Tire_Brake1_0 mesh8
+      N21 m:SM_Brake_RR_0000_001_SM_Brake_RR_0000_001_MAT_Tire_Brake_033 M
+        N22 m:SM_Brake_RR_0000_001_SM_Brake_RR_0000_001_MAT_Tire_Brake_033_m:MAT_Tire_Brake1_0 mesh9
+      N23 m:SM_Disk_L_0000_001_SM_Disk_L_0000_001_MAT_Tire_Disk M
+        N24 m:SM_Disk_L_0000_001_SM_Disk_L_0000_001_MAT_Tire_Disk_m:MAT_Tire_Disk1_0 mesh10
+      N25 m:SM_Disk_R_0000_001_SM_Disk_R_0000_001_MAT_Tire_Disk_011 M
+        N26 m:SM_Disk_R_0000_001_SM_Disk_R_0000_001_MAT_Tire_Disk_011_m:MAT_Tire_Disk1_0 mesh11
+      N27 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_004 M
+        N28 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_004_m:MAT_Glass1_0 mesh12
+      N29 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_005 M
+        N30 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_005_m:MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey1_0 mesh13
+      N31 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_006 M
+        N32 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_006_m:MAT_Lights1_0 mesh14
+      N33 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_007 M
+        N34 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_007_m:MAT_Details_MAT1_0 mesh15
+      N35 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_008 M
+        N36 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_008_m:MAT_Details_Chassis_0000_006_0 mesh16
+      N37 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_009 M
+        N38 m:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Glass_009_m:MAT_Details_Grid_02_0 mesh17
+      N39 m:SM_Hood_0000_001_SM_Hood_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_030 M
+        N40 m:SM_Hood_0000_001_SM_Hood_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_030_m:MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey1_0 mesh18
+      N41 m:SM_Hood_0000_001_SM_Hood_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_031 M
+        N42 m:SM_Hood_0000_001_SM_Hood_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_031_m:MAT_Details_EXT1_0 mesh19
+      N43 m:SM_Hood_0000_001_SM_Hood_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_032 M
+        N44 m:SM_Hood_0000_001_SM_Hood_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_032_m:MAT_Details_MAT1_0 mesh20
+      N45 m:SM_Hub_L_0000_001_SM_Hub_L_0000_001_MAT_Tire_Hub M
+        N46 m:SM_Hub_L_0000_001_SM_Hub_L_0000_001_MAT_Tire_Hub_m:MAT_Tire_Hub1_0 mesh21
+      N47 m:SM_Hub_R_0000_001_SM_Hub_R_0000_001_MAT_Tire_Hub_009 M
+        N48 m:SM_Hub_R_0000_001_SM_Hub_R_0000_001_MAT_Tire_Hub_009_m:MAT_Tire_Hub_010_0 mesh22
+      N49 m:SM_Interior_0000_001_SM_Interior_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_043 M
+        N50 m:SM_Interior_0000_001_SM_Interior_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_043_m:MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey1_0 mesh23
+      N51 m:SM_Interior_0000_001_SM_Interior_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_044 M
+        N52 m:SM_Interior_0000_001_SM_Interior_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_044_m:MAT_Lights1_0 mesh24
+      N53 m:SM_Interior_0000_001_SM_Interior_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_045 M
+        N54 m:SM_Interior_0000_001_SM_Interior_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_045_m:MAT_Details_MAT1_0 mesh25
+      N55 m:SM_Interior_0000_001_SM_Interior_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_046 M
+        N56 m:SM_Interior_0000_001_SM_Interior_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_046_m:MAT_Details_INT1_0 mesh26
+      N57 m:SM_Interior_0000_001_SM_Interior_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_047 M
+        N58 m:SM_Interior_0000_001_SM_Interior_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_047_m:MAT_Details_Add_02_0 mesh27
+      N59 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_049 M
+        N60 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_049_m:MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey1_0 mesh28
+      N61 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_050 M
+        N62 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_050_m:MAT_E320_W210_4matic_Sedan_2001_Black1_0 mesh29
+      N63 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_051 M
+        N64 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_051_m:MAT_Lights1_0 mesh30
+      N65 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_052 M
+        N66 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_052_m:MAT_Glass1_0 mesh31
+      N67 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_053 M
+        N68 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_053_m:MAT_Details_EXT1_0 mesh32
+      N69 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_054 M
+        N70 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_054_m:MAT_Details_MAT1_0 mesh33
+      N71 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_055 M
+        N72 m:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_055_m:MAT_Details_Chassis_0000_006_0 mesh34
+      N73 m:SM_Root_E320_W210_4Matic_Sedan_2001_001_SM_Root_E320_W210_4Matic_Sedan_2001_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_05 M
+        N74 m:SM_Root_E320_W210_4Matic_Sedan_2001_001_SM_Root_E320_W210_4Matic_Sedan_2001_001_MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey_05_m:MAT_E320_W210_4matic_Sedan_2001_Metallic_Grey1_0 mesh35
+      N75 15_tire_map_c M
+        N76 15_tire_map_c_tire1_0 mesh36
+      N77 16_tire_map_c M
+        N78 16_tire_map_c_tire1_0 mesh37
+      N79 SM_Disk_R_0000_001_SM_Disk_R_0000_001_MAT_Tire_Disk_011 M
+        N80 SM_Disk_R_0000_001_SM_Disk_R_0000_001_MAT_Tire_Disk_011_m:MAT_Tire_Disk1_0 mesh38
+      N81 SM_Hub_R_0000_001_SM_Hub_R_0000_001_MAT_Tire_Hub_009 M
+        N82 SM_Hub_R_0000_001_SM_Hub_R_0000_001_MAT_Tire_Hub_009_m:MAT_Tire_Hub_010_0 mesh39
+      N83 SM_Disk_L_0000_001_SM_Disk_L_0000_001_MAT_Tire_Disk M
+        N84 SM_Disk_L_0000_001_SM_Disk_L_0000_001_MAT_Tire_Disk_m:MAT_Tire_Disk1_0 mesh40
+      N85 SM_Hub_L_0000_001_SM_Hub_L_0000_001_MAT_Tire_Hub M
+        N86 SM_Hub_L_0000_001_SM_Hub_L_0000_001_MAT_Tire_Hub_m:MAT_Tire_Hub1_0 mesh41

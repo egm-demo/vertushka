@@ -1,0 +1,75 @@
+==  src/cay.glb nodes 38 meshes 19 mats 16 tex 21 imgs 305325,79826,29229,7496,4068,29387,958,525,102239,108,16242,19924,74880,24004,51039,634,316,9049,626667,32958,317772
+  M 0:orange_glass col=0.50,0.17,0.00,0.25 tex=0 met=0 r=0 a=BLEND em=
+  M 1:phong7 col=0.50,0.00,0.00,0.78 tex=0 met=0.9493362265484999 r=0 a=BLEND em=
+  M 2:tire col=0.03,0.03,0.03,1.00 tex=0 met=0.7055259596981628 r=0.4007631261352415 a= em=
+  M 3:plastic col=0.02,0.02,0.02,1.00 tex=0 met=0.6567639063280954 r=0.3946678694639831 a= em=
+  M 4:metal col=0.38,0.38,0.38,1.00 tex=0 met=0.5226682595604101 r=0.40685838280649994 a= em=
+  M 5:chassis col=0.00,0.00,0.00,1.00 tex=0 met=0 r=0.7177164730406796 a= em=
+  M 6:glass col=0.00,0.00,0.00,0.25 tex=0 met=0 r=0 a=BLEND em=
+  M 7:badges col= tex=1 met=0.5470492862454438 r=0.22400068266874718 a=BLEND em=
+  M 8:phong16 col= tex=1 met=undefined r=0.278857992710073 a= em=
+  M 9:phong15 col= tex=1 met=undefined r=0.3459058160939157 a= em=
+  M 10:Light_R col= tex=1 met=0.5531445429167022 r=0.3032390193951067 a= em=
+  M 11:light col= tex=1 met=undefined r=0.18742914264119662 a= em=
+  M 12:carint col=1.00,0.60,0.00,1.00 tex=0 met=0.041142982530994375 r=0.07161926588728651 a= em=
+  M 13:material col= tex=1 met=undefined r=0.24228645268252244 a= em=
+  M 14:internal col= tex=1 met=undefined r=0.7055259596981628 a= em=
+  M 15:glass_surr col=0.00,0.00,0.00,1.00 tex=0 met=0.20571491265497188 r=0.041142982530994375 a= em=
+  mesh0 car_porsche_cayenneturbos_2015_Mesh:M_GlassColor_High_orange_glass_0 mat=0 tri=80 min=-0.96,0.54,1.89 max=0.96,0.58,2.07
+  mesh1 car_porsche_cayenneturbos_2015_Mesh:M_GlassColor_High_phong7_0 mat=1 tri=686 min=-0.90,0.41,-2.40 max=0.90,1.42,-1.82
+  mesh2 car_porsche_cayenneturbos_2015_Mesh:M_Tire_High_tire_0 mat=2 tri=1200 min=-0.96,-0.18,-1.81 max=0.96,0.58,1.85
+  mesh3 car_porsche_cayenneturbos_2015_Mesh:M_Opaque_PlasticSmooth_High_plastic_0 mat=3 tri=6311 min=-1.07,0.05,-2.46 max=1.07,1.41,2.45
+  mesh4 car_porsche_cayenneturbos_2015_Mesh:M_Opaque_Chrome_High_metal_0 mat=4 tri=2643 min=-1.06,0.01,-2.37 max=1.06,1.43,2.45
+  mesh5 car_porsche_cayenneturbos_2015_Mesh:M_Opaque_Chrome_High_chassis_0 mat=5 tri=2140 min=-0.98,0.05,-2.45 max=0.97,1.45,2.45
+  mesh6 car_porsche_cayenneturbos_2015_Mesh:M_GlassLights_High_glass_0 mat=6 tri=1406 min=-1.07,0.19,-2.40 max=1.07,1.42,2.41
+  mesh7 car_porsche_cayenneturbos_2015_Mesh:M_GlassLights_High_orange_glass_0 mat=0 tri=80 min=-0.96,0.54,1.89 max=0.96,0.58,2.07
+  mesh8 car_porsche_cayenneturbos_2015_Mesh:M_Badges_High_badges_0 mat=7 tri=40 min=-0.92,0.17,-2.33 max=0.92,0.96,2.28
+  mesh9 car_porsche_cayenneturbos_2015_Mesh:M_BrakeDisc_High_phong16_0 mat=8 tri=1024 min=-0.87,-0.02,-1.65 max=0.87,0.42,1.70
+  mesh10 car_porsche_cayenneturbos_2015_Mesh:M_Caliper_High_phong15_0 mat=9 tri=592 min=-0.91,0.06,-1.36 max=0.91,0.43,1.72
+  mesh11 car_porsche_cayenneturbos_2015_Mesh:M_Chassis_High_chassis_0 mat=5 tri=854 min=-0.96,-0.05,-2.38 max=0.96,1.39,2.16
+  mesh12 car_porsche_cayenneturbos_2015_Mesh:M_LightRefracted_High_Light_R_0 mat=10 tri=132 min=-0.84,0.70,-2.24 max=0.84,0.92,2.03
+  mesh13 car_porsche_cayenneturbos_2015_Mesh:M_LightCluster_High_light_0 mat=11 tri=4808 min=-1.07,0.19,-2.40 max=1.07,1.42,2.40
+  mesh14 car_porsche_cayenneturbos_2015_Mesh:M_Paint_Metal_High_car��int_0 mat=12 tri=9848 min=-1.07,0.16,-2.45 max=1.07,1.51,2.46
+  mesh15 car_porsche_cayenneturbos_2015_Mesh:M_Rim_High_rim_0 mat=13 tri=9208 min=-0.96,-0.08,-1.71 max=0.96,0.48,1.76
+  mesh16 car_porsche_cayenneturbos_2015_Mesh:M_LicensePlate_High_plastic_0 mat=3 tri=144 min=-0.22,0.69,-2.32 max=0.22,0.83,-2.31
+  mesh17 car_porsche_cayenneturbos_2015_Mesh:M_Internal_Interior_High_internal_0 mat=14 tri=2726 min=-0.96,0.11,-2.42 max=0.96,1.46,2.34
+  mesh18 car_porsche_cayenneturbos_2015_Mesh:M_GlassSurround_High_glass_surr_0 mat=15 tri=222 min=-1.06,0.93,-2.25 max=1.06,1.41,1.15
+tri 44144
+N0 Sketchfab_model M
+  N1 FINAL_MODEL_16.fbx M
+    N2 RootNode
+      N3 car_porsche_cayenneturbos_2015_Mesh:M_GlassColor_High
+        N4 car_porsche_cayenneturbos_2015_Mesh:M_GlassColor_High_orange_glass_0 mesh0
+        N5 car_porsche_cayenneturbos_2015_Mesh:M_GlassColor_High_phong7_0 mesh1
+      N6 car_porsche_cayenneturbos_2015_Mesh:M_Tire_High
+        N7 car_porsche_cayenneturbos_2015_Mesh:M_Tire_High_tire_0 mesh2
+      N8 car_porsche_cayenneturbos_2015_Mesh:M_Opaque_PlasticSmooth_High
+        N9 car_porsche_cayenneturbos_2015_Mesh:M_Opaque_PlasticSmooth_High_plastic_0 mesh3
+      N10 car_porsche_cayenneturbos_2015_Mesh:M_Opaque_Chrome_High
+        N11 car_porsche_cayenneturbos_2015_Mesh:M_Opaque_Chrome_High_metal_0 mesh4
+        N12 car_porsche_cayenneturbos_2015_Mesh:M_Opaque_Chrome_High_chassis_0 mesh5
+      N13 car_porsche_cayenneturbos_2015_Mesh:M_GlassLights_High
+        N14 car_porsche_cayenneturbos_2015_Mesh:M_GlassLights_High_glass_0 mesh6
+        N15 car_porsche_cayenneturbos_2015_Mesh:M_GlassLights_High_orange_glass_0 mesh7
+      N16 car_porsche_cayenneturbos_2015_Mesh:M_Badges_High
+        N17 car_porsche_cayenneturbos_2015_Mesh:M_Badges_High_badges_0 mesh8
+      N18 car_porsche_cayenneturbos_2015_Mesh:M_BrakeDisc_High
+        N19 car_porsche_cayenneturbos_2015_Mesh:M_BrakeDisc_High_phong16_0 mesh9
+      N20 car_porsche_cayenneturbos_2015_Mesh:M_Caliper_High
+        N21 car_porsche_cayenneturbos_2015_Mesh:M_Caliper_High_phong15_0 mesh10
+      N22 car_porsche_cayenneturbos_2015_Mesh:M_Chassis_High
+        N23 car_porsche_cayenneturbos_2015_Mesh:M_Chassis_High_chassis_0 mesh11
+      N24 car_porsche_cayenneturbos_2015_Mesh:M_LightRefracted_High
+        N25 car_porsche_cayenneturbos_2015_Mesh:M_LightRefracted_High_Light_R_0 mesh12
+      N26 car_porsche_cayenneturbos_2015_Mesh:M_LightCluster_High
+        N27 car_porsche_cayenneturbos_2015_Mesh:M_LightCluster_High_light_0 mesh13
+      N28 car_porsche_cayenneturbos_2015_Mesh:M_Paint_Metal_High
+        N29 car_porsche_cayenneturbos_2015_Mesh:M_Paint_Metal_High_car��int_0 mesh14
+      N30 car_porsche_cayenneturbos_2015_Mesh:M_Rim_High
+        N31 car_porsche_cayenneturbos_2015_Mesh:M_Rim_High_rim_0 mesh15
+      N32 car_porsche_cayenneturbos_2015_Mesh:M_LicensePlate_High
+        N33 car_porsche_cayenneturbos_2015_Mesh:M_LicensePlate_High_plastic_0 mesh16
+      N34 car_porsche_cayenneturbos_2015_Mesh:M_Internal_Interior_High
+        N35 car_porsche_cayenneturbos_2015_Mesh:M_Internal_Interior_High_internal_0 mesh17
+      N36 car_porsche_cayenneturbos_2015_Mesh:M_GlassSurround_High
+        N37 car_porsche_cayenneturbos_2015_Mesh:M_GlassSurround_High_glass_surr_0 mesh18

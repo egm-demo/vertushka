@@ -1,0 +1,768 @@
+==  src/vette.glb nodes 506 meshes 249 mats 11 tex 29 imgs 1837,100112,1009,289,214257,2536,245839,140836,15380,514,38618,26844,402,53095,101788,7613,162302,39880,43084,99295,5948,664,126,26031,769,126,36805,4275,183705
+  M 0:cMAT_Corvette_C6_2005_Base1 col=1.00,0.02,0.00,1.00 tex=0 met=0.08990503590106179 r=0.047238239202252806 a= em=
+  M 1:cMAT_Glass_021 col=0.00,0.00,0.00,0.28 tex=1 met=0 r=0 a=BLEND em=
+  M 2:cMAT_Details_MAT_030 col= tex=1 met=undefined r=0.7847642964245224 a= em=
+  M 3:cMAT_Lights_030 col= tex=1 met=undefined r=0.30933427606636515 a= em=0.16761955845960672,0.16761955845960672,0.16761955845960672
+  M 4:cMAT_Details_EXT_025 col= tex=1 met=undefined r=0.2605722226962977 a= em=
+  M 5:cMAT_Details_Chassis_0000_006 col= tex=1 met=undefined r=0.5043824895466348 a= em=
+  M 6:cMAT_Details_INT_005 col= tex=1 met=undefined r=0.2605722226962977 a= em=
+  M 7:CChevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1 col= tex=1 met=undefined r=0.38247735612146627 a= em=
+  M 8:cMAT_Tire_Brake_045 col= tex=1 met=undefined r=0.30933427606636515 a= em=
+  M 9:cMAT_Tire_Hub_019 col= tex=1 met=undefined r=0.6019065962867696 a= em=
+  M 10:cMAT_Tire_Disk_023 col= tex=1 met=undefined r=0.44952517950530896 a= em=
+  mesh0 c:SM_Base_0000_001_SM_Base_0000_001_MAT_Corvette_C6_2005_Base_c:MAT_Corvette_C6_2005_Base1_0 mat=0 tri=4044 min=-1.05,0.08,-0.87 max=1.05,0.79,0.49
+  mesh1 c:SM_Base_0000_001_SM_Base_0000_001_MAT_Corvette_C6_2005_Base1_c:MAT_Glass_021_0 mat=1 tri=348 min=-0.79,0.67,-0.78 max=0.79,1.01,0.23
+  mesh2 c:SM_Base_0000_001_SM_Base_0000_001_MAT_Corvette_C6_2005_Base2_c:MAT_Details_MAT_030_0 mat=2 tri=786 min=-1.05,0.61,-0.87 max=1.05,0.78,0.41
+  mesh3 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_022_c:MAT_Corvette_C6_2005_Base1_0 mat=0 tri=12186 min=-0.93,-0.00,0.41 max=0.93,0.67,2.23
+  mesh4 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_023_c:MAT_Lights_030_0 mat=3 tri=2992 min=-0.90,0.13,1.64 max=0.90,0.56,2.05
+  mesh5 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_024_c:MAT_Glass_021_0 mat=1 tri=1862 min=-0.83,0.13,1.61 max=0.83,0.59,2.05
+  mesh6 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_025_c:MAT_Details_EXT_025_0 mat=4 tri=249 min=-0.45,0.11,2.01 max=0.45,0.44,2.10
+  mesh7 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_026_c:MAT_Details_MAT_030_0 mat=2 tri=1694 min=-0.92,-0.06,0.60 max=0.92,0.58,2.14
+  mesh8 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_027_c:MAT_Details_Chassis_0000_006_0 mat=5 tri=150 min=-0.85,-0.02,0.92 max=0.85,0.03,2.13
+  mesh9 c:SM_Hood_0000_001_SM_Hood_0000_001_MAT_Corvette_C6_2005_Base_031_c:MAT_Corvette_C6_2005_Base1_0 mat=0 tri=1210 min=-0.77,0.49,0.60 max=0.77,0.69,1.89
+  mesh10 c:SM_Interior_0000_001_SM_Interior_0000_001_MAT_Corvette_C6_2005_Base_042_c:MAT_Corvette_C6_2005_Base1_0 mat=0 tri=2731 min=-0.92,0.07,-0.92 max=0.92,0.76,0.65
+  mesh11 c:SM_Interior_0000_001_SM_Interior_0000_001_MAT_Corvette_C6_2005_Base_043_c:MAT_Lights_030_0 mat=3 tri=108 min=-0.70,0.21,-0.45 max=0.70,0.26,-0.39
+  mesh12 c:SM_Interior_0000_001_SM_Interior_0000_001_MAT_Corvette_C6_2005_Base_044_c:MAT_Details_MAT_030_0 mat=2 tri=16866 min=-0.91,0.05,-1.97 max=0.91,1.06,0.77
+  mesh13 c:SM_Interior_0000_001_SM_Interior_0000_001_MAT_Corvette_C6_2005_Base_045_c:MAT_Details_INT_005_0 mat=6 tri=1164 min=-0.85,0.06,-1.15 max=0.85,0.98,0.58
+  mesh14 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_045_c:MAT_Corvette_C6_2005_Base1_0 mat=0 tri=9460 min=-0.93,0.01,-2.22 max=0.93,1.09,0.45
+  mesh15 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_046_c:MAT_Lights_030_0 mat=3 tri=2138 min=-0.90,0.16,-2.21 max=0.90,0.82,-1.73
+  mesh16 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_047_c:MAT_Glass_021_0 mat=1 tri=1992 min=-0.77,0.16,-2.21 max=0.77,1.06,0.77
+  mesh17 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_048_c:MAT_Details_EXT_025_0 mat=4 tri=169 min=-0.09,0.68,-2.21 max=0.09,0.75,-2.20
+  mesh18 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_049_c:MAT_Details_MAT_030_0 mat=2 tri=4909 min=-0.92,0.02,-2.21 max=0.92,1.02,0.86
+  mesh19 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_050_c:MAT_Details_Chassis_0000_006_0 mat=5 tri=68 min=-0.85,-0.00,-1.80 max=0.85,0.08,0.92
+  mesh20 c:SM_Root_Corvette_C6_2005_001_SM_Root_Corvette_C6_2005_001_MAT_Corvette_C6_2005_Base_055_c:MAT_Corvette_C6_2005_Base1_0 mat=0 tri=12 min=-0.00,0.20,-0.00 max=0.00,0.21,0.00
+  mesh21 polySurface69_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.30,-0.17 max=0.14,-0.27,-0.13
+  mesh22 polySurface68_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.31,-0.13 max=0.14,-0.29,-0.09
+  mesh23 polySurface67_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.32,-0.10 max=0.14,-0.30,-0.06
+  mesh24 polySurface66_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.33,-0.06 max=0.14,-0.31,-0.02
+  mesh25 polySurface65_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.33,-0.02 max=0.14,-0.31,0.02
+  mesh26 polySurface64_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.33,0.02 max=0.14,-0.31,0.06
+  mesh27 polySurface63_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.19,-0.26 max=0.14,0.23,-0.22
+  mesh28 polySurface62_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.32,0.06 max=0.14,-0.30,0.10
+  mesh29 polySurface61_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.31,0.09 max=0.14,-0.29,0.13
+  mesh30 polySurface60_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.30,0.13 max=0.14,-0.27,0.17
+  mesh31 polySurface59_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.06,0.31 max=0.14,-0.02,0.33
+  mesh32 polySurface58_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.02,0.31 max=0.14,0.02,0.33
+  mesh33 polySurface57_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.02,0.31 max=0.14,0.06,0.33
+  mesh34 polySurface56_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.06,0.30 max=0.14,0.10,0.32
+  mesh35 polySurface55_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.09,0.29 max=0.14,0.13,0.31
+  mesh36 polySurface54_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.13,0.27 max=0.14,0.17,0.30
+  mesh37 polySurface53_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.16,0.25 max=0.14,0.20,0.28
+  mesh38 polySurface52_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.19,0.22 max=0.14,0.23,0.26
+  mesh39 polySurface51_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.10,0.30 max=0.14,-0.06,0.32
+  mesh40 polySurface50_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.13,0.29 max=0.14,-0.09,0.31
+  mesh41 polySurface49_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.17,0.27 max=0.14,-0.13,0.30
+  mesh42 polySurface48_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.20,0.25 max=0.14,-0.16,0.28
+  mesh43 polySurface47_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.23,0.22 max=0.14,-0.19,0.26
+  mesh44 polySurface46_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.26,0.19 max=0.14,-0.22,0.23
+  mesh45 polySurface45_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.28,0.16 max=0.14,-0.25,0.20
+  mesh46 polySurface44_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.30,0.06 max=0.14,0.32,0.10
+  mesh47 polySurface43_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.31,0.02 max=0.14,0.33,0.06
+  mesh48 polySurface42_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.31,-0.02 max=0.14,0.33,0.02
+  mesh49 polySurface41_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.31,-0.06 max=0.14,0.33,-0.02
+  mesh50 polySurface40_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.30,-0.10 max=0.14,0.32,-0.06
+  mesh51 polySurface39_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.29,-0.13 max=0.14,0.31,-0.09
+  mesh52 polySurface38_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.27,-0.17 max=0.14,0.30,-0.13
+  mesh53 polySurface37_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.25,-0.20 max=0.14,0.28,-0.16
+  mesh54 polySurface36_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.29,0.09 max=0.14,0.31,0.13
+  mesh55 polySurface35_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.22,-0.23 max=0.14,0.26,-0.19
+  mesh56 polySurface34_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.27,0.13 max=0.14,0.30,0.17
+  mesh57 polySurface33_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.25,0.16 max=0.14,0.28,0.20
+  mesh58 polySurface32_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.22,0.19 max=0.14,0.26,0.23
+  mesh59 polySurface31_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.16,-0.28 max=0.14,0.20,-0.25
+  mesh60 polySurface30_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.13,-0.30 max=0.14,0.17,-0.27
+  mesh61 polySurface29_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.09,-0.31 max=0.14,0.13,-0.29
+  mesh62 polySurface28_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.06,-0.32 max=0.14,0.10,-0.30
+  mesh63 polySurface27_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.02,-0.33 max=0.14,0.06,-0.31
+  mesh64 polySurface26_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.02,-0.33 max=0.14,0.02,-0.31
+  mesh65 polySurface25_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.06,-0.33 max=0.14,-0.02,-0.31
+  mesh66 polySurface24_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.10,-0.32 max=0.14,-0.06,-0.30
+  mesh67 polySurface23_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.13,-0.31 max=0.14,-0.09,-0.29
+  mesh68 polySurface22_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.17,-0.30 max=0.14,-0.13,-0.27
+  mesh69 polySurface21_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.20,-0.28 max=0.14,-0.16,-0.25
+  mesh70 polySurface20_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.23,-0.26 max=0.14,-0.19,-0.22
+  mesh71 polySurface19_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.26,-0.23 max=0.14,-0.22,-0.19
+  mesh72 polySurface18_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.28,-0.20 max=0.14,-0.25,-0.16
+  mesh73 polySurface17_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=112 min=-0.15,-0.31,-0.31 max=-0.14,0.31,0.31
+  mesh74 polySurface16_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=332 min=0.14,-0.31,-0.31 max=0.15,0.31,0.31
+  mesh75 c:SM_Brake_FL_0000_001_SM_Brake_FL_0000_001_MAT_Tire_Brake_044_c:MAT_Tire_Brake_045_0 mat=8 tri=690 min=-0.04,-0.15,-0.20 max=0.06,0.11,-0.09
+  mesh76 c:SM_Hub_L_0000_001_SM_Hub_L_0000_001_MAT_Tire_Hub_018_c:MAT_Tire_Hub_019_0 mat=9 tri=2790 min=-0.16,-0.24,-0.24 max=0.17,0.24,0.24
+  mesh77 c:SM_Disk_L_0000_001_SM_Disk_L_0000_001_MAT_Tire_Disk_022_c:MAT_Tire_Disk_023_0 mat=10 tri=286 min=-0.01,-0.17,-0.17 max=0.04,0.17,0.17
+  mesh78 polySurface225_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.30,-0.17 max=0.14,-0.27,-0.13
+  mesh79 polySurface224_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.31,-0.13 max=0.14,-0.29,-0.09
+  mesh80 polySurface223_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.32,-0.10 max=0.14,-0.30,-0.06
+  mesh81 polySurface222_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.33,-0.06 max=0.14,-0.31,-0.02
+  mesh82 polySurface221_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.33,-0.02 max=0.14,-0.31,0.02
+  mesh83 polySurface220_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.33,0.02 max=0.14,-0.31,0.06
+  mesh84 polySurface219_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.19,-0.26 max=0.14,0.23,-0.22
+  mesh85 polySurface218_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.32,0.06 max=0.14,-0.30,0.10
+  mesh86 polySurface217_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.31,0.09 max=0.14,-0.29,0.13
+  mesh87 polySurface216_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.30,0.13 max=0.14,-0.27,0.17
+  mesh88 polySurface215_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.06,0.31 max=0.14,-0.02,0.33
+  mesh89 polySurface214_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.02,0.31 max=0.14,0.02,0.33
+  mesh90 polySurface213_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.02,0.31 max=0.14,0.06,0.33
+  mesh91 polySurface212_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.06,0.30 max=0.14,0.10,0.32
+  mesh92 polySurface211_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.09,0.29 max=0.14,0.13,0.31
+  mesh93 polySurface210_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.13,0.27 max=0.14,0.17,0.30
+  mesh94 polySurface209_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.16,0.25 max=0.14,0.20,0.28
+  mesh95 polySurface208_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.19,0.22 max=0.14,0.23,0.26
+  mesh96 polySurface207_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.10,0.30 max=0.14,-0.06,0.32
+  mesh97 polySurface206_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.13,0.29 max=0.14,-0.09,0.31
+  mesh98 polySurface205_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.17,0.27 max=0.14,-0.13,0.30
+  mesh99 polySurface204_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.20,0.25 max=0.14,-0.16,0.28
+  mesh100 polySurface203_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.23,0.22 max=0.14,-0.19,0.26
+  mesh101 polySurface202_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.26,0.19 max=0.14,-0.22,0.23
+  mesh102 polySurface201_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.28,0.16 max=0.14,-0.25,0.20
+  mesh103 polySurface200_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.30,0.06 max=0.14,0.32,0.10
+  mesh104 polySurface199_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.31,0.02 max=0.14,0.33,0.06
+  mesh105 polySurface198_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.31,-0.02 max=0.14,0.33,0.02
+  mesh106 polySurface197_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.31,-0.06 max=0.14,0.33,-0.02
+  mesh107 polySurface196_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.30,-0.10 max=0.14,0.32,-0.06
+  mesh108 polySurface195_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.29,-0.13 max=0.14,0.31,-0.09
+  mesh109 polySurface194_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.27,-0.17 max=0.14,0.30,-0.13
+  mesh110 polySurface193_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.25,-0.20 max=0.14,0.28,-0.16
+  mesh111 polySurface192_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.29,0.09 max=0.14,0.31,0.13
+  mesh112 polySurface191_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.22,-0.23 max=0.14,0.26,-0.19
+  mesh113 polySurface190_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.27,0.13 max=0.14,0.30,0.17
+  mesh114 polySurface189_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.25,0.16 max=0.14,0.28,0.20
+  mesh115 polySurface188_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.22,0.19 max=0.14,0.26,0.23
+  mesh116 polySurface187_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.16,-0.28 max=0.14,0.20,-0.25
+  mesh117 polySurface186_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.13,-0.30 max=0.14,0.17,-0.27
+  mesh118 polySurface185_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.09,-0.31 max=0.14,0.13,-0.29
+  mesh119 polySurface184_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.06,-0.32 max=0.14,0.10,-0.30
+  mesh120 polySurface183_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,0.02,-0.33 max=0.14,0.06,-0.31
+  mesh121 polySurface182_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.02,-0.33 max=0.14,0.02,-0.31
+  mesh122 polySurface181_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.06,-0.33 max=0.14,-0.02,-0.31
+  mesh123 polySurface180_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.10,-0.32 max=0.14,-0.06,-0.30
+  mesh124 polySurface179_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.13,-0.31 max=0.14,-0.09,-0.29
+  mesh125 polySurface178_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.17,-0.30 max=0.14,-0.13,-0.27
+  mesh126 polySurface177_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.20,-0.28 max=0.14,-0.16,-0.25
+  mesh127 polySurface176_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.23,-0.26 max=0.14,-0.19,-0.22
+  mesh128 polySurface175_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.26,-0.23 max=0.14,-0.22,-0.19
+  mesh129 polySurface174_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.14,-0.28,-0.20 max=0.14,-0.25,-0.16
+  mesh130 polySurface173_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=112 min=-0.15,-0.31,-0.31 max=-0.14,0.31,0.31
+  mesh131 polySurface172_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=332 min=0.14,-0.31,-0.31 max=0.15,0.31,0.31
+  mesh132 c:SM_Hub_R_0000_001_SM_Hub_R_0000_001_MAT_Tire_Hub_027_c:MAT_Tire_Hub_019_0 mat=9 tri=2790 min=-0.17,-0.24,-0.24 max=0.16,0.24,0.24
+  mesh133 c:SM_Brake_FR_0000_001_SM_Brake_FR_0000_001_MAT_Tire_Brake_055_c:MAT_Tire_Brake_045_0 mat=8 tri=690 min=-0.06,-0.15,-0.20 max=0.04,0.11,-0.09
+  mesh134 c:SM_Disk_R_0000_001_SM_Disk_R_0000_001_MAT_Tire_Disk_033_c:MAT_Tire_Disk_023_0 mat=10 tri=286 min=-0.04,-0.17,-0.17 max=0.01,0.17,0.17
+  mesh135 SM_Hub_L_0000_001_SM_Hub_L_0000_001_MAT_Tire_Hub_018_c:MAT_Tire_Hub_019_0 mat=9 tri=2790 min=-0.16,-0.24,-0.24 max=0.17,0.24,0.24
+  mesh136 SM_Disk_L_0000_001_SM_Disk_L_0000_001_MAT_Tire_Disk_022_c:MAT_Tire_Disk_023_0 mat=10 tri=286 min=-0.01,-0.17,-0.17 max=0.04,0.17,0.17
+  mesh137 c:SM_Brake_RL_0000_001_SM_Brake_RL_0000_001_MAT_Tire_Brake_066_c:MAT_Tire_Brake_045_0 mat=8 tri=570 min=-0.04,-0.09,0.12 max=0.04,0.10,0.21
+  mesh138 polySurface472_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.17,-0.29 max=0.17,0.21,-0.25
+  mesh139 polySurface471_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.14,-0.30 max=0.17,0.18,-0.27
+  mesh140 polySurface470_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.10,-0.32 max=0.17,0.14,-0.29
+  mesh141 polySurface469_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.06,-0.33 max=0.17,0.11,-0.31
+  mesh142 polySurface468_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.03,-0.34 max=0.17,0.07,-0.32
+  mesh143 polySurface467_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.01,-0.34 max=0.17,0.03,-0.32
+  mesh144 polySurface466_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.19,0.23 max=0.17,0.23,0.27
+  mesh145 polySurface465_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.05,-0.34 max=0.17,-0.01,-0.32
+  mesh146 polySurface464_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.09,-0.33 max=0.17,-0.05,-0.31
+  mesh147 polySurface463_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.13,-0.32 max=0.17,-0.09,-0.30
+  mesh148 polySurface462_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.33,-0.11 max=0.17,-0.31,-0.06
+  mesh149 polySurface461_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.34,-0.07 max=0.17,-0.32,-0.03
+  mesh150 polySurface460_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.34,-0.03 max=0.17,-0.32,0.01
+  mesh151 polySurface459_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.34,0.01 max=0.17,-0.32,0.05
+  mesh152 polySurface458_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.33,0.05 max=0.17,-0.31,0.09
+  mesh153 polySurface457_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.32,0.09 max=0.17,-0.30,0.13
+  mesh154 polySurface456_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.31,0.13 max=0.17,-0.28,0.17
+  mesh155 polySurface455_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.29,0.16 max=0.17,-0.26,0.20
+  mesh156 polySurface454_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.32,-0.14 max=0.17,-0.29,-0.10
+  mesh157 polySurface453_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.30,-0.18 max=0.17,-0.27,-0.14
+  mesh158 polySurface452_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.29,-0.21 max=0.17,-0.25,-0.17
+  mesh159 polySurface451_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.26,-0.24 max=0.17,-0.22,-0.20
+  mesh160 polySurface450_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.23,-0.27 max=0.17,-0.19,-0.23
+  mesh161 polySurface449_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.20,-0.29 max=0.17,-0.16,-0.26
+  mesh162 polySurface448_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.17,-0.31 max=0.17,-0.13,-0.28
+  mesh163 polySurface447_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.14,0.29 max=0.17,-0.10,0.32
+  mesh164 polySurface446_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.11,0.31 max=0.17,-0.06,0.33
+  mesh165 polySurface445_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.07,0.32 max=0.17,-0.03,0.34
+  mesh166 polySurface444_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.03,0.32 max=0.17,0.01,0.34
+  mesh167 polySurface443_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.01,0.32 max=0.17,0.05,0.34
+  mesh168 polySurface442_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.05,0.31 max=0.17,0.09,0.33
+  mesh169 polySurface441_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.09,0.30 max=0.17,0.13,0.32
+  mesh170 polySurface440_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.13,0.28 max=0.17,0.17,0.31
+  mesh171 polySurface439_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.18,0.27 max=0.17,-0.14,0.30
+  mesh172 polySurface438_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.16,0.26 max=0.17,0.20,0.29
+  mesh173 polySurface437_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.21,0.25 max=0.17,-0.17,0.29
+  mesh174 polySurface436_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.24,0.22 max=0.17,-0.20,0.26
+  mesh175 polySurface435_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.27,0.19 max=0.17,-0.23,0.23
+  mesh176 polySurface434_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.22,0.20 max=0.17,0.26,0.24
+  mesh177 polySurface433_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.25,0.17 max=0.17,0.29,0.21
+  mesh178 polySurface432_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.27,0.14 max=0.17,0.30,0.18
+  mesh179 polySurface431_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.29,0.10 max=0.17,0.32,0.14
+  mesh180 polySurface430_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.31,0.06 max=0.17,0.33,0.11
+  mesh181 polySurface429_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.32,0.03 max=0.17,0.34,0.07
+  mesh182 polySurface428_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.32,-0.01 max=0.17,0.34,0.03
+  mesh183 polySurface427_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.32,-0.05 max=0.17,0.34,-0.01
+  mesh184 polySurface426_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.31,-0.09 max=0.17,0.33,-0.05
+  mesh185 polySurface425_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.30,-0.13 max=0.17,0.32,-0.09
+  mesh186 polySurface424_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.28,-0.17 max=0.17,0.31,-0.13
+  mesh187 polySurface423_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.26,-0.20 max=0.17,0.29,-0.16
+  mesh188 polySurface422_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.23,-0.23 max=0.17,0.27,-0.19
+  mesh189 polySurface421_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.20,-0.26 max=0.17,0.24,-0.22
+  mesh190 polySurface420_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=112 min=-0.17,-0.32,-0.32 max=-0.16,0.32,0.32
+  mesh191 polySurface419_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=332 min=0.16,-0.32,-0.32 max=0.18,0.32,0.32
+  mesh192 polySurface646_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.17,-0.29 max=0.17,0.21,-0.25
+  mesh193 polySurface645_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.14,-0.30 max=0.17,0.18,-0.27
+  mesh194 polySurface644_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.10,-0.32 max=0.17,0.14,-0.29
+  mesh195 polySurface643_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.06,-0.33 max=0.17,0.11,-0.31
+  mesh196 polySurface642_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.03,-0.34 max=0.17,0.07,-0.32
+  mesh197 polySurface641_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.01,-0.34 max=0.17,0.03,-0.32
+  mesh198 polySurface640_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.19,0.23 max=0.17,0.23,0.27
+  mesh199 polySurface639_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.05,-0.34 max=0.17,-0.01,-0.32
+  mesh200 polySurface638_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.09,-0.33 max=0.17,-0.05,-0.31
+  mesh201 polySurface637_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.13,-0.32 max=0.17,-0.09,-0.30
+  mesh202 polySurface636_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.33,-0.11 max=0.17,-0.31,-0.06
+  mesh203 polySurface635_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.34,-0.07 max=0.17,-0.32,-0.03
+  mesh204 polySurface634_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.34,-0.03 max=0.17,-0.32,0.01
+  mesh205 polySurface633_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.34,0.01 max=0.17,-0.32,0.05
+  mesh206 polySurface632_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.33,0.05 max=0.17,-0.31,0.09
+  mesh207 polySurface631_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.32,0.09 max=0.17,-0.30,0.13
+  mesh208 polySurface630_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.31,0.13 max=0.17,-0.28,0.17
+  mesh209 polySurface629_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.29,0.16 max=0.17,-0.26,0.20
+  mesh210 polySurface628_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.32,-0.14 max=0.17,-0.29,-0.10
+  mesh211 polySurface627_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.30,-0.18 max=0.17,-0.27,-0.14
+  mesh212 polySurface626_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.29,-0.21 max=0.17,-0.25,-0.17
+  mesh213 polySurface625_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.26,-0.24 max=0.17,-0.22,-0.20
+  mesh214 polySurface624_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.23,-0.27 max=0.17,-0.19,-0.23
+  mesh215 polySurface623_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.20,-0.29 max=0.17,-0.16,-0.26
+  mesh216 polySurface622_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.17,-0.31 max=0.17,-0.13,-0.28
+  mesh217 polySurface621_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.14,0.29 max=0.17,-0.10,0.32
+  mesh218 polySurface620_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.11,0.31 max=0.17,-0.06,0.33
+  mesh219 polySurface619_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.07,0.32 max=0.17,-0.03,0.34
+  mesh220 polySurface618_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.03,0.32 max=0.17,0.01,0.34
+  mesh221 polySurface617_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.01,0.32 max=0.17,0.05,0.34
+  mesh222 polySurface616_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.05,0.31 max=0.17,0.09,0.33
+  mesh223 polySurface615_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.09,0.30 max=0.17,0.13,0.32
+  mesh224 polySurface614_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.13,0.28 max=0.17,0.17,0.31
+  mesh225 polySurface613_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.18,0.27 max=0.17,-0.14,0.30
+  mesh226 polySurface612_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.16,0.26 max=0.17,0.20,0.29
+  mesh227 polySurface611_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.21,0.25 max=0.17,-0.17,0.29
+  mesh228 polySurface610_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.24,0.22 max=0.17,-0.20,0.26
+  mesh229 polySurface609_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,-0.27,0.19 max=0.17,-0.23,0.23
+  mesh230 polySurface608_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.22,0.20 max=0.17,0.26,0.24
+  mesh231 polySurface607_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.25,0.17 max=0.17,0.29,0.21
+  mesh232 polySurface606_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.27,0.14 max=0.17,0.30,0.18
+  mesh233 polySurface605_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.29,0.10 max=0.17,0.32,0.14
+  mesh234 polySurface604_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.31,0.06 max=0.17,0.33,0.11
+  mesh235 polySurface603_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.32,0.03 max=0.17,0.34,0.07
+  mesh236 polySurface602_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.32,-0.01 max=0.17,0.34,0.03
+  mesh237 polySurface601_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.32,-0.05 max=0.17,0.34,-0.01
+  mesh238 polySurface600_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.31,-0.09 max=0.17,0.33,-0.05
+  mesh239 polySurface599_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.30,-0.13 max=0.17,0.32,-0.09
+  mesh240 polySurface598_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.28,-0.17 max=0.17,0.31,-0.13
+  mesh241 polySurface597_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.26,-0.20 max=0.17,0.29,-0.16
+  mesh242 polySurface596_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.23,-0.23 max=0.17,0.27,-0.19
+  mesh243 polySurface595_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=10 min=-0.17,0.20,-0.26 max=0.17,0.24,-0.22
+  mesh244 polySurface594_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=112 min=-0.17,-0.32,-0.32 max=-0.16,0.32,0.32
+  mesh245 polySurface593_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mat=7 tri=332 min=0.16,-0.32,-0.32 max=0.18,0.32,0.32
+  mesh246 c:SM_Brake_RR_0000_001_SM_Brake_RR_0000_001_MAT_Tire_Brake_077_c:MAT_Tire_Brake_045_0 mat=8 tri=570 min=-0.04,-0.09,0.12 max=0.04,0.10,0.21
+  mesh247 SM_Hub_R_0000_001_SM_Hub_R_0000_001_MAT_Tire_Hub_027_c:MAT_Tire_Hub_019_0 mat=9 tri=2790 min=-0.17,-0.24,-0.24 max=0.16,0.24,0.24
+  mesh248 SM_Disk_R_0000_001_SM_Disk_R_0000_001_MAT_Tire_Disk_033_c:MAT_Tire_Disk_023_0 mat=10 tri=286 min=-0.04,-0.17,-0.17 max=0.01,0.17,0.17
+tri 83818
+N0 Sketchfab_model M
+  N1 FINAL_MODEL_C6.fbx M
+    N2 RootNode
+      N3 c:SM_Base_0000_001_SM_Base_0000_001_MAT_Corvette_C6_2005_Base M
+        N4 c:SM_Base_0000_001_SM_Base_0000_001_MAT_Corvette_C6_2005_Base_c:MAT_Corvette_C6_2005_Base1_0 mesh0
+      N5 c:SM_Base_0000_001_SM_Base_0000_001_MAT_Corvette_C6_2005_Base1 M
+        N6 c:SM_Base_0000_001_SM_Base_0000_001_MAT_Corvette_C6_2005_Base1_c:MAT_Glass_021_0 mesh1
+      N7 c:SM_Base_0000_001_SM_Base_0000_001_MAT_Corvette_C6_2005_Base2 M
+        N8 c:SM_Base_0000_001_SM_Base_0000_001_MAT_Corvette_C6_2005_Base2_c:MAT_Details_MAT_030_0 mesh2
+      N9 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_022 M
+        N10 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_022_c:MAT_Corvette_C6_2005_Base1_0 mesh3
+      N11 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_023 M
+        N12 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_023_c:MAT_Lights_030_0 mesh4
+      N13 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_024 M
+        N14 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_024_c:MAT_Glass_021_0 mesh5
+      N15 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_025 M
+        N16 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_025_c:MAT_Details_EXT_025_0 mesh6
+      N17 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_026 M
+        N18 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_026_c:MAT_Details_MAT_030_0 mesh7
+      N19 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_027 M
+        N20 c:SM_FrontKit_0000_001_SM_FrontKit_0000_001_MAT_Corvette_C6_2005_Base_027_c:MAT_Details_Chassis_0000_006_0 mesh8
+      N21 c:SM_Hood_0000_001_SM_Hood_0000_001_MAT_Corvette_C6_2005_Base_031 M
+        N22 c:SM_Hood_0000_001_SM_Hood_0000_001_MAT_Corvette_C6_2005_Base_031_c:MAT_Corvette_C6_2005_Base1_0 mesh9
+      N23 c:SM_Interior_0000_001_SM_Interior_0000_001_MAT_Corvette_C6_2005_Base_042 M
+        N24 c:SM_Interior_0000_001_SM_Interior_0000_001_MAT_Corvette_C6_2005_Base_042_c:MAT_Corvette_C6_2005_Base1_0 mesh10
+      N25 c:SM_Interior_0000_001_SM_Interior_0000_001_MAT_Corvette_C6_2005_Base_043 M
+        N26 c:SM_Interior_0000_001_SM_Interior_0000_001_MAT_Corvette_C6_2005_Base_043_c:MAT_Lights_030_0 mesh11
+      N27 c:SM_Interior_0000_001_SM_Interior_0000_001_MAT_Corvette_C6_2005_Base_044 M
+        N28 c:SM_Interior_0000_001_SM_Interior_0000_001_MAT_Corvette_C6_2005_Base_044_c:MAT_Details_MAT_030_0 mesh12
+      N29 c:SM_Interior_0000_001_SM_Interior_0000_001_MAT_Corvette_C6_2005_Base_045 M
+        N30 c:SM_Interior_0000_001_SM_Interior_0000_001_MAT_Corvette_C6_2005_Base_045_c:MAT_Details_INT_005_0 mesh13
+      N31 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_045 M
+        N32 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_045_c:MAT_Corvette_C6_2005_Base1_0 mesh14
+      N33 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_046 M
+        N34 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_046_c:MAT_Lights_030_0 mesh15
+      N35 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_047 M
+        N36 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_047_c:MAT_Glass_021_0 mesh16
+      N37 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_048 M
+        N38 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_048_c:MAT_Details_EXT_025_0 mesh17
+      N39 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_049 M
+        N40 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_049_c:MAT_Details_MAT_030_0 mesh18
+      N41 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_050 M
+        N42 c:SM_RearKit_0000_001_SM_RearKit_0000_001_MAT_Corvette_C6_2005_Base_050_c:MAT_Details_Chassis_0000_006_0 mesh19
+      N43 c:SM_Root_Corvette_C6_2005_001_SM_Root_Corvette_C6_2005_001_MAT_Corvette_C6_2005_Base_055 M
+        N44 c:SM_Root_Corvette_C6_2005_001_SM_Root_Corvette_C6_2005_001_MAT_Corvette_C6_2005_Base_055_c:MAT_Corvette_C6_2005_Base1_0 mesh20
+      N45 Wheel1A_3D
+        N46 3DWheel Front L M
+          N47 polySurface69
+            N48 polySurface69_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh21
+          N49 polySurface68
+            N50 polySurface68_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh22
+          N51 polySurface67
+            N52 polySurface67_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh23
+          N53 polySurface66
+            N54 polySurface66_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh24
+          N55 polySurface65
+            N56 polySurface65_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh25
+          N57 polySurface64
+            N58 polySurface64_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh26
+          N59 polySurface63
+            N60 polySurface63_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh27
+          N61 polySurface62
+            N62 polySurface62_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh28
+          N63 polySurface61
+            N64 polySurface61_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh29
+          N65 polySurface60
+            N66 polySurface60_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh30
+          N67 polySurface59
+            N68 polySurface59_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh31
+          N69 polySurface58
+            N70 polySurface58_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh32
+          N71 polySurface57
+            N72 polySurface57_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh33
+          N73 polySurface56
+            N74 polySurface56_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh34
+          N75 polySurface55
+            N76 polySurface55_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh35
+          N77 polySurface54
+            N78 polySurface54_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh36
+          N79 polySurface53
+            N80 polySurface53_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh37
+          N81 polySurface52
+            N82 polySurface52_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh38
+          N83 polySurface51
+            N84 polySurface51_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh39
+          N85 polySurface50
+            N86 polySurface50_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh40
+          N87 polySurface49
+            N88 polySurface49_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh41
+          N89 polySurface48
+            N90 polySurface48_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh42
+          N91 polySurface47
+            N92 polySurface47_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh43
+          N93 polySurface46
+            N94 polySurface46_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh44
+          N95 polySurface45
+            N96 polySurface45_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh45
+          N97 polySurface44
+            N98 polySurface44_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh46
+          N99 polySurface43
+            N100 polySurface43_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh47
+          N101 polySurface42
+            N102 polySurface42_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh48
+          N103 polySurface41
+            N104 polySurface41_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh49
+          N105 polySurface40
+            N106 polySurface40_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh50
+          N107 polySurface39
+            N108 polySurface39_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh51
+          N109 polySurface38
+            N110 polySurface38_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh52
+          N111 polySurface37
+            N112 polySurface37_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh53
+          N113 polySurface36
+            N114 polySurface36_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh54
+          N115 polySurface35
+            N116 polySurface35_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh55
+          N117 polySurface34
+            N118 polySurface34_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh56
+          N119 polySurface33
+            N120 polySurface33_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh57
+          N121 polySurface32
+            N122 polySurface32_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh58
+          N123 polySurface31
+            N124 polySurface31_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh59
+          N125 polySurface30
+            N126 polySurface30_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh60
+          N127 polySurface29
+            N128 polySurface29_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh61
+          N129 polySurface28
+            N130 polySurface28_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh62
+          N131 polySurface27
+            N132 polySurface27_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh63
+          N133 polySurface26
+            N134 polySurface26_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh64
+          N135 polySurface25
+            N136 polySurface25_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh65
+          N137 polySurface24
+            N138 polySurface24_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh66
+          N139 polySurface23
+            N140 polySurface23_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh67
+          N141 polySurface22
+            N142 polySurface22_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh68
+          N143 polySurface21
+            N144 polySurface21_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh69
+          N145 polySurface20
+            N146 polySurface20_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh70
+          N147 polySurface19
+            N148 polySurface19_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh71
+          N149 polySurface18
+            N150 polySurface18_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh72
+          N151 polySurface17
+            N152 polySurface17_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh73
+          N153 polySurface16
+            N154 polySurface16_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh74
+          N155 c:SM_Brake_FL_0000_001_SM_Brake_FL_0000_001_MAT_Tire_Brake_044 M
+            N156 c:SM_Brake_FL_0000_001_SM_Brake_FL_0000_001_MAT_Tire_Brake_044_c:MAT_Tire_Brake_045_0 mesh75
+          N157 c:SM_Hub_L_0000_001_SM_Hub_L_0000_001_MAT_Tire_Hub_018 M
+            N158 c:SM_Hub_L_0000_001_SM_Hub_L_0000_001_MAT_Tire_Hub_018_c:MAT_Tire_Hub_019_0 mesh76
+          N159 c:SM_Disk_L_0000_001_SM_Disk_L_0000_001_MAT_Tire_Disk_022 M
+            N160 c:SM_Disk_L_0000_001_SM_Disk_L_0000_001_MAT_Tire_Disk_022_c:MAT_Tire_Disk_023_0 mesh77
+        N161 3DWheel Front R M
+          N162 polySurface225 M
+            N163 polySurface225_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh78
+          N164 polySurface224 M
+            N165 polySurface224_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh79
+          N166 polySurface223 M
+            N167 polySurface223_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh80
+          N168 polySurface222 M
+            N169 polySurface222_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh81
+          N170 polySurface221 M
+            N171 polySurface221_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh82
+          N172 polySurface220 M
+            N173 polySurface220_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh83
+          N174 polySurface219 M
+            N175 polySurface219_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh84
+          N176 polySurface218 M
+            N177 polySurface218_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh85
+          N178 polySurface217 M
+            N179 polySurface217_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh86
+          N180 polySurface216 M
+            N181 polySurface216_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh87
+          N182 polySurface215 M
+            N183 polySurface215_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh88
+          N184 polySurface214 M
+            N185 polySurface214_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh89
+          N186 polySurface213 M
+            N187 polySurface213_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh90
+          N188 polySurface212 M
+            N189 polySurface212_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh91
+          N190 polySurface211 M
+            N191 polySurface211_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh92
+          N192 polySurface210 M
+            N193 polySurface210_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh93
+          N194 polySurface209 M
+            N195 polySurface209_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh94
+          N196 polySurface208 M
+            N197 polySurface208_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh95
+          N198 polySurface207 M
+            N199 polySurface207_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh96
+          N200 polySurface206 M
+            N201 polySurface206_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh97
+          N202 polySurface205 M
+            N203 polySurface205_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh98
+          N204 polySurface204 M
+            N205 polySurface204_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh99
+          N206 polySurface203 M
+            N207 polySurface203_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh100
+          N208 polySurface202 M
+            N209 polySurface202_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh101
+          N210 polySurface201 M
+            N211 polySurface201_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh102
+          N212 polySurface200 M
+            N213 polySurface200_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh103
+          N214 polySurface199 M
+            N215 polySurface199_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh104
+          N216 polySurface198 M
+            N217 polySurface198_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh105
+          N218 polySurface197 M
+            N219 polySurface197_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh106
+          N220 polySurface196 M
+            N221 polySurface196_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh107
+          N222 polySurface195 M
+            N223 polySurface195_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh108
+          N224 polySurface194 M
+            N225 polySurface194_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh109
+          N226 polySurface193 M
+            N227 polySurface193_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh110
+          N228 polySurface192 M
+            N229 polySurface192_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh111
+          N230 polySurface191 M
+            N231 polySurface191_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh112
+          N232 polySurface190 M
+            N233 polySurface190_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh113
+          N234 polySurface189 M
+            N235 polySurface189_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh114
+          N236 polySurface188 M
+            N237 polySurface188_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh115
+          N238 polySurface187 M
+            N239 polySurface187_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh116
+          N240 polySurface186 M
+            N241 polySurface186_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh117
+          N242 polySurface185 M
+            N243 polySurface185_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh118
+          N244 polySurface184 M
+            N245 polySurface184_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh119
+          N246 polySurface183 M
+            N247 polySurface183_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh120
+          N248 polySurface182 M
+            N249 polySurface182_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh121
+          N250 polySurface181 M
+            N251 polySurface181_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh122
+          N252 polySurface180 M
+            N253 polySurface180_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh123
+          N254 polySurface179 M
+            N255 polySurface179_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh124
+          N256 polySurface178 M
+            N257 polySurface178_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh125
+          N258 polySurface177 M
+            N259 polySurface177_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh126
+          N260 polySurface176 M
+            N261 polySurface176_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh127
+          N262 polySurface175 M
+            N263 polySurface175_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh128
+          N264 polySurface174 M
+            N265 polySurface174_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh129
+          N266 polySurface173 M
+            N267 polySurface173_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh130
+          N268 polySurface172 M
+            N269 polySurface172_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh131
+          N270 c:SM_Hub_R_0000_001_SM_Hub_R_0000_001_MAT_Tire_Hub_027 M
+            N271 c:SM_Hub_R_0000_001_SM_Hub_R_0000_001_MAT_Tire_Hub_027_c:MAT_Tire_Hub_019_0 mesh132
+          N272 c:SM_Brake_FR_0000_001_SM_Brake_FR_0000_001_MAT_Tire_Brake_055 M
+            N273 c:SM_Brake_FR_0000_001_SM_Brake_FR_0000_001_MAT_Tire_Brake_055_c:MAT_Tire_Brake_045_0 mesh133
+          N274 c:SM_Disk_R_0000_001_SM_Disk_R_0000_001_MAT_Tire_Disk_033 M
+            N275 c:SM_Disk_R_0000_001_SM_Disk_R_0000_001_MAT_Tire_Disk_033_c:MAT_Tire_Disk_023_0 mesh134
+        N276 3DWheel Rear L M
+          N277 SM_Hub_L_0000_001_SM_Hub_L_0000_001_MAT_Tire_Hub_018 M
+            N278 SM_Hub_L_0000_001_SM_Hub_L_0000_001_MAT_Tire_Hub_018_c:MAT_Tire_Hub_019_0 mesh135
+          N279 SM_Disk_L_0000_001_SM_Disk_L_0000_001_MAT_Tire_Disk_022 M
+            N280 SM_Disk_L_0000_001_SM_Disk_L_0000_001_MAT_Tire_Disk_022_c:MAT_Tire_Disk_023_0 mesh136
+          N281 c:SM_Brake_RL_0000_001_SM_Brake_RL_0000_001_MAT_Tire_Brake_066 M
+            N282 c:SM_Brake_RL_0000_001_SM_Brake_RL_0000_001_MAT_Tire_Brake_066_c:MAT_Tire_Brake_045_0 mesh137
+          N283 polySurface472
+            N284 polySurface472_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh138
+          N285 polySurface471
+            N286 polySurface471_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh139
+          N287 polySurface470
+            N288 polySurface470_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh140
+          N289 polySurface469
+            N290 polySurface469_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh141
+          N291 polySurface468
+            N292 polySurface468_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh142
+          N293 polySurface467
+            N294 polySurface467_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh143
+          N295 polySurface466
+            N296 polySurface466_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh144
+          N297 polySurface465
+            N298 polySurface465_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh145
+          N299 polySurface464
+            N300 polySurface464_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh146
+          N301 polySurface463
+            N302 polySurface463_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh147
+          N303 polySurface462
+            N304 polySurface462_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh148
+          N305 polySurface461
+            N306 polySurface461_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh149
+          N307 polySurface460
+            N308 polySurface460_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh150
+          N309 polySurface459
+            N310 polySurface459_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh151
+          N311 polySurface458
+            N312 polySurface458_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh152
+          N313 polySurface457
+            N314 polySurface457_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh153
+          N315 polySurface456
+            N316 polySurface456_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh154
+          N317 polySurface455
+            N318 polySurface455_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh155
+          N319 polySurface454
+            N320 polySurface454_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh156
+          N321 polySurface453
+            N322 polySurface453_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh157
+          N323 polySurface452
+            N324 polySurface452_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh158
+          N325 polySurface451
+            N326 polySurface451_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh159
+          N327 polySurface450
+            N328 polySurface450_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh160
+          N329 polySurface449
+            N330 polySurface449_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh161
+          N331 polySurface448
+            N332 polySurface448_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh162
+          N333 polySurface447
+            N334 polySurface447_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh163
+          N335 polySurface446
+            N336 polySurface446_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh164
+          N337 polySurface445
+            N338 polySurface445_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh165
+          N339 polySurface444
+            N340 polySurface444_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh166
+          N341 polySurface443
+            N342 polySurface443_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh167
+          N343 polySurface442
+            N344 polySurface442_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh168
+          N345 polySurface441
+            N346 polySurface441_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh169
+          N347 polySurface440
+            N348 polySurface440_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh170
+          N349 polySurface439
+            N350 polySurface439_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh171
+          N351 polySurface438
+            N352 polySurface438_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh172
+          N353 polySurface437
+            N354 polySurface437_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh173
+          N355 polySurface436
+            N356 polySurface436_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh174
+          N357 polySurface435
+            N358 polySurface435_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh175
+          N359 polySurface434
+            N360 polySurface434_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh176
+          N361 polySurface433
+            N362 polySurface433_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh177
+          N363 polySurface432
+            N364 polySurface432_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh178
+          N365 polySurface431
+            N366 polySurface431_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh179
+          N367 polySurface430
+            N368 polySurface430_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh180
+          N369 polySurface429
+            N370 polySurface429_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh181
+          N371 polySurface428
+            N372 polySurface428_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh182
+          N373 polySurface427
+            N374 polySurface427_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh183
+          N375 polySurface426
+            N376 polySurface426_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh184
+          N377 polySurface425
+            N378 polySurface425_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh185
+          N379 polySurface424
+            N380 polySurface424_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh186
+          N381 polySurface423
+            N382 polySurface423_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh187
+          N383 polySurface422
+            N384 polySurface422_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh188
+          N385 polySurface421
+            N386 polySurface421_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh189
+          N387 polySurface420
+            N388 polySurface420_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh190
+          N389 polySurface419
+            N390 polySurface419_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh191
+        N391 3DWheel Rear R M
+          N392 polySurface646 M
+            N393 polySurface646_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh192
+          N394 polySurface645 M
+            N395 polySurface645_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh193
+          N396 polySurface644 M
+            N397 polySurface644_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh194
+          N398 polySurface643 M
+            N399 polySurface643_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh195
+          N400 polySurface642 M
+            N401 polySurface642_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh196
+          N402 polySurface641 M
+            N403 polySurface641_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh197
+          N404 polySurface640 M
+            N405 polySurface640_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh198
+          N406 polySurface639 M
+            N407 polySurface639_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh199
+          N408 polySurface638 M
+            N409 polySurface638_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh200
+          N410 polySurface637 M
+            N411 polySurface637_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh201
+          N412 polySurface636 M
+            N413 polySurface636_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh202
+          N414 polySurface635 M
+            N415 polySurface635_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh203
+          N416 polySurface634 M
+            N417 polySurface634_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh204
+          N418 polySurface633 M
+            N419 polySurface633_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh205
+          N420 polySurface632 M
+            N421 polySurface632_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh206
+          N422 polySurface631 M
+            N423 polySurface631_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh207
+          N424 polySurface630 M
+            N425 polySurface630_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh208
+          N426 polySurface629 M
+            N427 polySurface629_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh209
+          N428 polySurface628 M
+            N429 polySurface628_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh210
+          N430 polySurface627 M
+            N431 polySurface627_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh211
+          N432 polySurface626 M
+            N433 polySurface626_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh212
+          N434 polySurface625 M
+            N435 polySurface625_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh213
+          N436 polySurface624 M
+            N437 polySurface624_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh214
+          N438 polySurface623 M
+            N439 polySurface623_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh215
+          N440 polySurface622 M
+            N441 polySurface622_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh216
+          N442 polySurface621 M
+            N443 polySurface621_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh217
+          N444 polySurface620 M
+            N445 polySurface620_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh218
+          N446 polySurface619 M
+            N447 polySurface619_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh219
+          N448 polySurface618 M
+            N449 polySurface618_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh220
+          N450 polySurface617 M
+            N451 polySurface617_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh221
+          N452 polySurface616 M
+            N453 polySurface616_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh222
+          N454 polySurface615 M
+            N455 polySurface615_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh223
+          N456 polySurface614 M
+            N457 polySurface614_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh224
+          N458 polySurface613 M
+            N459 polySurface613_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh225
+          N460 polySurface612 M
+            N461 polySurface612_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh226
+          N462 polySurface611 M
+            N463 polySurface611_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh227
+          N464 polySurface610 M
+            N465 polySurface610_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh228
+          N466 polySurface609 M
+            N467 polySurface609_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh229
+          N468 polySurface608 M
+            N469 polySurface608_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh230
+          N470 polySurface607 M
+            N471 polySurface607_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh231
+          N472 polySurface606 M
+            N473 polySurface606_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh232
+          N474 polySurface605 M
+            N475 polySurface605_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh233
+          N476 polySurface604 M
+            N477 polySurface604_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh234
+          N478 polySurface603 M
+            N479 polySurface603_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh235
+          N480 polySurface602 M
+            N481 polySurface602_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh236
+          N482 polySurface601 M
+            N483 polySurface601_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh237
+          N484 polySurface600 M
+            N485 polySurface600_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh238
+          N486 polySurface599 M
+            N487 polySurface599_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh239
+          N488 polySurface598 M
+            N489 polySurface598_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh240
+          N490 polySurface597 M
+            N491 polySurface597_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh241
+          N492 polySurface596 M
+            N493 polySurface596_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh242
+          N494 polySurface595 M
+            N495 polySurface595_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh243
+          N496 polySurface594 M
+            N497 polySurface594_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh244
+          N498 polySurface593 M
+            N499 polySurface593_C:Chevrolet_CorvetteGrandSport_2017_Wheel1A_3D_3DWheel1A_Material1_0 mesh245
+          N500 c:SM_Brake_RR_0000_001_SM_Brake_RR_0000_001_MAT_Tire_Brake_077 M
+            N501 c:SM_Brake_RR_0000_001_SM_Brake_RR_0000_001_MAT_Tire_Brake_077_c:MAT_Tire_Brake_045_0 mesh246
+          N502 SM_Hub_R_0000_001_SM_Hub_R_0000_001_MAT_Tire_Hub_027 M
+            N503 SM_Hub_R_0000_001_SM_Hub_R_0000_001_MAT_Tire_Hub_027_c:MAT_Tire_Hub_019_0 mesh247
+          N504 SM_Disk_R_0000_001_SM_Disk_R_0000_001_MAT_Tire_Disk_033 M
+            N505 SM_Disk_R_0000_001_SM_Disk_R_0000_001_MAT_Tire_Disk_033_c:MAT_Tire_Disk_023_0 mesh248
