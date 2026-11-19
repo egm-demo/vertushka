@@ -5,3 +5,6 @@
 - 2016 Porsche Cayenne Turbo S — CC BY-NC-SA 4.0 — sketchfab.com/3d-models/802e8c1f2c1341d9a5c026cabe952832
 - 2004 Audi A8 4.2 Quattro (D3) — CC BY 4.0 — sketchfab.com/3d-models/dcd10d441a574bf79d3a30f94d9750a9
 NC = только некоммерческое использование.
+
+w210n.glb: "1998 Mercedes-Benz E55 AMG (W210)" — Sketchfab af8a496d11ac46b2b4cff23197e6992a, CC BY 4.0
+a8n.glb: "2008 Audi A8 W12" — Sketchfab 47237a28d7f548bd865c3b3552dc493f, CC BY 4.0

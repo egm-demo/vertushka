@@ -1,8 +1,8 @@
 /* --- настоящие 3D-модели машин игрока (GLB, встроены в файл) --- */
-const WR={w210:/^tire1$|Tire_Hub|Tire_Disk/,g:/Mesh(rim|tire|Disk)/,vette:/Tire_Hub|Tire_Disk|Wheel1A/,cay:/^material$|^tire$|^phong16$/,a8:/^material_1[012]$/},
-  LR={w210:/Lights/,g:/^Light|red_glass/,vette:/Lights/,cay:/^light$|^Light_R$/,a8:/^$/};
-const MCFG={w210:{f:'w210',paint:/Metallic_Grey/},w210c:{f:'w210',paint:/Metallic_Grey/,open:.62},g:{f:'g',paint:/^carpaint$/},
-  c6:{f:'vette',paint:/Base1/},cay:{f:'cay',paint:/^car.*int$/},a8:{f:'a8',paint:/^Meshpart17Mtl$/}};
+const WR={w210n:/^Mesheswheel00[345]wheel00[456]1Mtl$/,a8n:/^(wheel_b|torm_disk_a8|mesh_spec)$/,w210:/^tire1$|Tire_Hub|Tire_Disk/,g:/Mesh(rim|tire|Disk)/,vette:/Tire_Hub|Tire_Disk|Wheel1A/,cay:/^material$|^tire$|^phong16$/,a8:/^material_1[012]$/},
+  LR={w210n:/^(L1Mtl|Meshesheadlights00021Mtl|Meshestaillights00011Mtl|B1Mtl)$/,a8n:/^(light_glass|lights_back_on|lights_glass)$/,w210:/Lights/,g:/^Light|red_glass/,vette:/Lights/,cay:/^light$|^Light_R$/,a8:/^$/};
+const MCFG={w210:{f:'w210n',paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/},w210c:{f:'w210n',paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/,open:.62},g:{f:'g',paint:/^carpaint$/},
+  c6:{f:'vette',paint:/Base1/},cay:{f:'cay',paint:/^car.*int$/},a8:{f:'a8n',paint:/^body$/,glass:/^(vehicle_generic_glasswindows2|windows_int)$/}};
 // разрезать меш на части по треугольникам: key(cx,cy,cz)-> ключ или null; геометрия в координатах корня (g)
 function splitMesh(o,key){const ge=o.geometry,idx=ge.index?ge.index.array:null,n=idx?idx.length:ge.attributes.position.count,mw=o.matrixWorld,nm=new T.Matrix3().getNormalMatrix(mw);
   const P=ge.attributes.position,v=new T.Vector3(),wp=new Float32Array(P.count*3);for(let i=0;i<P.count;i++){v.fromBufferAttribute(P,i).applyMatrix4(mw);wp[i*3]=v.x;wp[i*3+1]=v.y;wp[i*3+2]=v.z}
@@ -38,7 +38,8 @@ function fitMdl(src,pg,cf){const g=new T.Group(),m=src.clone(true);g.add(m);m.up
   m.position.x-=c.x;m.position.z+=(pb.max.z+pb.min.z)/2-c.z;m.position.y-=bb.min.y;g.updateMatrixWorld(true);
   if(cf.open){bb.setFromObject(m);cutTop(m,bb.min.y+(bb.max.y-bb.min.y)*cf.open)}
   const paint=[];m.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;o.frustumCulled=false;const mt=o.material;
-    if(mt&&cf.paint.test(mt.name||''))paint.push(o);else if(mt&&mt.transparent&&/glass|Translucent/i.test(mt.name||'')){o.renderOrder=2;mt.depthWrite=false}});
+    if(mt&&((cf.glass&&cf.glass.test(mt.name||''))||(cf.glassN&&cf.glassN.test(o.name+' '+(o.parent&&o.parent.name||''))))){const gm=mt.clone();gm.map=null;gm.color=new T.Color(0x0a0d12);gm.transparent=true;gm.opacity=.28;gm.depthWrite=false;gm.metalness=0;gm.roughness=.05;gm.envMapIntensity=1;o.material=gm;o.renderOrder=2;o.castShadow=false}
+    else if(mt&&cf.paint.test(mt.name||''))paint.push(o);else if(mt&&mt.transparent&&/glass|Translucent/i.test(mt.name||'')){o.renderOrder=2;mt.depthWrite=false}});
   g.userData.paint=paint;g.updateMatrixWorld(true);
   const wr=WR[cf.f],lr=LR[cf.f],wl=[],ll=[];m.traverse(o=>{if(!o.isMesh||!o.material)return;const nm=o.material.name||'';if(wr.test(nm))wl.push(o);else if(lr.test(nm))ll.push(o)});
   // колёса: 4 группы по четвертям

@@ -1,0 +1,178 @@
+==  src/gn.glb nodes 105 meshes 54 mats 17 tex 0 imgs 
+  M 0:jeep__paint col=0.05,0.05,0.05,1.00 tex=0 met=undefined r=0.08 a= em=
+  M 1:red_emission col=0.80,0.80,0.80,1.00 tex=0 met=undefined r=0.5 a= em=1,0,0
+  M 2:Material.001 col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.5 a= em=0.100492,0.100492,0.100492
+  M 3:Material.002 col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.5 a= em=
+  M 4:Elastic_Rubber col=0.00,0.00,0.00,1.00 tex=0 met=0.76489555606446 r=0.4126609921369232 a= em=
+  M 5:silver_rim col=0.60,0.60,0.60,1.00 tex=0 met=undefined r=0.321818 a= em=
+  M 6:logo col=0.80,0.80,0.80,1.00 tex=0 met=undefined r=0.143636 a= em=
+  M 7:front col=0.00,0.00,0.00,1.00 tex=0 met=undefined r=0.5 a= em=
+  M 8:grill col=0.00,0.00,0.00,1.00 tex=0 met=undefined r=undefined a= em=
+  M 9:handle_button col=0.00,0.00,0.00,1.00 tex=0 met=0 r=0.5 a= em=
+  M 10:door_handle col=0.00,0.00,0.00,1.00 tex=0 met=0.763636 r=0.5 a= em=
+  M 11:blue_emission col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.5 a= em=0,0.2534449999999999,0.9074159999999998
+  M 12:rim_black col=0.02,0.02,0.02,1.00 tex=0 met=0 r=0.5 a= em=
+  M 13:mirror col=0.00,0.00,0.00,1.00 tex=0 met=undefined r=0 a= em=
+  M 14:back_light_transparent col=0.80,0.80,0.80,0.00 tex=0 met=undefined r=0.5 a=BLEND em=1,0,0
+  M 15:Material.004 col= tex=0 met=0.603636 r=0.332727 a= em=
+  M 16:white_emission col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.5 a= em=1,1,1
+  mesh0 Object_0 mat=0 tri=5307 min=-2.09,1.27,-8.46 max=2.09,4.58,1.41
+  mesh1 Object_1 mat=0 tri=840 min=-1.20,1.93,-8.79 max=1.20,4.38,-8.45
+  mesh2 Object_2 mat=1 tri=436 min=-3.27,-0.11,-0.08 max=0.23,-0.09,0.08
+  mesh3 Object_3 mat=2 tri=34 min=-3.24,-0.11,-0.06 max=0.20,-0.11,0.06
+  mesh4 Object_4 mat=3 tri=100 min=-3.25,-0.11,-0.07 max=0.21,-0.09,0.07
+  mesh5 Object_5 mat=4 tri=2560 min=-1.15,-6.40,-0.86 max=1.00,0.53,1.30
+  mesh6 Object_6 mat=5 tri=2048 min=-0.68,0.55,-0.68 max=0.68,3.74,0.68
+  mesh7 Object_7 mat=5 tri=2048 min=-0.68,-4.32,-0.68 max=0.68,0.04,0.68
+  mesh8 Object_8 mat=6 tri=640 min=-1.00,-46.72,-1.00 max=1.00,0.02,1.00
+  mesh9 Object_9 mat=6 tri=24 min=-1.73,-120.59,-1.70 max=2.26,0.11,2.29
+  mesh10 Object_10 mat=7 tri=384 min=-0.21,-4.30,-0.21 max=0.21,0.02,0.21
+  mesh11 Object_11 mat=8 tri=504 min=-0.01,-0.26,-0.02 max=1.70,0.27,0.01
+  mesh12 Object_12 mat=8 tri=600 min=-0.05,-0.26,-0.01 max=1.25,0.27,-0.01
+  mesh13 Object_13 mat=9 tri=888 min=-1.00,-196.68,-1.00 max=1.00,1.00,1.00
+  mesh14 Object_14 mat=10 tri=888 min=-1.00,-231.88,-1.00 max=1.00,1.00,1.00
+  mesh15 Object_15 mat=9 tri=888 min=-1.00,-169.31,-1.00 max=1.00,1.00,1.00
+  mesh16 Object_16 mat=10 tri=888 min=-1.00,-199.82,-1.00 max=1.00,1.00,1.00
+  mesh17 Object_17 mat=9 tri=444 min=-1.00,-1.00,-1.00 max=1.00,1.00,1.00
+  mesh18 Object_18 mat=10 tri=444 min=-1.00,-1.00,-1.00 max=1.00,1.00,1.00
+  mesh19 Object_19 mat=10 tri=716 min=-0.08,-0.04,-0.21 max=0.01,0.04,0.20
+  mesh20 Object_20 mat=10 tri=1432 min=-3.80,-0.04,-0.19 max=0.01,0.04,0.16
+  mesh21 Object_21 mat=10 tri=1432 min=-3.80,-0.04,-0.19 max=0.01,0.04,0.16
+  mesh22 Object_22 mat=11 tri=256 min=-26.24,-0.52,-1.00 max=1.00,0.04,1.00
+  mesh23 Object_23 mat=0 tri=1468 min=-1.88,1.68,-3.88 max=1.88,4.37,-1.81
+  mesh24 Object_24 mat=4 tri=2560 min=-1.15,-6.40,-0.86 max=1.00,0.53,1.30
+  mesh25 Object_25 mat=5 tri=2048 min=-0.68,0.55,-0.68 max=0.68,3.74,0.68
+  mesh26 Object_26 mat=5 tri=1792 min=-0.68,-4.32,-0.68 max=0.68,0.04,0.68
+  mesh27 Object_27 mat=12 tri=256 min=-0.23,-4.30,-0.23 max=0.23,0.02,0.23
+  mesh28 Object_28 mat=6 tri=640 min=-1.00,-46.72,-1.00 max=1.00,0.02,1.00
+  mesh29 Object_29 mat=6 tri=24 min=-1.73,-120.59,-1.70 max=2.26,0.11,2.29
+  mesh30 Object_30 mat=7 tri=384 min=-0.22,-4.29,-0.22 max=0.22,0.00,0.22
+  mesh31 Object_31 mat=6 tri=320 min=-1.00,-0.05,-1.00 max=1.00,0.02,1.00
+  mesh32 Object_32 mat=6 tri=320 min=-1.00,-0.05,-1.00 max=1.00,0.02,1.00
+  mesh33 Object_33 mat=6 tri=12 min=-1.73,-0.00,-1.70 max=2.26,0.11,2.29
+  mesh34 Object_34 mat=6 tri=12 min=-1.73,-0.00,-1.70 max=2.26,0.11,2.29
+  mesh35 Object_35 mat=0 tri=1204 min=-1.88,1.68,-6.05 max=1.88,4.37,-3.97
+  mesh36 Object_36 mat=8 tri=37128 min=-1.13,-0.32,-9.58 max=46.43,0.00,0.90
+  mesh37 Object_37 mat=13 tri=20 min=-1.58,3.28,-2.32 max=1.58,4.24,-1.74
+  mesh38 Object_38 mat=0 tri=3986 min=-2.02,1.33,-8.90 max=2.02,4.37,-5.76
+  mesh39 Object_39 mat=0 tri=80 min=-1.05,3.18,-8.70 max=1.05,4.26,-8.48
+  mesh40 Object_40 mat=14 tri=392 min=-1.79,1.98,-8.79 max=1.79,2.21,-8.75
+  mesh41 Object_41 mat=7 tri=388 min=-1.19,1.25,0.69 max=1.19,1.40,1.43
+  mesh42 Object_42 mat=7 tri=104 min=-0.97,1.54,1.27 max=0.97,1.99,1.42
+  mesh43 Object_43 mat=0 tri=1004 min=-1.23,-0.02,-1.23 max=1.23,0.83,1.23
+  mesh44 Object_44 mat=15 tri=132 min=-0.25,-0.02,-0.21 max=0.96,-0.01,0.18
+  mesh45 Object_45 mat=8 tri=31567 min=-87.18,-12.52,-13.92 max=22.88,3.08,0.90
+  mesh46 Object_46 mat=8 tri=21473 min=-87.18,-12.52,-13.92 max=22.88,3.08,0.90
+  mesh47 Object_47 mat=16 tri=832 min=-35.72,0.20,-0.98 max=0.98,1.00,0.98
+  mesh48 Object_48 mat=8 tri=35137 min=-1.66,-0.33,-15.06 max=54.92,0.01,0.75
+  mesh49 Object_49 mat=8 tri=20555 min=-1.66,-0.33,-15.06 max=54.92,0.01,0.75
+  mesh50 Object_50 mat=13 tri=52 min=-1.73,3.24,-3.74 max=1.73,4.29,-1.99
+  mesh51 Object_51 mat=13 tri=44 min=-1.73,3.25,-5.80 max=1.73,4.28,-4.15
+  mesh52 Object_52 mat=13 tri=80 min=-1.73,3.26,-8.40 max=1.73,4.27,-6.14
+  mesh53 Object_53 mat=13 tri=72 min=-0.94,3.26,-8.69 max=0.94,4.19,-8.49
+tri 187887
+N0 Sketchfab_model M
+  N1 root
+    N2 GLTF_SceneRootNode M
+      N3 front body_48 M
+        N4 Object_4 mesh0
+        N5 back door_0
+          N6 Object_6 mesh1
+        N7 back light_1 M
+          N8 Object_8 mesh2
+          N9 Object_9 mesh3
+          N10 Object_10 mesh4
+        N11 back tyre_6 M
+          N12 Object_12 mesh5
+          N13 back wheel inner rim_2 M
+            N14 Object_14 mesh6
+          N15 back wheel rim_3 M
+            N16 Object_16 mesh7
+          N17 logo border back_4 M
+            N18 Object_18 mesh8
+          N19 logo centre back _5 M
+            N20 Object_20 mesh9
+        N21 back wheel holder_7 M
+          N22 Object_22 mesh10
+        N23 Cube.001_8 M
+          N24 Object_24 mesh11
+        N25 Cube.002_9 M
+          N26 Object_26 mesh12
+        N27 Cylinder.001_10 M
+          N28 Object_28 mesh13
+        N29 Cylinder.002_11 M
+          N30 Object_30 mesh14
+        N31 Cylinder.003_12 M
+          N32 Object_32 mesh15
+        N33 Cylinder.004_13 M
+          N34 Object_34 mesh16
+        N35 Cylinder.005_14 M
+          N36 Object_36 mesh17
+        N37 Cylinder.006_15 M
+          N38 Object_38 mesh18
+        N39 door handle back_16 M
+          N40 Object_40 mesh19
+        N41 door handle front_17 M
+          N42 Object_42 mesh20
+        N43 door handle middle_18 M
+          N44 Object_44 mesh21
+        N45 front blue light_19 M
+          N46 Object_46 mesh22
+        N47 front door_20
+          N48 Object_48 mesh23
+        N49 front tyre_25 M
+          N50 Object_50 mesh24
+          N51 front wheel inner rim_21 M
+            N52 Object_52 mesh25
+          N53 front wheel rim_22 M
+            N54 Object_54 mesh26
+            N55 Object_55 mesh27
+          N56 logo border front _23 M
+            N57 Object_57 mesh28
+          N58 logo centre front _24 M
+            N59 Object_59 mesh29
+        N60 front wheel holder_26 M
+          N61 Object_61 mesh30
+        N62 logo border_28 M
+          N63 Object_63 mesh31
+        N64 logo border rear side_29 M
+          N65 Object_65 mesh32
+        N66 logo centre_30 M
+          N67 Object_67 mesh33
+        N68 logo centre rear side_31 M
+          N69 Object_69 mesh34
+        N70 middle door_32
+          N71 Object_71 mesh35
+        N72 middle grill_33 M
+          N73 Object_73 mesh36
+        N74 Plane.002_34
+          N75 Object_75 mesh37
+        N76 Plane.006_35
+          N77 Object_77 mesh38
+        N78 Plane.009_36
+          N79 Object_79 mesh39
+        N80 Plane.011_37 M
+          N81 Object_81 mesh40
+        N82 Plane.012_38
+          N83 Object_83 mesh41
+        N84 Plane.015_39
+          N85 Object_85 mesh42
+        N86 showcase wheel_40 M
+          N87 Object_87 mesh43
+          N88 Object_88 mesh44
+        N89 side grill_41 M
+          N90 Object_90 mesh45
+          N91 Object_91 mesh46
+        N92 Sphere_42 M
+          N93 Object_93 mesh47
+        N94 upper grill_43 M
+          N95 Object_95 mesh48
+          N96 Object_96 mesh49
+        N97 window 1_44
+          N98 Object_98 mesh50
+        N99 window 2_45
+          N100 Object_100 mesh51
+        N101 window 3_46
+          N102 Object_102 mesh52
+        N103 window 4_47
+          N104 Object_104 mesh53

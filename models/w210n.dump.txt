@@ -1,0 +1,459 @@
+==  src/w210n.glb nodes 269 meshes 133 mats 55 tex 34 imgs 158705,65354,51116,9989,158705,64695,30404,136620,45179,53175,4181,35213,30807,1533,340582,63192,96040,215013,340582,215013,30025,340582,215013,30025,340582,215013,30025,340582,215013,30025,30025,30025,133332,378170
+  M 0:Meshesdoorrfok0061Mtl col=0.00,0.00,0.00,1.00 tex=0 met=0 r=undefined a= em=
+  M 1:Meshestaillights00011Mtl col=0.00,0.00,0.00,1.00 tex=0 met=0 r=undefined a= em=
+  M 2:B1Mtl col=0.18,0.00,0.00,1.00 tex=0 met=0 r=undefined a= em=
+  M 3:L1Mtl col=0.94,0.94,0.94,1.00 tex=0 met=0 r=undefined a= em=
+  M 4:Paint1Mtl.004 col=0.85,0.83,0.83,1.00 tex=0 met=0 r=0.7820248343882321 a= em=
+  M 5:L3Mtl col=0.62,0.62,0.62,1.00 tex=0 met=0 r=undefined a= em=
+  M 6:L4Mtl col=0.60,0.61,0.65,1.00 tex=0 met=0 r=undefined a= em=
+  M 7:L5Mtl col=0.41,0.00,0.00,1.00 tex=0 met=0 r=undefined a= em=
+  M 8:Ri1Mtl col=0.77,0.33,0.05,1.00 tex=0 met=0 r=undefined a= em=
+  M 9:Meshesdoorlfok0101Mtl col=0.00,0.00,0.00,1.00 tex=0 met=0 r=undefined a= em=
+  M 10:Meshesbodyshellbodyshell0021Mtl col=0.37,0.37,0.38,1.00 tex=0 met=0 r=undefined a= em=
+  M 11:Meshesbodyshellbodyshell0051Mtl col=0.02,0.02,0.02,1.00 tex=0 met=0 r=undefined a= em=
+  M 12:Meshesbootok0021Mtl col=0.00,0.00,0.00,1.00 tex=0 met=0 r=undefined a= em=
+  M 13:Meshesbootok006bootok0161Mtl col= tex=1 met=0 r=undefined a= em=
+  M 14:Meshesbootok1Mtl col= tex=1 met=0 r=undefined a= em=
+  M 15:Meshesbumperf0bumperf00031Mtl col= tex=1 met=0 r=undefined a= em=
+  M 16:Meshesbumperf0bumperf00041Mtl col= tex=1 met=0 r=undefined a= em=
+  M 17:Mesheschassis0011Mtl col=0.11,0.11,0.11,1.00 tex=0 met=0 r=undefined a= em=
+  M 18:Mesheschassis0031Mtl col= tex=1 met=0 r=undefined a= em=
+  M 19:Mesheschassis0051Mtl col=0.03,0.03,0.03,1.00 tex=0 met=0 r=undefined a= em=
+  M 20:Mesheschassis0061Mtl col=0.04,0.04,0.04,1.00 tex=0 met=0 r=undefined a= em=
+  M 21:Mesheschassis0071Mtl col= tex=1 met=0 r=undefined a= em=
+  M 22:Mesheschassis0081Mtl col= tex=1 met=0 r=undefined a= em=
+  M 23:Mesheschassis0091Mtl col= tex=1 met=0 r=undefined a= em=
+  M 24:Mesheschassis0101Mtl col= tex=1 met=0 r=undefined a= em=
+  M 25:Mesheschassis0111Mtl col= tex=1 met=0 r=undefined a= em=
+  M 26:Mesheschassis0121Mtl col= tex=1 met=0 r=undefined a= em=
+  M 27:Mesheschassis0131Mtl col= tex=1 met=0 r=undefined a= em=
+  M 28:Mesheschassis0141Mtl col= tex=1 met=0 r=undefined a= em=
+  M 29:Mesheschassis0151Mtl col= tex=0 met=0 r=undefined a= em=
+  M 30:Mesheschassis0161Mtl col= tex=1 met=0 r=undefined a= em=
+  M 31:Mesheschassis0171Mtl col= tex=1 met=0 r=undefined a= em=
+  M 32:Mesheschassis0201Mtl col=0.05,0.05,0.05,1.00 tex=0 met=0 r=undefined a= em=
+  M 33:Mesheschassis0211Mtl col= tex=1 met=0 r=undefined a= em=
+  M 34:Mesheschassis0231Mtl col= tex=1 met=0 r=undefined a= em=
+  M 35:Mesheschassis1Mtl col= tex=1 met=0 r=undefined a= em=
+  M 36:Meshesdoorlfok0071Mtl col= tex=1 met=0 r=undefined a= em=
+  M 37:Meshesdoorlfok0081Mtl col= tex=1 met=0 r=undefined a= em=
+  M 38:Meshesdoorlfok0091Mtl col= tex=1 met=0 r=undefined a= em=
+  M 39:Meshesdoorlrokdoorlrok0061Mtl col= tex=1 met=0 r=undefined a= em=
+  M 40:Meshesdoorlrokdoorlrok0071Mtl col= tex=1 met=0 r=undefined a= em=
+  M 41:Meshesdoorlrokdoorlrok0081Mtl col= tex=1 met=0 r=undefined a= em=
+  M 42:Meshesdoorrfok0071Mtl col= tex=1 met=0 r=undefined a= em=
+  M 43:Meshesdoorrfok0081Mtl col= tex=1 met=0 r=undefined a= em=
+  M 44:Meshesdoorrfok0091Mtl col= tex=1 met=0 r=undefined a= em=
+  M 45:Meshesdoorrrokdoorrrok0061Mtl col= tex=1 met=0 r=undefined a= em=
+  M 46:Meshesdoorrrokdoorrrok0071Mtl col= tex=1 met=0 r=undefined a= em=
+  M 47:Meshesdoorrrokdoorrrok0081Mtl col= tex=1 met=0 r=undefined a= em=
+  M 48:Meshesexhaustokexhaustok0001Mtl col=0.12,0.11,0.12,1.00 tex=0 met=0 r=undefined a= em=
+  M 49:Meshesheadlights00021Mtl col=0.00,0.00,0.00,1.00 tex=0 met=0 r=undefined a= em=
+  M 50:Meshesinteriorinterior0011Mtl col= tex=1 met=0 r=undefined a= em=
+  M 51:Meshessteeringwheel1Mtl col= tex=1 met=0 r=undefined a= em=
+  M 52:Mesheswheel003wheel0041Mtl col=0.33,0.33,0.33,1.00 tex=0 met=0 r=undefined a= em=
+  M 53:Mesheswheel004wheel0051Mtl col= tex=1 met=0 r=undefined a= em=
+  M 54:Mesheswheel005wheel0061Mtl col= tex=1 met=0 r=undefined a= em=
+  mesh0 1_Meshesdoorrfok0061Mtl_0 mat=0 tri=50 min=14.76,1.01,30.23 max=15.44,3.22,34.46
+  mesh1 2_Meshesdoorrfok0061Mtl_0 mat=0 tri=2428 min=17.35,1.07,39.71 max=20.12,2.63,40.26
+  mesh2 3_Meshesdoorrfok0061Mtl_0 mat=0 tri=50 min=22.04,1.01,30.23 max=22.71,3.22,34.46
+  mesh3 4_Meshesdoorrfok0061Mtl_0 mat=0 tri=26 min=15.06,1.07,27.35 max=15.12,1.16,30.18
+  mesh4 5_Meshesdoorrfok0061Mtl_0 mat=0 tri=134 min=15.15,0.88,38.66 max=22.32,0.95,40.40
+  mesh5 6_Meshesdoorrfok0061Mtl_0 mat=0 tri=26 min=22.35,1.07,27.35 max=22.41,1.16,30.18
+  mesh6 7_Meshesdoorrfok0061Mtl_0 mat=0 tri=1173 min=16.45,2.78,21.26 max=21.01,3.09,21.41
+  mesh7 8_Meshestaillights00011Mtl_0 mat=1 tri=302 min=15.88,0.03,39.93 max=21.59,0.41,40.26
+  mesh8 B1_B1Mtl_0 mat=2 tri=86 min=16.51,1.81,21.26 max=20.96,2.22,21.35
+  mesh9 B2_B1Mtl_0 mat=2 tri=336 min=15.62,1.84,21.37 max=21.85,2.19,21.77
+  mesh10 L1_L1Mtl_0 mat=3 tri=1250 min=15.58,1.37,39.24 max=21.89,1.94,39.92
+  mesh11 L2_Paint1Mtl.004_0 mat=4 tri=50 min=17.79,-0.05,40.00 max=17.84,-0.00,40.05
+  mesh12 L3_L3Mtl_0 mat=5 tri=80 min=18.36,-0.04,40.60 max=18.41,0.01,40.66
+  mesh13 L4_L4Mtl_0 mat=6 tri=62 min=16.41,2.21,21.26 max=21.06,2.47,21.37
+  mesh14 L5_L5Mtl_0 mat=7 tri=238 min=18.75,1.25,21.77 max=19.23,1.85,21.93
+  mesh15 Li1_Ri1Mtl_0 mat=8 tri=92 min=21.17,1.89,39.26 max=21.88,2.23,39.58
+  mesh16 Li2_Ri1Mtl_0 mat=8 tri=18 min=21.06,2.20,21.38 max=21.83,2.44,21.76
+  mesh17 Meshesbodyshellbodyshell0011_Meshesdoorlfok0101Mtl_0 mat=9 tri=174 min=16.21,3.23,23.14 max=21.27,4.79,31.34
+  mesh18 Meshesbodyshellbodyshell0021_Meshesbodyshellbodyshell0021Mtl_0 mat=10 tri=272 min=15.33,1.83,25.99 max=22.15,2.58,30.36
+  mesh19 Meshesbodyshellbodyshell0031_Meshesdoorrfok0061Mtl_0 mat=0 tri=1576 min=15.16,0.23,21.46 max=22.31,4.59,39.19
+  mesh20 Meshesbodyshellbodyshell0041_Meshesdoorrfok0061Mtl_0 mat=0 tri=371 min=15.74,2.79,34.40 max=21.74,3.12,35.58
+  mesh21 Meshesbodyshellbodyshell0051_Meshesbodyshellbodyshell0051Mtl_0 mat=11 tri=170 min=16.07,3.19,23.06 max=21.41,4.79,31.56
+  mesh22 Meshesbodyshellbodyshell0061_Meshesdoorrfok0061Mtl_0 mat=0 tri=288 min=17.00,2.76,29.46 max=20.54,4.79,35.47
+  mesh23 Meshesbootok0021_Meshesbootok0021Mtl_0 mat=12 tri=718 min=16.41,1.81,21.26 max=21.06,2.47,21.34
+  mesh24 Meshesbootok005bootok0151_Meshesbodyshellbodyshell0021Mtl_0 mat=10 tri=405 min=16.02,1.48,21.26 max=21.46,3.22,24.24
+  mesh25 Meshesbootok006bootok0161_Meshesbootok006bootok0161Mtl_0 mat=13 tri=196 min=16.44,1.69,21.36 max=21.04,3.14,23.06
+  mesh26 Meshesbootok1_Meshesbootok1Mtl_0 mat=14 tri=100 min=16.38,1.77,21.26 max=21.10,2.51,21.38
+  mesh27 Meshesbumperf0bumperf00031_Meshesbumperf0bumperf00031Mtl_0 mat=15 tri=200 min=15.89,0.08,40.02 max=21.58,0.41,40.14
+  mesh28 Meshesbumperf0bumperf00041_Meshesbumperf0bumperf00041Mtl_0 mat=16 tri=64 min=16.18,0.04,39.95 max=21.29,0.39,40.25
+  mesh29 Mesheschassis0011_Mesheschassis0011Mtl_0 mat=17 tri=3034 min=15.30,0.24,27.30 max=22.17,4.30,39.00
+  mesh30 Mesheschassis0021_Meshesdoorrfok0061Mtl_0 mat=0 tri=95 min=16.02,0.14,21.26 max=22.27,3.17,38.27
+  mesh31 Mesheschassis0031_Mesheschassis0031Mtl_0 mat=18 tri=671 min=15.55,-0.10,21.46 max=21.96,3.12,36.17
+  mesh32 Mesheschassis0051_Mesheschassis0051Mtl_0 mat=19 tri=180 min=16.80,1.29,35.86 max=20.20,2.34,38.60
+  mesh33 Mesheschassis0061_Mesheschassis0061Mtl_0 mat=20 tri=5231 min=15.15,-0.28,21.33 max=22.33,3.14,40.19
+  mesh34 Mesheschassis0071_Mesheschassis0071Mtl_0 mat=21 tri=558 min=17.26,-0.36,33.47 max=20.20,1.93,38.89
+  mesh35 Mesheschassis0081_Mesheschassis0081Mtl_0 mat=22 tri=498 min=16.10,-0.36,25.09 max=21.38,2.06,37.17
+  mesh36 Mesheschassis0091_Mesheschassis0091Mtl_0 mat=23 tri=3423 min=16.02,-0.32,23.91 max=21.24,2.47,39.99
+  mesh37 Mesheschassis0101_Mesheschassis0101Mtl_0 mat=24 tri=854 min=15.94,0.24,35.41 max=21.53,2.62,39.56
+  mesh38 Mesheschassis0111_Mesheschassis0111Mtl_0 mat=25 tri=5141 min=15.87,-0.26,24.75 max=21.60,2.00,38.69
+  mesh39 Mesheschassis0121_Mesheschassis0121Mtl_0 mat=26 tri=2212 min=16.35,-0.25,24.88 max=21.12,2.34,37.79
+  mesh40 Mesheschassis0131_Mesheschassis0131Mtl_0 mat=27 tri=1454 min=15.37,-0.33,21.29 max=22.10,2.23,39.95
+  mesh41 Mesheschassis0141_Mesheschassis0141Mtl_0 mat=28 tri=75 min=15.95,-0.10,35.43 max=21.53,2.52,38.36
+  mesh42 Mesheschassis0151_Mesheschassis0151Mtl_0 mat=29 tri=726 min=15.88,0.13,34.73 max=21.59,2.60,40.10
+  mesh43 Mesheschassis0161_Mesheschassis0161Mtl_0 mat=30 tri=4 min=17.71,2.24,36.06 max=19.76,2.32,37.54
+  mesh44 Mesheschassis0171_Mesheschassis0171Mtl_0 mat=31 tri=8134 min=15.21,0.12,21.22 max=22.34,4.62,35.14
+  mesh45 Mesheschassis0181_Meshesdoorrfok0061Mtl_0 mat=0 tri=3608 min=15.41,0.30,23.00 max=22.07,4.63,34.46
+  mesh46 Mesheschassis0191_Meshesbodyshellbodyshell0021Mtl_0 mat=10 tri=6 min=18.48,3.21,23.22 max=18.99,3.34,23.43
+  mesh47 Mesheschassis0201_Mesheschassis0201Mtl_0 mat=32 tri=5746 min=15.74,0.09,27.63 max=21.73,4.48,34.00
+  mesh48 Mesheschassis0211_Mesheschassis0211Mtl_0 mat=33 tri=55 min=19.77,2.39,33.72 max=20.80,2.46,33.78
+  mesh49 Mesheschassis0231_Mesheschassis0231Mtl_0 mat=34 tri=1590 min=18.37,1.56,33.18 max=19.10,1.76,33.31
+  mesh50 Mesheschassis1_Mesheschassis1Mtl_0 mat=35 tri=3291 min=15.85,0.69,29.81 max=21.63,2.72,33.72
+  mesh51 Meshesdoorlfok0031_Meshesdoorrfok0061Mtl_0 mat=0 tri=260 min=21.71,0.25,30.09 max=22.30,3.24,34.55
+  mesh52 Meshesdoorlfok0041_Meshesdoorrfok0061Mtl_0 mat=0 tri=58 min=21.89,2.71,33.11 max=22.76,3.24,33.73
+  mesh53 Meshesdoorlfok0051_Meshesdoorrfok0061Mtl_0 mat=0 tri=58 min=21.15,2.43,29.88 max=21.97,4.48,32.67
+  mesh54 Meshesdoorlfok0061_Meshesdoorrfok0061Mtl_0 mat=0 tri=312 min=21.11,2.69,29.86 max=22.06,4.59,34.12
+  mesh55 Meshesdoorlfok0071_Meshesdoorlfok0071Mtl_0 mat=36 tri=779 min=21.62,0.48,30.32 max=21.87,2.81,34.13
+  mesh56 Meshesdoorlfok0081_Meshesdoorlfok0081Mtl_0 mat=37 tri=74 min=21.63,1.16,30.21 max=21.75,2.43,33.11
+  mesh57 Meshesdoorlfok0091_Meshesdoorlfok0091Mtl_0 mat=38 tri=971 min=21.57,0.46,30.20 max=21.98,3.50,34.21
+  mesh58 Meshesdoorlfok0101_Meshesdoorlfok0101Mtl_0 mat=9 tri=40 min=21.23,2.79,30.03 max=21.95,4.47,33.36
+  mesh59 Meshesdoorlrokdoorlrok0011_Meshesdoorlfok0101Mtl_0 mat=9 tri=35 min=21.22,2.79,25.96 max=21.95,4.50,29.78
+  mesh60 Meshesdoorlrokdoorlrok0031_Meshesdoorrfok0061Mtl_0 mat=0 tri=307 min=21.18,0.25,25.73 max=22.32,4.59,30.23
+  mesh61 Meshesdoorlrokdoorlrok0041_Meshesdoorrfok0061Mtl_0 mat=0 tri=75 min=21.16,2.45,27.44 max=21.98,4.49,30.11
+  mesh62 Meshesdoorlrokdoorlrok0051_Meshesdoorrfok0061Mtl_0 mat=0 tri=211 min=21.12,2.72,25.73 max=22.08,4.59,30.11
+  mesh63 Meshesdoorlrokdoorlrok0061_Meshesdoorlrokdoorlrok0061Mtl_0 mat=39 tri=845 min=21.66,0.56,26.31 max=21.91,2.87,29.74
+  mesh64 Meshesdoorlrokdoorlrok0071_Meshesdoorlrokdoorlrok0071Mtl_0 mat=40 tri=66 min=21.65,0.90,26.35 max=21.86,2.51,29.85
+  mesh65 Meshesdoorlrokdoorlrok0081_Meshesdoorlrokdoorlrok0081Mtl_0 mat=41 tri=738 min=21.66,0.57,26.06 max=21.98,2.93,29.88
+  mesh66 Meshesdoorrfok0031_Meshesdoorrfok0061Mtl_0 mat=0 tri=260 min=15.17,0.25,30.09 max=15.76,3.24,34.55
+  mesh67 Meshesdoorrfok0041_Meshesdoorrfok0061Mtl_0 mat=0 tri=58 min=14.72,2.71,33.11 max=15.58,3.24,33.73
+  mesh68 Meshesdoorrfok0051_Meshesdoorrfok0061Mtl_0 mat=0 tri=58 min=15.50,2.43,29.88 max=16.32,4.48,32.67
+  mesh69 Meshesdoorrfok0061_Meshesdoorrfok0061Mtl_0 mat=0 tri=312 min=15.41,2.69,29.86 max=16.36,4.59,34.12
+  mesh70 Meshesdoorrfok0071_Meshesdoorrfok0071Mtl_0 mat=42 tri=779 min=15.60,0.48,30.32 max=15.85,2.81,34.13
+  mesh71 Meshesdoorrfok0081_Meshesdoorrfok0081Mtl_0 mat=43 tri=74 min=15.72,1.16,30.21 max=15.85,2.43,33.11
+  mesh72 Meshesdoorrfok0091_Meshesdoorrfok0091Mtl_0 mat=44 tri=971 min=15.50,0.46,30.20 max=15.90,3.50,34.21
+  mesh73 Meshesdoorrfok0101_Meshesdoorlfok0101Mtl_0 mat=9 tri=40 min=15.53,2.79,30.03 max=16.25,4.47,33.36
+  mesh74 Meshesdoorrrokdoorrrok0011_Meshesdoorlfok0101Mtl_0 mat=9 tri=35 min=15.52,2.79,25.96 max=16.26,4.50,29.78
+  mesh75 Meshesdoorrrokdoorrrok0031_Meshesdoorrfok0061Mtl_0 mat=0 tri=307 min=15.15,0.25,25.73 max=16.29,4.59,30.23
+  mesh76 Meshesdoorrrokdoorrrok0041_Meshesdoorrfok0061Mtl_0 mat=0 tri=75 min=15.49,2.45,27.44 max=16.32,4.49,30.11
+  mesh77 Meshesdoorrrokdoorrrok0051_Meshesdoorrfok0061Mtl_0 mat=0 tri=211 min=15.40,2.72,25.73 max=16.36,4.59,30.11
+  mesh78 Meshesdoorrrokdoorrrok0061_Meshesdoorrrokdoorrrok0061Mtl_0 mat=45 tri=845 min=15.56,0.56,26.31 max=15.81,2.87,29.74
+  mesh79 Meshesdoorrrokdoorrrok0071_Meshesdoorrrokdoorrrok0071Mtl_0 mat=46 tri=66 min=15.61,0.90,26.35 max=15.82,2.51,29.85
+  mesh80 Meshesdoorrrokdoorrrok0081_Meshesdoorrrokdoorrrok0081Mtl_0 mat=47 tri=738 min=15.49,0.57,26.06 max=15.81,2.93,29.88
+  mesh81 Meshesexhaustokexhaustok0001_Meshesexhaustokexhaustok0001Mtl_0 mat=48 tri=788 min=19.47,-0.04,21.31 max=20.99,0.71,24.12
+  mesh82 Meshesexhaustokexhaustok0011_Meshesdoorrfok0061Mtl_0 mat=0 tri=52 min=20.04,0.07,21.32 max=20.77,0.37,21.63
+  mesh83 Meshesheadlights00021_Meshesheadlights00021Mtl_0 mat=49 tri=608 min=15.53,1.33,39.33 max=21.95,2.27,39.94
+  mesh84 Meshesheadlights00031_Meshesbodyshellbodyshell0021Mtl_0 mat=10 tri=2338 min=15.54,1.33,39.31 max=21.93,2.27,39.93
+  mesh85 Meshesheadlights00041_Meshesbodyshellbodyshell0021Mtl_0 mat=10 tri=992 min=15.52,1.32,39.12 max=21.96,2.29,39.91
+  mesh86 Meshesheadlights01_Meshesbodyshellbodyshell0021Mtl_0 mat=10 tri=84 min=15.58,1.38,39.45 max=21.89,1.93,39.79
+  mesh87 Meshesinteriorinterior0011_Meshesinteriorinterior0011Mtl_0 mat=50 tri=9858 min=15.63,-0.12,23.18 max=21.84,4.79,35.22
+  mesh88 Meshesskirts0skirts00011_Meshesdoorrfok0061Mtl_0 mat=0 tri=1838 min=15.21,-0.29,27.12 max=22.26,0.18,35.59
+  mesh89 Meshessteeringwheel1_Meshessteeringwheel1Mtl_0 mat=51 tri=2514 min=19.44,1.63,32.38 max=21.09,3.22,33.11
+  mesh90 Meshestaillights00011_Meshestaillights00011Mtl_0 mat=1 tri=1216 min=15.51,1.76,21.32 max=21.96,2.50,22.12
+  mesh91 Meshestaillights00021_B1Mtl_0 mat=2 tri=188 min=15.53,1.76,21.33 max=21.94,2.50,22.12
+  mesh92 Mesheswheel001wheel0021_Meshesbodyshellbodyshell0021Mtl_0 mat=10 tri=534 min=22.23,0.25,36.96 max=22.31,0.55,37.26
+  mesh93 Mesheswheel001wheel0022_Meshesbodyshellbodyshell0021Mtl_0 mat=10 tri=534 min=15.15,0.18,25.49 max=15.23,0.48,25.79
+  mesh94 Mesheswheel001wheel0023_Meshesbodyshellbodyshell0021Mtl_0 mat=10 tri=534 min=22.24,0.22,25.44 max=22.32,0.52,25.74
+  mesh95 Mesheswheel001wheel0024_Meshesbodyshellbodyshell0021Mtl_0 mat=10 tri=534 min=15.15,0.23,36.96 max=15.23,0.52,37.25
+  mesh96 Mesheswheel002wheel0031_Meshesdoorrfok0061Mtl_0 mat=0 tri=382 min=21.69,-0.00,36.71 max=21.86,0.80,37.51
+  mesh97 Mesheswheel002wheel0032_Meshesdoorrfok0061Mtl_0 mat=0 tri=382 min=15.59,-0.07,25.24 max=15.77,0.73,26.04
+  mesh98 Mesheswheel002wheel0033_Meshesdoorrfok0061Mtl_0 mat=0 tri=382 min=15.59,-0.07,25.24 max=15.77,0.73,26.04
+  mesh99 Mesheswheel002wheel0034_Meshesdoorrfok0061Mtl_0 mat=0 tri=382 min=21.71,-0.02,25.19 max=21.88,0.77,25.98
+  mesh100 Mesheswheel002wheel0035_Meshesdoorrfok0061Mtl_0 mat=0 tri=382 min=15.59,-0.02,36.71 max=15.77,0.77,37.50
+  mesh101 Mesheswheel002wheel0036_Meshesbodyshellbodyshell0021Mtl_0 mat=10 tri=382 min=15.23,-0.02,36.71 max=15.41,0.77,37.50
+  mesh102 Mesheswheel003wheel0041_Mesheswheel003wheel0041Mtl_0 mat=52 tri=9689 min=21.25,-0.71,36.00 max=22.30,1.51,38.22
+  mesh103 Mesheswheel003wheel0042_Mesheswheel003wheel0041Mtl_0 mat=52 tri=9689 min=15.15,-0.78,24.53 max=16.20,1.44,26.75
+  mesh104 Mesheswheel003wheel0043_Mesheswheel003wheel0041Mtl_0 mat=52 tri=9689 min=21.27,-0.73,24.48 max=22.32,1.48,26.69
+  mesh105 Mesheswheel003wheel0044_Mesheswheel003wheel0041Mtl_0 mat=52 tri=9689 min=15.15,-0.73,36.00 max=16.20,1.48,38.21
+  mesh106 Mesheswheel004wheel0051_Mesheswheel004wheel0051Mtl_0 mat=53 tri=444 min=21.26,-0.95,35.76 max=22.29,1.74,38.45
+  mesh107 Mesheswheel004wheel0052_Mesheswheel004wheel0051Mtl_0 mat=53 tri=444 min=15.16,-1.02,24.30 max=16.19,1.68,26.99
+  mesh108 Mesheswheel004wheel0053_Mesheswheel004wheel0051Mtl_0 mat=53 tri=444 min=21.28,-0.97,24.24 max=22.31,1.72,26.93
+  mesh109 Mesheswheel004wheel0054_Mesheswheel004wheel0051Mtl_0 mat=53 tri=444 min=15.16,-0.97,35.76 max=16.19,1.72,38.45
+  mesh110 Mesheswheel005wheel0061_Mesheswheel005wheel0061Mtl_0 mat=54 tri=320 min=21.29,-0.97,35.74 max=22.26,1.77,38.48
+  mesh111 Mesheswheel005wheel0062_Mesheswheel005wheel0061Mtl_0 mat=54 tri=320 min=15.19,-1.04,24.27 max=16.16,1.70,27.01
+  mesh112 Mesheswheel005wheel0063_Mesheswheel005wheel0061Mtl_0 mat=54 tri=320 min=21.31,-1.00,24.21 max=22.28,1.75,26.96
+  mesh113 Mesheswheel005wheel0064_Mesheswheel005wheel0061Mtl_0 mat=54 tri=320 min=15.19,-1.00,35.73 max=16.16,1.75,38.48
+  mesh114 Mesheswheelwheel0011_Meshesbodyshellbodyshell0021Mtl_0 mat=10 tri=152 min=21.97,-0.00,36.82 max=22.23,0.69,37.40
+  mesh115 Mesheswheelwheel0012_Meshesbodyshellbodyshell0021Mtl_0 mat=10 tri=152 min=15.20,-0.06,25.35 max=15.45,0.63,25.93
+  mesh116 Mesheswheelwheel0013_Meshesbodyshellbodyshell0021Mtl_0 mat=10 tri=152 min=22.03,-0.02,25.30 max=22.29,0.67,25.87
+  mesh117 Mesheswheelwheel0014_Meshesbodyshellbodyshell0021Mtl_0 mat=10 tri=152 min=15.19,-0.03,36.82 max=15.45,0.67,37.40
+  mesh118 Mesheswindscreenokwindscreenok0011_Meshesdoorlfok0101Mtl_0 mat=9 tri=210 min=15.77,2.84,32.28 max=21.70,4.48,35.26
+  mesh119 Paint1_Paint1Mtl.004_0 mat=4 tri=2232 min=15.10,0.13,34.07 max=22.38,2.94,39.74
+  mesh120 Paint10_Paint1Mtl.004_0 mat=4 tri=2758 min=15.10,-0.17,20.98 max=22.37,1.45,24.60
+  mesh121 Paint11_Paint1Mtl.004_0 mat=4 tri=4912 min=15.16,-0.28,38.26 max=22.31,1.74,40.48
+  mesh122 Paint12_Paint1Mtl.004_0 mat=4 tri=1384 min=16.02,1.48,21.21 max=21.46,3.22,23.76
+  mesh123 Paint2_Paint1Mtl.004_0 mat=4 tri=3962 min=15.11,0.14,21.26 max=22.36,4.79,34.55
+  mesh124 Paint3_Paint1Mtl.004_0 mat=4 tri=2692 min=15.76,1.06,34.57 max=21.71,2.97,40.23
+  mesh125 Paint4_Paint1Mtl.004_0 mat=4 tri=653 min=15.08,0.25,25.73 max=16.30,4.59,30.23
+  mesh126 Paint5_Paint1Mtl.004_0 mat=4 tri=1315 min=14.71,0.23,29.86 max=16.29,4.59,34.55
+  mesh127 Paint6_Paint1Mtl.004_0 mat=4 tri=75 min=14.72,2.98,33.11 max=14.83,3.19,33.35
+  mesh128 Paint7_Paint1Mtl.004_0 mat=4 tri=653 min=21.18,0.25,25.73 max=22.39,4.59,30.23
+  mesh129 Paint8_Paint1Mtl.004_0 mat=4 tri=1315 min=21.18,0.23,29.86 max=22.76,4.59,34.55
+  mesh130 Paint9_Paint1Mtl.004_0 mat=4 tri=75 min=22.64,2.98,33.11 max=22.75,3.19,33.35
+  mesh131 Ri1_Ri1Mtl_0 mat=8 tri=92 min=15.59,1.89,39.26 max=16.31,2.23,39.58
+  mesh132 Ri2_Ri1Mtl_0 mat=8 tri=18 min=15.64,2.20,21.38 max=16.42,2.44,21.76
+tri 156849
+N0 Sketchfab_model M
+  N1 f140c6f7ec0f4ae597e24ebcdb6e3660.fbx M
+    N2 RootNode
+      N3 1 M
+        N4 1_Meshesdoorrfok0061Mtl_0 mesh0
+      N5 2 M
+        N6 2_Meshesdoorrfok0061Mtl_0 mesh1
+      N7 3 M
+        N8 3_Meshesdoorrfok0061Mtl_0 mesh2
+      N9 4 M
+        N10 4_Meshesdoorrfok0061Mtl_0 mesh3
+      N11 5 M
+        N12 5_Meshesdoorrfok0061Mtl_0 mesh4
+      N13 6 M
+        N14 6_Meshesdoorrfok0061Mtl_0 mesh5
+      N15 7 M
+        N16 7_Meshesdoorrfok0061Mtl_0 mesh6
+      N17 8 M
+        N18 8_Meshestaillights00011Mtl_0 mesh7
+      N19 B1 M
+        N20 B1_B1Mtl_0 mesh8
+      N21 B2 M
+        N22 B2_B1Mtl_0 mesh9
+      N23 L1 M
+        N24 L1_L1Mtl_0 mesh10
+      N25 L2 M
+        N26 L2_Paint1Mtl.004_0 mesh11
+      N27 L3 M
+        N28 L3_L3Mtl_0 mesh12
+      N29 L4 M
+        N30 L4_L4Mtl_0 mesh13
+      N31 L5 M
+        N32 L5_L5Mtl_0 mesh14
+      N33 Li1 M
+        N34 Li1_Ri1Mtl_0 mesh15
+      N35 Li2 M
+        N36 Li2_Ri1Mtl_0 mesh16
+      N37 Meshesbodyshellbodyshell0011 M
+        N38 Meshesbodyshellbodyshell0011_Meshesdoorlfok0101Mtl_0 mesh17
+      N39 Meshesbodyshellbodyshell0021 M
+        N40 Meshesbodyshellbodyshell0021_Meshesbodyshellbodyshell0021Mtl_0 mesh18
+      N41 Meshesbodyshellbodyshell0031 M
+        N42 Meshesbodyshellbodyshell0031_Meshesdoorrfok0061Mtl_0 mesh19
+      N43 Meshesbodyshellbodyshell0041 M
+        N44 Meshesbodyshellbodyshell0041_Meshesdoorrfok0061Mtl_0 mesh20
+      N45 Meshesbodyshellbodyshell0051 M
+        N46 Meshesbodyshellbodyshell0051_Meshesbodyshellbodyshell0051Mtl_0 mesh21
+      N47 Meshesbodyshellbodyshell0061 M
+        N48 Meshesbodyshellbodyshell0061_Meshesdoorrfok0061Mtl_0 mesh22
+      N49 Meshesbootok0021 M
+        N50 Meshesbootok0021_Meshesbootok0021Mtl_0 mesh23
+      N51 Meshesbootok005bootok0151 M
+        N52 Meshesbootok005bootok0151_Meshesbodyshellbodyshell0021Mtl_0 mesh24
+      N53 Meshesbootok006bootok0161 M
+        N54 Meshesbootok006bootok0161_Meshesbootok006bootok0161Mtl_0 mesh25
+      N55 Meshesbootok1 M
+        N56 Meshesbootok1_Meshesbootok1Mtl_0 mesh26
+      N57 Meshesbumperf0bumperf00031 M
+        N58 Meshesbumperf0bumperf00031_Meshesbumperf0bumperf00031Mtl_0 mesh27
+      N59 Meshesbumperf0bumperf00041 M
+        N60 Meshesbumperf0bumperf00041_Meshesbumperf0bumperf00041Mtl_0 mesh28
+      N61 Mesheschassis0011 M
+        N62 Mesheschassis0011_Mesheschassis0011Mtl_0 mesh29
+      N63 Mesheschassis0021 M
+        N64 Mesheschassis0021_Meshesdoorrfok0061Mtl_0 mesh30
+      N65 Mesheschassis0031 M
+        N66 Mesheschassis0031_Mesheschassis0031Mtl_0 mesh31
+      N67 Mesheschassis0051 M
+        N68 Mesheschassis0051_Mesheschassis0051Mtl_0 mesh32
+      N69 Mesheschassis0061 M
+        N70 Mesheschassis0061_Mesheschassis0061Mtl_0 mesh33
+      N71 Mesheschassis0071 M
+        N72 Mesheschassis0071_Mesheschassis0071Mtl_0 mesh34
+      N73 Mesheschassis0081 M
+        N74 Mesheschassis0081_Mesheschassis0081Mtl_0 mesh35
+      N75 Mesheschassis0091 M
+        N76 Mesheschassis0091_Mesheschassis0091Mtl_0 mesh36
+      N77 Mesheschassis0101 M
+        N78 Mesheschassis0101_Mesheschassis0101Mtl_0 mesh37
+      N79 Mesheschassis0111 M
+        N80 Mesheschassis0111_Mesheschassis0111Mtl_0 mesh38
+      N81 Mesheschassis0121 M
+        N82 Mesheschassis0121_Mesheschassis0121Mtl_0 mesh39
+      N83 Mesheschassis0131 M
+        N84 Mesheschassis0131_Mesheschassis0131Mtl_0 mesh40
+      N85 Mesheschassis0141 M
+        N86 Mesheschassis0141_Mesheschassis0141Mtl_0 mesh41
+      N87 Mesheschassis0151 M
+        N88 Mesheschassis0151_Mesheschassis0151Mtl_0 mesh42
+      N89 Mesheschassis0161 M
+        N90 Mesheschassis0161_Mesheschassis0161Mtl_0 mesh43
+      N91 Mesheschassis0171 M
+        N92 Mesheschassis0171_Mesheschassis0171Mtl_0 mesh44
+      N93 Mesheschassis0181 M
+        N94 Mesheschassis0181_Meshesdoorrfok0061Mtl_0 mesh45
+      N95 Mesheschassis0191 M
+        N96 Mesheschassis0191_Meshesbodyshellbodyshell0021Mtl_0 mesh46
+      N97 Mesheschassis0201 M
+        N98 Mesheschassis0201_Mesheschassis0201Mtl_0 mesh47
+      N99 Mesheschassis0211 M
+        N100 Mesheschassis0211_Mesheschassis0211Mtl_0 mesh48
+      N101 Mesheschassis0231 M
+        N102 Mesheschassis0231_Mesheschassis0231Mtl_0 mesh49
+      N103 Mesheschassis1 M
+        N104 Mesheschassis1_Mesheschassis1Mtl_0 mesh50
+      N105 Meshesdoorlfok0031 M
+        N106 Meshesdoorlfok0031_Meshesdoorrfok0061Mtl_0 mesh51
+      N107 Meshesdoorlfok0041 M
+        N108 Meshesdoorlfok0041_Meshesdoorrfok0061Mtl_0 mesh52
+      N109 Meshesdoorlfok0051 M
+        N110 Meshesdoorlfok0051_Meshesdoorrfok0061Mtl_0 mesh53
+      N111 Meshesdoorlfok0061 M
+        N112 Meshesdoorlfok0061_Meshesdoorrfok0061Mtl_0 mesh54
+      N113 Meshesdoorlfok0071 M
+        N114 Meshesdoorlfok0071_Meshesdoorlfok0071Mtl_0 mesh55
+      N115 Meshesdoorlfok0081 M
+        N116 Meshesdoorlfok0081_Meshesdoorlfok0081Mtl_0 mesh56
+      N117 Meshesdoorlfok0091 M
+        N118 Meshesdoorlfok0091_Meshesdoorlfok0091Mtl_0 mesh57
+      N119 Meshesdoorlfok0101 M
+        N120 Meshesdoorlfok0101_Meshesdoorlfok0101Mtl_0 mesh58
+      N121 Meshesdoorlrokdoorlrok0011 M
+        N122 Meshesdoorlrokdoorlrok0011_Meshesdoorlfok0101Mtl_0 mesh59
+      N123 Meshesdoorlrokdoorlrok0031 M
+        N124 Meshesdoorlrokdoorlrok0031_Meshesdoorrfok0061Mtl_0 mesh60
+      N125 Meshesdoorlrokdoorlrok0041 M
+        N126 Meshesdoorlrokdoorlrok0041_Meshesdoorrfok0061Mtl_0 mesh61
+      N127 Meshesdoorlrokdoorlrok0051 M
+        N128 Meshesdoorlrokdoorlrok0051_Meshesdoorrfok0061Mtl_0 mesh62
+      N129 Meshesdoorlrokdoorlrok0061 M
+        N130 Meshesdoorlrokdoorlrok0061_Meshesdoorlrokdoorlrok0061Mtl_0 mesh63
+      N131 Meshesdoorlrokdoorlrok0071 M
+        N132 Meshesdoorlrokdoorlrok0071_Meshesdoorlrokdoorlrok0071Mtl_0 mesh64
+      N133 Meshesdoorlrokdoorlrok0081 M
+        N134 Meshesdoorlrokdoorlrok0081_Meshesdoorlrokdoorlrok0081Mtl_0 mesh65
+      N135 Meshesdoorrfok0031 M
+        N136 Meshesdoorrfok0031_Meshesdoorrfok0061Mtl_0 mesh66
+      N137 Meshesdoorrfok0041 M
+        N138 Meshesdoorrfok0041_Meshesdoorrfok0061Mtl_0 mesh67
+      N139 Meshesdoorrfok0051 M
+        N140 Meshesdoorrfok0051_Meshesdoorrfok0061Mtl_0 mesh68
+      N141 Meshesdoorrfok0061 M
+        N142 Meshesdoorrfok0061_Meshesdoorrfok0061Mtl_0 mesh69
+      N143 Meshesdoorrfok0071 M
+        N144 Meshesdoorrfok0071_Meshesdoorrfok0071Mtl_0 mesh70
+      N145 Meshesdoorrfok0081 M
+        N146 Meshesdoorrfok0081_Meshesdoorrfok0081Mtl_0 mesh71
+      N147 Meshesdoorrfok0091 M
+        N148 Meshesdoorrfok0091_Meshesdoorrfok0091Mtl_0 mesh72
+      N149 Meshesdoorrfok0101 M
+        N150 Meshesdoorrfok0101_Meshesdoorlfok0101Mtl_0 mesh73
+      N151 Meshesdoorrrokdoorrrok0011 M
+        N152 Meshesdoorrrokdoorrrok0011_Meshesdoorlfok0101Mtl_0 mesh74
+      N153 Meshesdoorrrokdoorrrok0031 M
+        N154 Meshesdoorrrokdoorrrok0031_Meshesdoorrfok0061Mtl_0 mesh75
+      N155 Meshesdoorrrokdoorrrok0041 M
+        N156 Meshesdoorrrokdoorrrok0041_Meshesdoorrfok0061Mtl_0 mesh76
+      N157 Meshesdoorrrokdoorrrok0051 M
+        N158 Meshesdoorrrokdoorrrok0051_Meshesdoorrfok0061Mtl_0 mesh77
+      N159 Meshesdoorrrokdoorrrok0061 M
+        N160 Meshesdoorrrokdoorrrok0061_Meshesdoorrrokdoorrrok0061Mtl_0 mesh78
+      N161 Meshesdoorrrokdoorrrok0071 M
+        N162 Meshesdoorrrokdoorrrok0071_Meshesdoorrrokdoorrrok0071Mtl_0 mesh79
+      N163 Meshesdoorrrokdoorrrok0081 M
+        N164 Meshesdoorrrokdoorrrok0081_Meshesdoorrrokdoorrrok0081Mtl_0 mesh80
+      N165 Meshesexhaustokexhaustok0001 M
+        N166 Meshesexhaustokexhaustok0001_Meshesexhaustokexhaustok0001Mtl_0 mesh81
+      N167 Meshesexhaustokexhaustok0011 M
+        N168 Meshesexhaustokexhaustok0011_Meshesdoorrfok0061Mtl_0 mesh82
+      N169 Meshesheadlights00021 M
+        N170 Meshesheadlights00021_Meshesheadlights00021Mtl_0 mesh83
+      N171 Meshesheadlights00031 M
+        N172 Meshesheadlights00031_Meshesbodyshellbodyshell0021Mtl_0 mesh84
+      N173 Meshesheadlights00041 M
+        N174 Meshesheadlights00041_Meshesbodyshellbodyshell0021Mtl_0 mesh85
+      N175 Meshesheadlights01 M
+        N176 Meshesheadlights01_Meshesbodyshellbodyshell0021Mtl_0 mesh86
+      N177 Meshesinteriorinterior0011 M
+        N178 Meshesinteriorinterior0011_Meshesinteriorinterior0011Mtl_0 mesh87
+      N179 Meshesskirts0skirts00011 M
+        N180 Meshesskirts0skirts00011_Meshesdoorrfok0061Mtl_0 mesh88
+      N181 Meshessteeringwheel1 M
+        N182 Meshessteeringwheel1_Meshessteeringwheel1Mtl_0 mesh89
+      N183 Meshestaillights00011 M
+        N184 Meshestaillights00011_Meshestaillights00011Mtl_0 mesh90
+      N185 Meshestaillights00021 M
+        N186 Meshestaillights00021_B1Mtl_0 mesh91
+      N187 Mesheswheel001wheel0021 M
+        N188 Mesheswheel001wheel0021_Meshesbodyshellbodyshell0021Mtl_0 mesh92
+      N189 Mesheswheel001wheel0022 M
+        N190 Mesheswheel001wheel0022_Meshesbodyshellbodyshell0021Mtl_0 mesh93
+      N191 Mesheswheel001wheel0023 M
+        N192 Mesheswheel001wheel0023_Meshesbodyshellbodyshell0021Mtl_0 mesh94
+      N193 Mesheswheel001wheel0024 M
+        N194 Mesheswheel001wheel0024_Meshesbodyshellbodyshell0021Mtl_0 mesh95
+      N195 Mesheswheel002wheel0031 M
+        N196 Mesheswheel002wheel0031_Meshesdoorrfok0061Mtl_0 mesh96
+      N197 Mesheswheel002wheel0032 M
+        N198 Mesheswheel002wheel0032_Meshesdoorrfok0061Mtl_0 mesh97
+      N199 Mesheswheel002wheel0033 M
+        N200 Mesheswheel002wheel0033_Meshesdoorrfok0061Mtl_0 mesh98
+      N201 Mesheswheel002wheel0034 M
+        N202 Mesheswheel002wheel0034_Meshesdoorrfok0061Mtl_0 mesh99
+      N203 Mesheswheel002wheel0035 M
+        N204 Mesheswheel002wheel0035_Meshesdoorrfok0061Mtl_0 mesh100
+      N205 Mesheswheel002wheel0036 M
+        N206 Mesheswheel002wheel0036_Meshesbodyshellbodyshell0021Mtl_0 mesh101
+      N207 Mesheswheel003wheel0041 M
+        N208 Mesheswheel003wheel0041_Mesheswheel003wheel0041Mtl_0 mesh102
+      N209 Mesheswheel003wheel0042 M
+        N210 Mesheswheel003wheel0042_Mesheswheel003wheel0041Mtl_0 mesh103
+      N211 Mesheswheel003wheel0043 M
+        N212 Mesheswheel003wheel0043_Mesheswheel003wheel0041Mtl_0 mesh104
+      N213 Mesheswheel003wheel0044 M
+        N214 Mesheswheel003wheel0044_Mesheswheel003wheel0041Mtl_0 mesh105
+      N215 Mesheswheel004wheel0051 M
+        N216 Mesheswheel004wheel0051_Mesheswheel004wheel0051Mtl_0 mesh106
+      N217 Mesheswheel004wheel0052 M
+        N218 Mesheswheel004wheel0052_Mesheswheel004wheel0051Mtl_0 mesh107
+      N219 Mesheswheel004wheel0053 M
+        N220 Mesheswheel004wheel0053_Mesheswheel004wheel0051Mtl_0 mesh108
+      N221 Mesheswheel004wheel0054 M
+        N222 Mesheswheel004wheel0054_Mesheswheel004wheel0051Mtl_0 mesh109
+      N223 Mesheswheel005wheel0061 M
+        N224 Mesheswheel005wheel0061_Mesheswheel005wheel0061Mtl_0 mesh110
+      N225 Mesheswheel005wheel0062 M
+        N226 Mesheswheel005wheel0062_Mesheswheel005wheel0061Mtl_0 mesh111
+      N227 Mesheswheel005wheel0063 M
+        N228 Mesheswheel005wheel0063_Mesheswheel005wheel0061Mtl_0 mesh112
+      N229 Mesheswheel005wheel0064 M
+        N230 Mesheswheel005wheel0064_Mesheswheel005wheel0061Mtl_0 mesh113
+      N231 Mesheswheelwheel0011 M
+        N232 Mesheswheelwheel0011_Meshesbodyshellbodyshell0021Mtl_0 mesh114
+      N233 Mesheswheelwheel0012 M
+        N234 Mesheswheelwheel0012_Meshesbodyshellbodyshell0021Mtl_0 mesh115
+      N235 Mesheswheelwheel0013 M
+        N236 Mesheswheelwheel0013_Meshesbodyshellbodyshell0021Mtl_0 mesh116
+      N237 Mesheswheelwheel0014 M
+        N238 Mesheswheelwheel0014_Meshesbodyshellbodyshell0021Mtl_0 mesh117
+      N239 Mesheswindscreenokwindscreenok0011 M
+        N240 Mesheswindscreenokwindscreenok0011_Meshesdoorlfok0101Mtl_0 mesh118
+      N241 Paint1 M
+        N242 Paint1_Paint1Mtl.004_0 mesh119
+      N243 Paint10 M
+        N244 Paint10_Paint1Mtl.004_0 mesh120
+      N245 Paint11 M
+        N246 Paint11_Paint1Mtl.004_0 mesh121
+      N247 Paint12 M
+        N248 Paint12_Paint1Mtl.004_0 mesh122
+      N249 Paint2 M
+        N250 Paint2_Paint1Mtl.004_0 mesh123
+      N251 Paint3 M
+        N252 Paint3_Paint1Mtl.004_0 mesh124
+      N253 Paint4 M
+        N254 Paint4_Paint1Mtl.004_0 mesh125
+      N255 Paint5 M
+        N256 Paint5_Paint1Mtl.004_0 mesh126
+      N257 Paint6 M
+        N258 Paint6_Paint1Mtl.004_0 mesh127
+      N259 Paint7 M
+        N260 Paint7_Paint1Mtl.004_0 mesh128
+      N261 Paint8 M
+        N262 Paint8_Paint1Mtl.004_0 mesh129
+      N263 Paint9 M
+        N264 Paint9_Paint1Mtl.004_0 mesh130
+      N265 Ri1 M
+        N266 Ri1_Ri1Mtl_0 mesh131
+      N267 Ri2 M
+        N268 Ri2_Ri1Mtl_0 mesh132

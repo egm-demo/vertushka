@@ -1,0 +1,146 @@
+==  src/a8n.glb nodes 53 meshes 51 mats 40 tex 34 imgs 121595,956998,3233,660434,245223,660434,26808,675669,121595,93346,316935,72,120084,87,4427,126,101,101,118590,42505,45770,196895,235672,214706,68,379194,78253,84,2894,727584,134519,84281,169005,214910
+  M 0:Audi_A8_consol col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 1:Audi_A8_pribory col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 2:Material_25 col= tex=1 met=0 r=0.839954853096497 a= em=
+  M 3:Material_26 col= tex=1 met=0 r=0.839954853096497 a= em=
+  M 4:Material_27 col= tex=1 met=0 r=0.839954853096497 a= em=
+  M 5:a8_lights col= tex=1 met=0 r=undefined a= em=
+  M 6:a8_lights_glass_r col= tex=1 met=0 r=undefined a= em=
+  M 7:alcantara col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 8:alcantara_2 col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 9:audi_a8_consol_night col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 10:badge col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 11:badge_caliper col= tex=1 met=0 r=0.8504651218778779 a= em=
+  M 12:blackfull col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 13:body col= tex=1 met=0 r=0.7340852051527506 a= em=
+  M 14:bump_leather col= tex=1 met=0 r=0.9831820716949257 a= em=
+  M 15:bump_plastic col= tex=1 met=0 r=0.9843491541992672 a= em=
+  M 16:bump_stitching col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 17:caliper col= tex=1 met=0 r=0.8504651218778779 a= em=
+  M 18:chrome col= tex=1 met=0 r=0 a= em=
+  M 19:dark_misc col= tex=1 met=0 r=0.552786404500042 a= em=
+  M 20:dark_misc_2 col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 21:dipan col= tex=1 met=0 r=0.9778663616059936 a= em=
+  M 22:dniwe col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 23:ext_plate_plastic col= tex=1 met=0 r=0.8504651218778779 a= em=
+  M 24:gauge_needle col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 25:grille_bumper_f col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 26:kovrolin col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 27:light_glass col= tex=1 met=0 r=0.9084004869807638 a= em=
+  M 28:lights_back_on col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 29:lights_glass col= tex=1 met=0 r=undefined a= em=
+  M 30:mesh_spec col= tex=1 met=0 r=0.9740997993588865 a= em=
+  M 31:misc col= tex=1 met=0 r=0.99 a= em=
+  M 32:plastic col= tex=1 met=0 r=0.9787867965644036 a= em=
+  M 33:pribory_night col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 34:torm_disk_a8 col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 35:vehicle_generic_glasswindows2 col= tex=1 met=0 r=0.7846574691617882 a= em=
+  M 36:wheel_b col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 37:windows_int col= tex=1 met=0 r=undefined a= em=
+  M 38:wood col= tex=1 met=0 r=0.9822172058996108 a= em=
+  M 39:z_gauge_emissive_alpha col= tex=1 met=0 r=0.9822172058996108 a= em=
+  mesh0 Object_0 mat=2 tri=81 min=0.86,-0.79,0.95 max=1.02,-0.75,1.05
+  mesh1 Object_1 mat=3 tri=81 min=-1.02,-0.79,0.95 max=-0.86,-0.75,1.05
+  mesh2 Object_2 mat=4 tri=24 min=-0.12,-0.53,1.19 max=0.12,-0.53,1.24
+  mesh3 Object_3 mat=6 tri=484 min=-0.76,-2.21,0.32 max=0.76,-2.19,0.36
+  mesh4 Object_4 mat=8 tri=982 min=-0.80,-1.02,0.90 max=0.80,1.96,1.41
+  mesh5 Object_5 mat=10 tri=16 min=0.33,-0.58,0.81 max=0.46,-0.55,0.90
+  mesh6 Object_6 mat=14 tri=3394 min=0.21,-0.67,0.70 max=0.59,-0.52,1.05
+  mesh7 Object_7 mat=15 tri=980 min=0.32,-0.70,0.75 max=0.48,-0.55,0.94
+  mesh8 Object_8 mat=16 tri=472 min=0.24,-0.65,0.73 max=0.56,-0.54,1.02
+  mesh9 Object_9 mat=21 tri=1378 min=-0.95,-2.43,0.10 max=0.95,1.90,0.72
+  mesh10 Object_10 mat=22 tri=681 min=-0.81,-2.43,0.10 max=0.82,2.48,0.36
+  mesh11 Object_11 mat=26 tri=4373 min=-0.78,-1.21,0.25 max=0.78,2.44,1.08
+  mesh12 Object_12 mat=35 tri=240 min=-0.81,-1.14,0.93 max=0.81,1.96,1.35
+  mesh13 Object_13 mat=37 tri=240 min=-0.81,-1.14,0.93 max=0.81,1.96,1.35
+  mesh14 Object_14 mat=39 tri=8 min=0.28,-0.59,0.87 max=0.52,-0.58,0.89
+  mesh15 Object_15 mat=0 tri=67 min=-0.08,-0.94,0.43 max=0.50,0.12,0.97
+  mesh16 Object_16 mat=1 tri=265 min=-0.73,-0.81,0.77 max=0.74,-0.76,0.82
+  mesh17 Object_17 mat=1 tri=10200 min=-0.76,-1.21,0.23 max=0.76,1.87,1.38
+  mesh18 Object_18 mat=1 tri=1142 min=-0.80,-0.95,0.62 max=0.80,1.13,0.92
+  mesh19 Object_19 mat=5 tri=3032 min=-0.94,-2.24,0.52 max=0.94,1.89,1.07
+  mesh20 Object_20 mat=7 tri=296 min=-0.81,-0.64,0.60 max=0.81,1.05,0.82
+  mesh21 Object_21 mat=9 tri=67 min=-0.08,-0.94,0.43 max=0.50,0.13,0.97
+  mesh22 Object_22 mat=11 tri=4 min=-0.84,-1.45,0.30 max=0.84,-1.37,0.45
+  mesh23 Object_23 mat=12 tri=534 min=-0.82,-1.23,0.27 max=0.82,2.48,1.36
+  mesh24 Object_24 mat=13 tri=7467 min=-0.95,-2.44,0.10 max=0.95,2.39,1.39
+  mesh25 Object_25 mat=13 tri=11495 min=-0.78,-2.44,0.23 max=1.04,2.54,1.07
+  mesh26 Object_26 mat=13 tri=10027 min=-1.04,-1.09,0.23 max=0.96,1.27,1.06
+  mesh27 Object_27 mat=13 tri=7674 min=-0.91,-2.55,0.14 max=0.91,2.60,1.43
+  mesh28 Object_28 mat=17 tri=4512 min=-0.84,-1.49,0.20 max=0.84,-1.33,0.53
+  mesh29 Object_29 mat=18 tri=5086 min=-0.63,-1.32,0.19 max=0.62,2.50,0.93
+  mesh30 Object_30 mat=19 tri=16312 min=-0.94,-2.51,0.15 max=0.94,2.54,1.37
+  mesh31 Object_31 mat=19 tri=9570 min=-1.03,-2.55,0.25 max=1.03,2.59,1.05
+  mesh32 Object_32 mat=20 tri=10128 min=-1.03,-2.56,0.36 max=1.03,2.54,1.36
+  mesh33 Object_33 mat=20 tri=1249 min=-0.74,-1.25,0.95 max=-0.08,-1.04,0.99
+  mesh34 Object_34 mat=23 tri=184 min=-0.16,-2.56,0.39 max=0.16,2.53,0.81
+  mesh35 Object_35 mat=24 tri=16 min=0.28,-0.86,0.89 max=0.52,-0.84,0.91
+  mesh36 Object_36 mat=25 tri=14132 min=-0.85,-2.55,0.25 max=0.85,-2.05,0.72
+  mesh37 Object_37 mat=27 tri=392 min=-0.86,-2.41,0.59 max=0.86,-2.03,0.74
+  mesh38 Object_38 mat=28 tri=12595 min=-0.80,2.24,0.78 max=0.80,2.51,0.97
+  mesh39 Object_39 mat=28 tri=2109 min=0.62,2.31,0.86 max=0.74,2.43,0.95
+  mesh40 Object_40 mat=29 tri=504 min=-0.80,2.24,0.78 max=0.80,2.51,0.97
+  mesh41 Object_41 mat=30 tri=8496 min=-0.95,-1.84,0.03 max=0.95,1.76,0.59
+  mesh42 Object_42 mat=31 tri=1152 min=-0.82,1.27,0.30 max=0.82,1.42,0.48
+  mesh43 Object_43 mat=32 tri=2095 min=-0.72,-0.56,0.38 max=0.73,1.30,1.04
+  mesh44 Object_44 mat=32 tri=13310 min=-0.86,-1.23,0.25 max=0.86,1.31,1.38
+  mesh45 Object_45 mat=32 tri=5956 min=-0.88,-0.97,0.34 max=0.88,1.19,1.36
+  mesh46 Object_46 mat=33 tri=933 min=-0.80,-0.88,0.41 max=0.80,0.56,1.31
+  mesh47 Object_47 mat=34 tri=10472 min=0.65,-1.84,0.02 max=0.95,1.76,0.59
+  mesh48 Object_48 mat=34 tri=10472 min=-0.95,-1.84,0.02 max=-0.65,1.76,0.59
+  mesh49 Object_49 mat=36 tri=2800 min=-0.96,-1.93,-0.07 max=0.96,1.85,0.68
+  mesh50 Object_50 mat=38 tri=1247 min=-0.77,-0.91,0.36 max=0.77,1.13,1.01
+tri 199426
+N0 Sketchfab_model M
+  N1 a8w12_2008.obj.cleaner.materialmerger.gles
+    N2 Object_2 mesh0
+    N3 Object_3 mesh1
+    N4 Object_4 mesh2
+    N5 Object_5 mesh3
+    N6 Object_6 mesh4
+    N7 Object_7 mesh5
+    N8 Object_8 mesh6
+    N9 Object_9 mesh7
+    N10 Object_10 mesh8
+    N11 Object_11 mesh9
+    N12 Object_12 mesh10
+    N13 Object_13 mesh11
+    N14 Object_14 mesh12
+    N15 Object_15 mesh13
+    N16 Object_16 mesh14
+    N17 Object_17 mesh15
+    N18 Object_18 mesh16
+    N19 Object_19 mesh17
+    N20 Object_20 mesh18
+    N21 Object_21 mesh19
+    N22 Object_22 mesh20
+    N23 Object_23 mesh21
+    N24 Object_24 mesh22
+    N25 Object_25 mesh23
+    N26 Object_26 mesh24
+    N27 Object_27 mesh25
+    N28 Object_28 mesh26
+    N29 Object_29 mesh27
+    N30 Object_30 mesh28
+    N31 Object_31 mesh29
+    N32 Object_32 mesh30
+    N33 Object_33 mesh31
+    N34 Object_34 mesh32
+    N35 Object_35 mesh33
+    N36 Object_36 mesh34
+    N37 Object_37 mesh35
+    N38 Object_38 mesh36
+    N39 Object_39 mesh37
+    N40 Object_40 mesh38
+    N41 Object_41 mesh39
+    N42 Object_42 mesh40
+    N43 Object_43 mesh41
+    N44 Object_44 mesh42
+    N45 Object_45 mesh43
+    N46 Object_46 mesh44
+    N47 Object_47 mesh45
+    N48 Object_48 mesh46
+    N49 Object_49 mesh47
+    N50 Object_50 mesh48
+    N51 Object_51 mesh49
+    N52 Object_52 mesh50

@@ -1,0 +1,20 @@
+==  src/vetten.glb nodes 9 meshes 7 mats 2 tex 5 imgs 3080824,10645242,954066,10564671,12605618
+  M 0:Corvette col= tex=1 met=undefined r=undefined a=BLEND em=
+  M 1:Wheel col= tex=1 met=undefined r=undefined a= em=
+  mesh0 Object_0 mat=0 tri=9256 min=-0.95,0.01,0.14 max=0.95,4.45,1.21
+  mesh1 Object_1 mat=0 tri=11596 min=-0.95,0.24,0.22 max=0.95,4.47,0.97
+  mesh2 Object_2 mat=0 tri=13688 min=-0.96,-0.01,0.13 max=0.96,4.32,1.23
+  mesh3 Object_3 mat=0 tri=8214 min=-1.04,0.36,0.21 max=1.04,4.47,0.92
+  mesh4 Object_4 mat=1 tri=19360 min=-0.93,0.69,0.10 max=0.93,3.91,0.63
+  mesh5 Object_5 mat=1 tri=7536 min=-0.92,0.89,0.20 max=0.92,3.71,0.61
+  mesh6 Object_6 mat=1 tri=13696 min=-0.92,0.63,0.04 max=0.92,3.97,0.69
+tri 83346
+N0 Sketchfab_model M
+  N1 CorvetteC6.obj.cleaner.materialmerger.gles
+    N2 Object_2 mesh0
+    N3 Object_3 mesh1
+    N4 Object_4 mesh2
+    N5 Object_5 mesh3
+    N6 Object_6 mesh4
+    N7 Object_7 mesh5
+    N8 Object_8 mesh6
