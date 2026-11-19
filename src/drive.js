@@ -651,6 +651,18 @@ function make(cfg){
     if(camMode===1){const c=w.cabCam;c.position.copy(w.eye.position);c.quaternion.identity();c.rotateY(-s.look-.12);c.rotateX(-.05);c.rotateZ(rz);c.fov=cam.fov;c.aspect=cam.aspect;c.updateProjectionMatrix()}
     w.sky.position.copy(cam.position);w.dl.position.copy(w.car.position).addScaledVector(w.sunDir,170);w.dl.target.position.copy(w.car.position);
     if(w.spot){w.spot.position.set(s.x+pfx*1.6,gy+.85,s.z+pfz*1.6);w.spot.target.position.set(s.x+pfx*42,hy(sS+42)+.2,s.z+pfz*42)}}
+  function loadUI(wd,hh,t){const L=w.ld,f='"Segoe UI",sans-serif';if(!L.sp)L.sp=0;L.sp+=(L.p-L.sp)*.12;const p=L.sp;
+    g.fillStyle='#07080c';g.fillRect(0,0,wd,hh);const gr=g.createRadialGradient(wd/2,hh*.62,0,wd/2,hh*.62,wd*.6);gr.addColorStop(0,'rgba(255,122,26,.13)');gr.addColorStop(1,'rgba(255,122,26,0)');g.fillStyle=gr;g.fillRect(0,0,wd,hh);
+    // полосы дороги, бегущие вниз
+    g.save();g.strokeStyle='rgba(255,255,255,.07)';g.lineWidth=2;for(let i=0;i<14;i++){const y=hh*.55+((i*40+t*260)%(hh*.5));const k=(y-hh*.55)/(hh*.45);g.beginPath();g.moveTo(wd/2-k*wd*.05,y);g.lineTo(wd/2-k*wd*.05,y+12*k);g.moveTo(wd/2+k*wd*.05,y);g.lineTo(wd/2+k*wd*.05,y+12*k);g.stroke()}g.restore();
+    const fs=clamp(Math.min(hh*.05,wd*.04),18,40),bw=Math.min(wd*.6,560),bh=Math.max(8,fs*.32),bx=(wd-bw)/2,by=hh*.55;
+    g.textAlign='center';g.textBaseline='middle';g.fillStyle='#fff';g.font='italic 900 '+fs+'px '+f;g.fillText('НОЧНОЕ ШОССЕ',wd/2,by-fs*1.6);
+    g.save();g.translate(bx,by);g.transform(1,0,-.25,1,0,0);g.fillStyle='rgba(255,255,255,.08)';g.fillRect(0,0,bw,bh);
+    const lg=g.createLinearGradient(0,0,bw,0);lg.addColorStop(0,'#ff5a00');lg.addColorStop(1,'#ffb347');g.fillStyle=lg;g.fillRect(0,0,bw*p,bh);
+    g.fillStyle='rgba(255,255,255,.55)';g.fillRect(Math.max(0,bw*p-3),0,3,bh);g.restore();
+    g.font='600 '+(fs*.42)+'px '+f;g.fillStyle='rgba(255,255,255,.75)';g.textAlign='left';g.fillText(L.msg,bx,by+bh+fs*.6);g.textAlign='right';g.fillStyle='#ff9a3c';g.fillText(Math.round(p*100)+'%',bx+bw,by+bh+fs*.6);
+    g.textAlign='center';g.fillStyle='rgba(255,255,255,.62)';g.font=(fs*.36)+'px '+f;g.fillText('Загружаем все машины и город, чтобы в игре ничего не подгружалось',wd/2,by+bh+fs*1.5);
+    g.textAlign='start';g.textBaseline='alphabetic'}
   function hud(wd,hh,t){vig(wd,hh);const s=st,f='"Segoe UI",sans-serif',fs=clamp(Math.min(hh*.027,wd*.021),12,22),pl=(x,y,a,b)=>{g.fillStyle='rgba(6,8,12,.66)';rr(x,y,a,b,4);g.fill();g.fillStyle='#ff7a1a';g.fillRect(x,y+4,3,Math.max(0,b-8))};
     g.textBaseline='middle';g.shadowBlur=0;
     const rows=[['Очки',Math.round(s.score).toLocaleString('ru-RU')],['Рекорд',Math.round(s.best).toLocaleString('ru-RU')],['Обогнал',String(s.passed)],['Путь',(s.dist/1000).toFixed(1)+' км']];
@@ -680,10 +692,12 @@ function make(cfg){
     g.textAlign='start';g.textBaseline='alphabetic'}
   return {name:cfg.name,grp:'Рандом и игры',game:true,three:true,get st(){return st},get world(){return w},dcx,
     garKey,get garage(){return gar},get car(){return w&&w.sel},get whInfo(){return w&&w.wh&&w.wh.map(([p])=>[+p.position.x.toFixed(2),+p.position.y.toFixed(2),+p.position.z.toFixed(2),p.children[0].children.length]).concat([[w.pg.W,w.pg.wr,w.pg.ax]])},get mdlInfo(){if(!w||!w.mdl)return null;w.car.updateMatrixWorld(true);const inv=new T.Matrix4().copy(w.car.matrixWorld).invert(),r={pg:[w.pg.L,w.pg.W,w.pg.H,w.pg.wr,w.pg.ax],mats:{}},v=new T.Vector3();w.mdl.traverse(o=>{if(!o.isMesh)return;const n=o.material.name||'?',q=r.mats[n]||(r.mats[n]={t:0,b:[1e9,1e9,1e9,-1e9,-1e9,-1e9]}),p=o.geometry.attributes.position,m=new T.Matrix4().multiplyMatrices(inv,o.matrixWorld);q.t+=o.geometry.index.count/3|0;for(let i=0;i<p.count;i+=3){v.fromBufferAttribute(p,i).applyMatrix4(m);q.b[0]=Math.min(q.b[0],v.x);q.b[1]=Math.min(q.b[1],v.y);q.b[2]=Math.min(q.b[2],v.z);q.b[3]=Math.max(q.b[3],v.x);q.b[4]=Math.max(q.b[4],v.y);q.b[5]=Math.max(q.b[5],v.z)}});for(const k in r.mats)r.mats[k].b=r.mats[k].b.map(x=>+x.toFixed(2));return r},pick(i,c){if(w)applyCar({i,c})},
-    enter(){if(!r3init())return;const first=!w;if(!w)build();reset();if(first&&LS.get('car_'+cfg.id,null)===null)gar=true},
+    enter(){if(!r3init())return;const first=!w;if(!w)build();reset();if(first&&LS.get('car_'+cfg.id,null)===null)gar=true;
+      if(first&&w.preload){w.ld={p:0,msg:'Загрузка…',t0:performance.now()};w.preload((p,msg)=>{w.ld.p=p;w.ld.msg=msg}).then(()=>{const id=w.pd.id;if(w.useMdl&&w.mdl!==w.fitC[id])w.useMdl();w.ld.done=performance.now()}).catch(e=>{console.warn('preload',e);w.ld.done=performance.now()})}},
+    get loading(){return !!(w&&w.ld&&!w.ld.done)},
     restart(){if(w&&st&&(st.crashed?st.crashT>.7:true))reset()},gas(){if(w&&st&&st.crashed&&st.crashT>1.2)reset()},
     nextCam(){camMode=(camMode+1)%4;LS.set('cam_'+cfg.id,camMode);if(st)say(['Вид: сзади','Вид: от руля','Вид: с капота','Вид: издалека'][camMode],1.2)},get cam(){return camMode},
-    draw(wd,hh,t,dt){if(!w||!st)return;if(!gar)step(Math.min(dt,.05),t);sync(t,dt,wd,hh);if(gar)garCam(t,wd,hh);
+    draw(wd,hh,t,dt){if(!w||!st)return;if(w.ld&&!w.ld.done){loadUI(wd,hh,t);return}if(w.ld&&w.ld.done&&!w.ld.fadeT)w.ld.fadeT=t;if(!gar)step(Math.min(dt,.05),t);sync(t,dt,wd,hh);if(gar)garCam(t,wd,hh);
       const tw=Math.max(2,Math.round(wd*dpr*glScale)),tH=Math.max(2,Math.round(hh*dpr*glScale));if(g3.width!==tw||g3.height!==tH)R3.setSize(tw,tH,false);
       R3.render(w.sc,w.cam);if(camMode===1&&!gar){R3.autoClear=false;R3.clearDepth();if(!(w.mdl&&w.noCab))R3.render(w.cabSc,w.cabCam);R3.autoClear=true}if(gar)garUI(wd,hh,t);else hud(wd,hh,t)}}}
 return [make(NY)]})();

@@ -69,10 +69,26 @@ function fitMdl(src,pg,cf){const g=new T.Group(),m=src.clone(true);g.add(m);m.up
 w.mdlEmpty=new T.BufferGeometry();
 w.useMdl=()=>{const id=w.pd.id,cf=MCFG[id];if(w.mdl){w.body.remove(w.mdl);w.mdl=null}
   if(!cf)return;const pg=w.pg,tok=w.mdlTok=(w.mdlTok||0)+1;
-  loadMdl(cf.f).then(src=>{if(!src||tok!==w.mdlTok)return;const g=fitMdl(src,pg,cf);g.userData.id=id;w.mdl=g;w.body.add(g);
+  const put=g=>{if(!g||tok!==w.mdlTok)return;w.mdl=g;w.body.add(g);
     w.body.geometry=w.mdlEmpty;w.mdlPaint();if(w.wh)w.wh.forEach(([p])=>w.car.remove(p));w.wh=[];
     for(const q of g.userData.wheels)if(q){w.car.add(q[0]);w.wh.push(q)}
-    if(w.wh.length!==4){w.wh.forEach(([p])=>w.car.remove(p));w.wh=[];w.mkWh()}w.eyeO=null;setTimeout(()=>{try{w.fitEye()}catch(e){console.warn('eye',e)}},0)})};
+    if(w.wh.length!==4){w.wh.forEach(([p])=>w.car.remove(p));w.wh=[];w.mkWh()}w.eyeO=null;if(g.userData.eye)w.eyeO=g.userData.eye;else setTimeout(()=>{try{w.fitEye();g.userData.eye=w.eyeO}catch(e){console.warn('eye',e)}},0)};
+  if(w.fitC[id])return put(w.fitC[id]);
+  loadMdl(cf.f).then(src=>{if(!src||tok!==w.mdlTok)return;const g=fitMdl(src,pg,cf);g.userData.id=id;w.fitC[id]=g;put(g)})};
+w.fitC={};
+// загрузка всего заранее: модели -> подгонка всех машин -> заливка текстур и шейдеров в видеокарту
+w.preload=async(prog)=>{const ids=PCARS.map(p=>p.id).filter(id=>MCFG[id]),files=[...new Set(ids.map(id=>MCFG[id].f))],N=files.length+ids.length+2;let k=0;
+  const tick=async(msg)=>{k++;prog(k/N,msg);await new Promise(r=>setTimeout(r,16))};
+  await tick('Город и дорога');
+  for(const f of files){await loadMdl(f);await tick('Модель: '+f)}
+  for(const id of ids){const pd=PCARS.find(p=>p.id===id);if(!w.fitC[id]){const src=await loadMdl(MCFG[id].f);if(src){const pg=carGeo(pd.kind,true),g=fitMdl(src,pg,MCFG[id]);g.userData.id=id;w.fitC[id]=g}}await tick(pd.name)}
+  // в видеокарту: временно ставим все машины в сцену и компилируем
+  const tmp=new T.Group();for(const id in w.fitC){const g=w.fitC[id];if(g.parent)continue;g.userData.tmpWh=[];for(const q of g.userData.wheels)if(q){g.add(q[0]);g.userData.tmpWh.push(q[0])}tmp.add(g)}
+  w.sc.add(tmp);tmp.position.copy(w.car.position);
+  try{w.sc.traverse(o=>{const ms=o.material?(Array.isArray(o.material)?o.material:[o.material]):[];for(const mt of ms)for(const key of['map','normalMap','roughnessMap','metalnessMap','emissiveMap','aoMap','alphaMap'])if(mt[key])R3.initTexture(mt[key])});
+    R3.compile(w.sc,w.cam);if(w.cabSc)R3.compile(w.cabSc,w.cabCam||w.cam);R3.render(w.sc,w.cam)}catch(e){console.warn('precompile',e)}
+  w.sc.remove(tmp);for(const g of [...tmp.children]){tmp.remove(g);for(const p of g.userData.tmpWh||[])g.remove(p);delete g.userData.tmpWh}
+  await tick('Видеокарта');prog(1,'Готово')};
 // огни/нитро каждый кадр
 w.fxUpd=(s,dt,night)=>{const fx=w.mdl&&w.mdl.userData.fx;if(!fx)return;const t=performance.now()/1000,br=!!s.brk;
   for(const m of fx.fl)m.emissiveIntensity=night?1.5:.25;for(const m of fx.rl)m.emissiveIntensity=br?3.4:night?1.2:.15;
