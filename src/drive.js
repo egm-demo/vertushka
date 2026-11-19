@@ -353,7 +353,12 @@ function make(cfg){
     w.mkWh=()=>{const pg=w.pg;if(w.wh)w.wh.forEach(([p])=>w.car.remove(p));const cd=CARS[w.pd.kind]||{},wg=wheelGeo(pg.wr,.26,cd.wh);w.pcal.color.setHex(cd.cal||0x777b80);w.wh=[];for(let i=0;i<4;i++){const piv=new T.Group(),m=new T.Mesh(wg,[w.m.tire,w.m.rim,w.m.aux,w.m.dark]);m.castShadow=true;const cl=new T.Mesh(new T.BoxGeometry(.085,pg.wr*.34,pg.wr*.4),w.pcal);cl.position.set(0,pg.wr*.3,pg.wr*.16);cl.rotation.x=.5;piv.add(cl);piv.position.set((i%2?1:-1)*(pg.W/2-.15),pg.wr,-(i<2?pg.ax[0]:pg.ax[1]));piv.add(m);w.car.add(piv);w.wh.push([piv,m])}};w.mkWh();
     // неон под днищем, дым, следы шин, тени под машинами
     w.glow=new T.Mesh(new T.PlaneGeometry(3.6,6.8).rotateX(-Math.PI/2),new T.MeshBasicMaterial({map:glowTex,transparent:true,blending:T.AdditiveBlending,depthWrite:false,toneMapped:false,polygonOffset:true,polygonOffsetFactor:-4,polygonOffsetUnits:-4}));w.glow.position.y=.05;w.car.add(w.glow);w.csh=new T.Mesh(new T.PlaneGeometry(1,1).rotateX(-Math.PI/2),new T.MeshBasicMaterial({map:cshTex(),transparent:true,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-3,polygonOffsetUnits:-3}));w.csh.position.y=.03;w.csh.renderOrder=1;w.car.add(w.csh);w.csh.scale.set(w.pg.W*1.3,1,w.pg.L*1.12);
-    w.smoke=w.mkPts(SMN,9,0xffffff,true,w.dyn);w.smoke.geometry.setDrawRange(0,SMN);w.sp=[];for(let i=0;i<SMN;i++)w.sp.push({x:0,y:0,z:0,vx:0,vy:0,vz:0,l:0,m:1});w.si=0;
+    {const ge=new T.BufferGeometry();ge.setAttribute('position',new T.BufferAttribute(new Float32Array(SMN*3),3));ge.setAttribute('color',new T.BufferAttribute(new Float32Array(SMN*3),3));
+      const pc=document.createElement('canvas');pc.width=pc.height=64;const px=pc.getContext('2d');for(let i=0;i<14;i++){const r=10+Math.random()*14,x=20+Math.random()*24,y=20+Math.random()*24,gr=px.createRadialGradient(x,y,0,x,y,r);gr.addColorStop(0,'rgba(255,255,255,.35)');gr.addColorStop(1,'rgba(255,255,255,0)');px.fillStyle=gr;px.fillRect(0,0,64,64)}
+      const mt=new T.ShaderMaterial({uniforms:{map:{value:new T.CanvasTexture(pc)},tint:{value:new T.Color(cfg.night?0xa9aebb:0xd8d8dc)}},transparent:true,depthWrite:false,
+        vertexShader:'attribute vec3 color;varying float va;varying float vr;void main(){vec4 mv=modelViewMatrix*vec4(position,1.);va=color.x;vr=color.z;gl_PointSize=color.y*640./max(.5,-mv.z);gl_Position=projectionMatrix*mv;}',
+        fragmentShader:'uniform sampler2D map;uniform vec3 tint;varying float va;varying float vr;void main(){vec2 u=gl_PointCoord-.5;float c=cos(vr),s=sin(vr);u=mat2(c,-s,s,c)*u+.5;vec4 t=texture2D(map,u);gl_FragColor=vec4(tint*(.85+.15*t.r),t.a*va);if(gl_FragColor.a<.004)discard;}'});
+      w.smoke=new T.Points(ge,mt);w.smoke.frustumCulled=false;w.smoke.renderOrder=4;w.dyn.add(w.smoke)}w.sp=[];for(let i=0;i<SMN;i++)w.sp.push({x:0,y:0,z:0,vx:0,vy:0,vz:0,l:0,m:1});w.si=0;
     {const ge=new T.BufferGeometry(),idx=[];w.skA=new Float32Array(SKN*12);for(let i=0;i<SKN;i++){const a=i*4;idx.push(a,a+1,a+2,a+2,a+1,a+3)}ge.setIndex(idx);ge.setAttribute('position',new T.BufferAttribute(w.skA,3));
       w.sk=new T.Mesh(ge,new T.MeshBasicMaterial({color:0x040405,transparent:true,opacity:.62,depthWrite:false,side:T.DoubleSide,polygonOffset:true,polygonOffsetFactor:-3,polygonOffsetUnits:-3}));w.sk.frustumCulled=false;sc.add(w.sk);w.skI=0;w.skZ=0;w.skP=[null,null]}
     w.shad=new T.InstancedMesh(new T.PlaneGeometry(1,1).rotateX(-Math.PI/2),new T.MeshBasicMaterial({map:shTex,transparent:true,depthWrite:false,opacity:.8,polygonOffset:true,polygonOffsetFactor:-1,polygonOffsetUnits:-1}),48);w.shad.frustumCulled=false;w.shad.count=0;sc.add(w.shad);
@@ -549,7 +554,7 @@ function make(cfg){
     const fx=Math.sin(s.psi),fz=-Math.cos(s.psi),rx=-fz,rz=fx,bx=s.x-fx*pg.L*.5,bz=s.z-fz*pg.L*.5;
     if(s.nitroOn)for(const sg of[-1,1])emit(bx+rx*sg*.45,gy+.38,bz+rz*sg*.45,-fx*6+(Math.random()-.5),Math.random()*.6,-fz*6+(Math.random()-.5),.22,.35,.65,1,0);
     if((s.slip>.13||(keys.h&&!s.crashed))&&s.kmh>25&&s.surf===1){const ra=-pg.ax[1],hw=pg.W/2-.12;for(const sg of[-1,1]){const wx=s.x-fx*ra+rx*sg*hw,wz=s.z-fz*ra+rz*sg*hw;
-        if(Math.random()<.55)emitS(wx+(Math.random()-.5)*.9,gy+.3+Math.random()*.3,wz+(Math.random()-.5)*.9,(Math.random()-.5)*3+fx*s.u*.2,.8+Math.random()*1.8,(Math.random()-.5)*3+fz*s.u*.2,1+Math.random()*.9);skidAdd(sg<0?0:1,wx,wz,rx,rz)}}
+        for(let q=0;q<2;q++)if(Math.random()<.5+Math.min(.45,s.slip))emitS(wx+(Math.random()-.5)*.9,gy+.25+Math.random()*.3,wz+(Math.random()-.5)*.9,(Math.random()-.5)*3+fx*s.u*.25,.6+Math.random()*1.6,(Math.random()-.5)*3+fz*s.u*.25,1.4+Math.random()*1.4);skidAdd(sg<0?0:1,wx,wz,rx,rz)}}
     else w.skP[0]=w.skP[1]=null;
     if(s.surf<1&&s.kmh>12&&Math.random()<.8)emit(bx+(Math.random()-.5)*1.6,gy+.2,bz,(Math.random()-.5)*2,.8+Math.random()*1.5,(Math.random()-.5)*2,.9,.42,.36,.26,-1)}
   function sync(t,dt,wd,hh){const s=st,pg=w.pg,sS=s.s,gy=groundY(sS,s.d),m=dcx(sS),psiR=Math.atan(m);
@@ -560,7 +565,7 @@ function make(cfg){
     s.heave=s.surf<1?Math.sin(t*37)*.025*Math.min(1,s.kmh/40):Math.sin(t*23)*.004*Math.min(1,s.kmh/120);
     w.body.rotation.set(s.pitch,0,s.roll);w.body.position.y=s.heave;s.spin+=s.u/C.rw*dt;
     w.wh.forEach(([piv,ms],i)=>{piv.rotation.y=i<2?-s.steer*1.6:0;ms.rotation.x=-s.spin});
-    w.ptail.emissiveIntensity=s.brk?3.2:cfg.night?1.3:.2;
+    w.ptail.emissiveIntensity=s.brk?3.2:cfg.night?1.3:.2;if(w.fxUpd)w.fxUpd(s,dt,!!cfg.night);
     w.glow.material.color.set(col(.6+A.beat*.3));w.glow.material.opacity=Math.min(.7,.2+A.beat*.35+A.bass*.15);w.glow.visible=camMode!==1;
     s.wheelA+=(clamp(s.steer/Math.max(.02,s.dmax),-1.3,1.3)*.72-s.wheelA)*Math.min(1,dt*12);w.sw.rotation.z=-s.wheelA;
     let shi=0;setI(w.shad,shi++,s.x,gy+.03,s.z,-s.psi,pg.W*1.55,1,pg.L*1.25,0);for(const c of s.cars){const p=pt(c.s,c.d,0);c.mesh.position.set(p.x,p.y,p.z);c.mesh.rotation.set(p.pitch*c.dir,p.yaw+(c.dir<0?Math.PI:0)-c.yawOff,0);if(shi<48)setI(w.shad,shi++,p.x,p.y+.03,p.z,p.yaw-c.yawOff,c.W*1.5,1,c.L*1.25,p.pitch)}
@@ -579,10 +584,10 @@ function make(cfg){
     for(let i=0;i<PN;i++){const p=w.pp[i];if(p.l>0){p.l-=dt;p.vy-=p.gr*dt;p.x+=p.vx*dt;p.y+=p.vy*dt;p.z+=p.vz*dt;const k=Math.max(0,p.l/p.m);pp.setXYZ(i,p.x,p.y,p.z-s.z);pc.setXYZ(i,p.r*k,p.g*k,p.b*k)}else pc.setXYZ(i,0,0,0)}
     pp.needsUpdate=pc.needsUpdate=true;
     {const sp_=w.smoke.geometry.attributes.position,sc_=w.smoke.geometry.attributes.color,dr=Math.exp(-dt*1.6);
-      for(let i=0;i<SMN;i++){const p=w.sp[i];if(p.l>0){p.l-=dt;p.vx*=dr;p.vz*=dr;p.vy*=dr;p.x+=p.vx*dt;p.y+=p.vy*dt+dt*.5;p.z+=p.vz*dt;const k=Math.max(0,p.l/p.m),a=.028*Math.min(1,k*2.5);sp_.setXYZ(i,p.x,p.y,p.z-s.z);sc_.setXYZ(i,a,a,a*1.08)}else sc_.setXYZ(i,0,0,0)}
+      for(let i=0;i<SMN;i++){const p=w.sp[i];if(p.l>0){p.l-=dt;p.vx*=dr;p.vz*=dr;p.vy*=dr;p.x+=p.vx*dt;p.y+=p.vy*dt+dt*.5;p.z+=p.vz*dt;const k=Math.max(0,p.l/p.m),a=1.15*Math.min(1,k*1.6)*Math.min(1,(1-k)*8);sp_.setXYZ(i,p.x,p.y,p.z-s.z);sc_.setXYZ(i,a,.9+(1-k)*3.2,i*1.7)}else sc_.setXYZ(i,0,0,0)}
       sp_.needsUpdate=sc_.needsUpdate=true}
     // камера
-    const cam=w.cam,sp=Math.hypot(s.u,s.v),k=Math.min(1,sp/cfg.vtop),beta=s.u>3?Math.atan2(s.v,s.u):0;s.camYaw+=(s.psi+beta*.5-s.camYaw)*(1-Math.exp(-dt*4.5));w.body.visible=camMode!==1;for(const p of w.wh)p[0].visible=camMode!==1;
+    const cam=w.cam,sp=Math.hypot(s.u,s.v),k=Math.min(1,sp/cfg.vtop),beta=s.u>3?Math.atan2(s.v,s.u):0;s.camYaw+=(s.psi+beta*.5-s.camYaw)*(1-Math.exp(-dt*4.5));const inM=camMode===1&&!!w.mdl;w.body.visible=camMode!==1||inM;for(const p of w.wh)p[0].visible=camMode!==1;if(w.cabHide)w.cabHide(inM);cam.near=camMode===1?.04:.3;
     const cy=s.camYaw,cfx=Math.sin(cy),cfz=-Math.cos(cy),pfx=Math.sin(s.psi),pfz=-Math.cos(s.psi);
     if(camMode===1){const F='"Segoe UI",Arial,sans-serif',rp=clamp(s.rpm/C.red,0,1);let x=w.clCv.getContext('2d');if(w.pd.cab.cl!=='dig')dials(x,s);else{x.fillStyle='#05070b';x.fillRect(0,0,512,160);x.textBaseline='middle';
       for(let i=0;i<24;i++){x.fillStyle=i/24<rp?(i>=21?'#ff5548':col(.45+i/24*.5)):'rgba(255,255,255,.13)';x.fillRect(16+i*20,12,17,16)}
@@ -592,7 +597,7 @@ function make(cfg){
       x=w.scCv.getContext('2d');x.fillStyle='#070a10';x.fillRect(0,0,256,128);const tr=tracks[cur];x.textBaseline='middle';x.textAlign='left';x.fillStyle='#fff';x.font='700 18px '+F;x.fillText(cap?cap.name:tr?tr.title:'Вертушка',12,20,232);
       for(let i=0;i<24;i++){const v=A.bands[4+((i*2.4)|0)];x.fillStyle=col(.25+i/24*.75);x.fillRect(12+i*9.7,120-v*82,7.5,v*82+2)}w.scTex.needsUpdate=true;
       w.ambM.color.set(col(.5+A.note*.45)).multiplyScalar(.45+.55*Math.max(A.beat,A.mel*.7));w.cabL.color.set(col(.7));w.cabL.intensity=.55+A.beat*.7+A.mel*.3;
-      w.eye.position.set(-.37+clamp(-s.ay*.002,-.03,.03),1.08+w.pd.cab.dy,.38+clamp(s.ax*.002,-.03,.04));
+      {const E=inM&&w.eyeO?w.eyeO:[-.37,1.08+w.pd.cab.dy,.38];w.eye.position.set(E[0]+clamp(-s.ay*.002,-.03,.03),E[1],E[2]+clamp(s.ax*.002,-.03,.04))}
       w.car.updateMatrixWorld(true);cam.position.setFromMatrixPosition(w.eye.matrixWorld);w.eye.getWorldQuaternion(cam.quaternion);s.look+=(clamp(beta*.75,-.7,.7)-s.look)*Math.min(1,dt*5);cam.rotateY(-s.look-.12);cam.rotateX(-.05);
       for(let i=0;i<2;i++){w.hands[i].getWorldPosition(V2);const ar=w.arms[i];ar.position.copy(V2);ar.position.y-=w.pd.cab.dy;ar.lookAt(w.elb[i]);ar.scale.z=V2.distanceTo(w.elb[i])}}
     else if(camMode===2){const hd=w.pd.hood;cam.position.set(s.x+pfx*hd[0],gy+hd[1]+s.heave,s.z+pfz*hd[0]);V1.set(s.x+pfx*30,hy(sS+30)+1,s.z+pfz*30)}
@@ -631,12 +636,12 @@ function make(cfg){
     else if(s.msgT>0){g.globalAlpha=Math.min(1,s.msgT*2.5);box([s.msg],hh*.16,1.5);g.globalAlpha=1}
     g.textAlign='start';g.textBaseline='alphabetic'}
   return {name:cfg.name,grp:'Рандом и игры',game:true,three:true,get st(){return st},get world(){return w},dcx,
-    garKey,get garage(){return gar},get car(){return w&&w.sel},get mdlInfo(){if(!w||!w.mdl)return null;const r={paint:w.mdl.userData.paint.length,mats:{}};w.mdl.traverse(o=>{if(o.isMesh){const n=o.material.name||'?';r.mats[n]=(r.mats[n]||0)+o.geometry.index.count/3|0}});return r},pick(i,c){if(w)applyCar({i,c})},
+    garKey,get garage(){return gar},get car(){return w&&w.sel},get whInfo(){return w&&w.wh&&w.wh.map(([p])=>[+p.position.x.toFixed(2),+p.position.y.toFixed(2),+p.position.z.toFixed(2),p.children[0].children.length]).concat([[w.pg.W,w.pg.wr,w.pg.ax]])},get mdlInfo(){if(!w||!w.mdl)return null;w.car.updateMatrixWorld(true);const inv=new T.Matrix4().copy(w.car.matrixWorld).invert(),r={pg:[w.pg.L,w.pg.W,w.pg.H,w.pg.wr,w.pg.ax],mats:{}},v=new T.Vector3();w.mdl.traverse(o=>{if(!o.isMesh)return;const n=o.material.name||'?',q=r.mats[n]||(r.mats[n]={t:0,b:[1e9,1e9,1e9,-1e9,-1e9,-1e9]}),p=o.geometry.attributes.position,m=new T.Matrix4().multiplyMatrices(inv,o.matrixWorld);q.t+=o.geometry.index.count/3|0;for(let i=0;i<p.count;i+=3){v.fromBufferAttribute(p,i).applyMatrix4(m);q.b[0]=Math.min(q.b[0],v.x);q.b[1]=Math.min(q.b[1],v.y);q.b[2]=Math.min(q.b[2],v.z);q.b[3]=Math.max(q.b[3],v.x);q.b[4]=Math.max(q.b[4],v.y);q.b[5]=Math.max(q.b[5],v.z)}});for(const k in r.mats)r.mats[k].b=r.mats[k].b.map(x=>+x.toFixed(2));return r},pick(i,c){if(w)applyCar({i,c})},
     enter(){if(!r3init())return;const first=!w;if(!w)build();reset();if(first&&LS.get('car_'+cfg.id,null)===null)gar=true},
     restart(){if(w&&st&&(st.crashed?st.crashT>.7:true))reset()},gas(){if(w&&st&&st.crashed&&st.crashT>1.2)reset()},
     nextCam(){camMode=(camMode+1)%4;LS.set('cam_'+cfg.id,camMode);if(st)say(['Вид: сзади','Вид: от руля','Вид: с капота','Вид: издалека'][camMode],1.2)},get cam(){return camMode},
     draw(wd,hh,t,dt){if(!w||!st)return;if(!gar)step(Math.min(dt,.05),t);sync(t,dt,wd,hh);if(gar)garCam(t,wd,hh);
       const tw=Math.max(2,Math.round(wd*dpr*glScale)),tH=Math.max(2,Math.round(hh*dpr*glScale));if(g3.width!==tw||g3.height!==tH)R3.setSize(tw,tH,false);
-      R3.render(w.sc,w.cam);if(camMode===1&&!gar){R3.autoClear=false;R3.clearDepth();R3.render(w.cabSc,w.cabCam);R3.autoClear=true}if(gar)garUI(wd,hh,t);else hud(wd,hh,t)}}}
+      R3.render(w.sc,w.cam);if(camMode===1&&!gar){R3.autoClear=false;R3.clearDepth();if(!(w.mdl&&w.noCab))R3.render(w.cabSc,w.cabCam);R3.autoClear=true}if(gar)garUI(wd,hh,t);else hud(wd,hh,t)}}}
 return [make(NY)]})();
 const VIZX=[VIZRND,...DRIVE];
