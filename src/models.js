@@ -1,9 +1,10 @@
 /* --- настоящие 3D-модели машин игрока (GLB, встроены в файл) --- */
-const WR={gb:/^(right_wheel_[23]|plastic5_1[56]|leather02_weave_21)\.001$/,c6z:/^(Wheel[1-4]|Yokohama[1-4])Mtl$/,caym:/Wheel1A_Material$/,gn:/^(Elastic_Rubber|silver_rim|rim_black)$/,vetten:/^Wheel$/,w210n:/^Mesheswheel00[345]wheel00[456]1Mtl$/,a8n:/^(wheel_b|torm_disk_a8|mesh_spec)$/,w210:/^tire1$|Tire_Hub|Tire_Disk/,g:/Mesh(rim|tire|Disk)/,vette:/Tire_Hub|Tire_Disk|Wheel1A/,cay:/^material$|^tire$|^phong16$/,a8:/^material_1[012]$/},
-  LR={gb:/^(plastic5_(9|10)|leather02_weave_(10|15|18|25|26))\.001$/,c6z:/^(Vehiclelights[12]|Lights[123]|Glass1)Mtl$/,caym:/2022LightA_Material$/,gn:/emission|back_light/,vetten:/^$/,w210n:/^(L1Mtl|Meshesheadlights00021Mtl|Meshestaillights00011Mtl|B1Mtl)$/,a8n:/^(light_glass|lights_back_on|lights_glass)$/,w210:/Lights/,g:/^Light|red_glass/,vette:/Lights/,cay:/^light$|^Light_R$/,a8:/^$/};
+const WR={gb:/^(right_wheel_[23]|plastic5_1[56]|leather02_weave_21)\.001$/,c6z:/^(Wheel[1-4]|Yokohama[1-4])Mtl$/,caym:/Wheel1A_Material$/,cay23:/^caenka_(tire|chromewheels)$/,gn:/^(Elastic_Rubber|silver_rim|rim_black)$/,vetten:/^Wheel$/,w210n:/^Mesheswheel00[345]wheel00[456]1Mtl$/,a8n:/^(wheel_b|torm_disk_a8|mesh_spec)$/,w210:/^tire1$|Tire_Hub|Tire_Disk/,g:/Mesh(rim|tire|Disk)/,vette:/Tire_Hub|Tire_Disk|Wheel1A/,cay:/^material$|^tire$|^phong16$/,a8:/^material_1[012]$/},
+  LR={gb:/^(plastic5_(9|10)|leather02_weave_(10|15|18|25|26))\.001$/,c6z:/^(Vehiclelights[12]|Lights[123]|Glass1)Mtl$/,caym:/2022LightA_Material$/,cay23:/^caenka_(headlight|dalniy|DXO|stop|FARIZAD|stop2)$/,gn:/emission|back_light/,vetten:/^$/,w210n:/^(L1Mtl|Meshesheadlights00021Mtl|Meshestaillights00011Mtl|B1Mtl)$/,a8n:/^(light_glass|lights_back_on|lights_glass)$/,w210:/Lights/,g:/^Light|red_glass/,vette:/Lights/,cay:/^light$|^Light_R$/,a8:/^$/};
 const W210T=[[/^Meshesheadlights00021Mtl$/,0xd9e2ec,.9,.06],[/^Meshestaillights00011Mtl$/,0x7a0a06,.2,.12],[/^Meshesbootok0021Mtl$/,0x9a9ca2,1,.18],[/^L4Mtl$/,0xb8bcc4,1,.15],[/^Meshesbodyshellbodyshell0021Mtl$/,0x9ea2a8,1,.2]];
+const CAYT=[[/^caenka_leather$/,0x1c1714,0,.62],[/^caenka_carpetORANGE$/,0x1a1a1c,0,.95],[/^caenka_stitch$/,0x8a7a66,0,.8],[/^caenka_chrome$/,0xc8ccd2,1,.18],[/^caenka_black$/,0x18191b,0,.7],[/^caenka$/,0x2a2b2e,.2,.55],[/^caenka_dashboardFULL$/,0x202124,0,.6],[/^caenka_tire$/,0x141415,0,.9],[/^caenka_chromewheels$/,0xb8bcc2,1,.25],[/^caenka_red$/,0x8a0a08,0,.4],[/^caenka_(optika|zadSTERLO)$/,0x3a0806,0,.15],[/^caenka_peredfari$/,0xd8dde4,.9,.08],[/^(caenka_gauge|caenka_strelochki|caenka_gauge_3)$/,0x9aa0a8,0,.4],[/^(caenka_dashboardFULL|caenka_full_black_def|caenka_muzlonax|leather_embossedch1_001_custom2|caenka_belt)$/,0x1d1e20,0,.65],[/^(caenka_bolt|caenka_gauge_knopka|mirror\.012)$/,0x55585e,.6,.4],[/^(?!caenka_body$|caenka_glass|glass_invisible|caenka_(headlight|dalniy|DXO|stop|FARIZAD|stop2)$).*/,0x26272a,.1,.6]];
 const MCFG={w210:{f:'w210n',tint:W210T,paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/},w210c:{f:'w210n',tint:W210T,paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/,open:.62},g:{f:'gb',paint:/^bodypaint/,glass:/^(ExtWindowsGlass|IntWindows)/},
-  c6:{f:'c6z',ry:0,paint:/^Remapbody1Mtl$/,glass:/^Glass(2|6|10)Mtl$/},cay:{f:'caym',paint:/2022Paint_Material$/,glass:/2022Window_Material$/},a8:{f:'a8n',paint:/^body$/,glass:/^(vehicle_generic_glasswindows2|windows_int)$/}};
+  c6:{f:'c6z',ry:0,paint:/^Remapbody1Mtl$/,glass:/^Glass(2|6|10)Mtl$/},cay:{f:'cay23',tint:CAYT,paint:/^caenka_body$/,glass:/^(caenka_glass|caenka_glass_tinted|caenka_glass_prostoe|glass_invisible\.006)$/},a8:{f:'a8n',paint:/^body$/,glass:/^(vehicle_generic_glasswindows2|windows_int)$/}};
 // разрезать меш на части по треугольникам: key(cx,cy,cz)-> ключ или null; геометрия в координатах корня (g)
 function splitMesh(o,key){const ge=o.geometry,idx=ge.index?ge.index.array:null,n=idx?idx.length:ge.attributes.position.count,mw=o.matrixWorld,nm=new T.Matrix3().getNormalMatrix(mw);
   const P=ge.attributes.position,v=new T.Vector3(),wp=new Float32Array(P.count*3);for(let i=0;i<P.count;i++){v.fromBufferAttribute(P,i).applyMatrix4(mw);wp[i*3]=v.x;wp[i*3+1]=v.y;wp[i*3+2]=v.z}
@@ -140,7 +141,7 @@ loadMdl('arms').then(src=>{if(!src)return;const hm=src;const H=hm.userData;H.all
   w.hm=hm;hm.visible=false}).catch(e=>console.warn('hands',e));
 
 // в салоне: тёмный интерьер (Audi — полностью чёрный), без светлых бликов, чтобы видно было дорогу
-const CDARK={a8:.6,cay:.6,g:.6,w210:.7,w210c:.7,c6:.9};
+const CDARK={a8:.6,cay:.8,g:.85,w210:.7,w210c:.7,c6:.9};
 w.cabDark=on=>{if(w.hm)w.hm.visible=on;const g=w.mdl;if(!g)return;const id=g.userData.id,cf=MCFG[id]||{},k=CDARK[id]||.45;if(g.userData.dk===on)return;g.userData.dk=on;
   g.traverse(o=>{if(!o.isMesh)return;for(const mt of Array.isArray(o.material)?o.material:[o.material]){if(!mt||!mt.color)continue;
     if(mt.userData.c0===undefined){mt.userData.c0=mt.color.getHex();mt.userData.r0=mt.roughness;mt.userData.e0=mt.envMapIntensity}
@@ -194,4 +195,4 @@ w.fitEye=()=>{const g=w.mdl;if(!g)return null;const pg=w.pg,X=-pg.W*.205;g.updat
   // капот: верх кузова по центру, между фарами и лобовым
   let hz=-9,hb=0;g.traverse(o=>{if(!o.isMesh)return;const P=o.geometry.attributes.position,mw=new T.Matrix4().multiplyMatrices(inv,o.matrixWorld),st=Math.max(1,P.count/6000|0);
     for(let i=0;i<P.count;i+=st){v.fromBufferAttribute(P,i).applyMatrix4(mw);if(Math.abs(v.x)>.35||v.z<-pg.L*.3||v.z>-pg.L*.12)continue;if(v.y>hz&&v.y<pg.H*.85)hz=v.y}});
-  w.hoodO=hz>0?[pg.L*.2,+(hz+.13).toFixed(3)]:null;return {roof,y,z}};
+  w.hoodO=hz>0?[pg.L*.2,+(hz+.32).toFixed(3)]:null;return {roof,y,z}};

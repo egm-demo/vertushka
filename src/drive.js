@@ -492,7 +492,10 @@ function make(cfg){
       // руль под марку (по фото): мерседес — 4 спицы, звезда, дерево по ободу; ауди — 3 спицы, кольца; корвет — плоский низ; порше — 3 спицы
       const swp=new T.Group();swp.position.set(-.37,.79,-.2);swp.rotation.x=-.38;const sw=new T.Group();swp.add(sw);cab.add(swp);w.sw=sw;
       swp.add(new T.Mesh(new T.CylinderGeometry(.036,.05,.36,16).rotateX(Math.PI/2).translate(0,0,-.2),dkM));
-      const BR=CB.cl,R=.17,rr=.02,lea=S({color:0x141416,roughness:.48}),pad=S({color:0x1b1b1e,roughness:.4,metalness:.2});
+      // перфорированная кожа обода со строчкой
+      const leaT=ctex(256,64,(x,a,b)=>{x.fillStyle='#17171a';x.fillRect(0,0,a,b);x.fillStyle='rgba(0,0,0,.55)';for(let i=0;i<a;i+=6)for(let j=8;j<b-8;j+=6){x.beginPath();x.arc(i+(j/6%2)*3,j,1.1,0,7);x.fill()}
+        x.strokeStyle='rgba(150,140,128,.85)';x.lineWidth=1.4;x.setLineDash([4,3]);for(const y of[3,b-3]){x.beginPath();x.moveTo(0,y);x.lineTo(a,y);x.stroke()}});leaT.wrapS=leaT.wrapT=T.RepeatWrapping;leaT.repeat.set(10,1);
+      const BR=CB.cl,R=.17,rr=.021,lea=S({map:leaT,color:0xffffff,roughness:.55}),pad=S({color:0x1b1b1e,roughness:.4,metalness:.2});
       const rimWood=BR==='merc'&&!CB.dy;// дерево по ободу у W210 (фото 2)
       const wdR=S({color:0x4a1f0c,roughness:.22,metalness:.05});
       if(BR==='vette'){const pts=[];for(let k=0;k<=64;k++){const a=k/64*Math.PI*2;let x=Math.cos(a)*R,y=Math.sin(a)*R;if(y<-R*.78)y=-R*.78;pts.push(new T.Vector3(x,y,0))}
@@ -515,6 +518,12 @@ function make(cfg){
       const sl=R-hubR*.6-.01;
       if(BR==='merc'){spoke(.32,sl,.04,1);spoke(Math.PI-.32,sl,.04,1);spoke(-Math.PI/2+.5,sl,.028,0);spoke(-Math.PI/2-.5,sl,.028,0)}
       else{spoke(0,sl,.046,1);spoke(Math.PI,sl,.046,1);spoke(-Math.PI/2,sl*(BR==='vette'?.75:1),.04,0)}
+      {// детали руля: упоры под большие пальцы, купол подушки с окантовкой, кожух колонки, лепестки
+        const th=S({color:0x111113,roughness:.5});for(const sg of[-1,1]){const tg=new T.Mesh(new T.SphereGeometry(rr*1.35,12,10).scale(1,1.9,1.05),th);const q=sg>0?.42:Math.PI-.42;tg.position.set(Math.cos(q)*(R-rr*.35),Math.sin(q)*(R-rr*.35),-.003);tg.rotation.z=q;sw.add(tg)}
+        const hR0=BR==='merc'?.068:.058;const dome=new T.Mesh(new T.SphereGeometry(hR0*.98,28,12,0,Math.PI*2,0,Math.PI*.32).rotateX(Math.PI/2).scale(1,1,.55),S({color:0x1a1a1d,roughness:.42}));dome.position.z=.006;sw.add(dome);
+        sw.add(new T.Mesh(new T.TorusGeometry(hR0*1.02,.0035,6,40),S({color:0xb8bcc4,roughness:.2,metalness:.95})).translateZ(.02));
+        if(BR==='merc'||BR==='vette'){const pdM=S({color:BR==='vette'?0x2a2c30:0x9ea3aa,roughness:.25,metalness:.9});for(const sg of[-1,1]){const p=new T.Mesh(new T.BoxGeometry(.05,.075,.006),pdM);p.position.set(sg*(R*.62),.05,-.035);p.rotation.z=-sg*.25;sw.add(p)}}
+        for(const sg of[-1,1]){const r2=new T.Mesh(new T.TorusGeometry(R,rr*.18,6,40,Math.PI*.18),S({color:0x8a8072,roughness:.6}));r2.rotation.z=sg>0?.18:Math.PI-.18-Math.PI*.18;r2.position.z=rr*.92;sw.add(r2)}}
       sw.add(new T.Mesh(new T.BoxGeometry(.012,.026,.044).translate(0,R,0),BR==='vette'?S({color:0xc8102e,roughness:.5}):S({color:0x18181a,roughness:.5})));
       // руки: кисть обхватывает обод (пальцы обёрнуты вокруг), запястье, часы на левой, тёмный рукав
       const skin=new T.MeshStandardMaterial({color:0xc98d70,roughness:.6}),skinD=new T.MeshStandardMaterial({color:0xb27a5e,roughness:.65}),nail=new T.MeshStandardMaterial({color:0xe3b8a6,roughness:.3});
@@ -741,7 +750,7 @@ function make(cfg){
       {const E=inM&&w.eyeO?w.eyeO:[-.37,1.08+w.pd.cab.dy,.38];w.eye.position.set(E[0]+clamp(-s.ay*.002,-.03,.03),E[1],E[2]+clamp(s.ax*.002,-.03,.04))}
       w.car.updateMatrixWorld(true);cam.position.setFromMatrixPosition(w.eye.matrixWorld);w.eye.getWorldQuaternion(cam.quaternion);s.look+=(clamp(beta*.75,-.7,.7)-s.look)*Math.min(1,dt*5);cam.rotateY(-s.look-.12);cam.rotateX(-.05-(inM&&w.eyeP||0));
       if(!(w.hmUpd&&w.hmUpd()))for(let i=0;i<2;i++){const ar=w.arms[i];ar.userData.wr.getWorldPosition(V2);w.cab.worldToLocal(V2);V2.z+=.03;V2.y-=.02;ar.position.copy(V2);V1.copy(w.elb[i]);ar.lookAt(w.cab.localToWorld(V1))}}
-    else if(camMode===2){const hd=(w.mdl&&w.hoodO)||w.pd.hood;cam.position.set(s.x+pfx*hd[0],gy+hd[1]+s.heave,s.z+pfz*hd[0]);V1.set(s.x+pfx*30,hy(sS+30)+1,s.z+pfz*30)}
+    else if(camMode===2){const hd=(w.mdl&&w.hoodO)||w.pd.hood;cam.position.set(s.x+pfx*hd[0],gy+hd[1]+s.heave,s.z+pfz*hd[0]);V1.set(s.x+pfx*30,gy+hd[1]*.7,s.z+pfz*30)}
     else{const dist=(camMode===3?11:6.4)+k*1.4+(pg.L-4.5),hgt=(camMode===3?4.8:2.25)+(pg.H-1.2)*.75,czx=s.x-cfx*dist,czz=s.z-cfz*dist;
       cam.position.set(czx,Math.max(gy,hy(-czz))+hgt,czz);V1.set(s.x+cfx*7,gy+pg.H*.6+.4,s.z+cfz*7)}
     const sh=s.shake*.35+(k*k*.02+(s.surf<1?.05*k:0))*(s.nitroOn?.5:1)+(s.nitroOn?.012:0);cam.position.x+=(Math.random()-.5)*sh;cam.position.y+=(Math.random()-.5)*sh;
