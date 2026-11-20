@@ -1,7 +1,8 @@
 /* --- настоящие 3D-модели машин игрока (GLB, встроены в файл) --- */
 const WR={gb:/^(right_wheel_[23]|plastic5_1[56]|leather02_weave_21)\.001$/,c6z:/^(Wheel[1-4]|Yokohama[1-4])Mtl$/,caym:/Wheel1A_Material$/,gn:/^(Elastic_Rubber|silver_rim|rim_black)$/,vetten:/^Wheel$/,w210n:/^Mesheswheel00[345]wheel00[456]1Mtl$/,a8n:/^(wheel_b|torm_disk_a8|mesh_spec)$/,w210:/^tire1$|Tire_Hub|Tire_Disk/,g:/Mesh(rim|tire|Disk)/,vette:/Tire_Hub|Tire_Disk|Wheel1A/,cay:/^material$|^tire$|^phong16$/,a8:/^material_1[012]$/},
   LR={gb:/^(plastic5_(9|10)|leather02_weave_(10|15|18|25|26))\.001$/,c6z:/^(Vehiclelights[12]|Lights[123]|Glass1)Mtl$/,caym:/2022LightA_Material$/,gn:/emission|back_light/,vetten:/^$/,w210n:/^(L1Mtl|Meshesheadlights00021Mtl|Meshestaillights00011Mtl|B1Mtl)$/,a8n:/^(light_glass|lights_back_on|lights_glass)$/,w210:/Lights/,g:/^Light|red_glass/,vette:/Lights/,cay:/^light$|^Light_R$/,a8:/^$/};
-const MCFG={w210:{f:'w210n',paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/},w210c:{f:'w210n',paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/,open:.62},g:{f:'gb',paint:/^bodypaint/,glass:/^(ExtWindowsGlass|IntWindows)/},
+const W210T=[[/^Meshesheadlights00021Mtl$/,0xd9e2ec,.9,.06],[/^Meshestaillights00011Mtl$/,0x7a0a06,.2,.12],[/^Meshesbootok0021Mtl$/,0x9a9ca2,1,.18],[/^L4Mtl$/,0xb8bcc4,1,.15],[/^Meshesbodyshellbodyshell0021Mtl$/,0x9ea2a8,1,.2]];
+const MCFG={w210:{f:'w210n',tint:W210T,paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/},w210c:{f:'w210n',tint:W210T,paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/,open:.62},g:{f:'gb',paint:/^bodypaint/,glass:/^(ExtWindowsGlass|IntWindows)/},
   c6:{f:'c6z',ry:0,paint:/^Remapbody1Mtl$/,glass:/^Glass(2|6|10)Mtl$/},cay:{f:'caym',paint:/2022Paint_Material$/,glass:/2022Window_Material$/},a8:{f:'a8n',paint:/^body$/,glass:/^(vehicle_generic_glasswindows2|windows_int)$/}};
 // разрезать меш на части по треугольникам: key(cx,cy,cz)-> ключ или null; геометрия в координатах корня (g)
 function splitMesh(o,key){const ge=o.geometry,idx=ge.index?ge.index.array:null,n=idx?idx.length:ge.attributes.position.count,mw=o.matrixWorld,nm=new T.Matrix3().getNormalMatrix(mw);
@@ -60,6 +61,7 @@ function fitMdl(src,pg,cf){const g=new T.Group(),m=src.clone(true);g.add(m);m.up
   m.scale.multiplyScalar(L/sz.z);m.updateMatrixWorld(true);bb.setFromObject(m);const c=bb.getCenter(new T.Vector3());
   m.position.x-=c.x;m.position.z+=(pb.max.z+pb.min.z)/2-c.z;m.position.y-=bb.min.y;g.updateMatrixWorld(true);
   if(cf.open){bb.setFromObject(m);cabrio(g,m,bb,cf.open)}
+  if(cf.tint){const done=new Map();m.traverse(o=>{if(!o.isMesh||!o.material)return;const t=cf.tint.find(q=>q[0].test(o.material.name||''));if(!t)return;let nm=done.get(o.material);if(!nm){nm=o.material.clone();nm.color=new T.Color(t[1]);nm.metalness=t[2];nm.roughness=t[3];nm.envMapIntensity=1.4;done.set(o.material,nm)}o.material=nm})}
   const paint=[];m.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;o.frustumCulled=false;const mt=o.material;
     if(mt&&((cf.glass&&cf.glass.test(mt.name||''))||(cf.glassN&&cf.glassN.test(o.name+' '+(o.parent&&o.parent.name||''))))){const gm=mt.clone();gm.map=null;gm.color=new T.Color(0x0a0d12);gm.transparent=true;gm.opacity=.28;gm.depthWrite=false;gm.metalness=0;gm.roughness=.05;gm.envMapIntensity=1;o.material=gm;o.renderOrder=2;o.castShadow=false}
     else if(mt&&cf.paint.test(mt.name||''))paint.push(o);else if(mt&&mt.transparent&&/glass|Translucent/i.test(mt.name||'')){o.renderOrder=2;mt.depthWrite=false}});
@@ -96,8 +98,8 @@ w.useMdl=()=>{const id=w.pd.id,cf=MCFG[id];if(w.mdl){w.body.remove(w.mdl);w.mdl=
   const put=g=>{if(!g||tok!==w.mdlTok)return;w.mdl=g;w.body.add(g);
     w.body.geometry=w.mdlEmpty;w.mdlPaint();if(w.wh)w.wh.forEach(([p])=>w.car.remove(p));w.wh=[];
     for(const q of g.userData.wheels)if(q){w.car.add(q[0]);w.wh.push(q)}
-    if(w.wh.length!==4){w.wh.forEach(([p])=>w.car.remove(p));w.wh=[];w.mkWh()}w.eyeO=null;w.hoodO=null;w.eyeP=(MCFG[id]||{}).eyeP||0;if(g.userData.eye){w.eyeO=g.userData.eye;w.hoodO=g.userData.hood}else setTimeout(()=>{try{w.fitEye();g.userData.eye=w.eyeO;g.userData.hood=w.hoodO}catch(e){console.warn('eye',e)}},0)};
-  if(TOUCH)for(const k in w.fitC)if(k!==id){const o=w.fitC[k];o.traverse(q=>{if(q.isMesh){q.geometry.dispose();for(const mt of [].concat(q.material))if(mt){for(const t of['map','normalMap','roughnessMap','metalnessMap','emissiveMap','aoMap'])if(mt[t])mt[t].dispose();mt.dispose()}}});for(const q of o.userData.wheels||[])if(q)q[0].traverse(z=>{if(z.isMesh)z.geometry.dispose()});delete w.fitC[k]}
+    if(w.wh.length!==4){w.wh.forEach(([p])=>w.car.remove(p));w.wh=[];w.mkWh()}w.eyeO=null;w.hoodO=null;w.mdlSW=null;w.eyeP=(MCFG[id]||{}).eyeP||0;if(g.userData.eye){w.eyeO=g.userData.eye;w.hoodO=g.userData.hood}else setTimeout(()=>{try{w.fitEye();g.userData.eye=w.eyeO;g.userData.hood=w.hoodO}catch(e){console.warn('eye',e)}},0);setTimeout(()=>{try{w.findSW(g)}catch(e){console.warn('sw',e)}},30)};
+  for(const k in w.fitC)if(k!==id&&!(MCFG[k]&&MCFG[id]&&MCFG[k].f===MCFG[id].f&&0)){const o=w.fitC[k];o.traverse(q=>{if(q.isMesh){q.geometry.dispose();for(const mt of [].concat(q.material))if(mt){for(const t of['map','normalMap','roughnessMap','metalnessMap','emissiveMap','aoMap'])if(mt[t])mt[t].dispose();mt.dispose()}}});for(const q of o.userData.wheels||[])if(q)q[0].traverse(z=>{if(z.isMesh)z.geometry.dispose()});delete w.fitC[k]}
   if(w.fitC[id])return put(w.fitC[id]);
   loadMdl(cf.f).then(src=>{if(!src||tok!==w.mdlTok)return;const g=fitMdl(src,pg,cf);g.userData.id=id;w.fitC[id]=g;put(g)})};
 w.fitC={};
@@ -146,7 +148,7 @@ w.cabDark=on=>{if(w.hm)w.hm.visible=on;const g=w.mdl;if(!g)return;const id=g.use
     if(on&&!paint&&!glass){const c=new T.Color(mt.userData.c0),L=c.r*.3+c.g*.59+c.b*.11,f=Math.min(1,Math.max(k,k/Math.max(.35,L)*.6));c.multiplyScalar(f);if(id==='a8')c.lerp(new T.Color(0x1c1c20),.2);mt.color.copy(c);mt.roughness=Math.max(mt.userData.r0??.5,.5);if(mt.envMapIntensity!==undefined)mt.envMapIntensity=(mt.userData.e0??1)*.55;if(mt.normalScale)mt.normalScale.setScalar(.5)}
     else{if(mt.normalScale)mt.normalScale.setScalar(1);mt.color.setHex(mt.userData.c0);if(mt.userData.r0!==undefined)mt.roughness=mt.userData.r0;if(mt.userData.e0!==undefined)mt.envMapIntensity=mt.userData.e0}}})};
 // загрузка всего заранее: модели -> подгонка всех машин -> заливка текстур и шейдеров в видеокарту
-w.preload=async(prog)=>{const ids=PCARS.map(p=>p.id).filter(id=>MCFG[id]&&(!TOUCH||id===w.pd.id)),files=[...new Set(ids.map(id=>MCFG[id].f))],N=files.length+ids.length+2;let k=0;
+w.preload=async(prog)=>{const ids=PCARS.map(p=>p.id).filter(id=>MCFG[id]&&id===w.pd.id),files=[...new Set(ids.map(id=>MCFG[id].f))],N=files.length+ids.length+2;let k=0;
   const tick=async(msg)=>{k++;prog(k/N,msg);await new Promise(r=>setTimeout(r,16))};
   await tick('Город и дорога');
   for(const f of files){await loadMdl(f);await tick('Модель: '+f)}
@@ -160,17 +162,23 @@ w.preload=async(prog)=>{const ids=PCARS.map(p=>p.id).filter(id=>MCFG[id]&&(!TOUC
   await tick('Видеокарта');prog(1,'Готово')};
 // огни/нитро каждый кадр
 w.fxUpd=(s,dt,night)=>{const fx=w.mdl&&w.mdl.userData.fx;if(!fx)return;const t=performance.now()/1000,br=!!s.brk;
-  for(const m of fx.fl)m.emissiveIntensity=night?.55:.1;for(const m of fx.rl)m.emissiveIntensity=br?3.4:night?1.2:.15;
+  for(const m of fx.fl)m.emissiveIntensity=night?.55:.1;for(const m of fx.rl)m.emissiveIntensity=br?2.1:night?.75:.12;
   const cv=(w._cv||(w._cv=new T.Vector3())).copy(w.cam.position);w.car.worldToLocal(cv);const front=cv.z<-w.pg.L*.3,fa=front?Math.min(1,(-cv.z-w.pg.L*.3)/3):0;for(const sp of fx.hg){sp.visible=night&&front&&camMode!==1&&camMode!==2;sp.material.opacity=fa*.22}fx.pool.visible=false;
-  for(const sp of fx.tg){sp.visible=night||br;sp.visible=sp.visible&&br;sp.material.opacity=.3;sp.scale.setScalar(.22)}
+  for(const sp of fx.tg){sp.visible=br&&night;sp.material.opacity=.14;sp.scale.setScalar(.13)}
   const on=!!s.nitroOn&&camMode!==1;fx.fl2.intensity=on?2.5+Math.random()*2:0;
   fx.fire.forEach((f,i)=>{f.visible=on;if(on){const k=.75+Math.random()*.5;f.scale.set(k,k,1.1+Math.random()*.9+Math.min(1,s.kmh/200)*.6);f.rotation.z=Math.random()*3}})};
 w.mdlPaint=()=>{if(!w.mdl)return;const pm=w.ppaint();pm.envMapIntensity=.7;w.mdl.userData.paint.forEach(o=>o.material=pm);w.mdl.traverse(o=>{if(o.isMesh&&o.material&&o.material!==pm&&o.material.envMapIntensity!==undefined)o.material.envMapIntensity=.6})};
 
 // вид из салона: показываем настоящий салон модели, из самодельного оставляем только руль и руки
+w.findSW=g=>{if(!g||g!==w.mdl)return;if(g.userData.swF===undefined){g.userData.swF=null;const E=w.eyeO;if(E){w.car.updateMatrixWorld(true);const inv=new T.Matrix4().copy(w.car.matrixWorld).invert(),L=[];
+  g.traverse(o=>{if(!o.isMesh)return;o.geometry.computeBoundingBox();const b=o.geometry.boundingBox.clone().applyMatrix4(new T.Matrix4().multiplyMatrices(inv,o.matrixWorld));L.push({o,c:b.getCenter(new T.Vector3()),s:b.getSize(new T.Vector3()),n:o.geometry.attributes.position.count})});
+  let best=null;for(const q of L){const c=q.c,s=q.s;if(Math.abs(c.x-E[0])<.2&&c.z<E[2]-.15&&c.z>E[2]-1.1&&c.y>E[1]-.75&&c.y<E[1]+.05&&s.x>.28&&s.x<.5&&s.y>.22&&s.y<.5&&s.z<.32&&q.n>300&&(!best||q.n>best.n))best=q}
+  if(best){const C=best.c.clone();g.userData.swF=L.filter(q=>q.c.distanceTo(C)<.12&&Math.max(q.s.x,q.s.y,q.s.z)<.5).map(q=>q.o)}}}
+  w.mdlSW=g.userData.swF;if(w._cabOn){w._cabOn=null;w.cabHide(true)}};
 w.cabHide=on=>{if(!w.cab||!w.sw)return;const keep=w.sw.parent,dy=w.pd.cab.dy,E=w.eyeO;
   // руль и руки едут вместе с глазом водителя модели
   if(on&&E)w.cab.position.set(E[0]+.37,E[1]-1.08,E[2]-.38);else w.cab.position.set(0,dy,0);
+  if(w.mdlSW)for(const o of w.mdlSW)o.visible=!on;
   if(!w.inL){w.inL=new T.PointLight(0xffe2c4,0,2.6,1.2);w.car.add(w.inL);w.inL2=new T.PointLight(0x9fb4ff,0,2.2,1.2);w.car.add(w.inL2)}
   if(on&&E){w.inL.position.set(E[0]+.25,E[1]-.12,E[2]-.55);w.inL2.position.set(0,E[1]+.05,E[2]+.2)}w.inL.intensity=on?2.2:0;w.inL2.intensity=on?1.4:0;w.inL.distance=3.2;w.inL2.distance=3;
   w.cabDark(on);if(w._cabOn===on)return;w._cabOn=on;for(const c of w.cab.children)if(c!==keep&&!(w.arms||[]).includes(c))c.visible=!on};
