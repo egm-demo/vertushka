@@ -695,14 +695,14 @@ function make(cfg){
       for(let i=0;i<24;i++){const v=A.bands[4+((i*2.4)|0)];x.fillStyle=col(.25+i/24*.75);x.fillRect(12+i*9.7,120-v*82,7.5,v*82+2)}w.scTex.needsUpdate=true;
       w.ambM.color.set(col(.5+A.note*.45)).multiplyScalar(.45+.55*Math.max(A.beat,A.mel*.7));w.cabL.color.set(col(.7));w.cabL.intensity=.55+A.beat*.7+A.mel*.3;
       {const E=inM&&w.eyeO?w.eyeO:[-.37,1.08+w.pd.cab.dy,.38];w.eye.position.set(E[0]+clamp(-s.ay*.002,-.03,.03),E[1],E[2]+clamp(s.ax*.002,-.03,.04))}
-      w.car.updateMatrixWorld(true);cam.position.setFromMatrixPosition(w.eye.matrixWorld);w.eye.getWorldQuaternion(cam.quaternion);s.look+=(clamp(beta*.75,-.7,.7)-s.look)*Math.min(1,dt*5);cam.rotateY(-s.look-.12);cam.rotateX(-.05);
+      w.car.updateMatrixWorld(true);cam.position.setFromMatrixPosition(w.eye.matrixWorld);w.eye.getWorldQuaternion(cam.quaternion);s.look+=(clamp(beta*.75,-.7,.7)-s.look)*Math.min(1,dt*5);cam.rotateY(-s.look-.12);cam.rotateX(-.05-(inM&&w.eyeP||0));
       if(!(w.hmUpd&&w.hmUpd()))for(let i=0;i<2;i++){const ar=w.arms[i];ar.userData.wr.getWorldPosition(V2);w.cab.worldToLocal(V2);V2.z+=.03;V2.y-=.02;ar.position.copy(V2);V1.copy(w.elb[i]);ar.lookAt(w.cab.localToWorld(V1))}}
     else if(camMode===2){const hd=(w.mdl&&w.hoodO)||w.pd.hood;cam.position.set(s.x+pfx*hd[0],gy+hd[1]+s.heave,s.z+pfz*hd[0]);V1.set(s.x+pfx*30,hy(sS+30)+1,s.z+pfz*30)}
     else{const dist=(camMode===3?11:6.4)+k*1.4+(pg.L-4.5),hgt=(camMode===3?4.8:2.25)+(pg.H-1.2)*.75,czx=s.x-cfx*dist,czz=s.z-cfz*dist;
       cam.position.set(czx,Math.max(gy,hy(-czz))+hgt,czz);V1.set(s.x+cfx*7,gy+pg.H*.6+.4,s.z+cfz*7)}
     const sh=s.shake*.35+(k*k*.02+(s.surf<1?.05*k:0))*(s.nitroOn?.5:1)+(s.nitroOn?.012:0);cam.position.x+=(Math.random()-.5)*sh;cam.position.y+=(Math.random()-.5)*sh;
     s.fov+=((camMode===1?55+k*6+(s.nitroOn?4:0):62+k*17+(s.nitroOn?8:0))-s.fov)*Math.min(1,dt*4);cam.fov=fovFit(s.fov,wd/hh);cam.aspect=wd/hh;cam.updateProjectionMatrix();if(camMode!==1)cam.lookAt(V1);const rz=clamp(-s.ay*.0035,-.05,.05)*(camMode===1?.4:1);cam.rotateZ(rz);
-    if(camMode===1){const c=w.cabCam;c.position.copy(w.eye.position);c.quaternion.identity();c.rotateY(-s.look-.12);c.rotateX(-.05);c.rotateZ(rz);c.fov=cam.fov;c.aspect=cam.aspect;c.updateProjectionMatrix()}
+    if(camMode===1){const c=w.cabCam;c.position.copy(w.eye.position);c.quaternion.identity();c.rotateY(-s.look-.12);c.rotateX(-.05-(w.mdl&&w.eyeP||0));c.rotateZ(rz);c.fov=cam.fov;c.aspect=cam.aspect;c.updateProjectionMatrix()}
     w.sky.position.copy(cam.position);w.dl.position.copy(w.car.position).addScaledVector(w.sunDir,170);w.dl.target.position.copy(w.car.position);
     if(w.spot){w.spot.position.set(s.x+pfx*1.6,gy+.85,s.z+pfz*1.6);w.spot.target.position.set(s.x+pfx*42,hy(sS+42)+.2,s.z+pfz*42)}}
   function loadUI(wd,hh,t){const L=w.ld,f='"Segoe UI",sans-serif';if(!L.sp)L.sp=0;L.sp+=(L.p-L.sp)*.12;const p=L.sp;
