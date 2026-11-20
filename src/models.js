@@ -2,7 +2,7 @@
 const WR={gb:/^(right_wheel_[23]|plastic5_1[56]|leather02_weave_21)\.001$/,c6z:/^(Wheel[1-4]|Yokohama[1-4])Mtl$/,caym:/Wheel1A_Material$/,gn:/^(Elastic_Rubber|silver_rim|rim_black)$/,vetten:/^Wheel$/,w210n:/^Mesheswheel00[345]wheel00[456]1Mtl$/,a8n:/^(wheel_b|torm_disk_a8|mesh_spec)$/,w210:/^tire1$|Tire_Hub|Tire_Disk/,g:/Mesh(rim|tire|Disk)/,vette:/Tire_Hub|Tire_Disk|Wheel1A/,cay:/^material$|^tire$|^phong16$/,a8:/^material_1[012]$/},
   LR={gb:/^(plastic5_(9|10)|leather02_weave_(10|15|18|25|26))\.001$/,c6z:/^(Vehiclelights[12]|Lights[123])Mtl$/,caym:/2022LightA_Material$/,gn:/emission|back_light/,vetten:/^$/,w210n:/^(L1Mtl|Meshesheadlights00021Mtl|Meshestaillights00011Mtl|B1Mtl)$/,a8n:/^(light_glass|lights_back_on|lights_glass)$/,w210:/Lights/,g:/^Light|red_glass/,vette:/Lights/,cay:/^light$|^Light_R$/,a8:/^$/};
 const MCFG={w210:{f:'w210n',paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/},w210c:{f:'w210n',paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/,open:.62},g:{f:'gb',paint:/^bodypaint/,glass:/^(ExtWindowsGlass|IntWindows)/},
-  c6:{f:'c6z',paint:/^Remapbody1Mtl$/,glass:/^Glass(1|2|6|10)Mtl$/},cay:{f:'caym',paint:/2022Paint_Material$/,glass:/2022Window_Material$/},a8:{f:'a8n',paint:/^body$/,glass:/^(vehicle_generic_glasswindows2|windows_int)$/}};
+  c6:{f:'c6z',eyeD:[0,-.12,0],paint:/^Remapbody1Mtl$/,glass:/^Glass(1|2|6|10)Mtl$/},cay:{f:'caym',paint:/2022Paint_Material$/,glass:/2022Window_Material$/},a8:{f:'a8n',paint:/^body$/,glass:/^(vehicle_generic_glasswindows2|windows_int)$/}};
 // разрезать меш на части по треугольникам: key(cx,cy,cz)-> ключ или null; геометрия в координатах корня (g)
 function splitMesh(o,key){const ge=o.geometry,idx=ge.index?ge.index.array:null,n=idx?idx.length:ge.attributes.position.count,mw=o.matrixWorld,nm=new T.Matrix3().getNormalMatrix(mw);
   const P=ge.attributes.position,v=new T.Vector3(),wp=new Float32Array(P.count*3);for(let i=0;i<P.count;i++){v.fromBufferAttribute(P,i).applyMatrix4(mw);wp[i*3]=v.x;wp[i*3+1]=v.y;wp[i*3+2]=v.z}
@@ -97,11 +97,12 @@ w.useMdl=()=>{const id=w.pd.id,cf=MCFG[id];if(w.mdl){w.body.remove(w.mdl);w.mdl=
     w.body.geometry=w.mdlEmpty;w.mdlPaint();if(w.wh)w.wh.forEach(([p])=>w.car.remove(p));w.wh=[];
     for(const q of g.userData.wheels)if(q){w.car.add(q[0]);w.wh.push(q)}
     if(w.wh.length!==4){w.wh.forEach(([p])=>w.car.remove(p));w.wh=[];w.mkWh()}w.eyeO=null;w.hoodO=null;if(g.userData.eye){w.eyeO=g.userData.eye;w.hoodO=g.userData.hood}else setTimeout(()=>{try{w.fitEye();g.userData.eye=w.eyeO;g.userData.hood=w.hoodO}catch(e){console.warn('eye',e)}},0)};
+  if(TOUCH)for(const k in w.fitC)if(k!==id){const o=w.fitC[k];o.traverse(q=>{if(q.isMesh){q.geometry.dispose();for(const mt of [].concat(q.material))if(mt){for(const t of['map','normalMap','roughnessMap','metalnessMap','emissiveMap','aoMap'])if(mt[t])mt[t].dispose();mt.dispose()}}});for(const q of o.userData.wheels||[])if(q)q[0].traverse(z=>{if(z.isMesh)z.geometry.dispose()});delete w.fitC[k]}
   if(w.fitC[id])return put(w.fitC[id]);
   loadMdl(cf.f).then(src=>{if(!src||tok!==w.mdlTok)return;const g=fitMdl(src,pg,cf);g.userData.id=id;w.fitC[id]=g;put(g)})};
 w.fitC={};
 // руки водителя: 3D-модель со скелетом (first-person hands rigged, CC BY), кисти на ободе руля через IK
-w.hp={tw:0,curl:.75,tc:.3,wo:.075,sh:[0,-.3,.12],k:1.08,sw:.17};
+w.hp={tw:-.6,curl:.9,tc:.5,ax:'z',tax:1,thin:.8,wo:.075,sh:[0,-.38,.2],k:.95,sw:.17};
 w.hmUpd=()=>{const hm=w.hm;if(!hm||!w.hands||!w.eye)return false;const H=hm.userData,P=w.hp;
   if(hm.parent!==w.cab)w.cab.add(hm);for(const hd of w.hands)hd.visible=false;for(const a of w.arms)a.visible=false;
   const qc=w.cab.getWorldQuaternion(new T.Quaternion()),dn=new T.Vector3(0,-1,0).applyQuaternion(qc),sd=new T.Vector3(1,0,0).applyQuaternion(qc);
@@ -122,7 +123,8 @@ w.hmUpd=()=>{const hm=w.hm;if(!hm||!w.hands||!w.eye)return false;const H=hm.user
     // кисть: в конец предплечья, поворот как у предплечья + скрутка
     const hq=A.wr.getWorldQuaternion(new T.Quaternion()).premultiply(new T.Quaternion().setFromUnitVectors(restD,fd)).premultiply(new T.Quaternion().setFromAxisAngle(fd,(i?-1:1)*P.tw));
     A.wr.position.copy(A.wr.parent.worldToLocal(W.clone()));setW(A.wr,hq);
-    for(const f of A.fing)f.quaternion.copy(f.userData.q0).multiply(new T.Quaternion().setFromAxisAngle(new T.Vector3(1,0,0),f.userData.th?P.tc:P.curl));
+    const ax=P.ax==='z'?new T.Vector3(0,0,i?-1:1):new T.Vector3(1,0,0);for(const f of A.fing)f.quaternion.copy(f.userData.q0).multiply(new T.Quaternion().setFromAxisAngle(f.userData.th&&P.tax?new T.Vector3(1,0,0):ax,f.userData.th?P.tc:P.curl));
+    if(P.thin){A.ua.scale.set(P.thin,1,P.thin);A.fa.scale.set(1,1,1);A.wr.scale.set(1/P.thin,1,1/P.thin)}
     A.wr.updateMatrixWorld(true)});
   return true};
 loadMdl('arms').then(src=>{if(!src)return;const hm=src;const H=hm.userData;H.all=[];const bn={};
@@ -136,7 +138,7 @@ loadMdl('arms').then(src=>{if(!src)return;const hm=src;const H=hm.userData;H.all
   w.hm=hm;hm.visible=false}).catch(e=>console.warn('hands',e));
 
 // в салоне: тёмный интерьер (Audi — полностью чёрный), без светлых бликов, чтобы видно было дорогу
-const CDARK={a8:.6,cay:.6,g:.6,w210:.7,w210c:.7,c6:.65};
+const CDARK={a8:.6,cay:.6,g:.6,w210:.7,w210c:.7,c6:.9};
 w.cabDark=on=>{if(w.hm)w.hm.visible=on;const g=w.mdl;if(!g)return;const id=g.userData.id,cf=MCFG[id]||{},k=CDARK[id]||.45;if(g.userData.dk===on)return;g.userData.dk=on;
   g.traverse(o=>{if(!o.isMesh)return;for(const mt of Array.isArray(o.material)?o.material:[o.material]){if(!mt||!mt.color)continue;
     if(mt.userData.c0===undefined){mt.userData.c0=mt.color.getHex();mt.userData.r0=mt.roughness;mt.userData.e0=mt.envMapIntensity}
@@ -144,7 +146,7 @@ w.cabDark=on=>{if(w.hm)w.hm.visible=on;const g=w.mdl;if(!g)return;const id=g.use
     if(on&&!paint&&!glass){const c=new T.Color(mt.userData.c0),L=c.r*.3+c.g*.59+c.b*.11,f=Math.min(1,Math.max(k,k/Math.max(.35,L)*.6));c.multiplyScalar(f);if(id==='a8')c.lerp(new T.Color(0x1c1c20),.2);mt.color.copy(c);mt.roughness=Math.max(mt.userData.r0??.5,.5);if(mt.envMapIntensity!==undefined)mt.envMapIntensity=(mt.userData.e0??1)*.55;if(mt.normalScale)mt.normalScale.setScalar(.5)}
     else{if(mt.normalScale)mt.normalScale.setScalar(1);mt.color.setHex(mt.userData.c0);if(mt.userData.r0!==undefined)mt.roughness=mt.userData.r0;if(mt.userData.e0!==undefined)mt.envMapIntensity=mt.userData.e0}}})};
 // загрузка всего заранее: модели -> подгонка всех машин -> заливка текстур и шейдеров в видеокарту
-w.preload=async(prog)=>{const ids=PCARS.map(p=>p.id).filter(id=>MCFG[id]),files=[...new Set(ids.map(id=>MCFG[id].f))],N=files.length+ids.length+2;let k=0;
+w.preload=async(prog)=>{const ids=PCARS.map(p=>p.id).filter(id=>MCFG[id]&&(!TOUCH||id===w.pd.id)),files=[...new Set(ids.map(id=>MCFG[id].f))],N=files.length+ids.length+2;let k=0;
   const tick=async(msg)=>{k++;prog(k/N,msg);await new Promise(r=>setTimeout(r,16))};
   await tick('Город и дорога');
   for(const f of files){await loadMdl(f);await tick('Модель: '+f)}
@@ -180,7 +182,7 @@ w.fitEye=()=>{const g=w.mdl;if(!g)return null;const pg=w.pg,X=-pg.W*.205;g.updat
     for(let i=0;i<P.count;i+=st){v.fromBufferAttribute(P,i).applyMatrix4(mw);if(Math.abs(v.x-X)>.16)continue;const b=Math.floor((v.z-zmin)/zs);if(b<0||b>=B)continue;if(v.y>pg.H*.82)hi[b]=Math.max(hi[b],v.y);}});
   // крыша над головой: минимальная высота среди верхних точек в середине машины
   let roof=9;for(let b=Math.floor(B*.4);b<Math.floor(B*.62);b++)if(hi[b]>0)roof=Math.min(roof,hi[b]);if(roof>8)roof=pg.H;
-  const y=Math.min(roof-.1,pg.H*.84),z=-pg.L*.02;w.eyeO=[X,+y.toFixed(3),+z.toFixed(3)];
+  const y=Math.min(roof-.1,pg.H*.84),z=-pg.L*.02;w.eyeO=[X,+y.toFixed(3),+z.toFixed(3)];{const cf=MCFG[w.pd&&w.pd.id];if(cf&&cf.eyeD)w.eyeO=w.eyeO.map((q,i)=>+(q+cf.eyeD[i]).toFixed(3))}
   // капот: верх кузова по центру, между фарами и лобовым
   let hz=-9,hb=0;g.traverse(o=>{if(!o.isMesh)return;const P=o.geometry.attributes.position,mw=new T.Matrix4().multiplyMatrices(inv,o.matrixWorld),st=Math.max(1,P.count/6000|0);
     for(let i=0;i<P.count;i+=st){v.fromBufferAttribute(P,i).applyMatrix4(mw);if(Math.abs(v.x)>.35||v.z<-pg.L*.3||v.z>-pg.L*.12)continue;if(v.y>hz&&v.y<pg.H*.85)hz=v.y}});
