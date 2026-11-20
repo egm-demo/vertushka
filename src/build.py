@@ -60,6 +60,7 @@ three = (D.parent / 'vendor' / 'three.min.js').read_text(encoding='utf-8')
 assert '</script' not in three
 gl = (D.parent / 'vendor' / 'gltf.js').read_text(encoding='utf-8')
 import base64, json
+snds = {f.stem: base64.b64encode(f.read_bytes()).decode() for f in sorted((D.parent / 'sounds').glob('*.wav'))}
 mods = {f.stem: base64.b64encode(f.read_bytes()).decode() for f in sorted((D.parent / 'models' / 'out').glob('*.glb'))}
 rep('<script>', '<script>' + three + '</script>\n<script>' + gl + '</script>\n<script>window.VT_MODELS=' + json.dumps(mods) + ';</script>\n<script>')
 (D.parent / 'Vertushka.html').write_text(s, encoding='utf-8', newline='\n')

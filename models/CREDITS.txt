@@ -14,3 +14,7 @@ gb (G Brabus): "Mercesdes_ Benz G-class Brabus" by Es-star kings (https://sketch
 c6z (Corvette C6 ZR1): "Chevrolet Corvette C6 Zr1" by Randomness (https://sketchfab.com/throwbackthursdaymodels), CC Attribution, https://sketchfab.com/3d-models/chevrolet-corvette-c6-zr1-96e2e14b663b4978b0d8fe3dd278de4e
 caym (Cayenne Turbo GT 2022): "2022 Porsche Cayenne Turbo GT" by Maroi Mister Let Me Think Official 3D Studio (https://sketchfab.com/homicivan53), CC Attribution, https://sketchfab.com/3d-models/2022-porsche-cayenne-turbo-gt-3f3fa4493ecc4826823f0cb27f638908
 arms (FPS Arms): "FREE [FPS Arms] GameReady - RIGGED" by BAMEN (https://sketchfab.com/bamenwo05), CC Attribution, https://sketchfab.com/3d-models/free-fps-arms-gameready-rigged-296d30fc705b4dff85c2c8a2d2724e7f
+
+
+Звук
+- V8 engine (v8a.wav, v8d.wav): "Generic V8 Engine Sound" by DerMeehdrescher / Meehdrescher Studios, https://opengameart.org/content/generic-v8-engine-sound — CC BY-SA 4.0 (обрезано до моно 24 кГц)
