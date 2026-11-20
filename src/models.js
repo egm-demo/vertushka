@@ -73,7 +73,7 @@ function fitMdl(src,pg,cf){const g=new T.Group(),m=src.clone(true);g.add(m);m.up
   // фары и фонари: перед светится тёплым белым, зад — красным (ярче при торможении)
   const fl=[],rl=[],fb=new T.Box3(),rb=new T.Box3();
   const LZ=(pb.max.z-pb.min.z)*.2,LY=pg.H*.75;for(const o of ll){const pr=splitMesh(o,(x,y,z)=>y>LY?'m':z<pb.min.z+LZ?'f':z>pb.max.z-LZ?'r':'m'),mt=o.material;if(pr.m){const q=new T.Mesh(pr.m,mt);g.add(q)}
-    if(pr.f){const fm=mt.clone();fm.emissive=new T.Color(0xfff6ea);fm.emissiveMap=mt.map||null;fm.emissiveIntensity=1;fm.roughness=Math.min(fm.roughness??.2,.15);const q=new T.Mesh(pr.f,fm);g.add(q);fl.push(fm);fb.union(pr.f.boundingBox)}
+    if(pr.f){const fm=mt.clone();fm.emissive=new T.Color(0xfff3e2);fm.emissiveMap=mt.map||null;fm.emissiveIntensity=1;fm.roughness=.05;fm.metalness=Math.max(fm.metalness||0,.6);fm.envMapIntensity=1.6;if(fm.transparent){fm.opacity=Math.min(fm.opacity,.35);fm.depthWrite=false}const q=new T.Mesh(pr.f,fm);g.add(q);fl.push(fm);fb.union(pr.f.boundingBox)}
     if(pr.r){const rm=mt.clone();rm.emissive=new T.Color(0xff2412);rm.emissiveMap=mt.map||null;rm.emissiveIntensity=1;const q=new T.Mesh(pr.r,rm);g.add(q);rl.push(rm);rb.union(pr.r.boundingBox)}
     o.parent.remove(o)}
   if(fb.isEmpty()){fb.set(new T.Vector3(-pg.W*.36,pg.H*.42,pb.min.z+.05),new T.Vector3(pg.W*.36,pg.H*.5,pb.min.z+.15))}
@@ -96,7 +96,7 @@ w.useMdl=()=>{const id=w.pd.id,cf=MCFG[id];if(w.mdl){w.body.remove(w.mdl);w.mdl=
   const put=g=>{if(!g||tok!==w.mdlTok)return;w.mdl=g;w.body.add(g);
     w.body.geometry=w.mdlEmpty;w.mdlPaint();if(w.wh)w.wh.forEach(([p])=>w.car.remove(p));w.wh=[];
     for(const q of g.userData.wheels)if(q){w.car.add(q[0]);w.wh.push(q)}
-    if(w.wh.length!==4){w.wh.forEach(([p])=>w.car.remove(p));w.wh=[];w.mkWh()}w.eyeO=null;if(g.userData.eye)w.eyeO=g.userData.eye;else setTimeout(()=>{try{w.fitEye();g.userData.eye=w.eyeO}catch(e){console.warn('eye',e)}},0)};
+    if(w.wh.length!==4){w.wh.forEach(([p])=>w.car.remove(p));w.wh=[];w.mkWh()}w.eyeO=null;w.hoodO=null;if(g.userData.eye){w.eyeO=g.userData.eye;w.hoodO=g.userData.hood}else setTimeout(()=>{try{w.fitEye();g.userData.eye=w.eyeO;g.userData.hood=w.hoodO}catch(e){console.warn('eye',e)}},0)};
   if(w.fitC[id])return put(w.fitC[id]);
   loadMdl(cf.f).then(src=>{if(!src||tok!==w.mdlTok)return;const g=fitMdl(src,pg,cf);g.userData.id=id;w.fitC[id]=g;put(g)})};
 w.fitC={};
@@ -136,13 +136,13 @@ loadMdl('hands').then(src=>{if(!src)return;const hm=src;const H=hm.userData;H.al
   w.hm=hm;hm.visible=false}).catch(e=>console.warn('hands',e));
 
 // в салоне: тёмный интерьер (Audi — полностью чёрный), без светлых бликов, чтобы видно было дорогу
-const CDARK={a8:.1,cay:.35,g:.3,w210:.45,w210c:.45,c6:.45};
+const CDARK={a8:.6,cay:.6,g:.6,w210:.7,w210c:.7,c6:.65};
 w.cabDark=on=>{if(w.hm)w.hm.visible=on;const g=w.mdl;if(!g)return;const id=g.userData.id,cf=MCFG[id]||{},k=CDARK[id]||.45;if(g.userData.dk===on)return;g.userData.dk=on;
   g.traverse(o=>{if(!o.isMesh)return;for(const mt of Array.isArray(o.material)?o.material:[o.material]){if(!mt||!mt.color)continue;
     if(mt.userData.c0===undefined){mt.userData.c0=mt.color.getHex();mt.userData.r0=mt.roughness;mt.userData.e0=mt.envMapIntensity}
     const paint=cf.paint&&cf.paint.test(mt.name||''),glass=mt.transparent||mt.opacity<1;
-    if(on&&!paint&&!glass){const c=new T.Color(mt.userData.c0),L=c.r*.3+c.g*.59+c.b*.11,f=id==='a8'?k:Math.min(1,k/Math.max(.2,L));c.multiplyScalar(f);if(id==='a8')c.lerp(new T.Color(0x0b0b0d),.6);mt.color.copy(c);mt.roughness=Math.max(mt.userData.r0??.5,.55);if(mt.envMapIntensity!==undefined)mt.envMapIntensity=(mt.userData.e0??1)*.35}
-    else{mt.color.setHex(mt.userData.c0);if(mt.userData.r0!==undefined)mt.roughness=mt.userData.r0;if(mt.userData.e0!==undefined)mt.envMapIntensity=mt.userData.e0}}})};
+    if(on&&!paint&&!glass){const c=new T.Color(mt.userData.c0),L=c.r*.3+c.g*.59+c.b*.11,f=Math.min(1,Math.max(k,k/Math.max(.35,L)*.6));c.multiplyScalar(f);if(id==='a8')c.lerp(new T.Color(0x1c1c20),.2);mt.color.copy(c);mt.roughness=Math.max(mt.userData.r0??.5,.5);if(mt.envMapIntensity!==undefined)mt.envMapIntensity=(mt.userData.e0??1)*.55;if(mt.normalScale)mt.normalScale.setScalar(.5)}
+    else{if(mt.normalScale)mt.normalScale.setScalar(1);mt.color.setHex(mt.userData.c0);if(mt.userData.r0!==undefined)mt.roughness=mt.userData.r0;if(mt.userData.e0!==undefined)mt.envMapIntensity=mt.userData.e0}}})};
 // загрузка всего заранее: модели -> подгонка всех машин -> заливка текстур и шейдеров в видеокарту
 w.preload=async(prog)=>{const ids=PCARS.map(p=>p.id).filter(id=>MCFG[id]),files=[...new Set(ids.map(id=>MCFG[id].f))],N=files.length+ids.length+2;let k=0;
   const tick=async(msg)=>{k++;prog(k/N,msg);await new Promise(r=>setTimeout(r,16))};
@@ -158,9 +158,9 @@ w.preload=async(prog)=>{const ids=PCARS.map(p=>p.id).filter(id=>MCFG[id]),files=
   await tick('Видеокарта');prog(1,'Готово')};
 // огни/нитро каждый кадр
 w.fxUpd=(s,dt,night)=>{const fx=w.mdl&&w.mdl.userData.fx;if(!fx)return;const t=performance.now()/1000,br=!!s.brk;
-  for(const m of fx.fl)m.emissiveIntensity=night?.75:.15;for(const m of fx.rl)m.emissiveIntensity=br?3.4:night?1.2:.15;
-  const cv=(w._cv||(w._cv=new T.Vector3())).copy(w.cam.position);w.car.worldToLocal(cv);const front=cv.z<-w.pg.L*.3,fa=front?Math.min(1,(-cv.z-w.pg.L*.3)/3):0;for(const sp of fx.hg){sp.visible=night&&front&&camMode!==1&&camMode!==2;sp.material.opacity=fa*.6}fx.pool.visible=night&&camMode!==1;fx.pool.material.opacity=.3;
-  for(const sp of fx.tg){sp.visible=night||br;sp.material.opacity=br?.55:.22;sp.scale.setScalar(br?.38:.24)}
+  for(const m of fx.fl)m.emissiveIntensity=night?.55:.1;for(const m of fx.rl)m.emissiveIntensity=br?3.4:night?1.2:.15;
+  const cv=(w._cv||(w._cv=new T.Vector3())).copy(w.cam.position);w.car.worldToLocal(cv);const front=cv.z<-w.pg.L*.3,fa=front?Math.min(1,(-cv.z-w.pg.L*.3)/3):0;for(const sp of fx.hg){sp.visible=night&&front&&camMode!==1&&camMode!==2;sp.material.opacity=fa*.22}fx.pool.visible=false;
+  for(const sp of fx.tg){sp.visible=night||br;sp.visible=sp.visible&&br;sp.material.opacity=.3;sp.scale.setScalar(.22)}
   const on=!!s.nitroOn&&camMode!==1;fx.fl2.intensity=on?2.5+Math.random()*2:0;
   fx.fire.forEach((f,i)=>{f.visible=on;if(on){const k=.75+Math.random()*.5;f.scale.set(k,k,1.1+Math.random()*.9+Math.min(1,s.kmh/200)*.6);f.rotation.z=Math.random()*3}})};
 w.mdlPaint=()=>{if(!w.mdl)return;const pm=w.ppaint();pm.envMapIntensity=.7;w.mdl.userData.paint.forEach(o=>o.material=pm);w.mdl.traverse(o=>{if(o.isMesh&&o.material&&o.material!==pm&&o.material.envMapIntensity!==undefined)o.material.envMapIntensity=.6})};
@@ -170,7 +170,7 @@ w.cabHide=on=>{if(!w.cab||!w.sw)return;const keep=w.sw.parent,dy=w.pd.cab.dy,E=w
   // руль и руки едут вместе с глазом водителя модели
   if(on&&E)w.cab.position.set(E[0]+.37,E[1]-1.08,E[2]-.38);else w.cab.position.set(0,dy,0);
   if(!w.inL){w.inL=new T.PointLight(0xffe2c4,0,2.6,1.2);w.car.add(w.inL);w.inL2=new T.PointLight(0x9fb4ff,0,2.2,1.2);w.car.add(w.inL2)}
-  if(on&&E){w.inL.position.set(E[0]+.25,E[1]-.12,E[2]-.55);w.inL2.position.set(0,E[1]+.05,E[2]+.2)}w.inL.intensity=on?1.1:0;w.inL2.intensity=on?.7:0;
+  if(on&&E){w.inL.position.set(E[0]+.25,E[1]-.12,E[2]-.55);w.inL2.position.set(0,E[1]+.05,E[2]+.2)}w.inL.intensity=on?2.2:0;w.inL2.intensity=on?1.4:0;w.inL.distance=3.2;w.inL2.distance=3;
   w.cabDark(on);if(w._cabOn===on)return;w._cabOn=on;for(const c of w.cab.children)if(c!==keep&&!(w.arms||[]).includes(c))c.visible=!on};
 
 w.fitEye=()=>{const g=w.mdl;if(!g)return null;const pg=w.pg,X=-pg.W*.205;g.updateMatrixWorld(true);const inv=new T.Matrix4().copy(g.matrixWorld).invert();
@@ -180,4 +180,8 @@ w.fitEye=()=>{const g=w.mdl;if(!g)return null;const pg=w.pg,X=-pg.W*.205;g.updat
     for(let i=0;i<P.count;i+=st){v.fromBufferAttribute(P,i).applyMatrix4(mw);if(Math.abs(v.x-X)>.16)continue;const b=Math.floor((v.z-zmin)/zs);if(b<0||b>=B)continue;if(v.y>pg.H*.82)hi[b]=Math.max(hi[b],v.y);}});
   // крыша над головой: минимальная высота среди верхних точек в середине машины
   let roof=9;for(let b=Math.floor(B*.4);b<Math.floor(B*.62);b++)if(hi[b]>0)roof=Math.min(roof,hi[b]);if(roof>8)roof=pg.H;
-  const y=Math.min(roof-.1,pg.H*.84),z=-pg.L*.02;w.eyeO=[X,+y.toFixed(3),+z.toFixed(3)];return {roof,y,z}};
+  const y=Math.min(roof-.1,pg.H*.84),z=-pg.L*.02;w.eyeO=[X,+y.toFixed(3),+z.toFixed(3)];
+  // капот: верх кузова по центру, между фарами и лобовым
+  let hz=-9,hb=0;g.traverse(o=>{if(!o.isMesh)return;const P=o.geometry.attributes.position,mw=new T.Matrix4().multiplyMatrices(inv,o.matrixWorld),st=Math.max(1,P.count/6000|0);
+    for(let i=0;i<P.count;i+=st){v.fromBufferAttribute(P,i).applyMatrix4(mw);if(Math.abs(v.x)>.35||v.z<-pg.L*.3||v.z>-pg.L*.12)continue;if(v.y>hz&&v.y<pg.H*.85)hz=v.y}});
+  w.hoodO=hz>0?[pg.L*.2,+(hz+.13).toFixed(3)]:null;return {roof,y,z}};

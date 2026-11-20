@@ -643,7 +643,7 @@ function make(cfg){
       {const E=inM&&w.eyeO?w.eyeO:[-.37,1.08+w.pd.cab.dy,.38];w.eye.position.set(E[0]+clamp(-s.ay*.002,-.03,.03),E[1],E[2]+clamp(s.ax*.002,-.03,.04))}
       w.car.updateMatrixWorld(true);cam.position.setFromMatrixPosition(w.eye.matrixWorld);w.eye.getWorldQuaternion(cam.quaternion);s.look+=(clamp(beta*.75,-.7,.7)-s.look)*Math.min(1,dt*5);cam.rotateY(-s.look-.12);cam.rotateX(-.05);
       if(!(w.hmUpd&&w.hmUpd()))for(let i=0;i<2;i++){const ar=w.arms[i];ar.userData.wr.getWorldPosition(V2);w.cab.worldToLocal(V2);V2.z+=.03;V2.y-=.02;ar.position.copy(V2);V1.copy(w.elb[i]);ar.lookAt(w.cab.localToWorld(V1))}}
-    else if(camMode===2){const hd=w.pd.hood;cam.position.set(s.x+pfx*hd[0],gy+hd[1]+s.heave,s.z+pfz*hd[0]);V1.set(s.x+pfx*30,hy(sS+30)+1,s.z+pfz*30)}
+    else if(camMode===2){const hd=(w.mdl&&w.hoodO)||w.pd.hood;cam.position.set(s.x+pfx*hd[0],gy+hd[1]+s.heave,s.z+pfz*hd[0]);V1.set(s.x+pfx*30,hy(sS+30)+1,s.z+pfz*30)}
     else{const dist=(camMode===3?11:6.4)+k*1.4+(pg.L-4.5),hgt=(camMode===3?4.8:2.25)+(pg.H-1.2)*.75,czx=s.x-cfx*dist,czz=s.z-cfz*dist;
       cam.position.set(czx,Math.max(gy,hy(-czz))+hgt,czz);V1.set(s.x+cfx*7,gy+pg.H*.6+.4,s.z+cfz*7)}
     const sh=s.shake*.35+(k*k*.02+(s.surf<1?.05*k:0))*(s.nitroOn?.5:1)+(s.nitroOn?.012:0);cam.position.x+=(Math.random()-.5)*sh;cam.position.y+=(Math.random()-.5)*sh;
