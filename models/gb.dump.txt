@@ -1,0 +1,629 @@
+==  src/gb.glb nodes 441 meshes 110 mats 76 tex 75 imgs 3307,257142,1863,10018,283,286,104417,52798,52798,283,42938,131350,283,59937,284,113788,63414,7341,284,87835,48952,34110,39640,182039,1052,12895,97451,11881,44484,5479,11175,11080,132759,336,312343,13186,29558,591238,591238,608029,180465,67,52798,126334,270001,10997,37074,31760,3122,67,12104,40953,78402,287,104788,554408,284,83445,118697,876361,137353,333163,43803,43400,608097,283,12218,284,132509,69953,52798,19955,36715,2404,120366
+  M 0:plastic5.001 col= tex=1 met=0 r=0.975 a= em=
+  M 1:leather02_weave.001 col= tex=1 met=0 r=undefined a= em=
+  M 2:plastic5_0.001 col= tex=1 met=undefined r=0.400515 a= em=
+  M 3:ptn_leather_016_lcao.001 col= tex=1 met=0 r=0.515902 a= em=
+  M 4:plastic5_1.001 col= tex=1 met=undefined r=0.418734 a= em=
+  M 5:plastic5_2.001 col= tex=1 met=0.546267 r=0.720945 a= em=
+  M 6:leather02_weave_0.001 col= tex=1 met=0 r=0.327639 a= em=
+  M 7:leather02_weave_1.001 col= tex=1 met=0 r=undefined a= em=
+  M 8:door_handles.002 col=0.00,0.00,0.00,1.00 tex=0 met=0.521975 r=0.625216 a= em=
+  M 9:leather02_weave_2.001 col= tex=1 met=0 r=undefined a= em=
+  M 10:leather02_weave_3.001 col= tex=1 met=0 r=undefined a= em=
+  M 11:leather02_weave_4.001 col= tex=1 met=0 r=undefined a= em=
+  M 12:leather02_weave_5.001 col= tex=1 met=0.801334 r=0.109011 a= em=
+  M 13:interiordfs.002 col= tex=1 met=0 r=0.0224936 a= em=
+  M 14:leather02_weave_6.001 col= tex=1 met=0 r=undefined a= em=
+  M 15:leather02_weave_7.001 col= tex=1 met=0 r=0 a=BLEND em=
+  M 16:leather02_weave_8.001 col= tex=1 met=0 r=undefined a= em=
+  M 17:plastic5_3.001 col= tex=1 met=0 r=0.975 a= em=
+  M 18:leather02_weave_9.001 col= tex=1 met=0 r=undefined a= em=
+  M 19:plastic5_4.001 col= tex=1 met=0 r=0 a= em=
+  M 20:right_wheel.001 col= tex=1 met=0.570559 r=0.175814 a= em=
+  M 21:leather02_weave_10.001 col= tex=1 met=0 r=undefined a= em=
+  M 22:plastic5_5.001 col= tex=1 met=0 r=0.975 a= em=
+  M 23:leather02_weave_11.001 col= tex=1 met=0 r=undefined a= em=
+  M 24:leather02_weave_12.001 col= tex=1 met=0 r=undefined a= em=
+  M 25:leather02_weave_13.001 col= tex=1 met=0 r=undefined a= em=
+  M 26:plastic5_6.001 col= tex=1 met=0 r=0.975 a= em=
+  M 27:plastic5_7.001 col= tex=1 met=0 r=0.975 a= em=
+  M 28:plastic5_8.001 col=0.00,0.00,0.00,1.00 tex=0 met=0.151522 r=0 a= em=
+  M 29:m_carbon_a.001 col= tex=1 met=undefined r=undefined a= em=
+  M 30:leather02_weave_14.001 col= tex=1 met=0 r=undefined a= em=
+  M 31:plastic5_9.001 col= tex=1 met=0 r=0.975 a= em=
+  M 32:leather02_weave_15.001 col= tex=1 met=0 r=undefined a= em=
+  M 33:plastic5_10.001 col= tex=1 met=0 r=0 a= em=
+  M 34:right_wheel_0.001 col= tex=1 met=0.971378 r=0.266909 a= em=
+  M 35:plastic5_11.001 col= tex=1 met=0 r=0.975 a= em=
+  M 36:bodypaint.001 col= tex=0 met=0.518182 r=0.154545 a= em=
+  M 37:ExtWindowsGlass.001 col=1.00,1.00,1.00,0.05 tex=1 met=0 r=0 a=BLEND em=
+  M 38:plastic5_12.001 col= tex=1 met=0 r=0.975 a= em=
+  M 39:exhausts.001 col= tex=1 met=0 r=undefined a= em=
+  M 40:IntWindows.002 col=0.00,0.00,0.00,0.40 tex=0 met=undefined r=0.0239884 a=BLEND em=
+  M 41:ExtWindowsGlass_0.001 col=0.01,0.01,0.01,0.37 tex=0 met=0.558413 r=0 a=BLEND em=
+  M 42:m_carbon_a_0.001 col= tex=1 met=0.236544 r=0.0604264 a= em=
+  M 43:m_carbon_a_1.001 col= tex=1 met=0 r=0.0373837 a= em=
+  M 44:right_wheel_1.001 col=0.45,0.45,0.45,1.00 tex=0 met=0.886356 r=0.00576934 a= em=
+  M 45:leather02_weave_16.001 col= tex=1 met=undefined r=0.777042 a= em=
+  M 46:leather02_weave_17.001 col= tex=1 met=0 r=0 a= em=
+  M 47:plastic5_13.001 col= tex=1 met=0.99567 r=0.667727 a= em=
+  M 48:plastic5_14.001 col= tex=1 met=0 r=0.975 a= em=
+  M 49:ExtWindowsGlass_1.001 col=1.00,1.00,1.00,0.13 tex=1 met=0 r=0.0303637 a=BLEND em=
+  M 50:leather02_weave_18.001 col= tex=1 met=0 r=undefined a= em=0.888887,0.888887,0.888887
+  M 51:leather02_weave_19.001 col= tex=1 met=0 r=undefined a= em=
+  M 52:leather02_weave_20.001 col= tex=1 met=0 r=undefined a= em=
+  M 53:plastic5_15.001 col= tex=1 met=0.6738 r=0.210812 a= em=
+  M 54:right_wheel_2.001 col= tex=1 met=0.764896 r=0.0786455 a= em=
+  M 55:leather02_weave_21.001 col= tex=1 met=0 r=undefined a= em=
+  M 56:plastic5_16.001 col= tex=1 met=undefined r=0.443026 a= em=
+  M 57:right_wheel_3.001 col= tex=1 met=0.194033 r=0 a= em=
+  M 58:leather02_weave_22.001 col= tex=1 met=0 r=undefined a= em=
+  M 59:leather02_weave_23.001 col= tex=1 met=0 r=undefined a=BLEND em=
+  M 60:leather02_weave_24.001 col= tex=1 met=0 r=undefined a= em=
+  M 61:leather02_weave_25.001 col= tex=1 met=0 r=undefined a= em=
+  M 62:leather02_weave_26.001 col= tex=1 met=0 r=undefined a= em=
+  M 63:leather02_weave_27.001 col= tex=0 met=0 r=undefined a= em=
+  M 64:door_handles_0.001 col= tex=1 met=0.236544 r=0.0847185 a= em=
+  M 65:exhausts_0.001 col= tex=1 met=0.61307 r=0.0361344 a= em=
+  M 66:leather02_weave_28.001 col= tex=1 met=0 r=undefined a= em=
+  M 67:leather02_weave_29.001 col= tex=1 met=0 r=undefined a= em=
+  M 68:leather02_weave_30.001 col= tex=1 met=0 r=undefined a= em=
+  M 69:leather02_weave_31.001 col= tex=1 met=0 r=undefined a= em=
+  M 70:plastic5_17.001 col= tex=1 met=0.710238 r=0.758823 a= em=
+  M 71:tgn_brabus_g900_2020_102__0.001 col= tex=0 met=undefined r=0 a= em=
+  M 72:interiordfs_0.001 col= tex=1 met=0 r=0.0224936 a= em=
+  M 73:plastic5_18.001 col= tex=1 met=0 r=0.975 a= em=
+  M 74:leather02_weave_32.001 col= tex=1 met=0 r=undefined a= em=
+  M 75:interiordfs_1.001 col= tex=1 met=0 r=0.0224936 a= em=
+  mesh0 Object_0 mat=0 tri=118 min=0.32,0.76,0.60 max=0.52,0.79,0.61
+  mesh1 Object_1 mat=1 tri=6 min=-0.27,0.76,0.53 max=-0.26,0.76,0.53
+  mesh2 Object_2 mat=2 tri=14043 min=-0.99,-0.17,-2.12 max=0.95,0.62,2.30
+  mesh3 Object_3 mat=3 tri=3220 min=-0.75,0.00,-1.98 max=0.71,0.95,0.94
+  mesh4 Object_4 mat=4 tri=9395 min=-0.86,-0.01,-1.97 max=0.82,1.39,1.03
+  mesh5 Object_5 mat=5 tri=11499 min=-0.79,-0.01,-2.01 max=0.76,1.25,1.02
+  mesh6 Object_6 mat=6 tri=24 min=-0.56,1.33,-1.68 max=0.53,1.33,-0.31
+  mesh7 Object_7 mat=7 tri=1515 min=-0.62,0.00,-1.68 max=0.55,0.16,0.62
+  mesh8 Object_8 mat=8 tri=280 min=-0.19,0.72,0.56 max=0.58,0.82,0.63
+  mesh9 Object_9 mat=9 tri=14 min=-0.08,1.28,0.26 max=0.04,1.30,0.30
+  mesh10 Object_10 mat=10 tri=188 min=-0.11,1.26,0.26 max=0.07,1.30,0.45
+  mesh11 Object_11 mat=11 tri=170 min=-0.78,0.03,0.31 max=0.75,1.28,0.74
+  mesh12 Object_12 mat=12 tri=140 min=-0.98,0.02,-1.88 max=0.94,0.37,0.99
+  mesh13 Object_13 mat=6 tri=288 min=-0.79,0.05,-1.11 max=0.75,1.15,-0.20
+  mesh14 Object_14 mat=13 tri=26 min=-0.19,0.73,0.59 max=0.57,0.84,0.62
+  mesh15 Object_15 mat=14 tri=42 min=-0.04,0.46,0.44 max=0.00,0.50,0.45
+  mesh16 Object_16 mat=15 tri=52 min=-1.11,-0.12,-2.20 max=1.07,0.79,2.09
+  mesh17 Object_17 mat=16 tri=390 min=-0.76,0.34,-1.51 max=0.72,0.84,0.74
+  mesh18 Object_18 mat=17 tri=226 min=-0.82,0.42,-0.53 max=0.78,0.72,0.57
+  mesh19 Object_19 mat=18 tri=172 min=-0.15,0.53,0.45 max=0.11,0.65,0.47
+  mesh20 Object_20 mat=6 tri=324 min=-0.79,0.35,-0.64 max=0.75,0.85,0.74
+  mesh21 Object_21 mat=6 tri=660 min=-0.76,0.61,0.54 max=0.72,0.79,1.03
+  mesh22 Object_22 mat=8 tri=11128 min=-0.86,-0.01,-2.00 max=0.82,1.33,0.97
+  mesh23 Object_23 mat=19 tri=16497 min=-0.76,-0.00,-1.11 max=0.72,1.30,0.97
+  mesh24 Object_24 mat=20 tri=2893 min=-0.78,0.34,-0.38 max=0.75,0.81,0.68
+  mesh25 Object_25 mat=6 tri=16660 min=-0.97,-0.30,-1.92 max=0.94,0.21,1.31
+  mesh26 Object_26 mat=21 tri=1430 min=-0.82,-0.00,-0.98 max=0.78,0.69,1.01
+  mesh27 Object_27 mat=22 tri=3192 min=-0.81,0.19,-1.22 max=0.77,1.25,0.64
+  mesh28 Object_28 mat=23 tri=32 min=-0.05,0.62,1.59 max=0.01,0.63,1.65
+  mesh29 Object_29 mat=24 tri=92 min=-0.90,0.19,-2.11 max=0.86,0.61,1.98
+  mesh30 Object_30 mat=6 tri=202 min=-0.72,0.53,1.15 max=0.65,0.65,1.97
+  mesh31 Object_31 mat=6 tri=790 min=-0.59,0.01,1.32 max=0.52,0.60,1.87
+  mesh32 Object_32 mat=25 tri=10 min=0.18,0.63,1.36 max=0.23,0.63,1.42
+  mesh33 Object_33 mat=6 tri=1559 min=-0.54,0.28,0.93 max=0.44,0.63,1.95
+  mesh34 Object_34 mat=26 tri=318 min=-0.87,0.20,-0.18 max=0.83,0.64,1.90
+  mesh35 Object_35 mat=27 tri=3692 min=-0.93,0.18,-2.11 max=0.90,0.65,1.81
+  mesh36 Object_36 mat=8 tri=19696 min=-0.94,0.02,-2.09 max=0.90,1.25,1.98
+  mesh37 Object_37 mat=8 tri=62657 min=-1.12,-0.38,-2.07 max=1.08,0.87,2.31
+  mesh38 Object_38 mat=8 tri=4334 min=-0.52,0.13,1.01 max=0.45,0.64,1.95
+  mesh39 Object_39 mat=8 tri=27791 min=-1.12,-0.39,-2.20 max=0.97,0.81,2.09
+  mesh40 Object_40 mat=28 tri=844 min=-0.79,1.33,-2.05 max=0.75,1.49,-1.61
+  mesh41 Object_41 mat=29 tri=1079 min=-0.36,0.59,1.14 max=0.33,0.64,1.66
+  mesh42 Object_42 mat=30 tri=709 min=-0.13,0.05,0.91 max=0.58,0.63,1.69
+  mesh43 Object_43 mat=31 tri=236 min=-1.12,0.20,-2.12 max=1.08,0.79,1.96
+  mesh44 Object_44 mat=32 tri=236 min=-1.12,0.20,-2.12 max=1.08,0.79,1.96
+  mesh45 Object_45 mat=33 tri=9946 min=-0.97,-0.07,-2.19 max=0.93,1.36,2.23
+  mesh46 Object_46 mat=34 tri=152 min=-0.78,0.52,-0.98 max=0.75,0.68,0.28
+  mesh47 Object_47 mat=8 tri=945 min=-0.95,0.43,-2.14 max=0.91,0.48,0.06
+  mesh48 Object_48 mat=35 tri=372 min=-0.86,0.13,-0.95 max=0.82,0.67,0.60
+  mesh49 Object_49 mat=36 tri=21997 min=-1.12,-0.17,-2.14 max=1.08,1.41,2.16
+  mesh50 Object_50 mat=36 tri=7346 min=-1.01,-0.16,-2.21 max=0.97,1.31,2.32
+  mesh51 Object_51 mat=37 tri=1564 min=-1.12,0.06,0.52 max=1.08,0.81,2.23
+  mesh52 Object_52 mat=38 tri=5580 min=-0.88,0.02,-2.08 max=0.84,1.24,0.75
+  mesh53 Object_53 mat=39 tri=248 min=-0.76,0.42,-0.97 max=0.73,0.51,0.29
+  mesh54 Object_54 mat=40 tri=634 min=-0.88,0.69,-2.09 max=0.83,1.25,0.80
+  mesh55 Object_55 mat=41 tri=582 min=-0.98,-0.08,-1.99 max=0.94,1.40,2.14
+  mesh56 Object_56 mat=42 tri=13434 min=-0.88,-0.11,-2.13 max=0.84,1.39,2.29
+  mesh57 Object_57 mat=43 tri=468 min=-0.26,0.19,-2.49 max=0.56,1.01,-2.39
+  mesh58 Object_58 mat=44 tri=637 min=-0.27,0.15,-2.39 max=0.58,1.02,-2.13
+  mesh59 Object_59 mat=28 tri=6990 min=-0.92,-0.13,-2.21 max=0.89,0.70,2.29
+  mesh60 Object_60 mat=45 tri=8 min=-0.88,-0.11,2.04 max=0.84,0.07,2.27
+  mesh61 Object_61 mat=46 tri=634 min=-0.11,0.25,2.21 max=0.38,0.49,2.25
+  mesh62 Object_62 mat=6 tri=468 min=-0.99,0.20,0.81 max=0.96,0.46,2.22
+  mesh63 Object_63 mat=8 tri=7414 min=-0.98,-0.16,1.83 max=0.94,0.47,2.30
+  mesh64 Object_64 mat=6 tri=92 min=-0.32,-0.00,-2.18 max=0.28,0.08,-2.14
+  mesh65 Object_65 mat=47 tri=146 min=-0.89,-0.10,-2.20 max=0.85,0.69,1.89
+  mesh66 Object_66 mat=48 tri=72 min=-0.86,0.17,-2.12 max=0.82,0.26,-2.08
+  mesh67 Object_67 mat=49 tri=986 min=-0.86,0.16,-2.14 max=0.82,0.26,-2.07
+  mesh68 Object_68 mat=50 tri=384 min=-0.76,0.26,2.06 max=0.72,0.47,2.14
+  mesh69 Object_69 mat=51 tri=216 min=-0.57,0.27,1.41 max=-0.47,0.43,1.66
+  mesh70 Object_70 mat=6 tri=1388 min=0.38,0.45,0.89 max=0.67,0.62,1.20
+  mesh71 Object_71 mat=52 tri=419 min=-0.73,0.37,0.97 max=0.27,0.64,1.26
+  mesh72 Object_72 mat=6 tri=1064 min=-0.80,0.54,0.91 max=0.15,0.67,1.19
+  mesh73 Object_73 mat=6 tri=4656 min=-0.71,0.04,-1.48 max=0.67,0.64,1.51
+  mesh74 Object_74 mat=53 tri=5280 min=-1.07,-0.52,-1.77 max=1.03,0.25,1.84
+  mesh75 Object_75 mat=54 tri=21844 min=0.70,-0.47,-1.54 max=1.03,0.20,1.79
+  mesh76 Object_76 mat=54 tri=21844 min=0.88,-0.46,-1.72 max=1.03,0.19,1.79
+  mesh77 Object_77 mat=54 tri=18756 min=0.72,-0.47,-1.72 max=1.03,0.19,-1.06
+  mesh78 Object_78 mat=55 tri=7288 min=-1.07,-0.46,-1.71 max=1.03,0.19,1.78
+  mesh79 Object_79 mat=56 tri=5280 min=-1.07,-0.55,-1.80 max=1.02,0.28,1.87
+  mesh80 Object_80 mat=57 tri=2648 min=-1.07,-0.45,-1.71 max=1.03,0.18,1.78
+  mesh81 Object_81 mat=58 tri=140 min=-0.46,0.85,-0.27 max=0.42,0.88,-0.26
+  mesh82 Object_82 mat=8 tri=3696 min=-0.79,-0.02,-1.12 max=0.75,1.16,0.46
+  mesh83 Object_83 mat=28 tri=4061 min=-0.74,0.53,-1.11 max=0.72,1.00,0.42
+  mesh84 Object_84 mat=59 tri=8 min=-0.54,0.81,-1.06 max=0.50,1.16,-0.24
+  mesh85 Object_85 mat=60 tri=6 min=0.83,0.37,-0.19 max=0.87,0.44,-0.19
+  mesh86 Object_86 mat=46 tri=92 min=-0.97,0.21,0.88 max=0.93,0.23,0.97
+  mesh87 Object_87 mat=61 tri=688 min=-0.79,0.54,1.86 max=0.75,0.60,1.99
+  mesh88 Object_88 mat=62 tri=104 min=-0.76,0.35,2.07 max=0.72,0.38,2.14
+  mesh89 Object_89 mat=63 tri=74 min=-0.93,0.45,0.25 max=0.90,0.57,0.91
+  mesh90 Object_90 mat=28 tri=7176 min=-0.98,-0.15,-2.12 max=0.95,1.40,2.22
+  mesh91 Object_91 mat=54 tri=21844 min=-1.07,-0.47,-1.72 max=-0.75,0.19,1.61
+  mesh92 Object_92 mat=54 tri=21844 min=-1.07,-0.46,-1.72 max=-0.92,0.20,1.79
+  mesh93 Object_93 mat=54 tri=18756 min=-1.07,-0.47,1.13 max=-0.75,0.19,1.79
+  mesh94 Object_94 mat=64 tri=19728 min=-1.00,-0.16,-2.12 max=0.97,1.31,2.14
+  mesh95 Object_95 mat=65 tri=992 min=-1.00,-0.26,-0.80 max=0.96,-0.07,-0.26
+  mesh96 Object_96 mat=34 tri=15040 min=-0.92,-0.27,-1.52 max=0.88,-0.00,1.59
+  mesh97 Object_97 mat=34 tri=5272 min=-0.89,-0.37,-1.63 max=0.85,0.10,1.70
+  mesh98 Object_98 mat=66 tri=282 min=0.58,0.33,-2.10 max=0.88,0.71,0.80
+  mesh99 Object_99 mat=67 tri=34 min=0.25,0.69,0.30 max=0.55,0.74,0.33
+  mesh100 Object_100 mat=68 tri=10 min=0.26,0.66,0.29 max=0.55,0.73,0.42
+  mesh101 Object_101 mat=69 tri=160 min=0.23,0.62,0.29 max=0.57,0.83,0.39
+  mesh102 Object_102 mat=70 tri=3143 min=0.19,0.53,0.25 max=0.61,0.91,0.46
+  mesh103 Object_103 mat=6 tri=2 min=-0.14,0.73,0.59 max=0.16,0.84,0.62
+  mesh104 Object_104 mat=71 tri=22 min=-0.12,1.15,0.40 max=0.09,1.20,0.42
+  mesh105 Object_105 mat=8 tri=3431 min=-0.74,0.72,-2.13 max=0.56,0.82,0.89
+  mesh106 Object_106 mat=72 tri=2 min=-0.14,0.73,0.59 max=0.16,0.84,0.62
+  mesh107 Object_107 mat=73 tri=61 min=0.27,0.74,0.59 max=0.54,0.82,0.62
+  mesh108 Object_108 mat=74 tri=60 min=0.38,0.74,0.60 max=0.51,0.80,0.61
+  mesh109 Object_109 mat=75 tri=12 min=0.26,0.74,0.59 max=0.55,0.83,0.62
+tri 517391
+N0 Sketchfab_model M
+  N1 root
+    N2 GLTF_SceneRootNode M
+      N3 G-class_327 M
+        N4 USDRoot_326 M
+          N5 scene_325 M
+            N6 Meshes_324 M
+              N7 Sketchfab_model.002_323 M
+                N8 GCLASS_fbx_322 M
+                  N9 RootNode.001_321
+                    N10 tgn_brabus_g900_2020_2 M
+                      N11 tgn_brabus_g900_2020_NeedleText_0_1
+                        N12 tgn_brabus_g900_2020_NeedleText_0.001_0
+                          N13 Object_13 mesh0
+                    N14 tgn_brabus_g900_2020_001_5 M
+                      N15 tgn_brabus_g900_2020_001_MAT_Carbon_0_4
+                        N16 tgn_brabus_g900_2020_001_MAT_Carbon_0.001_3
+                          N17 Object_17 mesh1
+                    N18 tgn_brabus_g900_2020_002_8 M
+                      N19 tgn_brabus_g900_2020_002_common_black033_0_7
+                        N20 tgn_brabus_g900_2020_002_common_black033_0.001_6
+                          N21 Object_21 mesh2
+                    N22 tgn_brabus_g900_2020_003_11 M
+                      N23 tgn_brabus_g900_2020_003_ptn_leather_016_lcao_0_10
+                        N24 tgn_brabus_g900_2020_003_ptn_leather_016_lcao_0.001_9
+                          N25 Object_25 mesh3
+                    N26 tgn_brabus_g900_2020_004_14 M
+                      N27 tgn_brabus_g900_2020_004_leather_jesko2_0_13
+                        N28 tgn_brabus_g900_2020_004_leather_jesko2_0.001_12
+                          N29 Object_29 mesh4
+                    N30 tgn_brabus_g900_2020_005_17 M
+                      N31 tgn_brabus_g900_2020_005_leatherbmp2_0_16
+                        N32 tgn_brabus_g900_2020_005_leatherbmp2_0.001_15
+                          N33 Object_33 mesh5
+                    N34 tgn_brabus_g900_2020_006_20 M
+                      N35 tgn_brabus_g900_2020_006_rol_symbols_002_diff_0_19
+                        N36 tgn_brabus_g900_2020_006_rol_symbols_002_diff_0.001_18
+                          N37 Object_37 mesh6
+                    N38 tgn_brabus_g900_2020_007_23 M
+                      N39 tgn_brabus_g900_2020_007_setlogo01_0_22
+                        N40 tgn_brabus_g900_2020_007_setlogo01_0.001_21
+                          N41 Object_41 mesh7
+                    N42 tgn_brabus_g900_2020_008_26 M
+                      N43 tgn_brabus_g900_2020_008_cas_0_25
+                        N44 tgn_brabus_g900_2020_008_cas_0.001_24
+                          N45 Object_45 mesh8
+                    N46 tgn_brabus_g900_2020_009_29 M
+                      N47 tgn_brabus_g900_2020_009_int_badges2_0_28
+                        N48 tgn_brabus_g900_2020_009_int_badges2_0.001_27
+                          N49 Object_49 mesh9
+                    N50 tgn_brabus_g900_2020_010_32 M
+                      N51 tgn_brabus_g900_2020_010_2001blk_0_31
+                        N52 tgn_brabus_g900_2020_010_2001blk_0.001_30
+                          N53 Object_53 mesh10
+                    N54 tgn_brabus_g900_2020_011_35 M
+                      N55 tgn_brabus_g900_2020_011_speakers2_d_0_34
+                        N56 tgn_brabus_g900_2020_011_speakers2_d_0.001_33
+                          N57 Object_57 mesh11
+                    N58 tgn_brabus_g900_2020_012_38 M
+                      N59 tgn_brabus_g900_2020_012_grill3_0_37
+                        N60 tgn_brabus_g900_2020_012_grill3_0.001_36
+                          N61 Object_61 mesh12
+                    N62 tgn_brabus_g900_2020_013_41 M
+                      N63 tgn_brabus_g900_2020_013_int_belt_color_0_40
+                        N64 tgn_brabus_g900_2020_013_int_belt_color_0.001_39
+                          N65 Object_65 mesh13
+                    N66 tgn_brabus_g900_2020_014_44 M
+                      N67 tgn_brabus_g900_2020_014_interiordfs_0_43
+                        N68 tgn_brabus_g900_2020_014_interiordfs_0.001_42
+                          N69 Object_69 mesh14
+                    N70 tgn_brabus_g900_2020_015_47 M
+                      N71 tgn_brabus_g900_2020_015_win30_0_46
+                        N72 tgn_brabus_g900_2020_015_win30_0.001_45
+                          N73 Object_73 mesh15
+                    N74 tgn_brabus_g900_2020_016_50 M
+                      N75 tgn_brabus_g900_2020_016_setlogo01x_0_49
+                        N76 tgn_brabus_g900_2020_016_setlogo01x_0.001_48
+                          N77 Object_77 mesh16
+                    N78 tgn_brabus_g900_2020_017_53 M
+                      N79 tgn_brabus_g900_2020_017_speakers_d_0_52
+                        N80 tgn_brabus_g900_2020_017_speakers_d_0.001_51
+                          N81 Object_81 mesh17
+                    N82 tgn_brabus_g900_2020_018_56 M
+                      N83 tgn_brabus_g900_2020_018_int_badges_0_55
+                        N84 tgn_brabus_g900_2020_018_int_badges_0.001_54
+                          N85 Object_85 mesh18
+                    N86 tgn_brabus_g900_2020_019_59 M
+                      N87 tgn_brabus_g900_2020_019_uni_cajun_pattern_992_difw_0_58
+                        N88 tgn_brabus_g900_2020_019_uni_cajun_pattern_992_difw_0.001_57
+                          N89 Object_89 mesh19
+                    N90 tgn_brabus_g900_2020_020_62 M
+                      N91 tgn_brabus_g900_2020_020_int_emsv__PAINT_2__0_61
+                        N92 tgn_brabus_g900_2020_020_int_emsv__PAINT_2__0.001_60
+                          N93 Object_93 mesh20
+                    N94 tgn_brabus_g900_2020_021_65 M
+                      N95 tgn_brabus_g900_2020_021_radiator_0_64
+                        N96 tgn_brabus_g900_2020_021_radiator_0.001_63
+                          N97 Object_97 mesh21
+                    N98 tgn_brabus_g900_2020_022_68 M
+                      N99 tgn_brabus_g900_2020_022_door_plastic_0_67
+                        N100 tgn_brabus_g900_2020_022_door_plastic_0.001_66
+                          N101 Object_101 mesh22
+                    N102 tgn_brabus_g900_2020_023_71 M
+                      N103 tgn_brabus_g900_2020_023_black3_0_70
+                        N104 tgn_brabus_g900_2020_023_black3_0.001_69
+                          N105 Object_105 mesh23
+                    N106 tgn_brabus_g900_2020_024_74 M
+                      N107 tgn_brabus_g900_2020_024_carbon_sesto3_0_73
+                        N108 tgn_brabus_g900_2020_024_carbon_sesto3_0.001_72
+                          N109 Object_109 mesh24
+                    N110 tgn_brabus_g900_2020_025_77 M
+                      N111 tgn_brabus_g900_2020_025_vehicle_generic_smallspecmap__PAINT_2__76
+                        N112 tgn_brabus_g900_2020_025_vehicle_generic_smallspecmap__PAIN_75
+                          N113 Object_113 mesh25
+                    N114 tgn_brabus_g900_2020_026_80 M
+                      N115 tgn_brabus_g900_2020_026_light1_0_79
+                        N116 tgn_brabus_g900_2020_026_light1_0.001_78
+                          N117 Object_117 mesh26
+                    N118 tgn_brabus_g900_2020_027_83 M
+                      N119 tgn_brabus_g900_2020_027_urus_27__PAINT_2__0_82
+                        N120 tgn_brabus_g900_2020_027_urus_27__PAINT_2__0.001_81
+                          N121 Object_121 mesh27
+                    N122 tgn_brabus_g900_2020_030_86 M
+                      N123 tgn_brabus_g900_2020_030_logo_brabus_01_0_85
+                        N124 tgn_brabus_g900_2020_030_logo_brabus_01_0.001_84
+                          N125 Object_125 mesh28
+                    N126 tgn_brabus_g900_2020_031_89 M
+                      N127 tgn_brabus_g900_2020_031_screw_017_opac_40a21753_9298_486f_b2d5_88
+                        N128 tgn_brabus_g900_2020_031_screw_017_opac_40a21753_9298_486f__87
+                          N129 Object_129 mesh29
+                    N130 tgn_brabus_g900_2020_032_92 M
+                      N131 tgn_brabus_g900_2020_032_8001_symbols_embossed_nrml_template_0_91
+                        N132 tgn_brabus_g900_2020_032_8001_symbols_embossed_nrml_templat_90
+                          N133 Object_133 mesh30
+                    N134 tgn_brabus_g900_2020_033_95 M
+                      N135 tgn_brabus_g900_2020_033_leather02_weave_0_94
+                        N136 tgn_brabus_g900_2020_033_leather02_weave_0.001_93
+                          N137 Object_137 mesh31
+                    N138 tgn_brabus_g900_2020_034_98 M
+                      N139 tgn_brabus_g900_2020_034_eng_logo_0_97
+                        N140 tgn_brabus_g900_2020_034_eng_logo_0.001_96
+                          N141 Object_141 mesh32
+                    N142 tgn_brabus_g900_2020_035_101 M
+                      N143 tgn_brabus_g900_2020_035_common_alum_0_100
+                        N144 tgn_brabus_g900_2020_035_common_alum_0.001_99
+                          N145 Object_145 mesh33
+                    N146 tgn_brabus_g900_2020_036_104 M
+                      N147 tgn_brabus_g900_2020_036_doortags_diffx_0_103
+                        N148 tgn_brabus_g900_2020_036_doortags_diffx_0.001_102
+                          N149 Object_149 mesh34
+                    N150 tgn_brabus_g900_2020_037_107 M
+                      N151 tgn_brabus_g900_2020_037_red_b_0_106
+                        N152 tgn_brabus_g900_2020_037_red_b_0.001_105
+                          N153 Object_153 mesh35
+                    N154 tgn_brabus_g900_2020_038_110 M
+                      N155 tgn_brabus_g900_2020_038_common_black010_0_109
+                        N156 tgn_brabus_g900_2020_038_common_black010_0.001_108
+                          N157 Object_157 mesh36
+                    N158 tgn_brabus_g900_2020_039_115 M
+                      N159 tgn_brabus_g900_2020_039_black_002_0_112
+                        N160 tgn_brabus_g900_2020_039_black_002_0.001_111
+                          N161 Object_161 mesh37
+                          N162 Object_162 mesh38
+                      N163 tgn_brabus_g900_2020_039_black_002_0_1_114
+                        N164 tgn_brabus_g900_2020_039_black_002_0.002_113
+                          N165 Object_165 mesh39
+                    N166 tgn_brabus_g900_2020_040_118 M
+                      N167 tgn_brabus_g900_2020_040_black_plastic1_0_117
+                        N168 tgn_brabus_g900_2020_040_black_plastic1_0.001_116
+                          N169 Object_169 mesh40
+                    N170 tgn_brabus_g900_2020_041_121 M
+                      N171 tgn_brabus_g900_2020_041_carbon_sesto_0_120
+                        N172 tgn_brabus_g900_2020_041_carbon_sesto_0.001_119
+                          N173 Object_173 mesh41
+                    N174 tgn_brabus_g900_2020_042_124 M
+                      N175 tgn_brabus_g900_2020_042_ductape_0_123
+                        N176 tgn_brabus_g900_2020_042_ductape_0.001_122
+                          N177 Object_177 mesh42
+                    N178 tgn_brabus_g900_2020_043_127 M
+                      N179 tgn_brabus_g900_2020_043_lights_lod0_50_0_126
+                        N180 tgn_brabus_g900_2020_043_lights_lod0_50_0.001_125
+                          N181 Object_181 mesh43
+                    N182 tgn_brabus_g900_2020_044_130 M
+                      N183 tgn_brabus_g900_2020_044_lights_lod0_a_0_129
+                        N184 tgn_brabus_g900_2020_044_lights_lod0_a_0.001_128
+                          N185 Object_185 mesh44
+                    N186 tgn_brabus_g900_2020_045_133 M
+                      N187 tgn_brabus_g900_2020_045_nlightsf_0_132
+                        N188 tgn_brabus_g900_2020_045_nlightsf_0.001_131
+                          N189 Object_189 mesh45
+                    N190 tgn_brabus_g900_2020_046_136 M
+                      N191 tgn_brabus_g900_2020_046_urus_28__PAINT_2__0_135
+                        N192 tgn_brabus_g900_2020_046_urus_28__PAINT_2__0.001_134
+                          N193 Object_193 mesh46
+                    N194 tgn_brabus_g900_2020_047_139 M
+                      N195 tgn_brabus_g900_2020_047_door_handles_0_138
+                        N196 tgn_brabus_g900_2020_047_door_handles_0.001_137
+                          N197 Object_197 mesh47
+                    N198 tgn_brabus_g900_2020_048_142 M
+                      N199 tgn_brabus_g900_2020_048_vehicle_genericmud_car_0_141
+                        N200 tgn_brabus_g900_2020_048_vehicle_genericmud_car_0.001_140
+                          N201 Object_201 mesh48
+                    N202 tgn_brabus_g900_2020_049_147 M
+                      N203 tgn_brabus_g900_2020_049_bodypaint_0_144
+                        N204 tgn_brabus_g900_2020_049_bodypaint_0.001_143
+                          N205 Object_205 mesh49
+                      N206 tgn_brabus_g900_2020_049_bodypaint_0_1_146
+                        N207 tgn_brabus_g900_2020_049_bodypaint_0.002_145
+                          N208 Object_208 mesh50
+                    N209 tgn_brabus_g900_2020_050_150 M
+                      N210 tgn_brabus_g900_2020_050_ExtGlass_0_149
+                        N211 tgn_brabus_g900_2020_050_ExtGlass_0.001_148
+                          N212 Object_212 mesh51
+                    N213 tgn_brabus_g900_2020_051_153 M
+                      N214 tgn_brabus_g900_2020_051_leather_jesko_0_152
+                        N215 tgn_brabus_g900_2020_051_leather_jesko_0.001_151
+                          N216 Object_216 mesh52
+                    N217 tgn_brabus_g900_2020_052_156 M
+                      N218 tgn_brabus_g900_2020_052_carbon_sesto2_0_155
+                        N219 tgn_brabus_g900_2020_052_carbon_sesto2_0.001_154
+                          N220 Object_220 mesh53
+                    N221 tgn_brabus_g900_2020_053_159 M
+                      N222 tgn_brabus_g900_2020_053_IntWindows_0_158
+                        N223 tgn_brabus_g900_2020_053_IntWindows_0.001_157
+                          N224 Object_224 mesh54
+                    N225 tgn_brabus_g900_2020_055_162 M
+                      N226 tgn_brabus_g900_2020_055_ExtWindowsGlass_0_161
+                        N227 tgn_brabus_g900_2020_055_ExtWindowsGlass_0.001_160
+                          N228 Object_228 mesh55
+                    N229 tgn_brabus_g900_2020_056_165 M
+                      N230 tgn_brabus_g900_2020_056_carbon_sesto4_0_164
+                        N231 tgn_brabus_g900_2020_056_carbon_sesto4_0.001_163
+                          N232 Object_232 mesh56
+                    N233 tgn_brabus_g900_2020_057_168 M
+                      N234 tgn_brabus_g900_2020_057_m_carbon_a_0_167
+                        N235 tgn_brabus_g900_2020_057_m_carbon_a_0.001_166
+                          N236 Object_236 mesh57
+                    N237 tgn_brabus_g900_2020_058_171 M
+                      N238 tgn_brabus_g900_2020_058_sparewheel_plastic_0_170
+                        N239 tgn_brabus_g900_2020_058_sparewheel_plastic_0.001_169
+                          N240 Object_240 mesh58
+                    N241 tgn_brabus_g900_2020_060_174 M
+                      N242 tgn_brabus_g900_2020_060_plastic5_0_173
+                        N243 tgn_brabus_g900_2020_060_plastic5_0.001_172
+                          N244 Object_244 mesh59
+                    N245 tgn_brabus_g900_2020_061_177 M
+                      N246 tgn_brabus_g900_2020_061_wangge_b_0_176
+                        N247 tgn_brabus_g900_2020_061_wangge_b_0.001_175
+                          N248 Object_248 mesh60
+                    N249 tgn_brabus_g900_2020_062_180 M
+                      N250 tgn_brabus_g900_2020_062_text_Brabus_G_V12_900_a_0_179
+                        N251 tgn_brabus_g900_2020_062_text_Brabus_G_V12_900_a_0.001_178
+                          N252 Object_252 mesh61
+                    N253 tgn_brabus_g900_2020_063_183 M
+                      N254 tgn_brabus_g900_2020_063_plastic3_0_182
+                        N255 tgn_brabus_g900_2020_063_plastic3_0.001_181
+                          N256 Object_256 mesh62
+                    N257 tgn_brabus_g900_2020_064_186 M
+                      N258 tgn_brabus_g900_2020_064_front_bumper_plastics_0_185
+                        N259 tgn_brabus_g900_2020_064_front_bumper_plastics_0.001_184
+                          N260 Object_260 mesh63
+                    N261 tgn_brabus_g900_2020_066_189 M
+                      N262 tgn_brabus_g900_2020_066_lights_0_188
+                        N263 tgn_brabus_g900_2020_066_lights_0.001_187
+                          N264 Object_264 mesh64
+                    N265 tgn_brabus_g900_2020_067_192 M
+                      N266 tgn_brabus_g900_2020_067_g63_grill_0_191
+                        N267 tgn_brabus_g900_2020_067_g63_grill_0.001_190
+                          N268 Object_268 mesh65
+                    N269 tgn_brabus_g900_2020_068_195 M
+                      N270 tgn_brabus_g900_2020_068_g500_brake_0_194
+                        N271 tgn_brabus_g900_2020_068_g500_brake_0.001_193
+                          N272 Object_272 mesh66
+                    N273 tgn_brabus_g900_2020_069_198 M
+                      N274 tgn_brabus_g900_2020_069_bw_window1__3__0_197
+                        N275 tgn_brabus_g900_2020_069_bw_window1__3__0.001_196
+                          N276 Object_276 mesh67
+                    N277 tgn_brabus_g900_2020_070_201 M
+                      N278 tgn_brabus_g900_2020_070_lightled_0_200
+                        N279 tgn_brabus_g900_2020_070_lightled_0.001_199
+                          N280 Object_280 mesh68
+                    N281 tgn_brabus_g900_2020_071_204 M
+                      N282 tgn_brabus_g900_2020_071_exhaust_net_0_203
+                        N283 tgn_brabus_g900_2020_071_exhaust_net_0.001_202
+                          N284 Object_284 mesh69
+                    N285 tgn_brabus_g900_2020_072_207 M
+                      N286 tgn_brabus_g900_2020_072_d5_0_206
+                        N287 tgn_brabus_g900_2020_072_d5_0.001_205
+                          N288 Object_288 mesh70
+                    N289 tgn_brabus_g900_2020_073_210 M
+                      N290 tgn_brabus_g900_2020_073_rgba8411ffff_0_209
+                        N291 tgn_brabus_g900_2020_073_rgba8411ffff_0.001_208
+                          N292 Object_292 mesh71
+                    N293 tgn_brabus_g900_2020_074_213 M
+                      N294 tgn_brabus_g900_2020_074_common_black020_0_212
+                        N295 tgn_brabus_g900_2020_074_common_black020_0.001_211
+                          N296 Object_296 mesh72
+                    N297 tgn_brabus_g900_2020_075_216 M
+                      N298 tgn_brabus_g900_2020_075_common_black097_0_215
+                        N299 tgn_brabus_g900_2020_075_common_black097_0.001_214
+                          N300 Object_300 mesh73
+                    N301 tgn_brabus_g900_2020_076_219 M
+                      N302 tgn_brabus_g900_2020_076_michelin02_0_218
+                        N303 tgn_brabus_g900_2020_076_michelin02_0.001_217
+                          N304 Object_304 mesh74
+                    N305 tgn_brabus_g900_2020_077_226 M
+                      N306 tgn_brabus_g900_2020_077_left_wheel_0_221
+                        N307 tgn_brabus_g900_2020_077_left_wheel_0.001_220
+                          N308 Object_308 mesh75
+                      N309 tgn_brabus_g900_2020_077_left_wheel_0_1_223
+                        N310 tgn_brabus_g900_2020_077_left_wheel_0.002_222
+                          N311 Object_311 mesh76
+                      N312 tgn_brabus_g900_2020_077_left_wheel_0_2_225
+                        N313 tgn_brabus_g900_2020_077_left_wheel_0.003_224
+                          N314 Object_314 mesh77
+                    N315 tgn_brabus_g900_2020_078_229 M
+                      N316 tgn_brabus_g900_2020_078_white_rimdetail_0_228
+                        N317 tgn_brabus_g900_2020_078_white_rimdetail_0.001_227
+                          N318 Object_318 mesh78
+                    N319 tgn_brabus_g900_2020_079_232 M
+                      N320 tgn_brabus_g900_2020_079_wheel_track_0_231
+                        N321 tgn_brabus_g900_2020_079_wheel_track_0.001_230
+                          N322 Object_322 mesh79
+                    N323 tgn_brabus_g900_2020_080_235 M
+                      N324 tgn_brabus_g900_2020_080_diamondcutrim_0_234
+                        N325 tgn_brabus_g900_2020_080_diamondcutrim_0.001_233
+                          N326 Object_326 mesh80
+                    N327 tgn_brabus_g900_2020_081_238 M
+                      N328 tgn_brabus_g900_2020_081_log_brabus_0_237
+                        N329 tgn_brabus_g900_2020_081_log_brabus_0.001_236
+                          N330 Object_330 mesh81
+                    N331 tgn_brabus_g900_2020_082_241 M
+                      N332 tgn_brabus_g900_2020_082_seat_plastic_0_240
+                        N333 tgn_brabus_g900_2020_082_seat_plastic_0.001_239
+                          N334 Object_334 mesh82
+                    N335 tgn_brabus_g900_2020_083_244 M
+                      N336 tgn_brabus_g900_2020_083_black2_0_243
+                        N337 tgn_brabus_g900_2020_083_black2_0.001_242
+                          N338 Object_338 mesh83
+                    N339 tgn_brabus_g900_2020_084_247 M
+                      N340 tgn_brabus_g900_2020_084_logo1_brabus_01__PAINT_2__0_246
+                        N341 tgn_brabus_g900_2020_084_logo1_brabus_01__PAINT_2__0.001_245
+                          N342 Object_342 mesh84
+                    N343 tgn_brabus_g900_2020_085_250 M
+                      N344 tgn_brabus_g900_2020_085_doortags_0_249
+                        N345 tgn_brabus_g900_2020_085_doortags_0.001_248
+                          N346 Object_346 mesh85
+                    N347 tgn_brabus_g900_2020_086_253 M
+                      N348 tgn_brabus_g900_2020_086_text_Brabus_G_V12_900_a__PAINT_2__0_252
+                        N349 tgn_brabus_g900_2020_086_text_Brabus_G_V12_900_a__PAINT_2___251
+                          N350 Object_350 mesh86
+                    N351 tgn_brabus_g900_2020_087_256 M
+                      N352 tgn_brabus_g900_2020_087_nlightsf20_0_255
+                        N353 tgn_brabus_g900_2020_087_nlightsf20_0.001_254
+                          N354 Object_354 mesh87
+                    N355 tgn_brabus_g900_2020_088_259 M
+                      N356 tgn_brabus_g900_2020_088_lamp_alpha_0_258
+                        N357 tgn_brabus_g900_2020_088_lamp_alpha_0.001_257
+                          N358 Object_358 mesh88
+                    N359 tgn_brabus_g900_2020_089_262 M
+                      N360 tgn_brabus_g900_2020_089_eng_brabus_0_261
+                        N361 tgn_brabus_g900_2020_089_eng_brabus_0.001_260
+                          N362 Object_362 mesh89
+                    N363 tgn_brabus_g900_2020_090_265 M
+                      N364 tgn_brabus_g900_2020_090_window_plastic_0_264
+                        N365 tgn_brabus_g900_2020_090_window_plastic_0.001_263
+                          N366 Object_366 mesh90
+                    N367 tgn_brabus_g900_2020_091_272 M
+                      N368 tgn_brabus_g900_2020_091_right_wheel_0_267
+                        N369 tgn_brabus_g900_2020_091_right_wheel_0.001_266
+                          N370 Object_370 mesh91
+                      N371 tgn_brabus_g900_2020_091_right_wheel_0_1_269
+                        N372 tgn_brabus_g900_2020_091_right_wheel_0.002_268
+                          N373 Object_373 mesh92
+                      N374 tgn_brabus_g900_2020_091_right_wheel_0_2_271
+                        N375 tgn_brabus_g900_2020_091_right_wheel_0.003_270
+                          N376 Object_376 mesh93
+                    N377 tgn_brabus_g900_2020_092_275 M
+                      N378 tgn_brabus_g900_2020_092_black4_0_274
+                        N379 tgn_brabus_g900_2020_092_black4_0.001_273
+                          N380 Object_380 mesh94
+                    N381 tgn_brabus_g900_2020_093_278 M
+                      N382 tgn_brabus_g900_2020_093_exhausts_0_277
+                        N383 tgn_brabus_g900_2020_093_exhausts_0.001_276
+                          N384 Object_384 mesh95
+                    N385 tgn_brabus_g900_2020_094_281 M
+                      N386 tgn_brabus_g900_2020_094_gt_34_0_280
+                        N387 tgn_brabus_g900_2020_094_gt_34_0.001_279
+                          N388 Object_388 mesh96
+                    N389 tgn_brabus_g900_2020_095_284 M
+                      N390 tgn_brabus_g900_2020_095_gt_35_0_283
+                        N391 tgn_brabus_g900_2020_095_gt_35_0.001_282
+                          N392 Object_392 mesh97
+                    N393 tgn_brabus_g900_2020_096_287 M
+                      N394 tgn_brabus_g900_2020_096_Material__29_0_286
+                        N395 tgn_brabus_g900_2020_096_Material__29_0.001_285
+                          N396 Object_396 mesh98
+                    N397 tgn_brabus_g900_2020_097_290 M
+                      N398 tgn_brabus_g900_2020_097_symbols_0_289
+                        N399 tgn_brabus_g900_2020_097_symbols_0.001_288
+                          N400 Object_400 mesh99
+                    N401 tgn_brabus_g900_2020_098_293 M
+                      N402 tgn_brabus_g900_2020_098_symbols_embossed_0_292
+                        N403 tgn_brabus_g900_2020_098_symbols_embossed_0.001_291
+                          N404 Object_404 mesh100
+                    N405 tgn_brabus_g900_2020_099_296 M
+                      N406 tgn_brabus_g900_2020_099_fx_0_295
+                        N407 tgn_brabus_g900_2020_099_fx_0.001_294
+                          N408 Object_408 mesh101
+                    N409 tgn_brabus_g900_2020_100_299 M
+                      N410 tgn_brabus_g900_2020_100_leather_wheel_0_298
+                        N411 tgn_brabus_g900_2020_100_leather_wheel_0.001_297
+                          N412 Object_412 mesh102
+                    N413 tgn_brabus_g900_2020_101_302 M
+                      N414 tgn_brabus_g900_2020_101_navi_0_301
+                        N415 tgn_brabus_g900_2020_101_navi_0.001_300
+                          N416 Object_416 mesh103
+                    N417 tgn_brabus_g900_2020_102_305 M
+                      N418 tgn_brabus_g900_2020_102__0_304
+                        N419 tgn_brabus_g900_2020_102__0.001_303
+                          N420 Object_420 mesh104
+                    N421 tgn_brabus_g900_2020_103_308 M
+                      N422 tgn_brabus_g900_2020_103_wiper_0_307
+                        N423 tgn_brabus_g900_2020_103_wiper_0.001_306
+                          N424 Object_424 mesh105
+                    N425 tgn_brabus_g900_2020_104_311 M
+                      N426 tgn_brabus_g900_2020_104_Music_0_310
+                        N427 tgn_brabus_g900_2020_104_Music_0.001_309
+                          N428 Object_428 mesh106
+                    N429 tgn_brabus_g900_2020_105_314 M
+                      N430 tgn_brabus_g900_2020_105_Material__25_0_313
+                        N431 tgn_brabus_g900_2020_105_Material__25_0.001_312
+                          N432 Object_432 mesh107
+                    N433 tgn_brabus_g900_2020_106_317 M
+                      N434 tgn_brabus_g900_2020_106_glowtext_0_316
+                        N435 tgn_brabus_g900_2020_106_glowtext_0.001_315
+                          N436 Object_436 mesh108
+                    N437 tgn_brabus_g900_2020_108_320 M
+                      N438 tgn_brabus_g900_2020_108_Material__26_0_319
+                        N439 tgn_brabus_g900_2020_108_Material__26_0.001_318
+                          N440 Object_440 mesh109

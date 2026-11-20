@@ -1,0 +1,1098 @@
+==  src/w210m.glb nodes 615 meshes 389 mats 92 tex 0 imgs 
+  M 0:material_0 col= tex=0 met=0 r=0.6 a= em=
+  M 1:mw210_headlight_lowbeam col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 2:mw210_headlight_highbeam col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 3:mw210_headlight_signal_L col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 4:mw210_taillight_brake col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 5:mw210_taillight_signal_L col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 6:mw210_taillight_lowhigh col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 7:mw210_taillight_reverse col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 8:mw210_taillight_signal_R col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 9:mw210_headlight_signal_R col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 10:mw210_taillightglass_lowhigh col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 11:mw210_taillightglass_reverse col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 12:mw210_taillightglass_brake col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 13:mw210_taillightglass_signal_L col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 14:mw210_headlightglass_lowbeam col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 15:mw210_headlightglass_highbeam col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 16:mw210_headlightglass_signal_L col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 17:mw210_taillightglass_signal_R col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 18:mw210_headlightglass_signal_R col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 19:mw210_shouroops col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 20:mw210_gps_screen col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 21:mw210_chrome col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 22:mw210_plastic3 col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 23:mw210_plastic2 col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 24:mw210_main col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 25:mw210_glass_tintable col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 26:mw210_tubs col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 27:mw210_mechanical col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 28:mw210_mechanical2 col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 29:mw210_radioscreen col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 30:mw210_buttons col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 31:mw210_interior col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 32:mw210_plastic col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 33:mw210_intchrome col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 34:mirror col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 35:mw210_srs col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 36:mw210_doorleather col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 37:mw210_set2 col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 38:mw210_stroch col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 39:mw210_keyhole col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 40:mw210_mirror_pov_R col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 41:mw210_glass col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 42:mw210_foglightsglass col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 43:mw210_mirror_pov_L col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 44:mw210_radio_buttons col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 45:mw210_plafon col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 46:mw210_brabus_logo col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 47:mw210_carpet col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 48:mw210_rubbersi col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 49:mw210_swl col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 50:mw210_roofcarp col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 51:mw210_chmsl col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 52:mw210_remni col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 53:mw210_keyhole2 col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 54:mw210_vstavki col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 55:mw210_radio col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 56:mw210_intseats col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 57:mw210_red col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 58:mw210_engbay col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 59:mw210_hood2 col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 60:mat_184_005 col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 61:legran_interior col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 62:mw210_gauges_v col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 63:bruckell_mechanical col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 64:legran col= tex=0 met=0 r=0.6 a= em=
+  M 65:bruckell_engine col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 66:legran_battery col=0.80,0.80,0.80,0.57 tex=0 met=0 r=0.6 a=BLEND em=
+  M 67:legran_checkengine col=0.80,0.80,0.80,0.57 tex=0 met=0 r=0.6 a=BLEND em=
+  M 68:legran_temp col=0.80,0.80,0.80,0.27 tex=0 met=0 r=0.6 a=BLEND em=
+  M 69:legran_lowpressure col=0.80,0.80,0.80,0.27 tex=0 met=0 r=0.6 a=BLEND em=
+  M 70:legran_high_beam col=0.80,0.80,0.80,0.57 tex=0 met=0 r=0.6 a=BLEND em=
+  M 71:legran_ajar col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 72:legran_lowfuel col=0.80,0.80,0.80,0.27 tex=0 met=0 r=0.6 a=BLEND em=
+  M 73:legran_abs col=0.80,0.80,0.80,0.27 tex=0 met=0 r=0.6 a=BLEND em=
+  M 74:rallyparts col=0.38,0.13,0.11,1.00 tex=0 met=0 r=0.6 a= em=
+  M 75:glass_invisible col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 76:signal_L col=0.80,0.80,0.80,0.57 tex=0 met=0 r=0.6 a=BLEND em=
+  M 77:signal_R col=0.80,0.80,0.80,0.57 tex=0 met=0 r=0.6 a=BLEND em=
+  M 78:lowfuel col=0.80,0.80,0.80,0.27 tex=0 met=0 r=0.6 a=BLEND em=
+  M 79:battery col=0.80,0.80,0.80,0.57 tex=0 met=0 r=0.6 a=BLEND em=
+  M 80:material col=0.80,0.80,0.80,0.27 tex=0 met=0 r=0.6 a=BLEND em=
+  M 81:parkingbrake col=0.80,0.80,0.80,0.27 tex=0 met=0 r=0.6 a=BLEND em=
+  M 82:hazard col=0.80,0.80,0.80,0.27 tex=0 met=0 r=0.6 a=BLEND em=
+  M 83:checkengine col=0.80,0.80,0.80,0.57 tex=0 met=0 r=0.6 a=BLEND em=
+  M 84:lowbeam col=0.80,0.80,0.80,0.27 tex=0 met=0 r=0.6 a=BLEND em=
+  M 85:neon_tube col=0.73,0.65,0.50,1.00 tex=0 met=0 r=0.6 a= em=
+  M 86:neon_tube_glow col=0.73,0.65,0.50,1.00 tex=0 met=0 r=0.6 a= em=
+  M 87:grille col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 88:mw210_foglight2 col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 89:mw210_vstavki2 col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 90:mw210_amg_gau col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 91:ibishu_engine col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  mesh0 bruckell_mechanical-material mat=63 tri=172 min=-0.67,-1.18,0.65 max=0.67,-1.07,0.84
+  mesh1 mw210_chrome-material mat=21 tri=552 min=-0.04,2.37,0.83 max=0.03,2.41,0.90
+  mesh2 mw210_plastic3-material mat=22 tri=32 min=0.88,-1.06,0.41 max=0.89,-0.83,0.43
+  mesh3 mw210_plastic3-material mat=22 tri=32 min=-0.89,-1.06,0.41 max=-0.88,-0.83,0.43
+  mesh4 mw210_brabus_logo-material mat=46 tri=159 min=0.72,-0.58,0.68 max=0.74,0.10,0.81
+  mesh5 mw210_brabus_logo-material mat=46 tri=146 min=0.73,0.34,0.73 max=0.75,1.13,0.85
+  mesh6 mw210_brabus_logo-material mat=46 tri=146 min=-0.75,0.34,0.73 max=-0.73,1.13,0.85
+  mesh7 mw210_brabus_logo-material mat=46 tri=159 min=-0.74,-0.58,0.68 max=-0.72,0.10,0.81
+  mesh8 mw210_brabus_logo-material mat=46 tri=247 min=-0.10,-0.41,0.40 max=0.10,-0.13,0.46
+  mesh9 mw210_brabus_logo-material mat=46 tri=227 min=-0.69,-0.65,0.40 max=0.69,-0.41,0.82
+  mesh10 mw210_plastic2-material mat=23 tri=120 min=-0.00,-0.03,-0.01 max=0.00,0.01,0.01
+  mesh11 mw210_intchrome-material mat=33 tri=50 min=-0.00,-0.04,-0.01 max=0.00,0.01,0.01
+  mesh12 mw210_chrome-material mat=21 tri=1099 min=-0.12,-1.73,0.56 max=0.11,-1.31,0.70
+  mesh13 Object_13 mat=0 tri=1 min=-0.04,-1.03,0.33 max=-0.04,-1.02,0.34
+  mesh14 ibishu_engine-material mat=91 tri=1606 min=-0.18,-1.34,0.13 max=0.16,-0.66,0.48
+  mesh15 mw210_amg_gau-material mat=90 tri=268 min=0.24,-0.65,0.74 max=0.50,-0.63,0.83
+  mesh16 mw210_vstavki2-material mat=89 tri=247 min=-0.10,-0.41,0.40 max=0.10,-0.13,0.46
+  mesh17 mw210_vstavki-material mat=54 tri=247 min=-0.10,-0.41,0.40 max=0.10,-0.13,0.46
+  mesh18 mw210_vstavki2-material mat=89 tri=227 min=-0.69,-0.65,0.40 max=0.69,-0.41,0.82
+  mesh19 mw210_vstavki2-material mat=89 tri=146 min=0.73,0.34,0.73 max=0.75,1.13,0.85
+  mesh20 mw210_vstavki2-material mat=89 tri=159 min=0.72,-0.58,0.68 max=0.74,0.10,0.81
+  mesh21 mw210_vstavki2-material mat=89 tri=159 min=-0.74,-0.58,0.68 max=-0.72,0.10,0.81
+  mesh22 mw210_vstavki2-material mat=89 tri=146 min=-0.75,0.34,0.73 max=-0.73,1.13,0.85
+  mesh23 mw210_vstavki-material mat=54 tri=159 min=0.72,-0.58,0.68 max=0.74,0.10,0.81
+  mesh24 mw210_vstavki-material mat=54 tri=146 min=0.73,0.34,0.73 max=0.75,1.13,0.85
+  mesh25 mw210_vstavki-material mat=54 tri=146 min=-0.75,0.34,0.73 max=-0.73,1.13,0.85
+  mesh26 mw210_vstavki-material mat=54 tri=159 min=-0.74,-0.58,0.68 max=-0.72,0.10,0.81
+  mesh27 mw210_plastic-material mat=32 tri=20 min=-0.03,-0.37,1.02 max=0.02,-0.37,1.18
+  mesh28 mw210_vstavki-material mat=54 tri=1640 min=-0.04,-0.38,0.92 max=0.03,-0.36,1.19
+  mesh29 mw210_main-material mat=24 tri=97 min=-0.74,-2.12,0.58 max=-0.41,-2.01,0.70
+  mesh30 mw210_main-material mat=24 tri=97 min=0.41,-2.12,0.58 max=0.74,-2.01,0.70
+  mesh31 mw210_chrome-material mat=21 tri=2806 min=0.88,-1.00,0.39 max=0.88,-0.93,0.40
+  mesh32 mw210_plastic3-material mat=22 tri=178 min=0.88,-1.02,0.38 max=0.88,-0.90,0.40
+  mesh33 mw210_brabus_logo-material mat=46 tri=68 min=-0.63,2.31,0.89 max=0.63,2.36,0.93
+  mesh34 mw210_plastic3-material mat=22 tri=41 min=0.60,-2.22,0.19 max=0.69,-2.17,0.28
+  mesh35 mw210_foglight2-material mat=88 tri=59 min=0.60,-2.20,0.19 max=0.69,-2.15,0.28
+  mesh36 mw210_plastic2-material mat=23 tri=41 min=-0.69,-2.22,0.19 max=-0.61,-2.17,0.28
+  mesh37 mw210_foglight2-material mat=88 tri=59 min=-0.69,-2.20,0.19 max=-0.61,-2.15,0.28
+  mesh38 mw210_foglightsglass-material mat=42 tri=100 min=0.61,-2.22,0.20 max=0.69,-2.19,0.28
+  mesh39 mw210_foglightsglass-material mat=42 tri=100 min=-0.69,-2.22,0.20 max=-0.61,-2.19,0.28
+  mesh40 mw210_chrome-material mat=21 tri=260 min=-0.88,1.71,0.44 max=0.88,2.48,0.48
+  mesh41 mw210_chrome-material mat=21 tri=134 min=-0.87,-2.28,0.39 max=0.87,-1.86,0.41
+  mesh42 mw210_main-material mat=24 tri=1838 min=-0.87,-1.09,0.11 max=0.87,0.96,0.23
+  mesh43 Object_43 mat=0 tri=1 min=-0.22,-1.29,0.63 max=0.27,-1.29,0.63
+  mesh44 mw210_plastic-material mat=32 tri=305 min=-0.31,-1.89,0.16 max=0.32,-1.25,0.62
+  mesh45 mw210_chrome-material mat=21 tri=1130 min=-0.16,-1.89,0.59 max=0.27,-1.72,0.71
+  mesh46 mw210_plastic2-material mat=23 tri=11006 min=-0.56,-1.92,0.25 max=0.29,-1.19,0.74
+  mesh47 mw210_intchrome-material mat=33 tri=25769 min=-0.19,-1.89,0.67 max=0.19,-1.36,0.73
+  mesh48 mw210_tubs-material mat=26 tri=1036 min=-0.34,-1.93,0.23 max=0.29,-1.17,0.62
+  mesh49 mw210_main-material mat=24 tri=2498 min=-0.88,1.60,0.14 max=0.88,2.47,0.51
+  mesh50 mw210_plastic3-material mat=22 tri=220 min=-0.65,-2.25,0.19 max=0.65,-2.17,0.28
+  mesh51 mw210_main-material mat=24 tri=4745 min=-0.87,-2.30,0.13 max=0.87,-1.76,0.57
+  mesh52 grille-material mat=87 tri=64 min=-0.62,-2.24,0.20 max=0.62,-2.17,0.27
+  mesh53 mw210_buttons-material mat=30 tri=24 min=0.72,0.37,0.74 max=0.73,0.39,0.77
+  mesh54 mw210_interior-material mat=31 tri=1169 min=0.71,0.26,0.25 max=0.81,1.21,0.88
+  mesh55 mw210_plastic-material mat=32 tri=274 min=0.72,0.28,0.28 max=0.74,0.92,0.54
+  mesh56 mw210_srs-material mat=35 tri=4 min=0.74,0.92,0.75 max=0.75,0.96,0.77
+  mesh57 mw210_plastic3-material mat=22 tri=354 min=0.72,0.31,0.29 max=0.76,0.96,0.80
+  mesh58 mw210_plastic2-material mat=23 tri=753 min=0.58,0.23,0.23 max=0.86,1.29,1.27
+  mesh59 mw210_intchrome-material mat=33 tri=58 min=0.75,0.48,0.73 max=0.76,0.59,0.76
+  mesh60 mw210_doorleather-material mat=36 tri=135 min=0.74,0.49,0.63 max=0.77,1.11,0.83
+  mesh61 mw210_set2-material mat=37 tri=36 min=0.72,0.31,0.29 max=0.72,0.44,0.42
+  mesh62 mw210_stroch-material mat=38 tri=16 min=0.75,0.50,0.67 max=0.76,1.02,0.73
+  mesh63 neon_tube_glow-material mat=86 tri=32 min=-0.69,-0.85,0.11 max=-0.67,0.79,0.13
+  mesh64 neon_tube_glow-material mat=86 tri=32 min=-0.23,1.86,0.21 max=0.23,1.88,0.23
+  mesh65 neon_tube_glow-material mat=86 tri=32 min=0.69,-0.85,0.11 max=0.71,0.79,0.13
+  mesh66 neon_tube_glow-material mat=86 tri=32 min=-0.43,-2.09,0.25 max=0.44,-2.07,0.27
+  mesh67 neon_tube-material mat=85 tri=72 min=-0.70,-0.90,0.11 max=-0.67,0.84,0.14
+  mesh68 neon_tube-material mat=85 tri=72 min=-0.27,1.85,0.21 max=0.27,1.88,0.23
+  mesh69 neon_tube-material mat=85 tri=72 min=0.69,-0.90,0.11 max=0.71,0.84,0.14
+  mesh70 neon_tube-material mat=85 tri=72 min=-0.48,-2.09,0.24 max=0.49,-2.07,0.27
+  mesh71 signal_L-material mat=76 tri=4 min=0.42,-0.65,0.81 max=0.44,-0.64,0.82
+  mesh72 signal_R-material mat=77 tri=4 min=0.30,-0.65,0.81 max=0.32,-0.64,0.82
+  mesh73 lowfuel-material mat=78 tri=2 min=0.22,-0.64,0.76 max=0.23,-0.63,0.77
+  mesh74 battery-material mat=79 tri=2 min=0.22,-0.63,0.74 max=0.24,-0.63,0.76
+  mesh75 abs-material mat=80 tri=2 min=0.51,-0.64,0.76 max=0.52,-0.63,0.77
+  mesh76 parkingbrake-material mat=81 tri=4 min=0.51,-0.63,0.75 max=0.52,-0.63,0.76
+  mesh77 hazard-material mat=82 tri=2 min=0.23,-0.63,0.73 max=0.24,-0.63,0.75
+  mesh78 checkengine-material mat=83 tri=2 min=0.51,-0.63,0.74 max=0.52,-0.63,0.75
+  mesh79 lowbeam-material mat=84 tri=2 min=0.31,-0.64,0.75 max=0.32,-0.64,0.76
+  mesh80 bruckell_mechanical-material mat=63 tri=88 min=-0.30,-1.22,0.12 max=0.30,-1.14,0.17
+  mesh81 glass_invisible-material mat=75 tri=4888 min=-0.68,-0.91,0.86 max=0.65,-0.33,1.24
+  mesh82 bruckell_mechanical-material mat=63 tri=176 min=-0.63,-1.28,0.26 max=0.63,-1.24,0.31
+  mesh83 bruckell_mechanical-material mat=63 tri=456 min=-0.66,-1.49,0.12 max=0.66,-1.17,0.19
+  mesh84 bruckell_mechanical-material mat=63 tri=136 min=-0.34,-1.30,0.26 max=0.34,-1.24,0.33
+  mesh85 bruckell_engine-material mat=65 tri=1010 min=-0.35,-1.73,0.36 max=0.34,-1.26,0.54
+  mesh86 bruckell_engine-material mat=65 tri=754 min=-0.19,-1.92,0.36 max=0.37,-1.37,0.59
+  mesh87 bruckell_mechanical-material mat=63 tri=720 min=0.01,-1.28,0.14 max=0.41,1.78,0.41
+  mesh88 bruckell_engine-material mat=65 tri=110 min=0.03,-1.29,0.36 max=0.12,-1.27,0.42
+  mesh89 rallyparts-material mat=74 tri=1148 min=-50.62,-211.89,9.95 max=51.00,-92.74,31.28
+  mesh90 rallyparts-material mat=74 tri=100 min=-0.88,1.64,0.03 max=-0.65,1.72,0.41
+  mesh91 rallyparts-material mat=74 tri=100 min=0.65,1.64,0.03 max=0.88,1.72,0.41
+  mesh92 rallyparts-material mat=74 tri=100 min=-0.90,-1.13,0.02 max=-0.66,-1.09,0.39
+  mesh93 rallyparts-material mat=74 tri=100 min=0.66,-1.13,0.02 max=0.90,-1.09,0.39
+  mesh94 bruckell_engine-material mat=65 tri=262 min=-0.12,-1.50,0.21 max=0.21,-1.36,0.34
+  mesh95 bruckell_engine-material mat=65 tri=704 min=-0.09,-0.94,0.11 max=0.12,-0.70,0.26
+  mesh96 bruckell_mechanical-material mat=63 tri=804 min=-0.61,-1.49,0.21 max=0.62,-1.39,0.33
+  mesh97 mw210_chrome-material mat=21 tri=354 min=-0.01,-1.73,0.67 max=0.03,-1.39,0.68
+  mesh98 mw210_plastic3-material mat=22 tri=134 min=-0.07,-1.81,0.60 max=0.09,-1.28,0.67
+  mesh99 bruckell_engine-material mat=65 tri=2588 min=-0.22,-1.82,0.16 max=0.25,-1.20,0.74
+  mesh100 mw210_chrome-material mat=21 tri=344 min=-0.02,-1.73,0.62 max=0.02,-1.69,0.64
+  mesh101 mw210_plastic3-material mat=22 tri=16 min=-0.10,-1.74,0.57 max=0.10,-1.35,0.64
+  mesh102 bruckell_engine-material mat=65 tri=2606 min=-0.31,-1.85,0.16 max=0.29,-1.25,0.66
+  mesh103 bruckell_mechanical-material mat=63 tri=88 min=-0.30,1.49,0.19 max=0.30,1.52,0.29
+  mesh104 bruckell_mechanical-material mat=63 tri=152 min=-0.04,-0.65,-0.04 max=0.04,1.11,0.04
+  mesh105 bruckell_mechanical-material mat=63 tri=452 min=-0.56,0.62,0.13 max=0.56,1.11,0.30
+  mesh106 bruckell_mechanical-material mat=63 tri=520 min=-0.60,1.26,0.15 max=0.60,1.51,0.27
+  mesh107 bruckell_mechanical-material mat=63 tri=1996 min=-0.59,0.84,0.12 max=0.59,1.53,0.37
+  mesh108 bruckell_mechanical-material mat=63 tri=176 min=-0.55,1.28,0.14 max=0.55,1.36,0.16
+  mesh109 bruckell_mechanical-material mat=63 tri=1248 min=-0.71,1.14,0.12 max=0.71,1.49,0.18
+  mesh110 bruckell_mechanical-material mat=63 tri=512 min=-0.74,1.23,0.11 max=0.74,1.45,0.39
+  mesh111 bruckell_mechanical-material mat=63 tri=804 min=-0.66,1.28,0.21 max=0.66,1.37,0.31
+  mesh112 bruckell_mechanical-material mat=63 tri=618 min=-0.14,1.06,0.14 max=0.14,1.45,0.37
+  mesh113 legran_battery-material mat=66 tri=4 min=14.71,-68.82,83.43 max=40.87,-68.81,85.17
+  mesh114 legran_checkengine-material mat=67 tri=7 min=49.47,-68.82,83.43 max=55.30,-68.81,84.98
+  mesh115 legran_temp-material mat=68 tri=2 min=45.44,-68.82,83.43 max=49.47,-68.81,85.04
+  mesh116 legran_lowpressure-material mat=69 tri=2 min=40.81,-68.82,83.43 max=45.47,-68.81,85.10
+  mesh117 legran_high_beam-material mat=70 tri=2 min=31.21,-68.82,83.43 max=35.28,-68.81,85.16
+  mesh118 legran_ajar-material mat=71 tri=2 min=25.57,-68.82,83.43 max=31.30,-68.81,85.19
+  mesh119 legran_lowfuel-material mat=72 tri=2 min=20.80,-68.82,83.43 max=25.68,-68.81,85.19
+  mesh120 legran_abs-material mat=73 tri=2 min=16.83,-68.82,83.43 max=20.85,-68.81,85.18
+  mesh121 bruckell_engine-material mat=65 tri=432 min=-0.38,-2.06,0.35 max=0.32,-1.68,0.70
+  mesh122 bruckell_engine-material mat=65 tri=432 min=-0.35,-2.06,0.35 max=0.32,-1.68,0.70
+  mesh123 mw210_plastic2-material mat=23 tri=76 min=-0.01,-0.00,-0.01 max=0.01,0.01,0.01
+  mesh124 mw210_gauges_v-material mat=62 tri=22 min=-0.00,0.00,0.01 max=0.00,0.00,0.03
+  mesh125 bruckell_mechanical-material mat=63 tri=1292 min=-0.63,1.28,0.32 max=0.63,1.37,0.57
+  mesh126 bruckell_mechanical-material mat=63 tri=232 min=-0.64,1.31,0.21 max=0.64,1.36,0.60
+  mesh127 bruckell_mechanical-material mat=63 tri=204 min=-0.81,1.22,0.13 max=-0.73,1.44,0.36
+  mesh128 bruckell_mechanical-material mat=63 tri=204 min=0.73,1.22,0.13 max=0.81,1.44,0.36
+  mesh129 bruckell_mechanical-material mat=63 tri=478 min=-0.73,1.17,0.14 max=0.73,1.41,0.28
+  mesh130 bruckell_mechanical-material mat=63 tri=192 min=-0.59,1.37,0.15 max=0.63,1.41,0.49
+  mesh131 bruckell_mechanical-material mat=63 tri=730 min=-0.45,-1.97,0.12 max=0.45,-1.04,0.28
+  mesh132 bruckell_mechanical-material mat=63 tri=1316 min=-0.66,-1.48,0.40 max=0.66,-1.34,0.75
+  mesh133 bruckell_engine-material mat=65 tri=398 min=-0.32,-2.05,0.26 max=0.33,-2.00,0.65
+  mesh134 bruckell_mechanical-material mat=63 tri=1088 min=-0.69,-1.67,0.17 max=0.69,-1.24,0.22
+  mesh135 legran-material mat=64 tri=396 min=-0.82,-2.00,0.13 max=0.82,-0.81,0.83
+  mesh136 Object_136 mat=0 tri=2 min=-0.75,1.97,0.36 max=0.76,2.14,0.38
+  mesh137 bruckell_mechanical-material mat=63 tri=1520 min=-0.86,-2.11,0.12 max=0.86,2.25,0.66
+  mesh138 mw210_mechanical-material mat=27 tri=4 min=-0.80,0.91,0.14 max=0.80,0.94,0.21
+  mesh139 mw210_plastic2-material mat=23 tri=76 min=-0.53,-0.37,-0.58 max=0.52,0.06,0.47
+  mesh140 mw210_gauges_v-material mat=62 tri=18 min=-0.11,-0.33,0.38 max=0.09,-0.05,1.88
+  mesh141 mw210_plastic2-material mat=23 tri=76 min=-0.01,-0.00,-0.01 max=0.01,0.01,0.01
+  mesh142 mw210_gauges_v-material mat=62 tri=22 min=-0.00,0.00,0.00 max=0.00,0.00,0.04
+  mesh143 mw210_plastic2-material mat=23 tri=76 min=-0.53,-0.00,-0.55 max=0.52,0.43,0.50
+  mesh144 mw210_gauges_v-material mat=62 tri=18 min=-0.12,0.04,0.41 max=0.09,0.32,1.91
+  mesh145 legran_interior-material mat=61 tri=84 min=-6.70,-0.58,-23.26 max=3.78,16.68,0.36
+  mesh146 legran_interior-material mat=61 tri=84 min=-2.77,-0.58,-15.69 max=2.79,12.15,0.36
+  mesh147 legran_interior-material mat=61 tri=84 min=-3.46,-0.58,-23.80 max=3.48,15.91,0.36
+  mesh148 legran_interior-material mat=61 tri=84 min=-2.97,-0.58,-26.81 max=3.03,18.31,0.36
+  mesh149 mw210_interior-material mat=31 tri=951 min=0.11,-0.44,0.22 max=0.66,0.31,1.15
+  mesh150 mw210_intseats-material mat=56 tri=104 min=0.22,-0.20,0.29 max=0.55,0.16,0.74
+  mesh151 mw210_plastic3-material mat=22 tri=426 min=0.12,-0.37,0.21 max=0.65,0.28,0.93
+  mesh152 mw210_plastic2-material mat=23 tri=182 min=0.12,-0.32,0.16 max=0.58,0.15,0.42
+  mesh153 mw210_intchrome-material mat=33 tri=16 min=0.30,0.26,0.92 max=0.48,0.27,0.95
+  mesh154 mw210_doorleather-material mat=36 tri=36 min=0.20,0.16,0.29 max=0.57,0.25,0.57
+  mesh155 mw210_red-material mat=57 tri=28 min=0.12,-0.04,0.37 max=0.14,0.00,0.41
+  mesh156 mw210_main-material mat=24 tri=1038 min=-0.98,-0.64,0.82 max=-0.78,-0.47,0.96
+  mesh157 mw210_main-material mat=24 tri=1038 min=0.78,-0.64,0.82 max=0.98,-0.47,0.97
+  mesh158 mw210_plastic2-material mat=23 tri=530 min=-0.11,-1.11,0.80 max=0.66,-0.82,0.91
+  mesh159 mat_184_005-material mat=60 tri=44 min=-0.16,2.38,0.78 max=0.16,2.40,0.78
+  mesh160 mw210_carpet-material mat=47 tri=288 min=-0.58,1.95,0.56 max=0.58,2.39,0.92
+  mesh161 mw210_plastic2-material mat=23 tri=504 min=-0.56,1.67,0.55 max=0.56,2.41,0.87
+  mesh162 mw210_main-material mat=24 tri=2130 min=-0.67,1.79,0.51 max=0.67,2.41,0.94
+  mesh163 mw210_keyhole-material mat=39 tri=28 min=-0.01,2.41,0.56 max=0.01,2.41,0.58
+  mesh164 mw210_plastic2-material mat=23 tri=81 min=-0.46,-1.27,0.84 max=0.46,-1.16,0.86
+  mesh165 mw210_hood2-material mat=59 tri=914 min=-0.73,-2.19,0.48 max=0.73,-0.85,0.88
+  mesh166 mw210_chrome-material mat=21 tri=770 min=-0.36,-2.24,0.47 max=0.36,-2.13,0.69
+  mesh167 mw210_plastic3-material mat=22 tri=246 min=-0.34,-2.23,0.49 max=0.34,-2.11,0.66
+  mesh168 mw210_plastic2-material mat=23 tri=390 min=-0.34,-2.23,0.47 max=0.34,-2.13,0.66
+  mesh169 mw210_main-material mat=24 tri=2734 min=-0.73,-2.19,0.48 max=0.73,-0.85,0.88
+  mesh170 mw210_chrome-material mat=21 tri=288 min=-0.87,1.72,0.43 max=0.87,2.46,0.47
+  mesh171 mw210_main-material mat=24 tri=180 min=-0.87,1.72,0.43 max=0.87,2.46,0.47
+  mesh172 mw210_plastic2-material mat=23 tri=54 min=-0.32,-2.23,0.46 max=0.32,-2.18,0.49
+  mesh173 mw210_plastic3-material mat=22 tri=140 min=-0.22,-2.12,0.44 max=0.16,-2.07,0.53
+  mesh174 mw210_mechanical2-material mat=28 tri=102 min=-0.31,-2.07,0.41 max=0.26,-2.06,0.63
+  mesh175 mw210_plastic2-material mat=23 tri=2313 min=-0.71,-1.74,0.51 max=0.71,-0.94,0.84
+  mesh176 mw210_engbay-material mat=58 tri=421 min=-0.51,-1.87,0.48 max=0.70,-1.03,0.81
+  mesh177 mw210_plastic3-material mat=22 tri=384 min=-0.71,-2.08,0.41 max=0.71,-1.20,0.79
+  mesh178 mw210_plastic2-material mat=23 tri=244 min=-0.73,-1.19,0.64 max=0.73,-0.81,0.87
+  mesh179 mw210_main-material mat=24 tri=470 min=-0.71,-2.11,0.40 max=0.71,-1.47,0.68
+  mesh180 mw210_engbay-material mat=58 tri=2272 min=-0.73,-2.13,0.40 max=0.73,-0.85,0.82
+  mesh181 mw210_interior-material mat=31 tri=1259 min=-0.72,0.53,0.19 max=0.72,1.44,1.02
+  mesh182 mw210_intseats-material mat=56 tri=128 min=-0.57,0.77,0.34 max=0.57,1.13,0.75
+  mesh183 mw210_plastic3-material mat=22 tri=56 min=-0.64,0.89,0.36 max=0.64,1.18,1.06
+  mesh184 mw210_plastic2-material mat=23 tri=408 min=-0.66,0.86,0.32 max=0.66,1.10,0.79
+  mesh185 mw210_intchrome-material mat=33 tri=162 min=-0.62,1.01,0.68 max=0.62,1.05,0.76
+  mesh186 mw210_red-material mat=57 tri=56 min=-0.12,0.86,0.41 max=0.12,0.91,0.45
+  mesh187 mw210_remni-material mat=52 tri=120 min=-0.64,0.89,0.32 max=0.64,1.31,1.06
+  mesh188 mw210_interior-material mat=31 tri=951 min=-0.66,-0.44,0.22 max=-0.11,0.31,1.15
+  mesh189 mw210_intseats-material mat=56 tri=104 min=-0.55,-0.20,0.29 max=-0.22,0.16,0.74
+  mesh190 mw210_plastic3-material mat=22 tri=426 min=-0.65,-0.37,0.21 max=-0.12,0.28,0.93
+  mesh191 mw210_plastic2-material mat=23 tri=182 min=-0.58,-0.32,0.16 max=-0.12,0.15,0.42
+  mesh192 mw210_intchrome-material mat=33 tri=16 min=-0.48,0.26,0.92 max=-0.30,0.27,0.95
+  mesh193 mw210_doorleather-material mat=36 tri=36 min=-0.57,0.16,0.29 max=-0.20,0.25,0.57
+  mesh194 mw210_red-material mat=57 tri=28 min=-0.14,-0.04,0.37 max=-0.12,0.00,0.41
+  mesh195 mw210_radio-material mat=55 tri=362 min=-0.09,-0.52,0.57 max=0.09,-0.48,0.63
+  mesh196 mw210_vstavki-material mat=54 tri=227 min=-0.69,-0.65,0.40 max=0.69,-0.41,0.82
+  mesh197 mw210_plastic-material mat=32 tri=1782 min=-0.71,-0.90,0.58 max=0.71,-0.42,0.87
+  mesh198 mw210_plastic2-material mat=23 tri=4243 min=-0.70,-0.91,0.35 max=0.70,0.32,0.89
+  mesh199 mw210_intchrome-material mat=33 tri=124 min=-0.66,-0.60,0.51 max=0.66,0.32,0.77
+  mesh200 mw210_set2-material mat=37 tri=320 min=-0.70,-0.79,0.79 max=0.70,-0.61,0.89
+  mesh201 mw210_keyhole-material mat=39 tri=16 min=0.19,-0.57,0.70 max=0.21,-0.56,0.72
+  mesh202 mw210_plastic-material mat=32 tri=6 min=0.32,-0.59,0.62 max=0.43,-0.56,0.73
+  mesh203 mw210_plastic2-material mat=23 tri=74 min=-0.59,-0.60,0.40 max=0.59,-0.27,0.79
+  mesh204 mw210_radioscreen-material mat=29 tri=42 min=0.26,-0.64,0.74 max=0.48,-0.63,0.77
+  mesh205 mw210_interior-material mat=31 tri=2513 min=-0.72,-1.01,0.35 max=0.72,-0.41,0.90
+  mesh206 mw210_srs-material mat=35 tri=4 min=-0.26,-0.70,0.85 max=-0.21,-0.68,0.86
+  mesh207 mw210_keyhole2-material mat=53 tri=20 min=-0.27,-0.59,0.77 max=-0.25,-0.58,0.78
+  mesh208 mw210_plastic2-material mat=23 tri=104 min=-0.69,0.19,0.73 max=0.69,0.27,0.78
+  mesh209 mw210_intchrome-material mat=33 tri=108 min=-0.67,0.21,0.70 max=0.67,0.23,0.74
+  mesh210 mw210_remni-material mat=52 tri=112 min=-0.69,-0.02,0.29 max=0.69,0.30,1.02
+  mesh211 mw210_chmsl-material mat=51 tri=10 min=-0.15,1.86,0.95 max=0.15,1.86,0.98
+  mesh212 mw210_plastic3-material mat=22 tri=820 min=-0.67,-0.34,0.91 max=0.67,1.41,1.31
+  mesh213 mw210_plastic2-material mat=23 tri=40 min=-0.64,1.06,0.83 max=0.64,2.00,1.12
+  mesh214 mw210_carpet-material mat=47 tri=714 min=-0.69,1.54,0.44 max=0.69,2.30,0.90
+  mesh215 mw210_rubbersi-material mat=48 tri=2330 min=-0.76,-0.89,0.16 max=0.76,2.24,1.25
+  mesh216 mw210_swl-material mat=49 tri=100 min=-0.72,-0.91,0.15 max=0.72,0.99,0.81
+  mesh217 mw210_roofcarp-material mat=50 tri=1174 min=-0.72,-0.85,0.73 max=0.72,1.90,1.32
+  mesh218 mw210_set2-material mat=37 tri=98 min=-0.54,1.43,0.97 max=0.54,1.57,0.99
+  mesh219 mw210_carpet-material mat=47 tri=468 min=-0.72,-0.91,0.12 max=0.72,1.30,0.99
+  mesh220 mw210_plastic-material mat=32 tri=148 min=-0.12,1.04,1.22 max=0.12,1.11,1.25
+  mesh221 mw210_plastic2-material mat=23 tri=117 min=-0.65,1.21,0.93 max=0.65,1.96,1.25
+  mesh222 mw210_brabus_logo-material mat=46 tri=228 min=-0.88,-0.90,0.21 max=0.88,-0.75,0.85
+  mesh223 mw210_plastic2-material mat=23 tri=2784 min=-0.87,-0.81,0.36 max=0.87,2.37,1.36
+  mesh224 mw210_main-material mat=24 tri=8329 min=-0.89,-0.84,0.21 max=0.89,2.40,1.33
+  mesh225 mw210_glass-material mat=41 tri=166 min=-0.72,-1.01,0.85 max=0.72,-0.28,1.25
+  mesh226 mw210_glass-material mat=41 tri=196 min=-0.65,1.21,0.93 max=0.65,1.96,1.25
+  mesh227 mw210_glass-material mat=41 tri=194 min=-0.42,-0.11,1.30 max=0.42,0.39,1.33
+  mesh228 mw210_shouroops-material mat=19 tri=64 min=-0.82,0.18,0.34 max=0.82,1.18,0.81
+  mesh229 mw210_buttons-material mat=30 tri=28 min=-0.02,-0.26,1.24 max=0.02,-0.17,1.26
+  mesh230 mw210_plastic2-material mat=23 tri=364 min=-0.72,-1.01,0.85 max=0.72,-0.17,1.27
+  mesh231 mw210_plafon-material mat=45 tri=160 min=-0.11,-0.30,1.23 max=0.11,-0.16,1.27
+  mesh232 mw210_buttons-material mat=30 tri=128 min=-0.14,-0.02,0.03 max=0.14,0.02,0.04
+  mesh233 mw210_interior-material mat=31 tri=1940 min=-0.20,-0.20,-0.14 max=0.20,0.20,0.05
+  mesh234 mw210_plastic-material mat=32 tri=644 min=-0.15,-0.03,0.02 max=0.15,0.04,0.04
+  mesh235 mw210_srs-material mat=35 tri=12 min=-0.08,-0.04,0.04 max=0.08,0.04,0.05
+  mesh236 mw210_chrome-material mat=21 tri=344 min=-0.02,-0.03,0.05 max=0.02,0.02,0.05
+  mesh237 mw210_radio_buttons-material mat=44 tri=26 min=-0.07,-0.51,0.59 max=0.08,-0.49,0.62
+  mesh238 mw210_buttons-material mat=30 tri=445 min=-0.60,-0.61,0.40 max=0.69,0.32,0.79
+  mesh239 mw210_glass-material mat=41 tri=56 min=0.61,0.33,0.85 max=0.79,1.24,1.24
+  mesh240 mw210_glass-material mat=41 tri=56 min=-0.79,0.33,0.85 max=-0.61,1.24,1.24
+  mesh241 mw210_foglightsglass-material mat=42 tri=136 min=0.96,-0.55,0.89 max=0.98,-0.49,0.95
+  mesh242 mw210_glass-material mat=41 tri=49 min=0.61,-0.54,0.83 max=0.79,0.26,1.24
+  mesh243 mw210_mirror_pov_L-material mat=43 tri=212 min=0.96,-0.55,0.89 max=0.98,-0.49,0.95
+  mesh244 mw210_buttons-material mat=30 tri=6 min=0.71,-0.45,0.71 max=0.71,-0.43,0.75
+  mesh245 mw210_interior-material mat=31 tri=1386 min=0.69,-0.73,0.26 max=0.81,0.20,0.86
+  mesh246 mw210_plastic-material mat=32 tri=158 min=0.71,-0.72,0.29 max=0.76,0.10,0.53
+  mesh247 mw210_srs-material mat=35 tri=4 min=0.74,0.00,0.73 max=0.74,0.04,0.75
+  mesh248 mw210_plastic3-material mat=22 tri=329 min=0.71,-0.70,0.30 max=0.80,0.22,0.86
+  mesh249 mw210_plastic2-material mat=23 tri=1126 min=0.59,-0.77,0.22 max=0.88,0.31,1.27
+  mesh250 mw210_intchrome-material mat=33 tri=58 min=0.73,-0.36,0.72 max=0.74,-0.25,0.75
+  mesh251 mw210_doorleather-material mat=36 tri=159 min=0.73,-0.36,0.60 max=0.77,0.12,0.81
+  mesh252 mw210_set2-material mat=37 tri=47 min=0.71,-0.70,0.30 max=0.74,-0.55,0.95
+  mesh253 mw210_stroch-material mat=38 tri=12 min=0.74,-0.33,0.65 max=0.75,0.10,0.72
+  mesh254 mirror-material mat=34 tri=36 min=0.80,-0.56,0.83 max=0.97,-0.49,0.95
+  mesh255 mw210_chrome-material mat=21 tri=156 min=0.86,-0.83,0.41 max=0.89,0.21,0.75
+  mesh256 mw210_plastic2-material mat=23 tri=87 min=0.61,-0.55,0.65 max=0.81,0.30,1.24
+  mesh257 mw210_main-material mat=24 tri=2224 min=0.60,-0.84,0.21 max=0.89,0.31,1.27
+  mesh258 mw210_keyhole-material mat=39 tri=12 min=0.87,0.17,0.73 max=0.88,0.18,0.74
+  mesh259 mw210_foglightsglass-material mat=42 tri=136 min=-0.98,-0.55,0.89 max=-0.96,-0.49,0.95
+  mesh260 mw210_glass-material mat=41 tri=49 min=-0.79,-0.54,0.83 max=-0.61,0.26,1.24
+  mesh261 mw210_mirror_pov_R-material mat=40 tri=212 min=-0.98,-0.55,0.89 max=-0.96,-0.49,0.95
+  mesh262 mw210_buttons-material mat=30 tri=6 min=-0.71,-0.45,0.71 max=-0.71,-0.43,0.75
+  mesh263 mw210_interior-material mat=31 tri=1386 min=-0.81,-0.73,0.26 max=-0.69,0.20,0.86
+  mesh264 mw210_plastic-material mat=32 tri=316 min=-0.76,-0.72,0.29 max=-0.71,0.10,0.53
+  mesh265 mw210_srs-material mat=35 tri=4 min=-0.74,0.00,0.73 max=-0.74,0.04,0.75
+  mesh266 mw210_plastic3-material mat=22 tri=329 min=-0.80,-0.70,0.30 max=-0.71,0.22,0.86
+  mesh267 mw210_plastic2-material mat=23 tri=1126 min=-0.88,-0.77,0.22 max=-0.59,0.31,1.27
+  mesh268 mw210_intchrome-material mat=33 tri=58 min=-0.74,-0.36,0.72 max=-0.73,-0.25,0.75
+  mesh269 mw210_doorleather-material mat=36 tri=159 min=-0.77,-0.36,0.59 max=-0.73,0.12,0.81
+  mesh270 mw210_set2-material mat=37 tri=47 min=-0.74,-0.70,0.30 max=-0.71,-0.55,0.95
+  mesh271 mw210_stroch-material mat=38 tri=12 min=-0.75,-0.33,0.65 max=-0.74,0.10,0.72
+  mesh272 mirror-material mat=34 tri=36 min=-0.97,-0.56,0.83 max=-0.80,-0.49,0.95
+  mesh273 mw210_plastic3-material mat=22 tri=156 min=-0.89,-0.83,0.41 max=-0.86,0.21,0.75
+  mesh274 mw210_plastic2-material mat=23 tri=87 min=-0.81,-0.55,0.65 max=-0.61,0.30,1.24
+  mesh275 mw210_main-material mat=24 tri=2224 min=-0.89,-0.84,0.21 max=-0.60,0.31,1.27
+  mesh276 mw210_keyhole-material mat=39 tri=12 min=-0.88,0.17,0.73 max=-0.87,0.18,0.74
+  mesh277 mw210_buttons-material mat=30 tri=24 min=-0.73,0.37,0.74 max=-0.72,0.39,0.76
+  mesh278 mw210_interior-material mat=31 tri=1169 min=-0.81,0.26,0.25 max=-0.71,1.21,0.88
+  mesh279 mw210_plastic-material mat=32 tri=274 min=-0.74,0.28,0.28 max=-0.72,0.92,0.54
+  mesh280 mw210_srs-material mat=35 tri=4 min=-0.75,0.92,0.75 max=-0.74,0.96,0.77
+  mesh281 mw210_plastic3-material mat=22 tri=354 min=-0.76,0.31,0.29 max=-0.72,0.96,0.80
+  mesh282 mw210_plastic2-material mat=23 tri=753 min=-0.86,0.23,0.23 max=-0.58,1.29,1.27
+  mesh283 mw210_intchrome-material mat=33 tri=58 min=-0.76,0.48,0.73 max=-0.75,0.59,0.76
+  mesh284 mw210_doorleather-material mat=36 tri=135 min=-0.77,0.49,0.63 max=-0.74,1.11,0.83
+  mesh285 mw210_set2-material mat=37 tri=36 min=-0.72,0.31,0.29 max=-0.72,0.44,0.42
+  mesh286 mw210_stroch-material mat=38 tri=16 min=-0.76,0.50,0.67 max=-0.75,1.02,0.73
+  mesh287 bruckell_mechanical-material mat=63 tri=752 min=-0.74,-1.57,0.13 max=0.74,-1.24,0.51
+  mesh288 mw210_plastic3-material mat=22 tri=160 min=-0.89,0.21,0.43 max=-0.85,1.15,0.78
+  mesh289 mw210_plastic2-material mat=23 tri=125 min=-0.81,0.25,0.83 max=-0.61,1.24,1.24
+  mesh290 mw210_main-material mat=24 tri=2085 min=-0.89,0.21,0.21 max=-0.60,1.31,1.27
+  mesh291 mw210_plastic3-material mat=22 tri=160 min=0.85,0.21,0.43 max=0.89,1.15,0.78
+  mesh292 mw210_plastic2-material mat=23 tri=125 min=0.61,0.25,0.84 max=0.81,1.24,1.24
+  mesh293 mw210_main-material mat=24 tri=2072 min=0.60,0.21,0.21 max=0.89,1.31,1.27
+  mesh294 Object_294 mat=0 tri=2 min=0.78,-0.84,0.59 max=0.87,-0.74,0.86
+  mesh295 mw210_main-material mat=24 tri=1291 min=0.67,-2.12,0.22 max=0.89,-0.73,0.88
+  mesh296 Object_296 mat=0 tri=1 min=-0.84,-0.81,0.79 max=-0.82,-0.79,0.82
+  mesh297 mw210_main-material mat=24 tri=1288 min=-0.89,-2.12,0.22 max=-0.67,-0.73,0.88
+  mesh298 mw210_chrome-material mat=21 tri=160 min=0.85,0.21,0.43 max=0.89,1.15,0.78
+  mesh299 mw210_plastic3-material mat=22 tri=156 min=0.86,-0.83,0.41 max=0.89,0.21,0.75
+  mesh300 mw210_chrome-material mat=21 tri=156 min=-0.89,-0.83,0.41 max=-0.86,0.21,0.75
+  mesh301 mw210_chrome-material mat=21 tri=160 min=-0.89,0.21,0.43 max=-0.85,1.15,0.78
+  mesh302 mw210_plastic3-material mat=22 tri=94 min=-0.24,1.77,0.95 max=0.24,1.89,0.98
+  mesh303 mw210_plastic3-material mat=22 tri=178 min=-0.11,-0.35,1.16 max=0.11,-0.30,1.24
+  mesh304 mirror-material mat=34 tri=12 min=-0.10,-0.32,1.16 max=0.10,-0.32,1.22
+  mesh305 mw210_interior-material mat=31 tri=520 min=-0.03,-0.12,-0.02 max=0.02,-0.04,0.04
+  mesh306 mw210_plastic-material mat=32 tri=318 min=-0.02,-0.11,-0.05 max=0.02,-0.04,0.04
+  mesh307 mw210_intchrome-material mat=33 tri=8 min=-0.01,-0.05,-0.09 max=0.00,-0.03,-0.04
+  mesh308 mw210_interior-material mat=31 tri=1129 min=-0.11,-0.41,0.27 max=0.11,0.35,0.57
+  mesh309 mw210_plastic-material mat=32 tri=352 min=-0.08,0.27,0.48 max=0.08,0.33,0.54
+  mesh310 mw210_main-material mat=24 tri=386 min=-0.81,-2.18,0.18 max=0.80,-1.83,0.44
+  mesh311 mw210_mechanical-material mat=27 tri=168 min=-0.79,-2.18,0.26 max=0.79,-2.01,0.38
+  mesh312 mw210_plastic2-material mat=23 tri=307 min=0.40,-2.16,0.47 max=0.78,-1.86,0.71
+  mesh313 mw210_plastic2-material mat=23 tri=307 min=-0.78,-2.16,0.47 max=-0.40,-1.86,0.71
+  mesh314 mw210_chrome-material mat=21 tri=32 min=-0.89,-1.06,0.41 max=-0.88,-0.83,0.43
+  mesh315 mw210_chrome-material mat=21 tri=32 min=0.88,-1.06,0.41 max=0.89,-0.83,0.43
+  mesh316 mw210_buttons-material mat=30 tri=40 min=-0.10,-0.54,0.64 max=0.10,-0.52,0.70
+  mesh317 mw210_plastic2-material mat=23 tri=334 min=-0.10,-0.55,0.64 max=0.10,-0.52,0.70
+  mesh318 mw210_radioscreen-material mat=29 tri=36 min=-0.08,-0.54,0.59 max=0.08,-0.50,0.68
+  mesh319 mw210_chrome-material mat=21 tri=824 min=-0.03,-2.12,0.71 max=0.03,-2.09,0.80
+  mesh320 mw210_chrome-material mat=21 tri=884 min=-0.04,2.37,0.83 max=0.54,2.41,0.90
+  mesh321 mw210_plastic3-material mat=22 tri=884 min=-0.04,2.37,0.83 max=0.54,2.41,0.90
+  mesh322 mw210_plastic3-material mat=22 tri=289 min=-0.55,2.37,0.84 max=-0.35,2.39,0.86
+  mesh323 mw210_chrome-material mat=21 tri=289 min=-0.55,2.37,0.84 max=-0.35,2.39,0.86
+  mesh324 Object_324 mat=0 tri=0 min=0.00,1.71,0.17 max=0.00,1.71,0.25
+  mesh325 mw210_plastic2-material mat=23 tri=272 min=-0.79,1.88,0.33 max=0.79,2.14,0.47
+  mesh326 mw210_mechanical-material mat=27 tri=201 min=-0.87,1.60,0.26 max=0.87,2.40,0.51
+  mesh327 mw210_mechanical2-material mat=28 tri=157 min=-0.80,1.63,0.18 max=0.80,2.30,0.48
+  mesh328 mw210_plastic2-material mat=23 tri=326 min=-0.50,-2.15,0.33 max=0.33,-1.94,0.47
+  mesh329 mw210_tubs-material mat=26 tri=552 min=0.56,0.93,0.11 max=0.88,1.75,0.61
+  mesh330 mw210_tubs-material mat=26 tri=360 min=0.45,-1.84,0.11 max=0.74,-1.08,0.64
+  mesh331 mw210_tubs-material mat=26 tri=84 min=0.71,-1.74,0.12 max=0.88,-1.08,0.64
+  mesh332 mw210_tubs-material mat=26 tri=36 min=0.68,-1.85,0.12 max=0.86,-1.72,0.51
+  mesh333 mw210_tubs-material mat=26 tri=360 min=-0.74,-1.84,0.11 max=-0.45,-1.08,0.64
+  mesh334 mw210_tubs-material mat=26 tri=84 min=-0.88,-1.74,0.12 max=-0.71,-1.08,0.64
+  mesh335 mw210_tubs-material mat=26 tri=36 min=-0.86,-1.85,0.12 max=-0.68,-1.72,0.51
+  mesh336 mw210_tubs-material mat=26 tri=552 min=-0.88,0.93,0.11 max=-0.56,1.75,0.61
+  mesh337 mw210_glass_tintable-material mat=25 tri=56 min=-0.79,0.33,0.85 max=-0.61,1.24,1.24
+  mesh338 mw210_glass_tintable-material mat=25 tri=56 min=0.61,0.33,0.85 max=0.79,1.24,1.24
+  mesh339 mw210_glass_tintable-material mat=25 tri=49 min=0.61,-0.54,0.83 max=0.79,0.26,1.24
+  mesh340 mw210_glass_tintable-material mat=25 tri=49 min=-0.79,-0.54,0.83 max=-0.61,0.26,1.24
+  mesh341 mw210_glass_tintable-material mat=25 tri=166 min=-0.72,-1.01,0.85 max=0.72,-0.28,1.25
+  mesh342 mw210_glass_tintable-material mat=25 tri=196 min=-0.65,1.21,0.93 max=0.65,1.96,1.25
+  mesh343 mw210_chrome-material mat=21 tri=108 min=-0.34,2.40,0.78 max=0.34,2.41,0.82
+  mesh344 mw210_main-material mat=24 tri=108 min=-0.34,2.40,0.78 max=0.34,2.41,0.82
+  mesh345 mw210_plastic3-material mat=22 tri=108 min=-0.34,2.40,0.78 max=0.34,2.41,0.82
+  mesh346 mw210_chrome-material mat=21 tri=334 min=0.30,2.07,0.17 max=0.53,2.39,0.27
+  mesh347 mw210_plastic3-material mat=22 tri=176 min=0.24,1.73,0.16 max=0.60,2.30,0.33
+  mesh348 mw210_plastic2-material mat=23 tri=136 min=-0.27,-0.00,-0.07 max=0.27,0.01,0.06
+  mesh349 mw210_chrome-material mat=21 tri=2806 min=-0.88,-0.99,0.39 max=-0.88,-0.92,0.40
+  mesh350 mw210_plastic3-material mat=22 tri=178 min=-0.88,-1.02,0.38 max=-0.88,-0.90,0.40
+  mesh351 mw210_shouroops-material mat=19 tri=38 min=-0.11,-0.53,0.51 max=0.11,-0.47,0.64
+  mesh352 mw210_gps_screen-material mat=20 tri=2 min=-0.10,-0.51,0.53 max=0.10,-0.47,0.63
+  mesh353 mw210_taillightglass_lowhigh-material mat=10 tri=68 min=-0.57,2.38,0.66 max=-0.38,2.40,0.76
+  mesh354 mw210_taillightglass_reverse-material mat=11 tri=58 min=-0.54,2.38,0.58 max=-0.36,2.40,0.66
+  mesh355 mw210_taillightglass_lowhigh-material mat=10 tri=168 min=-0.55,2.38,0.58 max=-0.36,2.40,0.69
+  mesh356 mw210_taillightglass_reverse-material mat=11 tri=179 min=-0.58,2.38,0.68 max=-0.40,2.40,0.76
+  mesh357 mw210_headlightglass_lowbeam-material mat=14 tri=126 min=-0.79,-2.13,0.47 max=-0.58,-2.05,0.62
+  mesh358 mw210_headlightglass_highbeam-material mat=15 tri=184 min=-0.55,-2.16,0.48 max=-0.41,-2.08,0.63
+  mesh359 mw210_headlightglass_signal_R-material mat=18 tri=93 min=-0.78,-2.08,0.61 max=-0.58,-2.01,0.70
+  mesh360 mw210_taillightglass_brake-material mat=12 tri=404 min=-0.79,2.19,0.58 max=-0.50,2.39,0.69
+  mesh361 mw210_taillightglass_signal_R-material mat=17 tri=246 min=-0.78,2.24,0.68 max=-0.55,2.39,0.76
+  mesh362 mw210_headlightglass_lowbeam-material mat=14 tri=126 min=0.58,-2.13,0.47 max=0.79,-2.05,0.62
+  mesh363 mw210_headlightglass_highbeam-material mat=15 tri=184 min=0.41,-2.16,0.48 max=0.55,-2.08,0.63
+  mesh364 mw210_headlightglass_signal_L-material mat=16 tri=93 min=0.58,-2.08,0.61 max=0.78,-2.01,0.70
+  mesh365 mw210_taillightglass_lowhigh-material mat=10 tri=68 min=0.38,2.38,0.66 max=0.57,2.40,0.76
+  mesh366 mw210_taillightglass_reverse-material mat=11 tri=58 min=0.36,2.38,0.58 max=0.54,2.40,0.66
+  mesh367 mw210_taillightglass_brake-material mat=12 tri=404 min=0.50,2.19,0.58 max=0.79,2.39,0.69
+  mesh368 mw210_taillightglass_signal_L-material mat=13 tri=246 min=0.55,2.24,0.68 max=0.78,2.39,0.76
+  mesh369 mw210_taillightglass_lowhigh-material mat=10 tri=168 min=0.36,2.38,0.58 max=0.55,2.40,0.69
+  mesh370 mw210_taillightglass_reverse-material mat=11 tri=179 min=0.40,2.38,0.68 max=0.58,2.40,0.76
+  mesh371 mw210_taillight_lowhigh-material mat=6 tri=113 min=-0.57,2.35,0.66 max=-0.38,2.40,0.76
+  mesh372 mw210_taillight_reverse-material mat=7 tri=111 min=-0.54,2.35,0.58 max=-0.36,2.40,0.66
+  mesh373 mw210_taillight_lowhigh-material mat=6 tri=119 min=-0.55,2.36,0.58 max=-0.36,2.40,0.69
+  mesh374 mw210_taillight_reverse-material mat=7 tri=179 min=-0.58,2.36,0.68 max=-0.40,2.40,0.76
+  mesh375 mw210_headlight_lowbeam-material mat=1 tri=210 min=-0.79,-2.13,0.47 max=-0.58,-1.99,0.61
+  mesh376 mw210_headlight_highbeam-material mat=2 tri=244 min=-0.55,-2.16,0.48 max=-0.41,-2.03,0.63
+  mesh377 mw210_headlight_signal_R-material mat=9 tri=179 min=-0.79,-2.08,0.60 max=-0.58,-1.99,0.70
+  mesh378 mw210_taillight_brake-material mat=4 tri=302 min=-0.79,2.19,0.58 max=-0.51,2.39,0.69
+  mesh379 mw210_taillight_signal_R-material mat=8 tri=247 min=-0.77,2.24,0.68 max=-0.55,2.38,0.76
+  mesh380 mw210_taillight_lowhigh-material mat=6 tri=113 min=0.38,2.35,0.66 max=0.57,2.40,0.76
+  mesh381 mw210_taillight_reverse-material mat=7 tri=111 min=0.36,2.35,0.58 max=0.54,2.40,0.66
+  mesh382 mw210_taillight_lowhigh-material mat=6 tri=119 min=0.36,2.36,0.58 max=0.55,2.40,0.69
+  mesh383 mw210_taillight_reverse-material mat=7 tri=179 min=0.40,2.36,0.68 max=0.58,2.40,0.76
+  mesh384 mw210_taillight_brake-material mat=4 tri=302 min=0.51,2.19,0.58 max=0.79,2.39,0.69
+  mesh385 mw210_taillight_signal_L-material mat=5 tri=247 min=0.55,2.24,0.68 max=0.77,2.38,0.76
+  mesh386 mw210_headlight_lowbeam-material mat=1 tri=210 min=0.58,-2.13,0.47 max=0.79,-1.99,0.61
+  mesh387 mw210_headlight_highbeam-material mat=2 tri=244 min=0.41,-2.16,0.48 max=0.55,-2.03,0.63
+  mesh388 mw210_headlight_signal_L-material mat=3 tri=179 min=0.58,-2.08,0.60 max=0.79,-1.99,0.70
+tri 199515
+N0 Sketchfab_model M
+  N1 Collada visual scene group
+    N2 Camera M
+      N3 Camera-camera
+    N4 mw210_hoodstruts
+      N5 bruckell_mechanical-material mesh0
+    N6 mw210_lettering_clear
+      N7 mw210_chrome-material mesh1
+    N8 mw210_trim_a_FL
+      N9 mw210_plastic3-material mesh2
+    N10 mw210_trim_a_FR
+      N11 mw210_plastic3-material mesh3
+    N12 mw210_vstavki3_FL
+      N13 mw210_brabus_logo-material mesh4
+    N14 mw210_vstavki3_RL
+      N15 mw210_brabus_logo-material mesh5
+    N16 mw210_vstavki3_RR
+      N17 mw210_brabus_logo-material mesh6
+    N18 mw210_vstavki3_FR
+      N19 mw210_brabus_logo-material mesh7
+    N20 mw210_vstavki_niz3
+      N21 mw210_brabus_logo-material mesh8
+    N22 mw210_vstavki3
+      N23 mw210_brabus_logo-material mesh9
+    N24 mw210_key M
+      N25 mw210_plastic2-material mesh10
+      N26 mw210_intchrome-material mesh11
+    N27 mw210_supercharger
+      N28 mw210_chrome-material mesh12
+    N29 mw210_transmission
+      N30 Object_30 mesh13
+      N31 ibishu_engine-material mesh14
+    N32 mw210_dashboard_amg
+      N33 mw210_amg_gau-material mesh15
+    N34 mw210_vstavki_niz2
+      N35 mw210_vstavki2-material mesh16
+    N36 mw210_vstavki_niz
+      N37 mw210_vstavki-material mesh17
+    N38 mw210_vstavki2
+      N39 mw210_vstavki2-material mesh18
+    N40 mw210_vstavki2_RL
+      N41 mw210_vstavki2-material mesh19
+    N42 mw210_vstavki2_FL
+      N43 mw210_vstavki2-material mesh20
+    N44 mw210_vstavki2_FR
+      N45 mw210_vstavki2-material mesh21
+    N46 mw210_vstavki2_RR
+      N47 mw210_vstavki2-material mesh22
+    N48 mw210_vstavki_FL
+      N49 mw210_vstavki-material mesh23
+    N50 mw210_vstavki_RL
+      N51 mw210_vstavki-material mesh24
+    N52 mw210_vstavki_RR
+      N53 mw210_vstavki-material mesh25
+    N54 mw210_vstavki_FR
+      N55 mw210_vstavki-material mesh26
+    N56 mw210_blatota
+      N57 mw210_plastic-material mesh27
+      N58 mw210_vstavki-material mesh28
+    N59 mw210_headlightcover_R
+      N60 mw210_main-material mesh29
+    N61 mw210_headlightcover_L
+      N62 mw210_main-material mesh30
+    N63 mw210_elegancefender_L
+      N64 mw210_chrome-material mesh31
+      N65 mw210_plastic3-material mesh32
+    N66 mw210_trunk_lipspoiler
+      N67 mw210_brabus_logo-material mesh33
+    N68 mw210_amg_foglight_L
+      N69 mw210_plastic3-material mesh34
+      N70 mw210_foglight2-material mesh35
+    N71 mw210_amg_foglight_R
+      N72 mw210_plastic2-material mesh36
+      N73 mw210_foglight2-material mesh37
+    N74 mw210_amg_foglightglass_L
+      N75 mw210_foglightsglass-material mesh38
+    N76 mw210_amg_foglightglass_R
+      N77 mw210_foglightsglass-material mesh39
+    N78 mw210_amg_bumper_chrome_trim_R
+      N79 mw210_chrome-material mesh40
+    N80 mw210_amg_bumper_chrome_trim_F
+      N81 mw210_chrome-material mesh41
+    N82 mw210_amg_sideskirts
+      N83 mw210_main-material mesh42
+    N84 mw210_engine_amg
+      N85 Object_85 mesh43
+      N86 mw210_plastic-material mesh44
+      N87 mw210_chrome-material mesh45
+      N88 mw210_plastic2-material mesh46
+      N89 mw210_intchrome-material mesh47
+      N90 mw210_tubs-material mesh48
+    N91 mw210_amg_bumper_R
+      N92 mw210_main-material mesh49
+    N93 mw210_amg_bumper_F
+      N94 mw210_plastic3-material mesh50
+      N95 mw210_main-material mesh51
+      N96 grille-material mesh52
+    N97 mw210_doorpanel_RL
+      N98 mw210_buttons-material mesh53
+      N99 mw210_interior-material mesh54
+      N100 mw210_plastic-material mesh55
+      N101 mw210_srs-material mesh56
+      N102 mw210_plastic3-material mesh57
+      N103 mw210_plastic2-material mesh58
+      N104 mw210_intchrome-material mesh59
+      N105 mw210_doorleather-material mesh60
+      N106 mw210_set2-material mesh61
+      N107 mw210_stroch-material mesh62
+    N108 mw210_neon_right
+      N109 neon_tube_glow-material mesh63
+    N110 mw210_neon_rear
+      N111 neon_tube_glow-material mesh64
+    N112 mw210_neon_left
+      N113 neon_tube_glow-material mesh65
+    N114 mw210_neon_front
+      N115 neon_tube_glow-material mesh66
+    N116 mw210_neon_cap_right
+      N117 neon_tube-material mesh67
+    N118 mw210_neon_cap_rear
+      N119 neon_tube-material mesh68
+    N120 mw210_neon_cap_left
+      N121 neon_tube-material mesh69
+    N122 mw210_neon_cap_front
+      N123 neon_tube-material mesh70
+    N124 mw210_signals
+      N125 signal_L-material mesh71
+      N126 signal_R-material mesh72
+      N127 lowfuel-material mesh73
+      N128 battery-material mesh74
+      N129 abs-material mesh75
+      N130 parkingbrake-material mesh76
+      N131 hazard-material mesh77
+      N132 checkengine-material mesh78
+      N133 lowbeam-material mesh79
+    N134 mw210_swaybarmount_F
+      N135 bruckell_mechanical-material mesh80
+    N136 mw210_windshield_dmg
+      N137 glass_invisible-material mesh81
+    N138 mw210_tierod_F
+      N139 bruckell_mechanical-material mesh82
+    N140 mw210_swaybar_F
+      N141 bruckell_mechanical-material mesh83
+    N142 mw210_steeringbox
+      N143 bruckell_mechanical-material mesh84
+    N144 mw210_header_v6
+      N145 bruckell_engine-material mesh85
+    N146 mw210_header_i4
+      N147 bruckell_engine-material mesh86
+    N148 mw210_exhaust_awd
+      N149 bruckell_mechanical-material mesh87
+      N150 bruckell_engine-material mesh88
+    N151 mw210_skidplate M
+      N152 rallyparts-material mesh89
+    N153 mw210_mudflap_RR
+      N154 rallyparts-material mesh90
+    N155 mw210_mudflap_RL
+      N156 rallyparts-material mesh91
+    N157 mw210_mudflap_FR
+      N158 rallyparts-material mesh92
+    N159 mw210_mudflap_FL
+      N160 rallyparts-material mesh93
+    N161 mw210_transfercase_fwd
+      N162 bruckell_engine-material mesh94
+    N163 mw210_transfercase
+      N164 bruckell_engine-material mesh95
+    N165 mw210_halfshaft_F
+      N166 bruckell_mechanical-material mesh96
+    N167 mw210_engine_i4
+      N168 mw210_chrome-material mesh97
+      N169 mw210_plastic3-material mesh98
+      N170 bruckell_engine-material mesh99
+    N171 mw210_engine_v6
+      N172 mw210_chrome-material mesh100
+      N173 mw210_plastic3-material mesh101
+      N174 bruckell_engine-material mesh102
+    N175 mw210_swaybarmount_R
+      N176 bruckell_mechanical-material mesh103
+    N177 mw210_driveshaft M
+      N178 bruckell_mechanical-material mesh104
+    N179 mw210_fueltank_awd
+      N180 bruckell_mechanical-material mesh105
+    N181 mw210_swaybar_R
+      N182 bruckell_mechanical-material mesh106
+    N183 mw210_subframe_R
+      N184 bruckell_mechanical-material mesh107
+    N185 mw210_monoleaf_R
+      N186 bruckell_mechanical-material mesh108
+    N187 mw210_lowerarm_R_monoleaf
+      N188 bruckell_mechanical-material mesh109
+    N189 mw210_hub_R
+      N190 bruckell_mechanical-material mesh110
+    N191 mw210_halfshaft_R
+      N192 bruckell_mechanical-material mesh111
+    N193 mw210_diff_R
+      N194 bruckell_mechanical-material mesh112
+    N195 mw210_dashboard_warninglights M
+      N196 legran_battery-material mesh113
+      N197 legran_checkengine-material mesh114
+      N198 legran_temp-material mesh115
+      N199 legran_lowpressure-material mesh116
+      N200 legran_high_beam-material mesh117
+      N201 legran_ajar-material mesh118
+      N202 legran_lowfuel-material mesh119
+      N203 legran_abs-material mesh120
+    N204 mw210_radhose_i4
+      N205 bruckell_engine-material mesh121
+    N206 mw210_radhose_v6
+      N207 bruckell_engine-material mesh122
+    N208 mw210_needle_tacho_sport M
+      N209 mw210_plastic2-material mesh123
+      N210 mw210_gauges_v-material mesh124
+    N211 mw210_spring_R
+      N212 bruckell_mechanical-material mesh125
+    N213 mw210_shock_R
+      N214 bruckell_mechanical-material mesh126
+    N215 mw210_brakedrum_RR
+      N216 bruckell_mechanical-material mesh127
+    N217 mw210_brakedrum_RL
+      N218 bruckell_mechanical-material mesh128
+    N219 mw210_axle_R
+      N220 bruckell_mechanical-material mesh129
+    N221 mw210_panhard_R
+      N222 bruckell_mechanical-material mesh130
+    N223 mw210_subframe_F
+      N224 bruckell_mechanical-material mesh131
+    N225 mw210_strut_F
+      N226 bruckell_mechanical-material mesh132
+    N227 mw210_radiator
+      N228 bruckell_engine-material mesh133
+    N229 mw210_lowerarm_F
+      N230 bruckell_mechanical-material mesh134
+    N231 mw210_body
+      N232 legran-material mesh135
+    N233 mw210_floorpan
+      N234 Object_234 mesh136
+      N235 bruckell_mechanical-material mesh137
+      N236 mw210_mechanical-material mesh138
+    N237 mw210_needle_temp_sport M
+      N238 mw210_plastic2-material mesh139
+      N239 mw210_gauges_v-material mesh140
+    N240 mw210_needle_speedo_sport M
+      N241 mw210_plastic2-material mesh141
+      N242 mw210_gauges_v-material mesh142
+    N243 mw210_needle_fuel_sport M
+      N244 mw210_plastic2-material mesh143
+      N245 mw210_gauges_v-material mesh144
+    N246 mw210_brakepedal M
+      N247 legran_interior-material mesh145
+    N248 mw210_parkingbrake M
+      N249 legran_interior-material mesh146
+    N250 mw210_clutchpedal M
+      N251 legran_interior-material mesh147
+    N252 mw210_gaspedal M
+      N253 legran_interior-material mesh148
+    N254 mw210_seat_FL
+      N255 mw210_interior-material mesh149
+      N256 mw210_intseats-material mesh150
+      N257 mw210_plastic3-material mesh151
+      N258 mw210_plastic2-material mesh152
+      N259 mw210_intchrome-material mesh153
+      N260 mw210_doorleather-material mesh154
+      N261 mw210_red-material mesh155
+    N262 mw210_mirror_R
+      N263 mw210_main-material mesh156
+    N264 mw210_mirror_L
+      N265 mw210_main-material mesh157
+    N266 mw210_wipers_F
+      N267 mw210_plastic2-material mesh158
+    N268 mesh_997_mesh_997_006
+      N269 mat_184_005-material mesh159
+    N270 mw210_trunk_interior
+      N271 mw210_carpet-material mesh160
+    N272 mw210_trunk_sedan
+      N273 mw210_plastic2-material mesh161
+      N274 mw210_main-material mesh162
+      N275 mw210_keyhole-material mesh163
+    N276 mw210_hood_niz
+      N277 mw210_plastic2-material mesh164
+      N278 mw210_hood2-material mesh165
+    N279 mw210_grille
+      N280 mw210_chrome-material mesh166
+      N281 mw210_plastic3-material mesh167
+      N282 mw210_plastic2-material mesh168
+    N283 mw210_hood_a
+      N284 mw210_main-material mesh169
+    N285 mw210_chrome_trim_R
+      N286 mw210_chrome-material mesh170
+      N287 mw210_main-material mesh171
+    N288 mw210_nakl
+      N289 mw210_plastic2-material mesh172
+    N290 mw210_radfan
+      N291 mw210_plastic3-material mesh173
+      N292 mw210_mechanical2-material mesh174
+    N293 mw210_engbay
+      N294 mw210_plastic2-material mesh175
+      N295 mw210_engbay-material mesh176
+    N296 mw210_podkapotka
+      N297 mw210_plastic3-material mesh177
+      N298 mw210_plastic2-material mesh178
+      N299 mw210_main-material mesh179
+      N300 mw210_engbay-material mesh180
+    N301 mw210_seats_R
+      N302 mw210_interior-material mesh181
+      N303 mw210_intseats-material mesh182
+    N304 mw210_remni_R
+      N305 mw210_plastic3-material mesh183
+      N306 mw210_plastic2-material mesh184
+      N307 mw210_intchrome-material mesh185
+      N308 mw210_red-material mesh186
+      N309 mw210_remni-material mesh187
+    N310 mw210_seat_FR
+      N311 mw210_interior-material mesh188
+      N312 mw210_intseats-material mesh189
+      N313 mw210_plastic3-material mesh190
+      N314 mw210_plastic2-material mesh191
+      N315 mw210_intchrome-material mesh192
+      N316 mw210_doorleather-material mesh193
+      N317 mw210_red-material mesh194
+    N318 mw210_radio
+      N319 mw210_radio-material mesh195
+    N320 mw210_vstavki
+      N321 mw210_vstavki-material mesh196
+    N322 mw210_dashboard2
+      N323 mw210_plastic-material mesh197
+      N324 mw210_plastic2-material mesh198
+      N325 mw210_intchrome-material mesh199
+      N326 mw210_set2-material mesh200
+      N327 mw210_keyhole-material mesh201
+    N328 mw210_dashboard3
+      N329 mw210_plastic-material mesh202
+      N330 mw210_plastic2-material mesh203
+    N331 mw210_gauges_screens
+      N332 mw210_radioscreen-material mesh204
+    N333 mw210_dashboard_bottom
+      N334 mw210_interior-material mesh205
+      N335 mw210_srs-material mesh206
+      N336 mw210_keyhole2-material mesh207
+    N337 mw210_remni_F
+      N338 mw210_plastic2-material mesh208
+      N339 mw210_intchrome-material mesh209
+      N340 mw210_remni-material mesh210
+    N341 mw210_chmsl
+      N342 mw210_chmsl-material mesh211
+    N343 mw210_interior_sedan
+      N344 mw210_plastic3-material mesh212
+      N345 mw210_plastic2-material mesh213
+      N346 mw210_carpet-material mesh214
+      N347 mw210_rubbersi-material mesh215
+      N348 mw210_swl-material mesh216
+      N349 mw210_roofcarp-material mesh217
+      N350 mw210_set2-material mesh218
+    N351 mw210_carpet
+      N352 mw210_carpet-material mesh219
+    N353 mw210_marar
+      N354 mw210_plastic-material mesh220
+      N355 mw210_plastic2-material mesh221
+    N356 mw210_body_sedan
+      N357 mw210_brabus_logo-material mesh222
+      N358 mw210_plastic2-material mesh223
+      N359 mw210_main-material mesh224
+    N360 mw210_windshield
+      N361 mw210_glass-material mesh225
+    N362 mw210_backlight
+      N363 mw210_glass-material mesh226
+    N364 mw210_luke
+      N365 mw210_glass-material mesh227
+    N366 mw210_boltisi
+      N367 mw210_shouroops-material mesh228
+    N368 mw210_ramaf
+      N369 mw210_buttons-material mesh229
+      N370 mw210_plastic2-material mesh230
+      N371 mw210_plafon-material mesh231
+    N372 mw210_steer_airbag M
+      N373 mw210_buttons-material mesh232
+      N374 mw210_interior-material mesh233
+      N375 mw210_plastic-material mesh234
+      N376 mw210_srs-material mesh235
+      N377 mw210_chrome-material mesh236
+    N378 mw210_radio_buttons
+      N379 mw210_radio_buttons-material mesh237
+    N380 mw210_dash_buttons
+      N381 mw210_buttons-material mesh238
+    N382 mw210_doorglass_RL
+      N383 mw210_glass-material mesh239
+    N384 mw210_doorglass_RR
+      N385 mw210_glass-material mesh240
+    N386 mw210_mirror_pov_L
+      N387 mw210_foglightsglass-material mesh241
+    N388 mw210_doorglass_FL
+      N389 mw210_glass-material mesh242
+    N390 mw210_mirror3_L
+      N391 mw210_mirror_pov_L-material mesh243
+    N392 mw210_doorpanel_FL
+      N393 mw210_buttons-material mesh244
+      N394 mw210_interior-material mesh245
+      N395 mw210_plastic-material mesh246
+      N396 mw210_srs-material mesh247
+      N397 mw210_plastic3-material mesh248
+      N398 mw210_plastic2-material mesh249
+      N399 mw210_intchrome-material mesh250
+      N400 mw210_doorleather-material mesh251
+      N401 mw210_set2-material mesh252
+      N402 mw210_stroch-material mesh253
+    N403 mw210_mirror2_L
+      N404 mirror-material mesh254
+    N405 mw210_trim_a_chrome_door_FL
+      N406 mw210_chrome-material mesh255
+    N407 mw210_door_FL
+      N408 mw210_plastic2-material mesh256
+      N409 mw210_main-material mesh257
+      N410 mw210_keyhole-material mesh258
+    N411 mw210_mirror_pov_R
+      N412 mw210_foglightsglass-material mesh259
+    N413 mw210_doorglass_FR
+      N414 mw210_glass-material mesh260
+    N415 mw210_mirror3_R
+      N416 mw210_mirror_pov_R-material mesh261
+    N417 mw210_doorpanel_FR
+      N418 mw210_buttons-material mesh262
+      N419 mw210_interior-material mesh263
+      N420 mw210_plastic-material mesh264
+      N421 mw210_srs-material mesh265
+      N422 mw210_plastic3-material mesh266
+      N423 mw210_plastic2-material mesh267
+      N424 mw210_intchrome-material mesh268
+      N425 mw210_doorleather-material mesh269
+      N426 mw210_set2-material mesh270
+      N427 mw210_stroch-material mesh271
+    N428 mw210_mirror2_R
+      N429 mirror-material mesh272
+    N430 mw210_trim_a_door_FR
+      N431 mw210_plastic3-material mesh273
+    N432 mw210_door_FR
+      N433 mw210_plastic2-material mesh274
+      N434 mw210_main-material mesh275
+      N435 mw210_keyhole-material mesh276
+    N436 mw210_doorpanel_RR
+      N437 mw210_buttons-material mesh277
+      N438 mw210_interior-material mesh278
+      N439 mw210_plastic-material mesh279
+      N440 mw210_srs-material mesh280
+      N441 mw210_plastic3-material mesh281
+      N442 mw210_plastic2-material mesh282
+      N443 mw210_intchrome-material mesh283
+      N444 mw210_doorleather-material mesh284
+      N445 mw210_set2-material mesh285
+      N446 mw210_stroch-material mesh286
+    N447 mw210_hub_F
+      N448 bruckell_mechanical-material mesh287
+    N449 mw210_trim_a_door_RR
+      N450 mw210_plastic3-material mesh288
+    N451 mw210_door_RR
+      N452 mw210_plastic2-material mesh289
+      N453 mw210_main-material mesh290
+    N454 mw210_trim_a_door_RL
+      N455 mw210_plastic3-material mesh291
+    N456 mw210_door_RL
+      N457 mw210_plastic2-material mesh292
+      N458 mw210_main-material mesh293
+    N459 mw210_fender_L
+      N460 Object_460 mesh294
+      N461 mw210_main-material mesh295
+    N462 mw210_fender_R
+      N463 Object_463 mesh296
+      N464 mw210_main-material mesh297
+    N465 mw210_trim_a_chrome_door_RL
+      N466 mw210_chrome-material mesh298
+    N467 mw210_trim_a_door_FL
+      N468 mw210_plastic3-material mesh299
+    N469 mw210_trim_a_chrome_door_FR
+      N470 mw210_chrome-material mesh300
+    N471 mw210_trim_a_chrome_door_RR
+      N472 mw210_chrome-material mesh301
+    N473 mw210_chmslframe
+      N474 mw210_plastic3-material mesh302
+    N475 mw210_intmirror
+      N476 mw210_plastic3-material mesh303
+      N477 mirror-material mesh304
+    N478 mw210_shifter_A M
+      N479 mw210_interior-material mesh305
+      N480 mw210_plastic-material mesh306
+      N481 mw210_intchrome-material mesh307
+    N482 mw210_centerconsole
+      N483 mw210_interior-material mesh308
+      N484 mw210_plastic-material mesh309
+    N485 mw210_bumperbar_F
+      N486 mw210_main-material mesh310
+      N487 mw210_mechanical-material mesh311
+    N488 mw210_headlightframe_b_L
+      N489 mw210_plastic2-material mesh312
+    N490 mw210_headlightframe_b_R
+      N491 mw210_plastic2-material mesh313
+    N492 mw210_trim_b_FR
+      N493 mw210_chrome-material mesh314
+    N494 mw210_trim_b_FL
+      N495 mw210_chrome-material mesh315
+    N496 mw210_rascreen
+      N497 mw210_buttons-material mesh316
+      N498 mw210_plastic2-material mesh317
+    N499 mw210_screen_info
+      N500 mw210_radioscreen-material mesh318
+    N501 mw210_hood_logo
+      N502 mw210_chrome-material mesh319
+    N503 mw210_lettering_trunk_chrome
+      N504 mw210_chrome-material mesh320
+    N505 mw210_lettering_trunk_black
+      N506 mw210_plastic3-material mesh321
+    N507 mw210_lettering_trunk_black2
+      N508 mw210_plastic3-material mesh322
+    N509 mw210_lettering_trunk_chrome2
+      N510 mw210_chrome-material mesh323
+    N511 mw210_floorpan2
+      N512 Object_512 mesh324
+      N513 mw210_plastic2-material mesh325
+      N514 mw210_mechanical-material mesh326
+      N515 mw210_mechanical2-material mesh327
+    N516 mw210_floorpan2.001
+      N517 mw210_plastic2-material mesh328
+    N518 mw210_tub_RL
+      N519 mw210_tubs-material mesh329
+    N520 mw210_fenderliner_L
+      N521 mw210_tubs-material mesh330
+    N522 mw210_fenderliner_L2
+      N523 mw210_tubs-material mesh331
+    N524 mw210_fenderliner_L3
+      N525 mw210_tubs-material mesh332
+    N526 mw210_fenderliner_R
+      N527 mw210_tubs-material mesh333
+    N528 mw210_fenderliner_R2
+      N529 mw210_tubs-material mesh334
+    N530 mw210_fenderliner_R3
+      N531 mw210_tubs-material mesh335
+    N532 mw210_tub_RR
+      N533 mw210_tubs-material mesh336
+    N534 mw210_doorglass_RR_tintable
+      N535 mw210_glass_tintable-material mesh337
+    N536 mw210_doorglass_RL_tintable
+      N537 mw210_glass_tintable-material mesh338
+    N538 mw210_doorglass_FL_tintable
+      N539 mw210_glass_tintable-material mesh339
+    N540 mw210_doorglass_FR_tintable
+      N541 mw210_glass_tintable-material mesh340
+    N542 mw210_windshield_tintable
+      N543 mw210_glass_tintable-material mesh341
+    N544 mw210_backlight_tintable
+      N545 mw210_glass_tintable-material mesh342
+    N546 mw210_trunk_trim
+      N547 mw210_chrome-material mesh343
+    N548 mw210_trunk_trim2
+      N549 mw210_main-material mesh344
+    N550 mw210_trunk_trim3
+      N551 mw210_plastic3-material mesh345
+    N552 mw210_muffler_amg
+      N553 mw210_chrome-material mesh346
+      N554 mw210_plastic3-material mesh347
+    N555 mw210_bumperramkaEU M
+      N556 mw210_plastic2-material mesh348
+    N557 mw210_elegancefender_R
+      N558 mw210_chrome-material mesh349
+      N559 mw210_plastic3-material mesh350
+    N560 mw210_android
+      N561 mw210_shouroops-material mesh351
+      N562 mw210_gps_screen-material mesh352
+    N563 mw210_basictailglassR
+      N564 mw210_taillightglass_lowhigh-material mesh353
+      N565 mw210_taillightglass_reverse-material mesh354
+    N566 mw210_tailglasst_R
+      N567 mw210_taillightglass_lowhigh-material mesh355
+      N568 mw210_taillightglass_reverse-material mesh356
+    N569 mw210_headlightglass_b_R
+      N570 mw210_headlightglass_lowbeam-material mesh357
+      N571 mw210_headlightglass_highbeam-material mesh358
+      N572 mw210_headlightglass_signal_R-material mesh359
+    N573 mw210_taillight_glass_a_R
+      N574 mw210_taillightglass_brake-material mesh360
+      N575 mw210_taillightglass_signal_R-material mesh361
+    N576 mw210_headlightglass_b_L
+      N577 mw210_headlightglass_lowbeam-material mesh362
+      N578 mw210_headlightglass_highbeam-material mesh363
+      N579 mw210_headlightglass_signal_L-material mesh364
+    N580 mw210_basictailglassL
+      N581 mw210_taillightglass_lowhigh-material mesh365
+      N582 mw210_taillightglass_reverse-material mesh366
+    N583 mw210_taillight_glass_a_L
+      N584 mw210_taillightglass_brake-material mesh367
+      N585 mw210_taillightglass_signal_L-material mesh368
+    N586 mw210_tailglasst_L
+      N587 mw210_taillightglass_lowhigh-material mesh369
+      N588 mw210_taillightglass_reverse-material mesh370
+    N589 mw210_trunklights_basic_R
+      N590 mw210_taillight_lowhigh-material mesh371
+      N591 mw210_taillight_reverse-material mesh372
+    N592 mw210_trunklights_R
+      N593 mw210_taillight_lowhigh-material mesh373
+      N594 mw210_taillight_reverse-material mesh374
+    N595 mw210_headlight_b_R
+      N596 mw210_headlight_lowbeam-material mesh375
+      N597 mw210_headlight_highbeam-material mesh376
+      N598 mw210_headlight_signal_R-material mesh377
+    N599 mw210_taillight_a_R
+      N600 mw210_taillight_brake-material mesh378
+      N601 mw210_taillight_signal_R-material mesh379
+    N602 mw210_trunklights_basic_L
+      N603 mw210_taillight_lowhigh-material mesh380
+      N604 mw210_taillight_reverse-material mesh381
+    N605 mw210_trunklights_L
+      N606 mw210_taillight_lowhigh-material mesh382
+      N607 mw210_taillight_reverse-material mesh383
+    N608 mw210_taillight_a_L
+      N609 mw210_taillight_brake-material mesh384
+      N610 mw210_taillight_signal_L-material mesh385
+    N611 mw210_headlight_b_L
+      N612 mw210_headlight_lowbeam-material mesh386
+      N613 mw210_headlight_highbeam-material mesh387
+      N614 mw210_headlight_signal_L-material mesh388

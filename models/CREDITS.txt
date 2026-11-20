@@ -9,3 +9,8 @@ NC = только некоммерческое использование.
 w210n.glb: "1998 Mercedes-Benz E55 AMG (W210)" — Sketchfab af8a496d11ac46b2b4cff23197e6992a, CC BY 4.0
 a8n.glb: "2008 Audi A8 W12" — Sketchfab 47237a28d7f548bd865c3b3552dc493f, CC BY 4.0
 hands.glb: "First Person Hands Rigged" — Sketchfab 547a45535f0c4fe787948f7a7a6a88db, CC BY 4.0
+
+gb (G Brabus): "Mercesdes_ Benz G-class Brabus" by Es-star kings (https://sketchfab.com/KINGSLEY_king), CC Attribution, https://sketchfab.com/3d-models/mercesdes--benz-g-class-brabus-b19805ec913240e29a410910e655f2fe
+c6z (Corvette C6 ZR1): "Chevrolet Corvette C6 Zr1" by Randomness (https://sketchfab.com/throwbackthursdaymodels), CC Attribution, https://sketchfab.com/3d-models/chevrolet-corvette-c6-zr1-96e2e14b663b4978b0d8fe3dd278de4e
+caym (Cayenne Turbo GT 2022): "2022 Porsche Cayenne Turbo GT" by Maroi Mister Let Me Think Official 3D Studio (https://sketchfab.com/homicivan53), CC Attribution, https://sketchfab.com/3d-models/2022-porsche-cayenne-turbo-gt-3f3fa4493ecc4826823f0cb27f638908
+arms (FPS Arms): "FREE [FPS Arms] GameReady - RIGGED" by BAMEN (https://sketchfab.com/bamenwo05), CC Attribution, https://sketchfab.com/3d-models/free-fps-arms-gameready-rigged-296d30fc705b4dff85c2c8a2d2724e7f

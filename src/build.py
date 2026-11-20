@@ -20,6 +20,7 @@ s, n = re.subn(r'\[data-theme=\w+\]\{[^\n]*\n', '', s); assert n == 3, n
 rep('font:14px/1.35 "Segoe UI Variable Text","Segoe UI",system-ui,sans-serif;', 'font:14px/1.35 var(--font);')
 s = s.replace('border-radius:6px', 'border-radius:var(--rad)')
 rep('</style>', rd('extra.css') + '</style>')
+rep('<meta name="viewport" content="width=device-width, initial-scale=1">', '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">\n<meta name="theme-color" content="#06080b">\n<meta name="apple-mobile-web-app-capable" content="yes">\n<meta name="mobile-web-app-capable" content="yes">\n<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">\n<meta name="format-detection" content="telephone=no">')
 # --- html
 rep('<nav class="tabs" id="tabs"></nav>', '''<div class="vpick">
     <button class="icon" id="vPrev" title="Предыдущая (←)"><svg viewBox="0 0 24 24"><path d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z"/></svg></button>

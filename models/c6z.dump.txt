@@ -1,0 +1,239 @@
+==  src/c6z.glb nodes 83 meshes 81 mats 73 tex 90 imgs 96,83,83,83,83,83,83,83,83,75674,69039,22107,22107,22107,22107,22107,22107,22107,421031,421031,508523,421031,96,83,96,83,96,83,96,83,96,83,83,112755,94018,277627,596,209924,96,83,278990,96,83,124959,99844,124959,99844,120583,100443,124959,99844,100443,100443,120583,100443,120583,327752,294359,69673,59164,508523,421031,508523,421031,508523,421031,3285,2063,198973,172679,198973,172679,101403,95810,101403,95810,101403,95810,180948,209591,180948,421031,89839,89839,89839,89839,1385342,1385342,1385342,1385342
+  M 0:Black1Mtl col= tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 1:Black2Mtl col= tex=1 met=0.693 r=undefined a= em=
+  M 2:Black3Mtl col= tex=1 met=0.05 r=undefined a= em=
+  M 3:Black4Mtl col= tex=1 met=0.05 r=undefined a= em=
+  M 4:Black5Mtl col= tex=1 met=0.05 r=undefined a= em=
+  M 5:Black6Mtl col= tex=1 met=0.05 r=undefined a= em=
+  M 6:Black7Mtl col= tex=1 met=0.05 r=0.7335939991383684 a= em=
+  M 7:Black8Mtl col= tex=1 met=0.693335446355646 r=undefined a= em=
+  M 8:Bumperframe1Mtl col= tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 9:Carbonfiber1Mtl col= tex=1 met=0.05 r=undefined a=BLEND em=
+  M 10:Carbonfiber2Mtl col= tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 11:Carbonfiber3Mtl col= tex=1 met=undefined r=undefined a=BLEND em=
+  M 12:Carbonfiber4Mtl col= tex=1 met=undefined r=undefined a= em=
+  M 13:Chassis261Mtl col= tex=1 met=0.05 r=0.7335939991383684 a= em=
+  M 14:Chassis262Mtl col= tex=1 met=0.05 r=0.7335939991383684 a= em=
+  M 15:Chassis271Mtl col= tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 16:Chrome1Mtl col= tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 17:Chrome2Mtl col= tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 18:Chrome3Mtl col= tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 19:Chrome4Mtl col= tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 20:Chrome5Mtl col= tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 21:Chrome6Mtl col= tex=1 met=0.12647657592861233 r=0.7335939991383684 a= em=
+  M 22:Corvettelogo20051024x7681Mtl col=1.00,1.00,1.00,0.90 tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 23:DarkStoneGrey1Mtl col= tex=1 met=0.05 r=0.9696507904707469 a= em=
+  M 24:DeepBlue1Mtl col=0.02,0.12,0.44,1.00 tex=0 met=0.05 r=undefined a= em=
+  M 25:DeepBlue2Mtl col= tex=1 met=undefined r=0.22133096024673604 a= em=
+  M 26:Glass10Mtl col=1.00,1.00,1.00,0.40 tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 27:Glass1Mtl col=1.00,1.00,1.00,0.20 tex=1 met=0 r=undefined a=BLEND em=
+  M 28:Glass2Mtl col=0.00,0.00,0.00,0.30 tex=0 met=0.05 r=0 a=BLEND em=
+  M 29:Glass6Mtl col=1.00,1.00,1.00,0.40 tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 30:InstitutionalWhite1Mtl col= tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 31:Interior1Mtl col=1.00,1.00,1.00,0.90 tex=1 met=0.05 r=undefined a=BLEND em=
+  M 32:Interior2Mtl col=1.00,1.00,1.00,0.90 tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 33:Interior3Mtl col=1.00,1.00,1.00,0.90 tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 34:Interior4Mtl col=1.00,1.00,1.00,0.90 tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 35:Interiornoalpha10Mtl col= tex=1 met=0.05 r=undefined a= em=
+  M 36:Interiornoalpha1Mtl col= tex=1 met=0.05 r=0.7335939991383684 a= em=
+  M 37:Interiornoalpha3Mtl col= tex=1 met=0.05 r=undefined a= em=
+  M 38:Interiornoalpha4Mtl col= tex=1 met=0.05 r=undefined a=BLEND em=
+  M 39:Interiornoalpha8Mtl col= tex=1 met=0.05 r=undefined a=BLEND em=
+  M 40:Interiornoalpha9Mtl col= tex=1 met=0.05 r=undefined a=BLEND em=
+  M 41:Intsymbols11Mtl col= tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 42:Intsymbols21Mtl col= tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 43:LightNight2Mtl col=1.00,1.00,1.00,0.90 tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 44:Lights1Mtl col= tex=1 met=0.05 r=undefined a=BLEND em=
+  M 45:Lights2Mtl col= tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 46:Lights3Mtl col= tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 47:Logo21Mtl col=1.00,1.00,1.00,0.90 tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 48:Nodamage10Mtl col= tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 49:Nodamage1Mtl col= tex=1 met=undefined r=0 a=BLEND em=
+  M 50:Nodamage2Mtl col= tex=1 met=0.05 r=undefined a=BLEND em=
+  M 51:Nodamage3Mtl col= tex=1 met=0.05 r=undefined a=BLEND em=
+  M 52:Nodamage5Mtl col= tex=1 met=0.05 r=undefined a=BLEND em=
+  M 53:Nodamage6Mtl col= tex=1 met=0.693 r=undefined a= em=
+  M 54:Nougat1Mtl col= tex=1 met=0.05 r=0.9055390067142172 a=BLEND em=
+  M 55:Pearl1Mtl col= tex=1 met=0.05 r=0.785660628319452 a= em=
+  M 56:ReallyBlack1Mtl col= tex=1 met=undefined r=0.16647365020541016 a=BLEND em=
+  M 57:Remapbody1Mtl col=0.05,0.07,0.58,1.00 tex=0 met=undefined r=0.3127598103156124 a= em=
+  M 58:Screw1Mtl col=1.00,1.00,1.00,0.90 tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 59:Screw2Mtl col=1.00,1.00,1.00,0.90 tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 60:Screw3Mtl col=1.00,1.00,1.00,0.90 tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 61:Undercarriage1Mtl col= tex=1 met=0.05 r=0.7335939991383684 a= em=
+  M 62:Undercarriage2Mtl col= tex=1 met=0.05 r=0.7335939991383684 a=BLEND em=
+  M 63:Vehiclelights1Mtl col= tex=1 met=0.05 r=undefined a= em=
+  M 64:Vehiclelights2Mtl col= tex=1 met=0.05 r=0.7335939991383684 a= em=
+  M 65:Wheel1Mtl col= tex=1 met=0.663 r=0 a= em=
+  M 66:Wheel2Mtl col= tex=1 met=0.663 r=0 a= em=
+  M 67:Wheel3Mtl col= tex=1 met=0.663 r=0 a= em=
+  M 68:Wheel4Mtl col= tex=1 met=0.6628591629993539 r=0 a= em=
+  M 69:Yokohama1Mtl col= tex=1 met=0.05 r=undefined a= em=
+  M 70:Yokohama2Mtl col= tex=1 met=0.05 r=undefined a= em=
+  M 71:Yokohama3Mtl col= tex=1 met=0.05 r=undefined a= em=
+  M 72:Yokohama4Mtl col= tex=1 met=0.05 r=undefined a= em=
+  mesh0 Object_0 mat=0 tri=8 min=-35.64,9.60,3.22 max=-29.79,10.19,3.31
+  mesh1 Object_1 mat=1 tri=1528 min=-36.07,-2.03,3.73 max=-29.34,2.70,5.07
+  mesh2 Object_2 mat=2 tri=2410 min=-29.77,3.19,1.22 max=-29.09,7.96,3.82
+  mesh3 Object_3 mat=3 tri=3628 min=-36.29,3.15,1.22 max=-35.54,7.93,3.82
+  mesh4 Object_4 mat=4 tri=2210 min=-35.12,6.26,2.43 max=-33.61,6.89,3.86
+  mesh5 Object_5 mat=5 tri=2563 min=-36.37,3.15,1.14 max=-28.83,9.42,3.89
+  mesh6 Object_6 mat=6 tri=5871 min=-36.12,8.21,2.13 max=-29.29,14.71,3.58
+  mesh7 Object_7 mat=7 tri=276 min=-35.96,6.00,3.34 max=-29.44,9.86,5.05
+  mesh8 Object_8 mat=8 tri=1650 min=-36.48,-2.33,0.82 max=-28.93,15.62,2.80
+  mesh9 Object_9 mat=9 tri=2074 min=-35.92,9.19,2.50 max=-29.49,14.66,3.66
+  mesh10 Object_10 mat=12 tri=1226 min=-36.54,13.51,0.64 max=-28.86,16.16,0.89
+  mesh11 Object_11 mat=11 tri=5141 min=-36.61,2.44,0.53 max=-28.79,10.51,5.22
+  mesh12 Object_12 mat=10 tri=80 min=-34.50,6.41,2.99 max=-34.24,6.50,3.23
+  mesh13 Object_13 mat=14 tri=478 min=-36.57,13.61,2.06 max=-36.15,14.52,2.27
+  mesh14 Object_14 mat=13 tri=496 min=-36.46,-1.43,2.98 max=-36.24,-0.58,3.17
+  mesh15 Object_15 mat=15 tri=492 min=-36.46,-1.43,2.98 max=-28.94,-0.58,3.17
+  mesh16 Object_16 mat=16 tri=82 min=-35.54,9.80,3.21 max=-35.43,9.93,3.34
+  mesh17 Object_17 mat=17 tri=116 min=-35.56,-1.54,3.75 max=-29.84,-1.40,3.84
+  mesh18 Object_18 mat=18 tri=257 min=-29.71,3.30,2.52 max=-28.27,6.79,3.93
+  mesh19 Object_19 mat=19 tri=293 min=-37.13,3.30,2.19 max=-35.54,6.79,3.93
+  mesh20 Object_20 mat=20 tri=967 min=-36.43,1.94,1.11 max=-28.98,7.43,4.75
+  mesh21 Object_21 mat=21 tri=5201 min=-35.32,10.01,2.42 max=-29.84,13.47,3.41
+  mesh22 Object_22 mat=22 tri=4 min=-33.00,11.98,3.47 max=-32.40,12.24,3.51
+  mesh23 Object_23 mat=23 tri=4600 min=-35.90,9.35,2.26 max=-29.50,14.67,3.40
+  mesh24 Object_24 mat=24 tri=24 min=-36.25,5.85,1.14 max=-29.15,6.56,1.18
+  mesh25 Object_25 mat=25 tri=1136 min=-34.04,10.56,3.13 max=-31.36,12.34,3.59
+  mesh26 Object_26 mat=26 tri=640 min=-35.35,-2.37,1.25 max=-30.05,-2.10,1.53
+  mesh27 Object_27 mat=29 tri=1648 min=-35.67,-2.31,3.21 max=-29.73,-2.13,3.60
+  mesh28 Object_28 mat=30 tri=167 min=-34.81,10.77,2.78 max=-34.31,11.37,3.27
+  mesh29 Object_29 mat=31 tri=2 min=-34.47,6.35,2.75 max=-34.40,6.39,2.79
+  mesh30 Object_30 mat=32 tri=14 min=-34.62,3.47,3.01 max=-30.36,7.34,3.93
+  mesh31 Object_31 mat=33 tri=44 min=-35.29,6.79,3.19 max=-34.78,7.08,3.36
+  mesh32 Object_32 mat=34 tri=38 min=-33.04,6.47,2.63 max=-32.88,6.62,2.69
+  mesh33 Object_33 mat=39 tri=68 min=-33.12,6.99,2.83 max=-33.05,7.06,2.91
+  mesh34 Object_34 mat=41 tri=59 min=-35.06,10.87,3.15 max=-34.53,11.78,3.31
+  mesh35 Object_35 mat=42 tri=69 min=-35.06,9.84,3.14 max=-29.93,12.15,3.26
+  mesh36 Object_36 mat=43 tri=4 min=-32.74,7.17,3.44 max=-32.69,7.22,3.50
+  mesh37 Object_37 mat=44 tri=340 min=-33.10,-2.58,3.90 max=-32.30,-2.49,3.98
+  mesh38 Object_38 mat=46 tri=468 min=-36.56,13.61,2.06 max=-28.84,14.52,2.27
+  mesh39 Object_39 mat=47 tri=4 min=-33.85,10.60,3.42 max=-31.55,11.58,3.50
+  mesh40 Object_40 mat=50 tri=208 min=-35.74,-1.36,3.87 max=-29.66,2.71,5.07
+  mesh41 Object_41 mat=54 tri=410 min=-34.16,10.44,2.46 max=-31.14,11.69,3.08
+  mesh42 Object_42 mat=56 tri=3983 min=-35.35,10.07,2.13 max=-29.78,14.70,3.60
+  mesh43 Object_43 mat=58 tri=252 min=-35.62,9.69,2.55 max=-30.01,14.24,3.28
+  mesh44 Object_44 mat=59 tri=32 min=-32.94,-1.66,3.80 max=-32.47,-1.53,3.85
+  mesh45 Object_45 mat=60 tri=96 min=-35.78,9.66,2.62 max=-29.62,14.62,3.37
+  mesh46 Object_46 mat=63 tri=162 min=-33.10,-2.59,3.90 max=-32.30,-2.55,3.98
+  mesh47 Object_47 mat=61 tri=1775 min=-36.61,-0.88,0.37 max=-28.79,15.38,2.55
+  mesh48 Object_48 mat=62 tri=64 min=-36.54,13.51,0.63 max=-28.86,16.16,0.74
+  mesh49 Object_49 mat=65 tri=5246 min=-30.57,-0.31,0.35 max=-28.64,2.00,2.67
+  mesh50 Object_50 mat=66 tri=5246 min=-36.77,-0.31,0.35 max=-34.82,2.00,2.67
+  mesh51 Object_51 mat=67 tri=5246 min=-29.96,10.83,0.36 max=-28.62,13.12,2.64
+  mesh52 Object_52 mat=70 tri=1144 min=-36.75,-0.66,0.00 max=-34.83,2.36,3.03
+  mesh53 Object_53 mat=68 tri=5246 min=-36.80,10.83,0.36 max=-35.45,13.12,2.64
+  mesh54 Object_54 mat=69 tri=1144 min=-30.57,-0.68,0.00 max=-28.66,2.35,3.03
+  mesh55 Object_55 mat=71 tri=1144 min=-29.96,10.47,0.02 max=-28.64,13.46,3.01
+  mesh56 Object_56 mat=72 tri=1144 min=-36.78,10.49,0.02 max=-35.45,13.48,3.01
+  mesh57 Object_57 mat=27 tri=1048 min=-36.09,7.55,1.22 max=-29.31,15.27,3.74
+  mesh58 Object_58 mat=28 tri=4658 min=-36.17,-2.38,2.41 max=-29.22,15.03,4.94
+  mesh59 Object_59 mat=36 tri=1014 min=-37.15,3.67,1.11 max=-28.25,13.25,4.45
+  mesh60 Object_60 mat=35 tri=1759 min=-35.29,5.81,2.11 max=-32.68,7.24,3.52
+  mesh61 Object_61 mat=38 tri=416 min=-34.73,7.70,3.21 max=-34.10,7.78,3.42
+  mesh62 Object_62 mat=37 tri=3436 min=-35.01,6.33,2.56 max=-33.73,7.02,3.76
+  mesh63 Object_63 mat=37 tri=23081 min=-36.08,-1.80,1.09 max=-29.32,9.30,5.20
+  mesh64 Object_64 mat=40 tri=676 min=-35.02,7.67,3.16 max=-33.65,7.81,3.40
+  mesh65 Object_65 mat=45 tri=1083 min=-35.61,-0.62,2.58 max=-28.93,14.13,3.05
+  mesh66 Object_66 mat=48 tri=8318 min=-36.67,-2.56,0.63 max=-28.73,15.67,4.01
+  mesh67 Object_67 mat=49 tri=4878 min=-36.19,-2.39,0.85 max=-29.21,15.06,3.76
+  mesh68 Object_68 mat=51 tri=1249 min=-36.55,3.01,3.14 max=-28.85,8.29,3.82
+  mesh69 Object_69 mat=52 tri=3215 min=-35.78,-2.56,3.25 max=-29.44,10.08,3.95
+  mesh70 Object_70 mat=53 tri=4828 min=-36.32,-0.10,0.54 max=-29.09,13.08,2.47
+  mesh71 Object_71 mat=53 tri=9998 min=-36.80,-2.20,0.53 max=-28.60,15.38,5.14
+  mesh72 Object_72 mat=55 tri=1008 min=-36.26,0.38,1.05 max=-29.16,12.43,1.97
+  mesh73 Object_73 mat=57 tri=10684 min=-36.67,-2.02,0.82 max=-28.73,16.04,4.55
+  mesh74 Object_74 mat=57 tri=11295 min=-37.20,-2.59,0.97 max=-28.20,14.67,4.07
+  mesh75 Object_75 mat=57 tri=3754 min=-36.16,13.40,2.42 max=-29.24,15.02,3.14
+  mesh76 Object_76 mat=57 tri=16510 min=-36.78,-1.79,0.64 max=-28.62,14.40,3.95
+  mesh77 Object_77 mat=57 tri=7260 min=-36.45,-2.57,0.91 max=-28.95,-0.96,4.01
+  mesh78 Object_78 mat=64 tri=6180 min=-36.12,-2.33,1.27 max=-29.28,14.82,3.76
+  mesh79 Object_79 mat=64 tri=3408 min=-35.86,-2.33,3.04 max=-34.15,-2.05,3.76
+  mesh80 Object_80 mat=64 tri=4103 min=-36.07,-2.36,1.25 max=-28.83,14.82,3.72
+tri 212777
+N0 Sketchfab_model M
+  N1 corvette c6.obj.cleaner.materialmerger.gles
+    N2 Object_2 mesh0
+    N3 Object_3 mesh1
+    N4 Object_4 mesh2
+    N5 Object_5 mesh3
+    N6 Object_6 mesh4
+    N7 Object_7 mesh5
+    N8 Object_8 mesh6
+    N9 Object_9 mesh7
+    N10 Object_10 mesh8
+    N11 Object_11 mesh9
+    N12 Object_12 mesh10
+    N13 Object_13 mesh11
+    N14 Object_14 mesh12
+    N15 Object_15 mesh13
+    N16 Object_16 mesh14
+    N17 Object_17 mesh15
+    N18 Object_18 mesh16
+    N19 Object_19 mesh17
+    N20 Object_20 mesh18
+    N21 Object_21 mesh19
+    N22 Object_22 mesh20
+    N23 Object_23 mesh21
+    N24 Object_24 mesh22
+    N25 Object_25 mesh23
+    N26 Object_26 mesh24
+    N27 Object_27 mesh25
+    N28 Object_28 mesh26
+    N29 Object_29 mesh27
+    N30 Object_30 mesh28
+    N31 Object_31 mesh29
+    N32 Object_32 mesh30
+    N33 Object_33 mesh31
+    N34 Object_34 mesh32
+    N35 Object_35 mesh33
+    N36 Object_36 mesh34
+    N37 Object_37 mesh35
+    N38 Object_38 mesh36
+    N39 Object_39 mesh37
+    N40 Object_40 mesh38
+    N41 Object_41 mesh39
+    N42 Object_42 mesh40
+    N43 Object_43 mesh41
+    N44 Object_44 mesh42
+    N45 Object_45 mesh43
+    N46 Object_46 mesh44
+    N47 Object_47 mesh45
+    N48 Object_48 mesh46
+    N49 Object_49 mesh47
+    N50 Object_50 mesh48
+    N51 Object_51 mesh49
+    N52 Object_52 mesh50
+    N53 Object_53 mesh51
+    N54 Object_54 mesh52
+    N55 Object_55 mesh53
+    N56 Object_56 mesh54
+    N57 Object_57 mesh55
+    N58 Object_58 mesh56
+    N59 Object_59 mesh57
+    N60 Object_60 mesh58
+    N61 Object_61 mesh59
+    N62 Object_62 mesh60
+    N63 Object_63 mesh61
+    N64 Object_64 mesh62
+    N65 Object_65 mesh63
+    N66 Object_66 mesh64
+    N67 Object_67 mesh65
+    N68 Object_68 mesh66
+    N69 Object_69 mesh67
+    N70 Object_70 mesh68
+    N71 Object_71 mesh69
+    N72 Object_72 mesh70
+    N73 Object_73 mesh71
+    N74 Object_74 mesh72
+    N75 Object_75 mesh73
+    N76 Object_76 mesh74
+    N77 Object_77 mesh75
+    N78 Object_78 mesh76
+    N79 Object_79 mesh77
+    N80 Object_80 mesh78
+    N81 Object_81 mesh79
+    N82 Object_82 mesh80

@@ -1,8 +1,8 @@
 /* --- настоящие 3D-модели машин игрока (GLB, встроены в файл) --- */
-const WR={gn:/^(Elastic_Rubber|silver_rim|rim_black)$/,vetten:/^Wheel$/,w210n:/^Mesheswheel00[345]wheel00[456]1Mtl$/,a8n:/^(wheel_b|torm_disk_a8|mesh_spec)$/,w210:/^tire1$|Tire_Hub|Tire_Disk/,g:/Mesh(rim|tire|Disk)/,vette:/Tire_Hub|Tire_Disk|Wheel1A/,cay:/^material$|^tire$|^phong16$/,a8:/^material_1[012]$/},
-  LR={gn:/emission|back_light/,vetten:/^$/,w210n:/^(L1Mtl|Meshesheadlights00021Mtl|Meshestaillights00011Mtl|B1Mtl)$/,a8n:/^(light_glass|lights_back_on|lights_glass)$/,w210:/Lights/,g:/^Light|red_glass/,vette:/Lights/,cay:/^light$|^Light_R$/,a8:/^$/};
-const MCFG={w210:{f:'w210n',paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/},w210c:{f:'w210n',paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/,open:.62},g:{f:'g',paint:/^carpaint$/},
-  c6:{f:'vette',paint:/Base1/},cay:{f:'cay',paint:/^car.*int$/},a8:{f:'a8n',paint:/^body$/,glass:/^(vehicle_generic_glasswindows2|windows_int)$/}};
+const WR={gb:/^(right_wheel_[23]|plastic5_1[56]|leather02_weave_21)\.001$/,c6z:/^(Wheel[1-4]|Yokohama[1-4])Mtl$/,caym:/Wheel1A_Material$/,gn:/^(Elastic_Rubber|silver_rim|rim_black)$/,vetten:/^Wheel$/,w210n:/^Mesheswheel00[345]wheel00[456]1Mtl$/,a8n:/^(wheel_b|torm_disk_a8|mesh_spec)$/,w210:/^tire1$|Tire_Hub|Tire_Disk/,g:/Mesh(rim|tire|Disk)/,vette:/Tire_Hub|Tire_Disk|Wheel1A/,cay:/^material$|^tire$|^phong16$/,a8:/^material_1[012]$/},
+  LR={gb:/^(plastic5_(9|10)|leather02_weave_(10|15|18|25|26))\.001$/,c6z:/^(Vehiclelights[12]|Lights[123])Mtl$/,caym:/2022LightA_Material$/,gn:/emission|back_light/,vetten:/^$/,w210n:/^(L1Mtl|Meshesheadlights00021Mtl|Meshestaillights00011Mtl|B1Mtl)$/,a8n:/^(light_glass|lights_back_on|lights_glass)$/,w210:/Lights/,g:/^Light|red_glass/,vette:/Lights/,cay:/^light$|^Light_R$/,a8:/^$/};
+const MCFG={w210:{f:'w210n',paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/},w210c:{f:'w210n',paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/,open:.62},g:{f:'gb',paint:/^bodypaint/,glass:/^(ExtWindowsGlass|IntWindows)/},
+  c6:{f:'c6z',paint:/^Remapbody1Mtl$/,glass:/^Glass(1|2|6|10)Mtl$/},cay:{f:'caym',paint:/2022Paint_Material$/,glass:/2022Window_Material$/},a8:{f:'a8n',paint:/^body$/,glass:/^(vehicle_generic_glasswindows2|windows_int)$/}};
 // разрезать меш на части по треугольникам: key(cx,cy,cz)-> ключ или null; геометрия в координатах корня (g)
 function splitMesh(o,key){const ge=o.geometry,idx=ge.index?ge.index.array:null,n=idx?idx.length:ge.attributes.position.count,mw=o.matrixWorld,nm=new T.Matrix3().getNormalMatrix(mw);
   const P=ge.attributes.position,v=new T.Vector3(),wp=new Float32Array(P.count*3);for(let i=0;i<P.count;i++){v.fromBufferAttribute(P,i).applyMatrix4(mw);wp[i*3]=v.x;wp[i*3+1]=v.y;wp[i*3+2]=v.z}
@@ -125,14 +125,14 @@ w.hmUpd=()=>{const hm=w.hm;if(!hm||!w.hands||!w.eye)return false;const H=hm.user
     for(const f of A.fing)f.quaternion.copy(f.userData.q0).multiply(new T.Quaternion().setFromAxisAngle(new T.Vector3(1,0,0),f.userData.th?P.tc:P.curl));
     A.wr.updateMatrixWorld(true)});
   return true};
-loadMdl('hands').then(src=>{if(!src)return;const hm=src;const H=hm.userData;H.all=[];const bn={};
+loadMdl('arms').then(src=>{if(!src)return;const hm=src;const H=hm.userData;H.all=[];const bn={};
   hm.traverse(o=>{if(o.isBone){H.all.push(o);o.userData.q0=o.quaternion.clone();o.userData.p0=o.position.clone();bn[o.name]=o}
     if(o.isMesh){o.frustumCulled=false;o.castShadow=false;const om=o.material;o.material=new T.MeshStandardMaterial({color:om.map?0xffffff:0xd9a58a,map:om.map||null,normalMap:om.normalMap||null,roughness:.55,metalness:0});o.renderOrder=3}});
   const B=re=>H.all.find(b=>re.test(b.name));hm.updateMatrixWorld(true);
-  H.arms=['L','R'].map(s=>{const wr=B(new RegExp('^forearm'+s+'001')),fing=H.all.filter(b=>new RegExp('^(f_\\w+|thumb)0[123]'+s+'_').test(b.name.replace(/\./g,'')));
-    fing.forEach(f=>f.userData.th=/^thumb/.test(f.name));return{ua:B(new RegExp('^upper_arm'+s)),fa:B(new RegExp('^forearm'+s+'_')),fe:B(new RegExp('^forearm'+s+'_end')),wr,fing}});
+  H.arms=['L','R'].map(s=>{const wr=B(new RegExp('^Hand_1\\.?'+s)),fing=H.all.filter(b=>new RegExp('^Finger_\\d_[123]\\.?'+s+'_').test(b.name));
+    fing.forEach(f=>f.userData.th=/^Finger_1_/.test(f.name));return{ua:B(new RegExp('^Arm_1\\.?'+s)),fa:B(new RegExp('^Arm_2\\.?'+s)),fe:wr,wr,fing}});
   const wp=b=>b.getWorldPosition(new T.Vector3()),A=H.arms[0];H.L=wp(A.fa).distanceTo(wp(A.ua))+wp(A.fe).distanceTo(wp(A.fa));
-  const c1=wp(B(/^clavicleL/)),c2=wp(B(/^clavicleR/));H.cl=c1.add(c2).multiplyScalar(.5);
+  const c1=wp(B(/^Arm_1\.?L/)),c2=wp(B(/^Arm_1\.?R/));H.cl=c1.add(c2).multiplyScalar(.5);
   w.hm=hm;hm.visible=false}).catch(e=>console.warn('hands',e));
 
 // в салоне: тёмный интерьер (Audi — полностью чёрный), без светлых бликов, чтобы видно было дорогу

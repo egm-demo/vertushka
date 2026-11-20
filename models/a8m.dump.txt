@@ -1,0 +1,925 @@
+==  src/a8m.glb nodes 496 meshes 345 mats 82 tex 15 imgs 956998,1136723,395850,335780,396697,350031,377463,279896,54959,165191,102747,953214,79620,134927,165588
+  M 0:rxx_a8_grey_g col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 1:rxx_a8_silver_g col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 2:etk800 col=0.01,0.01,0.01,1.00 tex=0 met=0 r=0.6 a= em=
+  M 3:rxx_a8_custom_wheel_a col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 4:rxx_a8_chrome col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 5:rxx_a8_needles col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 6:rxx_a8_chrome_int col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 7:rxx_a8_blackengb col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 8:rxx_a8_grayengb col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 9:rxx_a8_remni col= tex=1 met=0 r=0.6 a= em=
+  M 10:rxx_a8_glass_tint col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 11:rxx_a8_glass_tint_int col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 12:rxx_a8_plastic_black_e col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 13:rxx_a8_silver_c col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 14:rxx_a8_silver_e col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 15:rxx_a8_silver_e_b col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 16:rxx_a8_sidemarker col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 17:rxx_a8_reflector col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 18:rxx_a8_plastic_black col=0.01,0.01,0.01,1.00 tex=0 met=0 r=0.6 a= em=
+  M 19:rxx_a8_blackforheads col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 20:rxx_a8_chromereflectiveforheads col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 21:rxx_a8_chromeforheads col=0.50,0.50,0.50,1.00 tex=0 met=0 r=0.6 a= em=
+  M 22:rxx_a8_chromeforblinkers col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 23:rxx_a8_runninglight col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 24:rxx_a8_headlight col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 25:rxx_a8_signal_L_head col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 26:rxx_a8_headlightglass col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 27:rxx_a8_exhchr col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 28:rxx_a8_lights_back_fl col= tex=1 met=0 r=0.6 a= em=
+  M 29:rxx_a8_runninglight_fl col= tex=1 met=0 r=0.6 a= em=
+  M 30:rxx_a8_chmsl_fl col= tex=1 met=0 r=0.6 a= em=
+  M 31:rxx_a8_signal_R_fl col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 32:rxx_a8_reverselight_fl col= tex=1 met=0 r=0.6 a= em=
+  M 33:rxx_a8_foglight_rear_fl col= tex=1 met=0 r=0.6 a= em=
+  M 34:rxx_a8_taillightglass_fl col= tex=1 met=0 r=0.6 a= em=
+  M 35:rxx_a8_trunklightglass_fl col= tex=1 met=0 r=0.6 a= em=
+  M 36:rxx_a8_paint col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 37:rxx_a8_carpet col= tex=1 met=0 r=0.6 a= em=
+  M 38:rxx_a8_signal_L_fl col= tex=1 met=0 r=0.6 a= em=
+  M 39:checkengine col=0.59,0.59,0.59,1.00 tex=0 met=0 r=0.6 a= em=
+  M 40:lowpressure col=0.59,0.59,0.59,1.00 tex=0 met=0 r=0.6 a= em=
+  M 41:parkingbrake col=0.59,0.59,0.59,1.00 tex=0 met=0 r=0.6 a= em=
+  M 42:material col=0.59,0.59,0.59,1.00 tex=0 met=0 r=0.6 a= em=
+  M 43:highbeam col=0.59,0.59,0.59,1.00 tex=0 met=0 r=0.6 a= em=
+  M 44:material_44 col=0.59,0.59,0.59,1.00 tex=0 met=0 r=0.6 a= em=
+  M 45:material_45 col=0.59,0.59,0.59,1.00 tex=0 met=0 r=0.6 a= em=
+  M 46:lowbeam col=0.59,0.59,0.59,1.00 tex=0 met=0 r=0.6 a= em=
+  M 47:foglight col=0.59,0.59,0.59,1.00 tex=0 met=0 r=0.6 a= em=
+  M 48:rearfog col=0.59,0.59,0.59,1.00 tex=0 met=0 r=0.6 a= em=
+  M 49:rxx_a8_leather col= tex=1 met=0 r=0.6 a= em=
+  M 50:rxx_a8_blackchrome col=0.00,0.00,0.00,1.00 tex=0 met=0 r=0.6 a= em=
+  M 51:rxx_a8_foglight_fl col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 52:rxx_a8_glass col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 53:rxx_a8_foglight_s8 col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 54:rxx_a8_alcantara col= tex=1 met=0 r=0.6 a= em=
+  M 55:mirror col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 56:rxx_a8_chmsl col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 57:rxx_a8_signal_R_head col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 58:wheel_42a col= tex=1 met=0 r=0.6 a= em=
+  M 59:rxx_a8_wood_a col= tex=1 met=0 r=0.6 a= em=
+  M 60:rxx_a8_buttons_a col= tex=1 met=0 r=0.6 a= em=
+  M 61:wheel_42a.001 col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 62:rxx_a8_gaspedal col= tex=1 met=0 r=0.6 a= em=
+  M 63:rxx_a8_interior col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 64:rxx_a8_plastic_steer col= tex=1 met=0 r=0.6 a= em=
+  M 65:rxx_a8_buttons_b col= tex=1 met=0 r=0.6 a= em=
+  M 66:etkc col= tex=0 met=0 r=0.6 a= em=
+  M 67:rxx_a8_red col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 68:rxx_a8_allumin col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 69:rxx_a8_buttons_c col= tex=1 met=0 r=0.6 a= em=
+  M 70:rxx_a8_gauges_petrol col= tex=1 met=0 r=0.6 a= em=
+  M 71:rxx_a8_console col= tex=1 met=0 r=0.6 a= em=
+  M 72:rxx_a8_screen col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 73:signal_R col=0.59,0.59,0.59,1.00 tex=0 met=0 r=0.6 a= em=
+  M 74:signal_L col=0.59,0.59,0.59,1.00 tex=0 met=0 r=0.6 a= em=
+  M 75:rxx_a8_rim_a col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 76:glass_invisible col=0.64,0.64,0.64,1.00 tex=0 met=0 r=0.6 a= em=
+  M 77:rxx_a8_blackforstockrims col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 78:rxx_a8_chromeforstockrims col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 79:rxx_a8_greyforstockrims col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 80:rxx_a8_rim_3 col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  M 81:rxx_a8_greyforstockrims3 col=0.80,0.80,0.80,1.00 tex=0 met=0 r=0.6 a= em=
+  mesh0 rxx_a8_chrome-material mat=4 tri=154 min=-0.93,-1.03,0.76 max=-0.91,-0.96,0.79
+  mesh1 rxx_a8_chrome-material mat=4 tri=292 min=-0.81,2.39,0.62 max=0.81,2.68,0.64
+  mesh2 rxx_a8_paint-material mat=36 tri=3398 min=-0.91,1.98,0.16 max=0.91,2.69,0.81
+  mesh3 rxx_a8_plastic_black-material mat=18 tri=20 min=0.38,2.48,0.26 max=0.47,2.53,0.33
+  mesh4 rxx_a8_exhchr-material mat=27 tri=400 min=0.37,2.35,0.25 max=0.47,2.62,0.36
+  mesh5 rxx_a8_plastic_black-material mat=18 tri=20 min=-0.57,2.46,0.26 max=-0.48,2.53,0.33
+  mesh6 rxx_a8_exhchr-material mat=27 tri=400 min=-0.58,2.35,0.25 max=-0.48,2.61,0.36
+  mesh7 rxx_a8_plastic_black-material mat=18 tri=20 min=0.49,2.46,0.26 max=0.57,2.53,0.33
+  mesh8 rxx_a8_exhchr-material mat=27 tri=400 min=0.48,2.35,0.25 max=0.58,2.61,0.36
+  mesh9 rxx_a8_plastic_black-material mat=18 tri=20 min=-0.46,2.48,0.26 max=-0.38,2.53,0.33
+  mesh10 rxx_a8_exhchr-material mat=27 tri=400 min=-0.47,2.35,0.25 max=-0.37,2.62,0.36
+  mesh11 rxx_a8_chrome-material mat=4 tri=154 min=0.91,-1.03,0.76 max=0.93,-0.96,0.79
+  mesh12 rxx_a8_lights_back_fl-material mat=28 tri=8267 min=0.41,2.47,0.81 max=0.63,2.60,1.00
+  mesh13 rxx_a8_runninglight_fl-material mat=29 tri=466 min=0.43,2.48,0.89 max=0.62,2.58,0.97
+  mesh14 rxx_a8_reverselight_fl-material mat=32 tri=192 min=0.42,2.52,0.86 max=0.60,2.58,0.89
+  mesh15 rxx_a8_chmsl_fl-material mat=30 tri=278 min=0.46,2.49,0.90 max=0.61,2.56,0.96
+  mesh16 rxx_a8_foglight_rear_fl-material mat=33 tri=86 min=0.42,2.56,0.82 max=0.51,2.57,0.85
+  mesh17 rxx_a8_blackforheads-material mat=19 tri=58 min=-0.84,-2.16,0.63 max=-0.49,-1.83,0.75
+  mesh18 rxx_a8_chromereflectiveforheads-material mat=20 tri=23 min=-0.86,-2.24,0.61 max=-0.48,-1.90,0.75
+  mesh19 rxx_a8_chromeforheads-material mat=21 tri=2583 min=-0.86,-2.14,0.62 max=-0.50,-1.85,0.76
+  mesh20 rxx_a8_chromeforblinkers-material mat=22 tri=8 min=-0.84,-1.90,0.68 max=-0.77,-1.85,0.69
+  mesh21 rxx_a8_signal_R_head-material mat=57 tri=264 min=-0.84,-1.93,0.63 max=-0.75,-1.85,0.75
+  mesh22 rxx_a8_runninglight-material mat=23 tri=852 min=-0.61,-2.07,0.64 max=-0.51,-2.04,0.74
+  mesh23 rxx_a8_headlight-material mat=24 tri=140 min=-0.75,-1.96,0.65 max=-0.67,-1.95,0.73
+  mesh24 rxx_a8_headlightglass-material mat=26 tri=196 min=-0.86,-2.24,0.61 max=-0.48,-1.85,0.76
+  mesh25 rxx_a8_chrome_int-material mat=6 tri=960 min=0.07,-0.05,-0.02 max=0.08,0.05,0.02
+  mesh26 rxx_a8_rim_3-material mat=80 tri=4372 min=-0.15,-0.28,-0.28 max=0.11,0.28,0.28
+  mesh27 rxx_a8_greyforstockrims3-material mat=81 tri=134 min=0.07,-0.06,-0.06 max=0.11,0.22,0.13
+  mesh28 rxx_a8_blackforstockrims-material mat=77 tri=3942 min=-0.15,-0.29,-0.29 max=0.11,0.29,0.29
+  mesh29 rxx_a8_chromeforstockrims-material mat=78 tri=2124 min=0.06,-0.28,-0.28 max=0.10,0.28,0.29
+  mesh30 rxx_a8_greyforstockrims-material mat=79 tri=270 min=0.06,-0.08,-0.08 max=0.07,0.08,0.08
+  mesh31 rxx_a8_chrome-material mat=4 tri=222 min=-0.52,2.58,0.73 max=-0.45,2.60,0.76
+  mesh32 rxx_a8_chrome_int-material mat=6 tri=844 min=-0.30,-2.06,0.78 max=0.28,-1.76,0.83
+  mesh33 rxx_a8_blackengb-material mat=7 tri=3808 min=-0.66,-2.10,0.68 max=0.68,-1.34,0.87
+  mesh34 rxx_a8_grayengb-material mat=8 tri=1095 min=-0.38,-2.06,0.73 max=0.36,-1.40,0.85
+  mesh35 rxx_a8_chrome-material mat=4 tri=187 min=-0.44,2.59,0.73 max=-0.37,2.62,0.76
+  mesh36 rxx_a8_chrome-material mat=4 tri=162 min=0.42,2.58,0.74 max=0.52,2.60,0.78
+  mesh37 rxx_a8_chrome-material mat=4 tri=135 min=-0.31,-2.32,0.59 max=-0.22,-2.31,0.61
+  mesh38 rxx_a8_plastic_black-material mat=18 tri=24 min=-0.30,-2.31,0.59 max=-0.22,-2.31,0.61
+  mesh39 etk800-material mat=2 tri=2455 min=-0.65,-1.08,0.97 max=0.43,-0.87,1.04
+  mesh40 glass_invisible-material mat=76 tri=2512 min=-0.69,-0.96,1.02 max=0.69,-0.32,1.34
+  mesh41 etk800-material mat=2 tri=1062 min=-0.93,-1.09,0.14 max=0.93,2.64,0.83
+  mesh42 etk800-material mat=2 tri=11710 min=-0.94,-1.83,0.13 max=0.94,-0.96,0.81
+  mesh43 etk800-material mat=2 tri=144 min=-0.05,-0.63,0.17 max=0.18,-0.48,0.31
+  mesh44 rxx_a8_chrome_int-material mat=6 tri=242 min=-0.66,1.13,0.69 max=0.65,1.39,1.11
+  mesh45 rxx_a8_remni-material mat=9 tri=414 min=-0.67,1.08,0.42 max=0.67,1.45,1.07
+  mesh46 rxx_a8_leather-material mat=49 tri=2432 min=-0.74,0.61,0.34 max=0.73,1.42,1.28
+  mesh47 rxx_a8_chrome_int-material mat=6 tri=40 min=-0.48,0.38,0.98 max=-0.32,0.39,1.05
+  mesh48 rxx_a8_remni-material mat=9 tri=58 min=-0.13,0.02,0.46 max=-0.10,0.08,0.54
+  mesh49 rxx_a8_leather-material mat=49 tri=1944 min=-0.69,-0.39,0.28 max=-0.11,0.44,1.22
+  mesh50 rxx_a8_chrome_int-material mat=6 tri=40 min=0.31,0.38,0.98 max=0.48,0.39,1.05
+  mesh51 rxx_a8_remni-material mat=9 tri=58 min=0.09,0.02,0.46 max=0.13,0.08,0.54
+  mesh52 rxx_a8_leather-material mat=49 tri=1944 min=0.10,-0.39,0.28 max=0.69,0.44,1.22
+  mesh53 etk800-material mat=2 tri=300 min=-0.78,-2.07,0.22 max=0.78,-1.73,0.79
+  mesh54 etk800-material mat=2 tri=450 min=-0.37,-2.04,0.24 max=0.37,-1.93,0.75
+  mesh55 etk800-material mat=2 tri=534 min=-0.31,-1.06,0.10 max=0.31,1.34,0.37
+  mesh56 etk800-material mat=2 tri=228 min=-0.67,0.87,0.14 max=0.66,1.34,0.37
+  mesh57 rxx_a8_paint-material mat=36 tri=462 min=-0.78,-2.26,0.72 max=0.78,-0.91,0.95
+  mesh58 etk800-material mat=2 tri=1200 min=-0.78,-2.20,0.74 max=0.78,-0.91,0.98
+  mesh59 etk800-material mat=2 tri=112 min=-2.07,-23.76,-2.07 max=2.07,44.94,2.07
+  mesh60 etk800-material mat=2 tri=168 min=-3.47,-91.10,-3.53 max=3.47,98.11,3.44
+  mesh61 rxx_a8_plastic_black-material mat=18 tri=112 min=-0.77,0.55,0.74 max=-0.73,0.68,0.78
+  mesh62 rxx_a8_remni-material mat=9 tri=48 min=-0.73,0.39,0.81 max=-0.73,0.48,0.87
+  mesh63 rxx_a8_leather-material mat=49 tri=982 min=-0.88,0.36,0.37 max=-0.66,1.24,0.99
+  mesh64 wheel_42a-material mat=58 tri=72 min=-0.77,0.68,0.75 max=-0.76,0.76,0.80
+  mesh65 rxx_a8_alcantara-material mat=54 tri=86 min=-0.78,0.57,0.62 max=-0.76,1.14,0.82
+  mesh66 rxx_a8_wood_a-material mat=59 tri=108 min=-0.73,0.43,0.93 max=-0.72,1.22,0.98
+  mesh67 rxx_a8_buttons_a-material mat=60 tri=18 min=-0.77,0.56,0.75 max=-0.73,0.68,0.78
+  mesh68 rxx_a8_plastic_steer-material mat=64 tri=192 min=-0.84,0.38,0.90 max=-0.72,1.25,1.02
+  mesh69 rxx_a8_allumin-material mat=68 tri=98 min=-0.73,0.43,0.90 max=-0.72,1.22,0.95
+  mesh70 rxx_a8_plastic_black-material mat=18 tri=112 min=0.73,0.55,0.74 max=0.77,0.68,0.78
+  mesh71 rxx_a8_remni-material mat=9 tri=48 min=0.72,0.39,0.81 max=0.73,0.48,0.87
+  mesh72 rxx_a8_leather-material mat=49 tri=982 min=0.66,0.36,0.37 max=0.88,1.24,0.99
+  mesh73 wheel_42a-material mat=58 tri=72 min=0.76,0.68,0.75 max=0.77,0.76,0.80
+  mesh74 rxx_a8_alcantara-material mat=54 tri=86 min=0.76,0.57,0.62 max=0.78,1.14,0.82
+  mesh75 rxx_a8_wood_a-material mat=59 tri=108 min=0.72,0.43,0.93 max=0.73,1.22,0.98
+  mesh76 rxx_a8_buttons_a-material mat=60 tri=18 min=0.73,0.56,0.75 max=0.77,0.68,0.78
+  mesh77 rxx_a8_plastic_steer-material mat=64 tri=192 min=0.72,0.38,0.90 max=0.83,1.25,1.02
+  mesh78 rxx_a8_allumin-material mat=68 tri=98 min=0.72,0.43,0.90 max=0.73,1.22,0.95
+  mesh79 rxx_a8_plastic_black-material mat=18 tri=96 min=-0.80,-0.49,0.74 max=-0.75,-0.35,0.78
+  mesh80 rxx_a8_leather-material mat=49 tri=1184 min=-0.87,-0.79,0.36 max=-0.68,0.21,0.97
+  mesh81 wheel_42a-material mat=58 tri=72 min=-0.80,-0.36,0.74 max=-0.79,-0.25,0.79
+  mesh82 rxx_a8_alcantara-material mat=54 tri=62 min=-0.81,-0.47,0.65 max=-0.79,0.20,0.84
+  mesh83 rxx_a8_wood_a-material mat=59 tri=145 min=-0.77,-0.63,0.84 max=-0.73,0.16,0.96
+  mesh84 rxx_a8_buttons_a-material mat=60 tri=8 min=-0.79,-0.48,0.75 max=-0.75,-0.36,0.78
+  mesh85 rxx_a8_plastic_steer-material mat=64 tri=142 min=-0.82,-0.73,0.87 max=-0.72,0.24,0.99
+  mesh86 rxx_a8_allumin-material mat=68 tri=129 min=-0.77,-0.61,0.80 max=-0.73,0.16,0.91
+  mesh87 rxx_a8_plastic_black-material mat=18 tri=180 min=0.75,-0.40,0.64 max=0.80,-0.22,0.78
+  mesh88 rxx_a8_leather-material mat=49 tri=1233 min=0.68,-0.79,0.35 max=0.88,0.22,0.97
+  mesh89 wheel_42a-material mat=58 tri=136 min=0.75,-0.49,0.74 max=0.80,-0.25,0.79
+  mesh90 rxx_a8_alcantara-material mat=54 tri=62 min=0.79,-0.47,0.65 max=0.81,0.20,0.84
+  mesh91 rxx_a8_wood_a-material mat=59 tri=145 min=0.73,-0.63,0.84 max=0.77,0.16,0.96
+  mesh92 rxx_a8_buttons_a-material mat=60 tri=65 min=0.75,-0.48,0.66 max=0.80,-0.23,0.78
+  mesh93 rxx_a8_plastic_steer-material mat=64 tri=140 min=0.73,-0.73,0.87 max=0.82,0.24,0.99
+  mesh94 rxx_a8_allumin-material mat=68 tri=129 min=0.73,-0.61,0.80 max=0.77,0.16,0.91
+  mesh95 etk800-material mat=2 tri=6808 min=-0.76,-1.04,0.37 max=0.76,0.32,1.01
+  mesh96 rxx_a8_leather-material mat=49 tri=2243 min=-0.76,-1.06,0.37 max=0.76,0.32,1.03
+  mesh97 wheel_42a-material mat=58 tri=3043 min=-0.72,-0.71,0.45 max=0.71,0.31,1.00
+  mesh98 rxx_a8_wood_a-material mat=59 tri=741 min=-0.73,-0.73,0.38 max=0.73,0.32,1.03
+  mesh99 rxx_a8_buttons_a-material mat=60 tri=515 min=-0.63,-0.65,0.43 max=0.68,0.31,0.90
+  mesh100 rxx_a8_plastic_steer-material mat=64 tri=3390 min=-0.75,-0.96,0.65 max=0.74,-0.48,1.05
+  mesh101 rxx_a8_allumin-material mat=68 tri=265 min=-0.73,-0.64,0.80 max=0.73,-0.59,0.84
+  mesh102 rxx_a8_buttons_c-material mat=69 tri=25 min=-0.01,-0.63,0.82 max=0.01,-0.63,0.84
+  mesh103 rxx_a8_gauges_petrol-material mat=70 tri=164 min=0.22,-0.71,0.86 max=0.59,-0.62,0.99
+  mesh104 rxx_a8_console-material mat=71 tri=65 min=-0.05,-0.72,0.46 max=0.50,0.30,1.00
+  mesh105 rxx_a8_screen-material mat=72 tri=2 min=-0.08,-0.64,0.86 max=0.07,-0.63,0.94
+  mesh106 signal_R-material mat=73 tri=7 min=0.34,-0.71,1.00 max=0.34,-0.71,1.00
+  mesh107 signal_L-material mat=74 tri=7 min=0.45,-0.71,1.00 max=0.46,-0.71,1.00
+  mesh108 etk800-material mat=2 tri=184 min=-0.63,-2.22,0.38 max=0.63,-1.96,0.51
+  mesh109 etk800-material mat=2 tri=166 min=-0.14,-1.12,0.18 max=0.14,-0.59,0.44
+  mesh110 rxx_a8_chrome-material mat=4 tri=179 min=-0.45,2.60,0.73 max=-0.37,2.61,0.76
+  mesh111 rxx_a8_chrome-material mat=4 tri=230 min=-0.45,2.60,0.73 max=-0.37,2.61,0.76
+  mesh112 rxx_a8_chrome-material mat=4 tri=95 min=-0.51,2.59,0.73 max=-0.45,2.60,0.76
+  mesh113 rxx_a8_chrome-material mat=4 tri=247 min=-0.45,2.60,0.73 max=-0.37,2.61,0.76
+  mesh114 rxx_a8_chrome-material mat=4 tri=135 min=-0.46,2.60,0.73 max=-0.37,2.61,0.75
+  mesh115 rxx_a8_chrome-material mat=4 tri=64 min=-0.46,2.60,0.71 max=-0.37,2.61,0.73
+  mesh116 rxx_a8_plastic_black-material mat=18 tri=1532 min=-0.46,2.60,0.71 max=-0.37,2.61,0.73
+  mesh117 rxx_a8_chrome-material mat=4 tri=125 min=-0.45,2.60,0.73 max=-0.38,2.61,0.76
+  mesh118 rxx_a8_chrome_int-material mat=6 tri=1819 min=-0.10,-2.01,0.81 max=0.12,-1.39,0.92
+  mesh119 rxx_a8_blackengb-material mat=7 tri=14777 min=-0.63,-2.05,0.58 max=0.62,-1.32,0.92
+  mesh120 rxx_a8_grayengb-material mat=8 tri=1440 min=-0.19,-1.98,0.73 max=0.19,-1.52,0.85
+  mesh121 rxx_a8_red-material mat=67 tri=2 min=0.07,-2.01,0.82 max=0.09,-1.99,0.82
+  mesh122 rxx_a8_remni-material mat=9 tri=988 min=-0.10,-0.31,1.33 max=0.10,-0.04,1.40
+  mesh123 rxx_a8_leather-material mat=49 tri=194 min=-0.13,-0.31,1.33 max=0.13,-0.04,1.41
+  mesh124 rxx_a8_buttons_a-material mat=60 tri=28 min=-0.06,-0.28,1.33 max=0.06,-0.12,1.34
+  mesh125 rxx_a8_plastic_black-material mat=18 tri=1286 min=-0.29,-0.64,0.86 max=-0.23,-0.63,0.87
+  mesh126 rxx_a8_chrome_int-material mat=6 tri=52 min=-0.30,-0.64,0.86 max=-0.23,-0.63,0.87
+  mesh127 etk800-material mat=2 tri=136 min=-0.78,-1.55,0.21 max=0.78,-1.49,0.25
+  mesh128 etk800-material mat=2 tri=710 min=-0.65,-1.70,0.33 max=0.65,-1.33,0.65
+  mesh129 etk800-material mat=2 tri=684 min=-0.53,-1.74,0.19 max=0.53,-0.84,0.38
+  mesh130 etk800-material mat=2 tri=888 min=-0.75,-1.43,0.38 max=0.76,-1.27,0.85
+  mesh131 etk800-material mat=2 tri=288 min=-0.41,-1.55,0.20 max=0.41,-1.44,0.27
+  mesh132 etk800-material mat=2 tri=564 min=-0.78,-1.72,0.23 max=0.78,-1.41,0.33
+  mesh133 etk800-material mat=2 tri=256 min=-0.78,-1.43,0.19 max=0.78,-1.33,0.25
+  mesh134 etk800-material mat=2 tri=524 min=-0.81,-1.57,0.16 max=0.81,-1.29,0.50
+  mesh135 etk800-material mat=2 tri=692 min=-0.78,-1.44,0.28 max=0.78,-1.36,0.37
+  mesh136 etk800-material mat=2 tri=232 min=-0.39,-1.47,0.27 max=0.39,-1.30,0.37
+  mesh137 etk800-material mat=2 tri=104 min=-0.87,-1.30,0.22 max=0.87,-1.23,0.44
+  mesh138 etk800-material mat=2 tri=122 min=-0.89,-1.56,0.17 max=-0.82,-1.24,0.49
+  mesh139 etk800-material mat=2 tri=122 min=0.81,-1.56,0.17 max=0.89,-1.24,0.49
+  mesh140 etk800-material mat=2 tri=480 min=-0.78,1.32,0.39 max=0.78,1.59,0.51
+  mesh141 etk800-material mat=2 tri=328 min=-0.79,1.66,0.29 max=0.79,1.81,0.34
+  mesh142 etk800-material mat=2 tri=500 min=-0.78,1.45,0.32 max=0.78,1.65,0.47
+  mesh143 etk800-material mat=2 tri=714 min=-0.62,1.15,0.23 max=0.62,1.99,0.51
+  mesh144 etk800-material mat=2 tri=1016 min=-0.59,1.60,0.30 max=0.59,1.71,0.54
+  mesh145 etk800-material mat=2 tri=136 min=-0.66,1.60,0.28 max=0.66,1.65,0.65
+  mesh146 etk800-material mat=2 tri=840 min=-0.79,1.31,0.20 max=0.79,1.76,0.31
+  mesh147 etk800-material mat=2 tri=662 min=-0.82,1.40,0.15 max=0.82,1.70,0.50
+  mesh148 etk800-material mat=2 tri=692 min=-0.80,1.54,0.30 max=0.80,1.61,0.38
+  mesh149 etk800-material mat=2 tri=190 min=-0.11,1.39,0.19 max=0.11,1.66,0.43
+  mesh150 etk800-material mat=2 tri=104 min=-0.87,1.67,0.22 max=0.87,1.74,0.45
+  mesh151 etk800-material mat=2 tri=122 min=-0.89,1.42,0.18 max=-0.82,1.73,0.49
+  mesh152 etk800-material mat=2 tri=122 min=0.82,1.42,0.18 max=0.89,1.73,0.49
+  mesh153 rxx_a8_chrome-material mat=4 tri=28 min=0.38,2.60,0.74 max=0.41,2.61,0.77
+  mesh154 etkc-material mat=66 tri=1308 min=-0.68,-1.01,0.13 max=-0.01,2.42,0.44
+  mesh155 etkc-material mat=66 tri=1308 min=0.01,-1.01,0.13 max=0.68,2.42,0.44
+  mesh156 rxx_a8_glass-material mat=52 tri=58 min=-0.71,-0.97,0.99 max=0.71,-0.31,1.33
+  mesh157 rxx_a8_glass-material mat=52 tri=12 min=0.71,1.22,1.04 max=0.78,1.52,1.22
+  mesh158 rxx_a8_glass-material mat=52 tri=21 min=0.63,0.39,0.99 max=0.80,1.27,1.37
+  mesh159 rxx_a8_glass-material mat=52 tri=18 min=0.63,-0.61,0.96 max=0.81,0.35,1.37
+  mesh160 rxx_a8_chrome_int-material mat=6 tri=960 min=0.07,-0.03,-0.01 max=0.07,0.03,0.01
+  mesh161 rxx_a8_rim_a-material mat=75 tri=5648 min=-0.15,-0.30,-0.30 max=0.11,0.30,0.30
+  mesh162 rxx_a8_glass-material mat=52 tri=12 min=-0.78,1.22,1.04 max=-0.71,1.52,1.22
+  mesh163 rxx_a8_glass-material mat=52 tri=21 min=-0.81,0.39,0.99 max=-0.63,1.27,1.37
+  mesh164 rxx_a8_glass-material mat=52 tri=18 min=-0.81,-0.61,0.96 max=-0.63,0.35,1.37
+  mesh165 etk800-material mat=2 tri=546 min=-0.15,-0.02,-0.06 max=0.16,0.03,0.01
+  mesh166 wheel_42a-material mat=58 tri=1340 min=-0.05,-0.04,0.01 max=0.05,0.07,0.02
+  mesh167 rxx_a8_plastic_steer-material mat=64 tri=4562 min=-0.20,-0.20,-0.10 max=0.20,0.20,0.02
+  mesh168 rxx_a8_buttons_b-material mat=65 tri=16 min=-0.15,-0.02,-0.04 max=0.15,0.02,0.00
+  mesh169 rxx_a8_interior-material mat=63 tri=68 min=-6.84,-0.73,-24.88 max=4.49,11.89,0.96
+  mesh170 etk800-material mat=2 tri=32 min=-0.01,-0.01,-0.15 max=0.01,0.15,0.00
+  mesh171 rxx_a8_gaspedal-material mat=62 tri=16 min=-0.03,0.12,-0.18 max=0.02,0.18,-0.09
+  mesh172 etk800-material mat=2 tri=194 min=0.00,-0.01,-0.01 max=0.12,0.09,0.08
+  mesh173 rxx_a8_buttons_a-material mat=60 tri=14 min=0.07,0.06,0.05 max=0.11,0.09,0.07
+  mesh174 etk800-material mat=2 tri=104 min=-0.01,0.00,-0.02 max=0.01,0.07,0.02
+  mesh175 wheel_42a_001-material mat=61 tri=968 min=-0.00,-0.03,-0.01 max=0.01,0.05,0.01
+  mesh176 etk800-material mat=2 tri=443 min=-0.03,-0.52,0.57 max=0.02,-0.42,0.59
+  mesh177 wheel_42a-material mat=58 tri=812 min=-0.04,-0.53,0.56 max=0.04,-0.41,0.59
+  mesh178 rxx_a8_buttons_a-material mat=60 tri=126 min=-0.03,-0.52,0.58 max=0.02,-0.42,0.59
+  mesh179 wheel_42a-material mat=58 tri=195 min=-0.03,-0.02,-0.08 max=0.03,0.01,0.04
+  mesh180 rxx_a8_wood_a-material mat=59 tri=257 min=-0.03,-0.02,-0.03 max=0.03,0.03,0.05
+  mesh181 rxx_a8_chrome-material mat=4 tri=292 min=-0.81,2.39,0.63 max=0.81,2.68,0.64
+  mesh182 rxx_a8_paint-material mat=36 tri=3398 min=-0.91,1.98,0.22 max=0.91,2.69,0.81
+  mesh183 rxx_a8_paint-material mat=36 tri=4876 min=-0.78,-2.26,0.72 max=0.78,-0.91,0.99
+  mesh184 rxx_a8_plastic_black-material mat=18 tri=1104 min=-0.78,-1.17,0.77 max=0.78,-0.91,0.99
+  mesh185 rxx_a8_chrome_int-material mat=6 tri=1067 min=-0.77,-2.15,0.67 max=0.77,-0.94,0.80
+  mesh186 rxx_a8_paint-material mat=36 tri=264 min=-0.92,-0.98,0.12 max=0.92,1.17,0.27
+  mesh187 rxx_a8_paint-material mat=36 tri=3276 min=-1.04,-0.72,0.96 max=-0.81,-0.57,1.08
+  mesh188 etk800-material mat=2 tri=486 min=-1.02,-0.62,0.97 max=-0.85,-0.58,1.08
+  mesh189 mirror-material mat=55 tri=243 min=-1.02,-0.61,0.97 max=-0.86,-0.58,1.07
+  mesh190 rxx_a8_paint-material mat=36 tri=3276 min=0.82,-0.72,0.96 max=1.04,-0.57,1.08
+  mesh191 etk800-material mat=2 tri=486 min=0.86,-0.62,0.97 max=1.03,-0.58,1.08
+  mesh192 mirror-material mat=55 tri=243 min=0.86,-0.61,0.97 max=1.02,-0.58,1.07
+  mesh193 rxx_a8_chrome-material mat=4 tri=214 min=-0.94,-0.98,0.55 max=-0.93,-0.87,0.58
+  mesh194 rxx_a8_paint-material mat=36 tri=1068 min=-0.94,-1.98,0.25 max=-0.76,-0.83,0.95
+  mesh195 rxx_a8_signal_R_head-material mat=57 tri=206 min=-0.94,-0.97,0.55 max=-0.94,-0.89,0.57
+  mesh196 rxx_a8_chrome-material mat=4 tri=214 min=0.93,-0.98,0.55 max=0.94,-0.87,0.58
+  mesh197 rxx_a8_paint-material mat=36 tri=1068 min=0.76,-1.98,0.25 max=0.94,-0.83,0.95
+  mesh198 rxx_a8_signal_L_head-material mat=25 tri=206 min=0.94,-0.97,0.55 max=0.94,-0.89,0.57
+  mesh199 rxx_a8_paint-material mat=36 tri=92 min=0.90,0.27,0.26 max=0.94,1.08,0.37
+  mesh200 rxx_a8_paint-material mat=36 tri=92 min=0.89,-0.86,0.26 max=0.94,0.28,0.36
+  mesh201 rxx_a8_chrome-material mat=4 tri=266 min=0.80,0.26,0.58 max=0.96,1.33,1.03
+  mesh202 rxx_a8_paint-material mat=36 tri=2233 min=0.76,0.24,0.26 max=0.96,1.37,1.02
+  mesh203 rxx_a8_chrome_int-material mat=6 tri=252 min=0.84,1.21,0.70 max=0.88,1.23,0.76
+  mesh204 rxx_a8_leather-material mat=49 tri=32 min=0.61,0.38,1.00 max=0.80,1.28,1.38
+  mesh205 rxx_a8_blackchrome-material mat=50 tri=697 min=0.61,0.25,0.58 max=0.88,1.33,1.38
+  mesh206 rxx_a8_chrome-material mat=4 tri=275 min=-0.96,-0.87,0.56 max=-0.80,0.32,1.00
+  mesh207 rxx_a8_paint-material mat=36 tri=2004 min=-0.96,-0.92,0.26 max=-0.79,0.32,0.99
+  mesh208 rxx_a8_chrome_int-material mat=6 tri=247 min=-0.90,0.21,0.62 max=-0.86,0.24,0.64
+  mesh209 rxx_a8_leather-material mat=49 tri=87 min=-0.83,-0.78,0.95 max=-0.61,0.37,1.38
+  mesh210 rxx_a8_blackchrome-material mat=50 tri=729 min=-0.93,-0.93,0.57 max=-0.61,0.37,1.38
+  mesh211 rxx_a8_chrome-material mat=4 tri=300 min=0.79,-0.87,0.56 max=0.96,0.32,1.00
+  mesh212 rxx_a8_paint-material mat=36 tri=2011 min=0.79,-0.92,0.26 max=0.96,0.32,0.99
+  mesh213 rxx_a8_chrome_int-material mat=6 tri=499 min=0.85,0.21,0.60 max=0.90,0.25,0.66
+  mesh214 rxx_a8_leather-material mat=49 tri=87 min=0.61,-0.78,0.95 max=0.83,0.37,1.38
+  mesh215 rxx_a8_blackchrome-material mat=50 tri=970 min=0.61,-0.93,0.57 max=0.92,0.37,1.38
+  mesh216 rxx_a8_paint-material mat=36 tri=98 min=-0.94,1.00,0.26 max=0.93,1.18,0.37
+  mesh217 rxx_a8_chrome-material mat=4 tri=354 min=-0.82,-0.83,0.94 max=0.82,1.66,1.40
+  mesh218 rxx_a8_paint-material mat=36 tri=5389 min=-0.95,-0.91,0.14 max=0.95,2.48,1.45
+  mesh219 rxx_a8_chrome_int-material mat=6 tri=2328 min=-0.90,-0.67,0.27 max=0.90,1.97,1.10
+  mesh220 etk800-material mat=2 tri=520 min=-0.95,-1.14,0.17 max=0.95,2.63,1.33
+  mesh221 rxx_a8_remni-material mat=9 tri=952 min=-0.76,0.13,0.25 max=0.76,1.96,1.10
+  mesh222 rxx_a8_leather-material mat=49 tri=2462 min=-0.86,-1.05,0.27 max=0.86,1.37,1.40
+  mesh223 rxx_a8_alcantara-material mat=54 tri=982 min=-0.80,-0.85,0.93 max=0.80,2.05,1.44
+  mesh224 mirror-material mat=55 tri=24 min=-0.12,-0.36,1.22 max=0.12,-0.36,1.27
+  mesh225 rxx_a8_blackchrome-material mat=50 tri=408 min=-0.82,-1.06,0.95 max=0.82,2.09,1.38
+  mesh226 rxx_a8_carpet-material mat=37 tri=4373 min=-0.78,-1.04,0.28 max=0.78,2.53,1.11
+  mesh227 rxx_a8_chmsl-material mat=56 tri=108 min=-0.21,1.97,1.08 max=0.21,1.98,1.10
+  mesh228 rxx_a8_chrome-material mat=4 tri=2944 min=-0.85,-2.37,0.28 max=0.85,-1.95,0.77
+  mesh229 rxx_a8_paint-material mat=36 tri=3538 min=-0.91,-2.37,0.17 max=0.91,-1.79,0.72
+  mesh230 rxx_a8_plastic_black-material mat=18 tri=11506 min=-0.82,-2.38,0.27 max=0.82,-1.93,0.74
+  mesh231 etk800-material mat=2 tri=226 min=-0.82,-2.33,0.19 max=0.82,-1.78,0.74
+  mesh232 rxx_a8_glass-material mat=52 tri=52 min=-0.80,-2.12,0.33 max=0.79,-1.97,0.37
+  mesh233 rxx_a8_foglight_s8-material mat=53 tri=64 min=-0.80,-2.12,0.33 max=0.80,-1.97,0.37
+  mesh234 rxx_a8_chrome-material mat=4 tri=3634 min=-0.85,-2.37,0.28 max=0.85,-1.95,0.77
+  mesh235 rxx_a8_paint-material mat=36 tri=3538 min=-0.91,-2.37,0.17 max=0.91,-1.79,0.72
+  mesh236 rxx_a8_plastic_black-material mat=18 tri=14108 min=-0.85,-2.38,0.27 max=0.85,-1.88,0.74
+  mesh237 etk800-material mat=2 tri=226 min=-0.82,-2.33,0.19 max=0.82,-1.78,0.74
+  mesh238 rxx_a8_foglight_fl-material mat=51 tri=484 min=-0.76,-2.03,0.34 max=0.75,-2.02,0.39
+  mesh239 rxx_a8_chrome-material mat=4 tri=291 min=-0.96,0.26,0.58 max=-0.80,1.33,1.03
+  mesh240 rxx_a8_paint-material mat=36 tri=2240 min=-0.96,0.24,0.26 max=-0.76,1.37,1.02
+  mesh241 rxx_a8_chrome_int-material mat=6 tri=252 min=-0.88,1.21,0.70 max=-0.84,1.23,0.76
+  mesh242 rxx_a8_leather-material mat=49 tri=32 min=-0.80,0.38,1.00 max=-0.61,1.28,1.38
+  mesh243 rxx_a8_blackchrome-material mat=50 tri=691 min=-0.88,0.25,0.58 max=-0.61,1.33,1.38
+  mesh244 checkengine-material mat=39 tri=2 min=0.41,-0.66,0.90 max=0.42,-0.65,0.91
+  mesh245 lowpressure-material mat=40 tri=2 min=0.42,-0.66,0.90 max=0.43,-0.65,0.91
+  mesh246 parkingbrake-material mat=41 tri=2 min=0.29,-0.69,0.94 max=0.31,-0.69,0.95
+  mesh247 abs-material mat=42 tri=2 min=0.33,-0.69,0.94 max=0.34,-0.69,0.95
+  mesh248 highbeam-material mat=43 tri=2 min=0.40,-0.67,0.92 max=0.41,-0.67,0.93
+  mesh249 esc-material mat=44 tri=2 min=0.49,-0.68,0.94 max=0.51,-0.68,0.95
+  mesh250 tcs-material mat=45 tri=2 min=0.48,-0.69,0.95 max=0.49,-0.68,0.96
+  mesh251 lowbeam-material mat=46 tri=2 min=0.41,-0.67,0.92 max=0.42,-0.67,0.93
+  mesh252 foglight-material mat=47 tri=2 min=0.37,-0.66,0.90 max=0.38,-0.65,0.91
+  mesh253 rearfog-material mat=48 tri=2 min=0.39,-0.66,0.90 max=0.40,-0.65,0.91
+  mesh254 rxx_a8_paint-material mat=36 tri=92 min=-0.94,0.27,0.26 max=-0.90,1.08,0.37
+  mesh255 rxx_a8_paint-material mat=36 tri=92 min=-0.94,-0.86,0.26 max=-0.89,0.28,0.36
+  mesh256 rxx_a8_lights_back_fl-material mat=28 tri=4648 min=0.60,2.33,0.81 max=0.80,2.55,0.99
+  mesh257 rxx_a8_runninglight_fl-material mat=29 tri=489 min=0.62,2.37,0.89 max=0.75,2.52,0.96
+  mesh258 rxx_a8_chmsl_fl-material mat=30 tri=240 min=0.62,2.39,0.90 max=0.73,2.51,0.95
+  mesh259 rxx_a8_signal_L_fl-material mat=38 tri=237 min=0.61,2.39,0.86 max=0.76,2.53,0.89
+  mesh260 rxx_a8_taillightglass_fl-material mat=34 tri=201 min=0.60,2.33,0.81 max=0.80,2.55,0.99
+  mesh261 rxx_a8_glass-material mat=52 tri=56 min=-0.60,1.39,1.08 max=0.60,2.05,1.34
+  mesh262 rxx_a8_trunklightglass_fl-material mat=35 tri=149 min=0.40,2.48,0.81 max=0.63,2.60,1.00
+  mesh263 rxx_a8_chrome-material mat=4 tri=960 min=-0.10,2.58,0.92 max=0.09,2.62,0.98
+  mesh264 rxx_a8_paint-material mat=36 tri=1238 min=-0.66,1.95,0.66 max=0.66,2.63,1.09
+  mesh265 rxx_a8_chrome_int-material mat=6 tri=504 min=-0.64,1.98,0.85 max=0.64,2.06,0.94
+  mesh266 etk800-material mat=2 tri=1080 min=-0.64,2.05,0.93 max=0.64,2.16,1.05
+  mesh267 rxx_a8_carpet-material mat=37 tri=326 min=-0.64,2.00,0.67 max=0.64,2.63,1.09
+  mesh268 rxx_a8_trunklightglass_fl-material mat=35 tri=149 min=-0.63,2.48,0.81 max=-0.40,2.60,1.00
+  mesh269 rxx_a8_taillightglass_fl-material mat=34 tri=201 min=-0.80,2.33,0.81 max=-0.60,2.55,0.99
+  mesh270 rxx_a8_lights_back_fl-material mat=28 tri=8267 min=-0.63,2.47,0.81 max=-0.41,2.60,1.00
+  mesh271 rxx_a8_runninglight_fl-material mat=29 tri=466 min=-0.62,2.48,0.89 max=-0.43,2.58,0.97
+  mesh272 rxx_a8_reverselight_fl-material mat=32 tri=192 min=-0.60,2.52,0.86 max=-0.42,2.58,0.89
+  mesh273 rxx_a8_chmsl_fl-material mat=30 tri=278 min=-0.61,2.49,0.90 max=-0.46,2.56,0.96
+  mesh274 rxx_a8_foglight_rear_fl-material mat=33 tri=86 min=-0.51,2.56,0.82 max=-0.42,2.57,0.85
+  mesh275 rxx_a8_lights_back_fl-material mat=28 tri=4648 min=-0.80,2.33,0.81 max=-0.60,2.55,0.99
+  mesh276 rxx_a8_runninglight_fl-material mat=29 tri=489 min=-0.75,2.37,0.89 max=-0.62,2.52,0.96
+  mesh277 rxx_a8_chmsl_fl-material mat=30 tri=240 min=-0.73,2.39,0.90 max=-0.62,2.51,0.95
+  mesh278 rxx_a8_signal_R_fl-material mat=31 tri=237 min=-0.76,2.39,0.86 max=-0.61,2.53,0.89
+  mesh279 rxx_a8_plastic_black-material mat=18 tri=66 min=0.41,2.49,0.30 max=0.56,2.59,0.36
+  mesh280 rxx_a8_exhchr-material mat=27 tri=176 min=0.40,2.37,0.30 max=0.57,2.59,0.37
+  mesh281 rxx_a8_plastic_black-material mat=18 tri=66 min=-0.56,2.49,0.30 max=-0.41,2.59,0.36
+  mesh282 rxx_a8_exhchr-material mat=27 tri=176 min=-0.57,2.37,0.30 max=-0.40,2.59,0.37
+  mesh283 rxx_a8_chrome-material mat=4 tri=130 min=-0.44,2.60,0.73 max=-0.38,2.61,0.76
+  mesh284 rxx_a8_glass_tint-material mat=10 tri=58 min=-0.71,-0.97,0.99 max=0.71,-0.31,1.33
+  mesh285 rxx_a8_glass_tint_int-material mat=11 tri=58 min=-0.71,-0.97,0.99 max=0.71,-0.31,1.33
+  mesh286 rxx_a8_glass_tint-material mat=10 tri=21 min=-0.80,0.39,0.99 max=-0.63,1.27,1.37
+  mesh287 rxx_a8_glass_tint_int-material mat=11 tri=21 min=-0.80,0.39,0.99 max=-0.63,1.27,1.37
+  mesh288 rxx_a8_glass_tint-material mat=10 tri=21 min=0.63,0.39,0.99 max=0.80,1.27,1.37
+  mesh289 rxx_a8_glass_tint_int-material mat=11 tri=21 min=0.63,0.39,0.99 max=0.80,1.27,1.37
+  mesh290 rxx_a8_glass_tint-material mat=10 tri=18 min=-0.81,-0.61,0.96 max=-0.63,0.35,1.37
+  mesh291 rxx_a8_glass_tint_int-material mat=11 tri=18 min=-0.81,-0.61,0.96 max=-0.63,0.35,1.37
+  mesh292 rxx_a8_glass_tint-material mat=10 tri=18 min=0.63,-0.61,0.96 max=0.81,0.35,1.37
+  mesh293 rxx_a8_glass_tint_int-material mat=11 tri=18 min=0.63,-0.61,0.96 max=0.81,0.35,1.37
+  mesh294 rxx_a8_glass_tint-material mat=10 tri=56 min=-0.60,1.39,1.08 max=0.60,2.05,1.34
+  mesh295 rxx_a8_glass_tint_int-material mat=11 tri=56 min=-0.60,1.39,1.08 max=0.60,2.05,1.34
+  mesh296 rxx_a8_chrome_int-material mat=6 tri=18 min=-0.01,-0.00,0.00 max=0.01,0.01,0.00
+  mesh297 etk800-material mat=2 tri=147 min=-0.01,-0.03,-0.00 max=0.01,0.01,0.00
+  mesh298 rxx_a8_needles-material mat=5 tri=2 min=-0.00,-0.02,0.00 max=0.00,-0.00,0.00
+  mesh299 rxx_a8_chrome_int-material mat=6 tri=18 min=-0.01,-0.00,0.00 max=0.01,0.01,0.00
+  mesh300 etk800-material mat=2 tri=147 min=-0.01,-0.03,-0.00 max=0.01,0.01,0.00
+  mesh301 rxx_a8_needles-material mat=5 tri=2 min=-0.00,-0.02,0.00 max=0.00,-0.00,0.00
+  mesh302 rxx_a8_headlightglass-material mat=26 tri=196 min=0.48,-2.24,0.61 max=0.86,-1.85,0.76
+  mesh303 rxx_a8_blackforheads-material mat=19 tri=58 min=0.49,-2.16,0.63 max=0.84,-1.83,0.75
+  mesh304 rxx_a8_chromereflectiveforheads-material mat=20 tri=23 min=0.48,-2.24,0.61 max=0.86,-1.90,0.75
+  mesh305 rxx_a8_chromeforheads-material mat=21 tri=2583 min=0.50,-2.14,0.62 max=0.86,-1.85,0.76
+  mesh306 rxx_a8_chromeforblinkers-material mat=22 tri=8 min=0.77,-1.90,0.68 max=0.84,-1.85,0.69
+  mesh307 rxx_a8_runninglight-material mat=23 tri=852 min=0.51,-2.07,0.64 max=0.61,-2.04,0.74
+  mesh308 rxx_a8_headlight-material mat=24 tri=140 min=0.67,-1.96,0.65 max=0.75,-1.95,0.73
+  mesh309 rxx_a8_signal_L_head-material mat=25 tri=264 min=0.75,-1.93,0.63 max=0.84,-1.85,0.75
+  mesh310 rxx_a8_plastic_black-material mat=18 tri=1532 min=-0.31,-2.31,0.60 max=-0.22,-2.30,0.61
+  mesh311 rxx_a8_chrome_int-material mat=6 tri=64 min=-0.30,-2.31,0.60 max=-0.23,-2.30,0.61
+  mesh312 rxx_a8_chrome-material mat=4 tri=135 min=-0.93,-1.05,0.77 max=-0.91,-0.96,0.79
+  mesh313 rxx_a8_chrome-material mat=4 tri=135 min=0.91,-1.03,0.77 max=0.92,-0.94,0.79
+  mesh314 rxx_a8_sidemarker-material mat=16 tri=154 min=-0.85,-2.06,0.50 max=0.85,-1.96,0.55
+  mesh315 rxx_a8_reflector-material mat=17 tri=60 min=-0.82,-2.02,0.51 max=0.82,-2.00,0.54
+  mesh316 rxx_a8_sidemarker-material mat=16 tri=154 min=-0.84,-2.07,0.48 max=0.84,-1.97,0.52
+  mesh317 rxx_a8_reflector-material mat=17 tri=60 min=-0.81,-2.04,0.49 max=0.81,-2.02,0.51
+  mesh318 rxx_a8_chrome_int-material mat=6 tri=272 min=0.08,-0.03,-0.03 max=0.08,0.03,0.03
+  mesh319 etk800-material mat=2 tri=54 min=0.09,-0.00,-0.24 max=0.10,0.00,-0.23
+  mesh320 rxx_a8_silver_e-material mat=14 tri=4014 min=-0.18,-0.29,-0.29 max=0.11,0.29,0.29
+  mesh321 rxx_a8_silver_e_b-material mat=15 tri=890 min=0.06,-0.08,-0.07 max=0.08,0.08,0.08
+  mesh322 rxx_a8_chrome_int-material mat=6 tri=272 min=0.06,-0.03,-0.03 max=0.06,0.03,0.03
+  mesh323 etk800-material mat=2 tri=60 min=0.08,-0.00,0.24 max=0.09,0.00,0.25
+  mesh324 rxx_a8_plastic_black_e-material mat=12 tri=140 min=0.04,-0.07,-0.07 max=0.06,0.07,0.08
+  mesh325 rxx_a8_silver_c-material mat=13 tri=4800 min=-0.16,-0.29,-0.29 max=0.12,0.29,0.29
+  mesh326 rxx_a8_glass_tint-material mat=10 tri=12 min=0.71,1.22,1.04 max=0.78,1.52,1.22
+  mesh327 rxx_a8_glass_tint_int-material mat=11 tri=12 min=0.70,1.22,1.04 max=0.78,1.52,1.22
+  mesh328 rxx_a8_glass_tint-material mat=10 tri=12 min=-0.78,1.22,1.04 max=-0.71,1.52,1.22
+  mesh329 rxx_a8_glass_tint_int-material mat=11 tri=12 min=-0.78,1.22,1.04 max=-0.71,1.52,1.22
+  mesh330 rxx_a8_chrome_int-material mat=6 tri=760 min=-0.22,-1.81,0.71 max=0.40,-1.34,0.86
+  mesh331 rxx_a8_blackengb-material mat=7 tri=1917 min=-0.58,-1.98,0.63 max=0.55,-1.29,0.88
+  mesh332 rxx_a8_grayengb-material mat=8 tri=2266 min=-0.40,-1.91,0.63 max=0.40,-1.41,0.83
+  mesh333 etk800-material mat=2 tri=144 min=-0.32,-1.91,0.81 max=-0.28,-1.89,0.84
+  mesh334 rxx_a8_remni-material mat=9 tri=76 min=0.34,-1.48,0.84 max=0.43,-1.38,0.91
+  mesh335 rxx_a8_chrome-material mat=4 tri=18 min=-0.01,-0.01,-0.00 max=0.01,0.01,-0.00
+  mesh336 etk800-material mat=2 tri=259 min=-0.01,-0.05,-0.01 max=0.01,0.01,0.01
+  mesh337 rxx_a8_needles-material mat=5 tri=2 min=-0.00,-0.05,0.00 max=0.00,-0.00,0.00
+  mesh338 rxx_a8_chrome-material mat=4 tri=18 min=-0.01,-0.01,-0.00 max=0.01,0.01,-0.00
+  mesh339 etk800-material mat=2 tri=259 min=-0.01,-0.05,-0.01 max=0.01,0.01,0.01
+  mesh340 rxx_a8_needles-material mat=5 tri=2 min=-0.00,-0.05,0.00 max=0.00,-0.00,0.00
+  mesh341 etk800-material mat=2 tri=54 min=0.00,-0.04,-0.04 max=0.00,0.04,0.04
+  mesh342 rxx_a8_custom_wheel_a-material mat=3 tri=4510 min=-0.14,-0.28,-0.28 max=0.10,0.28,0.28
+  mesh343 rxx_a8_grey_g-material mat=0 tri=635 min=0.04,-0.09,-0.07 max=0.08,0.09,0.09
+  mesh344 rxx_a8_silver_g-material mat=1 tri=4718 min=-0.14,-0.28,-0.28 max=0.10,0.28,0.28
+tri 298597
+N0 Sketchfab_model M
+  N1 Collada visual scene group
+    N2 rxx_a8_lettering_v10_R
+      N3 rxx_a8_chrome-material mesh0
+    N4 rxx_a8_bumper_R_c
+      N5 rxx_a8_chrome-material mesh1
+      N6 rxx_a8_paint-material mesh2
+    N7 rxx_a8_exhausttip_L_v
+      N8 rxx_a8_plastic_black-material mesh3
+      N9 rxx_a8_exhchr-material mesh4
+    N10 rxx_a8_exhausttip_R_v
+      N11 rxx_a8_plastic_black-material mesh5
+      N12 rxx_a8_exhchr-material mesh6
+    N13 rxx_a8_exhausttip_L_z
+      N14 rxx_a8_plastic_black-material mesh7
+      N15 rxx_a8_exhchr-material mesh8
+    N16 rxx_a8_exhausttip_R_z
+      N17 rxx_a8_plastic_black-material mesh9
+      N18 rxx_a8_exhchr-material mesh10
+    N19 rxx_a8_lettering_v10_L
+      N20 rxx_a8_chrome-material mesh11
+    N21 rxx_a8_tailgatelight_L_fl
+      N22 rxx_a8_lights_back_fl-material mesh12
+      N23 rxx_a8_runninglight_fl-material mesh13
+      N24 rxx_a8_reverselight_fl-material mesh14
+      N25 rxx_a8_chmsl_fl-material mesh15
+      N26 rxx_a8_foglight_rear_fl-material mesh16
+    N27 rxx_a8_headlight_R_fl
+      N28 rxx_a8_blackforheads-material mesh17
+      N29 rxx_a8_chromereflectiveforheads-material mesh18
+      N30 rxx_a8_chromeforheads-material mesh19
+      N31 rxx_a8_chromeforblinkers-material mesh20
+      N32 rxx_a8_signal_R_head-material mesh21
+      N33 rxx_a8_runninglight-material mesh22
+      N34 rxx_a8_headlight-material mesh23
+    N35 rxx_a8_headlightglass_R_fl
+      N36 rxx_a8_headlightglass-material mesh24
+    N37 rxx_a8_wheel_d
+      N38 rxx_a8_chrome_int-material mesh25
+      N39 rxx_a8_rim_3-material mesh26
+      N40 rxx_a8_greyforstockrims3-material mesh27
+    N41 rxx_a8_wheel_b
+      N42 rxx_a8_blackforstockrims-material mesh28
+      N43 rxx_a8_chromeforstockrims-material mesh29
+      N44 rxx_a8_greyforstockrims-material mesh30
+    N45 rxx_a8_lettering_fsi
+      N46 rxx_a8_chrome-material mesh31
+    N47 rxx_a8_enginecover_w12
+      N48 rxx_a8_chrome_int-material mesh32
+      N49 rxx_a8_blackengb-material mesh33
+      N50 rxx_a8_grayengb-material mesh34
+    N51 rxx_a8_lettering_60
+      N52 rxx_a8_chrome-material mesh35
+    N53 rxx_a8_lettering_a8
+      N54 rxx_a8_chrome-material mesh36
+    N55 rxx_a8_lettering_w12_F
+      N56 rxx_a8_chrome-material mesh37
+      N57 rxx_a8_plastic_black-material mesh38
+    N58 rxx_a8_wipers
+      N59 etk800-material mesh39
+    N60 rxx_a8_windshield_dmg
+      N61 glass_invisible-material mesh40
+    N62 rxx_a8_undercarriage_short
+      N63 etk800-material mesh41
+    N64 rxx_a8_tubs
+      N65 etk800-material mesh42
+    N66 rxx_a8_transfercase
+      N67 etk800-material mesh43
+    N68 rxx_a8_seats_R
+      N69 rxx_a8_chrome_int-material mesh44
+      N70 rxx_a8_remni-material mesh45
+      N71 rxx_a8_leather-material mesh46
+    N72 rxx_a8_seat_FR
+      N73 rxx_a8_chrome_int-material mesh47
+      N74 rxx_a8_remni-material mesh48
+      N75 rxx_a8_leather-material mesh49
+    N76 rxx_a8_seat_FL
+      N77 rxx_a8_chrome_int-material mesh50
+      N78 rxx_a8_remni-material mesh51
+      N79 rxx_a8_leather-material mesh52
+    N80 rxx_a8_radsupport
+      N81 etk800-material mesh53
+    N82 rxx_a8_radiator
+      N83 etk800-material mesh54
+    N84 rxx_a8_heatshield
+      N85 etk800-material mesh55
+    N86 rxx_a8_fueltank
+      N87 etk800-material mesh56
+    N88 rxx_a8_engbaycrap
+      N89 rxx_a8_paint-material mesh57
+      N90 etk800-material mesh58
+    N91 rxx_a8_driveshaft_F_z M
+      N92 etk800-material mesh59
+    N93 rxx_a8_driveshaft_v M
+      N94 etk800-material mesh60
+    N95 rxx_a8_doorpanel_RR
+      N96 rxx_a8_plastic_black-material mesh61
+      N97 rxx_a8_remni-material mesh62
+      N98 rxx_a8_leather-material mesh63
+      N99 wheel_42a-material mesh64
+      N100 rxx_a8_alcantara-material mesh65
+      N101 rxx_a8_wood_a-material mesh66
+      N102 rxx_a8_buttons_a-material mesh67
+      N103 rxx_a8_plastic_steer-material mesh68
+      N104 rxx_a8_allumin-material mesh69
+    N105 rxx_a8_doorpanel_RL
+      N106 rxx_a8_plastic_black-material mesh70
+      N107 rxx_a8_remni-material mesh71
+      N108 rxx_a8_leather-material mesh72
+      N109 wheel_42a-material mesh73
+      N110 rxx_a8_alcantara-material mesh74
+      N111 rxx_a8_wood_a-material mesh75
+      N112 rxx_a8_buttons_a-material mesh76
+      N113 rxx_a8_plastic_steer-material mesh77
+      N114 rxx_a8_allumin-material mesh78
+    N115 rxx_a8_doorpanel_FR
+      N116 rxx_a8_plastic_black-material mesh79
+      N117 rxx_a8_leather-material mesh80
+      N118 wheel_42a-material mesh81
+      N119 rxx_a8_alcantara-material mesh82
+      N120 rxx_a8_wood_a-material mesh83
+      N121 rxx_a8_buttons_a-material mesh84
+      N122 rxx_a8_plastic_steer-material mesh85
+      N123 rxx_a8_allumin-material mesh86
+    N124 rxx_a8_doorpanel_FL
+      N125 rxx_a8_plastic_black-material mesh87
+      N126 rxx_a8_leather-material mesh88
+      N127 wheel_42a-material mesh89
+      N128 rxx_a8_alcantara-material mesh90
+      N129 rxx_a8_wood_a-material mesh91
+      N130 rxx_a8_buttons_a-material mesh92
+      N131 rxx_a8_plastic_steer-material mesh93
+      N132 rxx_a8_allumin-material mesh94
+    N133 rxx_a8_dash
+      N134 etk800-material mesh95
+      N135 rxx_a8_leather-material mesh96
+      N136 wheel_42a-material mesh97
+      N137 rxx_a8_wood_a-material mesh98
+      N138 rxx_a8_buttons_a-material mesh99
+      N139 rxx_a8_plastic_steer-material mesh100
+      N140 rxx_a8_allumin-material mesh101
+      N141 rxx_a8_buttons_c-material mesh102
+      N142 rxx_a8_gauges_petrol-material mesh103
+      N143 rxx_a8_console-material mesh104
+      N144 rxx_a8_screen-material mesh105
+      N145 signal_R-material mesh106
+      N146 signal_L-material mesh107
+    N147 rxx_a8_bumperbar_F
+      N148 etk800-material mesh108
+    N149 rxx_a8_transmission
+      N150 etk800-material mesh109
+    N151 rxx_a8_lettering_37
+      N152 rxx_a8_chrome-material mesh110
+    N153 rxx_a8_lettering_32
+      N154 rxx_a8_chrome-material mesh111
+    N155 rxx_a8_lettering_tdi
+      N156 rxx_a8_chrome-material mesh112
+    N157 rxx_a8_lettering_30
+      N158 rxx_a8_chrome-material mesh113
+    N159 rxx_a8_lettering_w12
+      N160 rxx_a8_chrome-material mesh114
+    N161 rxx_a8_lettering_quattro
+      N162 rxx_a8_chrome-material mesh115
+      N163 rxx_a8_plastic_black-material mesh116
+    N164 rxx_a8_lettering_42
+      N165 rxx_a8_chrome-material mesh117
+    N166 rxx_a8_enginecover_v10
+      N167 rxx_a8_chrome_int-material mesh118
+      N168 rxx_a8_blackengb-material mesh119
+      N169 rxx_a8_grayengb-material mesh120
+      N170 rxx_a8_red-material mesh121
+    N171 rxx_a8_huinya
+      N172 rxx_a8_remni-material mesh122
+      N173 rxx_a8_leather-material mesh123
+      N174 rxx_a8_buttons_a-material mesh124
+    N175 rxx_a8_lettering_quattro_F_int
+      N176 rxx_a8_plastic_black-material mesh125
+      N177 rxx_a8_chrome_int-material mesh126
+    N178 rxx_a8_tierod_F
+      N179 etk800-material mesh127
+    N180 rxx_a8_swaybar_F
+      N181 etk800-material mesh128
+    N182 rxx_a8_subframe_F
+      N183 etk800-material mesh129
+    N184 rxx_a8_strut_F
+      N185 etk800-material mesh130
+    N186 rxx_a8_steeringbox
+      N187 etk800-material mesh131
+    N188 rxx_a8_lowerarm_F_b
+      N189 etk800-material mesh132
+    N190 rxx_a8_lowerarm_F_a
+      N191 etk800-material mesh133
+    N192 rxx_a8_hub_F
+      N193 etk800-material mesh134
+    N194 rxx_a8_halfshaft_F
+      N195 etk800-material mesh135
+    N196 rxx_a8_diff_F
+      N197 etk800-material mesh136
+    N198 rxx_a8_caliper_F
+      N199 etk800-material mesh137
+    N200 rxx_a8_brakedisc_FR
+      N201 etk800-material mesh138
+    N202 rxx_a8_brakedisc_FL
+      N203 etk800-material mesh139
+    N204 rxx_a8_upperarm_R
+      N205 etk800-material mesh140
+    N206 rxx_a8_tierod_R
+      N207 etk800-material mesh141
+    N208 rxx_a8_swaybar_R
+      N209 etk800-material mesh142
+    N210 rxx_a8_subframe_R
+      N211 etk800-material mesh143
+    N212 rxx_a8_spring_R
+      N213 etk800-material mesh144
+    N214 rxx_a8_shock_R
+      N215 etk800-material mesh145
+    N216 rxx_a8_lowerarm_R
+      N217 etk800-material mesh146
+    N218 rxx_a8_hub_R
+      N219 etk800-material mesh147
+    N220 rxx_a8_halfshaft_R
+      N221 etk800-material mesh148
+    N222 rxx_a8_diff
+      N223 etk800-material mesh149
+    N224 rxx_a8_caliper_R
+      N225 etk800-material mesh150
+    N226 rxx_a8_brakedisc_RR
+      N227 etk800-material mesh151
+    N228 rxx_a8_brakedisc_RL
+      N229 etk800-material mesh152
+    N230 rxx_a8_lettering_L
+      N231 rxx_a8_chrome-material mesh153
+    N232 rxx_a8_exhaust_R
+      N233 etkc-material mesh154
+    N234 rxx_a8_exhaust_L
+      N235 etkc-material mesh155
+    N236 rxx_a8_windshield
+      N237 rxx_a8_glass-material mesh156
+    N238 rxx_a8_sideglass_L
+      N239 rxx_a8_glass-material mesh157
+    N240 rxx_a8_doorglass_RL_sedan
+      N241 rxx_a8_glass-material mesh158
+    N242 rxx_a8_doorglass_FL
+      N243 rxx_a8_glass-material mesh159
+    N244 rxx_a8_wheel_a
+      N245 rxx_a8_chrome_int-material mesh160
+      N246 rxx_a8_rim_a-material mesh161
+    N247 rxx_a8_sideglass_R
+      N248 rxx_a8_glass-material mesh162
+    N249 rxx_a8_doorglass_RR_sedan
+      N250 rxx_a8_glass-material mesh163
+    N251 rxx_a8_doorglass_FR
+      N252 rxx_a8_glass-material mesh164
+    N253 rxx_a8_steer M
+      N254 etk800-material mesh165
+      N255 wheel_42a-material mesh166
+      N256 rxx_a8_plastic_steer-material mesh167
+      N257 rxx_a8_buttons_b-material mesh168
+    N258 rxx_a8_brakepedal M
+      N259 rxx_a8_interior-material mesh169
+    N260 rxx_a8_gaspedal M
+      N261 etk800-material mesh170
+      N262 rxx_a8_gaspedal-material mesh171
+    N263 rxx_a8_signalstalk M
+      N264 etk800-material mesh172
+      N265 rxx_a8_buttons_a-material mesh173
+    N266 rxx_a8_key M
+      N267 etk800-material mesh174
+      N268 wheel_42a_001-material mesh175
+    N269 rxx_a8_shifterbase_A
+      N270 etk800-material mesh176
+      N271 wheel_42a-material mesh177
+      N272 rxx_a8_buttons_a-material mesh178
+    N273 rxx_a8_shifter_A M
+      N274 wheel_42a-material mesh179
+      N275 rxx_a8_wood_a-material mesh180
+    N276 rxx_a8_bumper_R_b
+      N277 rxx_a8_chrome-material mesh181
+      N278 rxx_a8_paint-material mesh182
+    N279 rxx_a8_hood_fl
+      N280 rxx_a8_paint-material mesh183
+      N281 rxx_a8_plastic_black-material mesh184
+      N282 rxx_a8_chrome_int-material mesh185
+    N283 rxx_a8_sideskirts_stock
+      N284 rxx_a8_paint-material mesh186
+    N285 rxx_a8_mirror_R
+      N286 rxx_a8_paint-material mesh187
+      N287 etk800-material mesh188
+      N288 mirror-material mesh189
+    N289 rxx_a8_mirror_L
+      N290 rxx_a8_paint-material mesh190
+      N291 etk800-material mesh191
+      N292 mirror-material mesh192
+    N293 rxx_a8_fender_R
+      N294 rxx_a8_chrome-material mesh193
+      N295 rxx_a8_paint-material mesh194
+      N296 rxx_a8_signal_R_head-material mesh195
+    N297 rxx_a8_fender_L
+      N298 rxx_a8_chrome-material mesh196
+      N299 rxx_a8_paint-material mesh197
+      N300 rxx_a8_signal_L_head-material mesh198
+    N301 rxx_a8_doorcap_stock_RL
+      N302 rxx_a8_paint-material mesh199
+    N303 rxx_a8_doorcap_stock_FL
+      N304 rxx_a8_paint-material mesh200
+    N305 rxx_a8_door_RL_sedan
+      N306 rxx_a8_chrome-material mesh201
+      N307 rxx_a8_paint-material mesh202
+      N308 rxx_a8_chrome_int-material mesh203
+      N309 rxx_a8_leather-material mesh204
+      N310 rxx_a8_blackchrome-material mesh205
+    N311 rxx_a8_door_FR
+      N312 rxx_a8_chrome-material mesh206
+      N313 rxx_a8_paint-material mesh207
+      N314 rxx_a8_chrome_int-material mesh208
+      N315 rxx_a8_leather-material mesh209
+      N316 rxx_a8_blackchrome-material mesh210
+    N317 rxx_a8_door_FL
+      N318 rxx_a8_chrome-material mesh211
+      N319 rxx_a8_paint-material mesh212
+      N320 rxx_a8_chrome_int-material mesh213
+      N321 rxx_a8_leather-material mesh214
+      N322 rxx_a8_blackchrome-material mesh215
+    N323 rxx_a8_bodycap_stock
+      N324 rxx_a8_paint-material mesh216
+    N325 rxx_a8_body_sedan
+      N326 rxx_a8_chrome-material mesh217
+      N327 rxx_a8_paint-material mesh218
+      N328 rxx_a8_chrome_int-material mesh219
+      N329 etk800-material mesh220
+      N330 rxx_a8_remni-material mesh221
+      N331 rxx_a8_leather-material mesh222
+      N332 rxx_a8_alcantara-material mesh223
+      N333 mirror-material mesh224
+      N334 rxx_a8_blackchrome-material mesh225
+      N335 rxx_a8_carpet-material mesh226
+      N336 rxx_a8_chmsl-material mesh227
+    N337 rxx_a8_bumper_F_c
+      N338 rxx_a8_chrome-material mesh228
+      N339 rxx_a8_paint-material mesh229
+      N340 rxx_a8_plastic_black-material mesh230
+      N341 etk800-material mesh231
+      N342 rxx_a8_glass-material mesh232
+      N343 rxx_a8_foglight_s8-material mesh233
+    N344 rxx_a8_bumper_F_b
+      N345 rxx_a8_chrome-material mesh234
+      N346 rxx_a8_paint-material mesh235
+      N347 rxx_a8_plastic_black-material mesh236
+      N348 etk800-material mesh237
+      N349 rxx_a8_foglight_fl-material mesh238
+    N350 rxx_a8_door_RR_sedan
+      N351 rxx_a8_chrome-material mesh239
+      N352 rxx_a8_paint-material mesh240
+      N353 rxx_a8_chrome_int-material mesh241
+      N354 rxx_a8_leather-material mesh242
+      N355 rxx_a8_blackchrome-material mesh243
+    N356 rxx_a8_decals_gauges
+      N357 checkengine-material mesh244
+      N358 lowpressure-material mesh245
+      N359 parkingbrake-material mesh246
+      N360 abs-material mesh247
+      N361 highbeam-material mesh248
+      N362 esc-material mesh249
+      N363 tcs-material mesh250
+      N364 lowbeam-material mesh251
+      N365 foglight-material mesh252
+      N366 rearfog-material mesh253
+    N367 rxx_a8_doorcap_stock_RR
+      N368 rxx_a8_paint-material mesh254
+    N369 rxx_a8_doorcap_stock_FR
+      N370 rxx_a8_paint-material mesh255
+    N371 rxx_a8_taillight_L_fl
+      N372 rxx_a8_lights_back_fl-material mesh256
+      N373 rxx_a8_runninglight_fl-material mesh257
+      N374 rxx_a8_chmsl_fl-material mesh258
+      N375 rxx_a8_signal_L_fl-material mesh259
+    N376 rxx_a8_taillightglass_L_fl
+      N377 rxx_a8_taillightglass_fl-material mesh260
+    N378 rxx_a8_backlight_sedan
+      N379 rxx_a8_glass-material mesh261
+    N380 rxx_a8_tailgatelightglass_L_fl
+      N381 rxx_a8_trunklightglass_fl-material mesh262
+    N382 rxx_a8_trunk_sedan
+      N383 rxx_a8_chrome-material mesh263
+      N384 rxx_a8_paint-material mesh264
+      N385 rxx_a8_chrome_int-material mesh265
+      N386 etk800-material mesh266
+      N387 rxx_a8_carpet-material mesh267
+    N388 rxx_a8_tailgatelightglass_R_fl
+      N389 rxx_a8_trunklightglass_fl-material mesh268
+    N390 rxx_a8_taillightglass_R_fl
+      N391 rxx_a8_taillightglass_fl-material mesh269
+    N392 rxx_a8_tailgatelight_R_fl
+      N393 rxx_a8_lights_back_fl-material mesh270
+      N394 rxx_a8_runninglight_fl-material mesh271
+      N395 rxx_a8_reverselight_fl-material mesh272
+      N396 rxx_a8_chmsl_fl-material mesh273
+      N397 rxx_a8_foglight_rear_fl-material mesh274
+    N398 rxx_a8_taillight_R_fl
+      N399 rxx_a8_lights_back_fl-material mesh275
+      N400 rxx_a8_runninglight_fl-material mesh276
+      N401 rxx_a8_chmsl_fl-material mesh277
+      N402 rxx_a8_signal_R_fl-material mesh278
+    N403 rxx_a8_exhausttip_L_a
+      N404 rxx_a8_plastic_black-material mesh279
+      N405 rxx_a8_exhchr-material mesh280
+    N406 rxx_a8_exhausttip_R_a
+      N407 rxx_a8_plastic_black-material mesh281
+      N408 rxx_a8_exhchr-material mesh282
+    N409 rxx_a8_lettering_40
+      N410 rxx_a8_chrome-material mesh283
+    N411 rxx_a8_windshield_tint
+      N412 rxx_a8_glass_tint-material mesh284
+      N413 rxx_a8_glass_tint_int-material mesh285
+    N414 rxx_a8_doorglass_RR_sedan_tint
+      N415 rxx_a8_glass_tint-material mesh286
+      N416 rxx_a8_glass_tint_int-material mesh287
+    N417 rxx_a8_doorglass_RL_sedan_tint
+      N418 rxx_a8_glass_tint-material mesh288
+      N419 rxx_a8_glass_tint_int-material mesh289
+    N420 rxx_a8_doorglass_FR_tint
+      N421 rxx_a8_glass_tint-material mesh290
+      N422 rxx_a8_glass_tint_int-material mesh291
+    N423 rxx_a8_doorglass_FL_tint
+      N424 rxx_a8_glass_tint-material mesh292
+      N425 rxx_a8_glass_tint_int-material mesh293
+    N426 rxx_a8_backlight_sedan_tint
+      N427 rxx_a8_glass_tint-material mesh294
+      N428 rxx_a8_glass_tint_int-material mesh295
+    N429 rxx_a8_needle_fuel M
+      N430 rxx_a8_chrome_int-material mesh296
+      N431 etk800-material mesh297
+      N432 rxx_a8_needles-material mesh298
+    N433 rxx_a8_needle_temp M
+      N434 rxx_a8_chrome_int-material mesh299
+      N435 etk800-material mesh300
+      N436 rxx_a8_needles-material mesh301
+    N437 rxx_a8_headlightglass_L_fl
+      N438 rxx_a8_headlightglass-material mesh302
+    N439 rxx_a8_headlight_L_fl
+      N440 rxx_a8_blackforheads-material mesh303
+      N441 rxx_a8_chromereflectiveforheads-material mesh304
+      N442 rxx_a8_chromeforheads-material mesh305
+      N443 rxx_a8_chromeforblinkers-material mesh306
+      N444 rxx_a8_runninglight-material mesh307
+      N445 rxx_a8_headlight-material mesh308
+      N446 rxx_a8_signal_L_head-material mesh309
+    N447 rxx_a8_lettering_quattro_F_b
+      N448 rxx_a8_plastic_black-material mesh310
+      N449 rxx_a8_chrome_int-material mesh311
+    N450 rxx_a8_lettering_w12_R
+      N451 rxx_a8_chrome-material mesh312
+    N452 rxx_a8_lettering_w12_L
+      N453 rxx_a8_chrome-material mesh313
+    N454 rxx_a8_bumper_F_b_reflectors
+      N455 rxx_a8_sidemarker-material mesh314
+      N456 rxx_a8_reflector-material mesh315
+    N457 rxx_a8_bumper_F_��_reflectors
+      N458 rxx_a8_sidemarker-material mesh316
+      N459 rxx_a8_reflector-material mesh317
+    N460 rxx_a8_wheel_e
+      N461 rxx_a8_chrome_int-material mesh318
+      N462 etk800-material mesh319
+      N463 rxx_a8_silver_e-material mesh320
+      N464 rxx_a8_silver_e_b-material mesh321
+    N465 rxx_a8_wheel_c
+      N466 rxx_a8_chrome_int-material mesh322
+      N467 etk800-material mesh323
+      N468 rxx_a8_plastic_black_e-material mesh324
+      N469 rxx_a8_silver_c-material mesh325
+    N470 rxx_a8_sideglass_L_tint
+      N471 rxx_a8_glass_tint-material mesh326
+      N472 rxx_a8_glass_tint_int-material mesh327
+    N473 rxx_a8_sideglass_R_tint
+      N474 rxx_a8_glass_tint-material mesh328
+      N475 rxx_a8_glass_tint_int-material mesh329
+    N476 rxx_a8_enginecover_stock
+      N477 rxx_a8_chrome_int-material mesh330
+      N478 rxx_a8_blackengb-material mesh331
+      N479 rxx_a8_grayengb-material mesh332
+      N480 etk800-material mesh333
+      N481 rxx_a8_remni-material mesh334
+    N482 rxx_a8_needle_tacho M
+      N483 rxx_a8_chrome-material mesh335
+      N484 etk800-material mesh336
+      N485 rxx_a8_needles-material mesh337
+    N486 rxx_a8_needle_speedo M
+      N487 rxx_a8_chrome-material mesh338
+      N488 etk800-material mesh339
+      N489 rxx_a8_needles-material mesh340
+    N490 rxx_a8_wheel_f
+      N491 etk800-material mesh341
+      N492 rxx_a8_custom_wheel_a-material mesh342
+    N493 rxx_a8_wheel_g
+      N494 rxx_a8_grey_g-material mesh343
+      N495 rxx_a8_silver_g-material mesh344
