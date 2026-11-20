@@ -425,7 +425,7 @@ function make(cfg){
       for(const sg of[-1,1]){const a=sg>0?.32:Math.PI-.32,u=new T.Vector3(Math.cos(a),Math.sin(a),0),v=new T.Vector3(-Math.sin(a),Math.cos(a),0),Z=new T.Vector3(0,0,1),hd=new T.Group();sw.add(hd);w.hands.push(hd);
         const c=u.clone().multiplyScalar(R),onRim=(t,r,off)=>c.clone().addScaledVector(u,Math.cos(t)*r).addScaledVector(Z,Math.sin(t)*r).addScaledVector(v,off);
         // ладонь — снаружи-сзади обода
-        const palm=new T.Mesh(new T.SphereGeometry(.045,16,12).scale(1.05,.95,.55),skin);palm.position.copy(onRim(.75,.045,-sg*.0)).addScaledVector(v,-.005);palm.lookAt(palm.position.clone().add(u.clone().multiplyScalar(-1).add(Z.clone().multiplyScalar(-.6))));hd.add(palm);
+        const palm=new T.Mesh(new T.SphereGeometry(.045,16,12).scale(1.05,.95,.55),skin);palm.position.copy(onRim(.75,.045,-sg*.0)).addScaledVector(v,-.005);palm.lookAt(palm.position.clone().add(u.clone().multiplyScalar(-1).add(Z.clone().multiplyScalar(-.6))));hd.add(palm);hd.userData.palm=palm;
         // 4 пальца: дуга вокруг сечения обода от ладони наружу, вперёд и внутрь
         for(let f=0;f<4;f++){const off=(f-1.5)*.0205,ln=[.95,1.05,1.0,.82][f],rf=.0098-f*.0005,pts=[];
           for(let k=0;k<=10;k++){const t=.55-k/10*(Math.PI*1.55*ln);pts.push(onRim(t,rr+rf+.002,off*(1-k/30)))}
@@ -642,7 +642,7 @@ function make(cfg){
       w.ambM.color.set(col(.5+A.note*.45)).multiplyScalar(.45+.55*Math.max(A.beat,A.mel*.7));w.cabL.color.set(col(.7));w.cabL.intensity=.55+A.beat*.7+A.mel*.3;
       {const E=inM&&w.eyeO?w.eyeO:[-.37,1.08+w.pd.cab.dy,.38];w.eye.position.set(E[0]+clamp(-s.ay*.002,-.03,.03),E[1],E[2]+clamp(s.ax*.002,-.03,.04))}
       w.car.updateMatrixWorld(true);cam.position.setFromMatrixPosition(w.eye.matrixWorld);w.eye.getWorldQuaternion(cam.quaternion);s.look+=(clamp(beta*.75,-.7,.7)-s.look)*Math.min(1,dt*5);cam.rotateY(-s.look-.12);cam.rotateX(-.05);
-      for(let i=0;i<2;i++){const ar=w.arms[i];ar.userData.wr.getWorldPosition(V2);w.cab.worldToLocal(V2);V2.z+=.03;V2.y-=.02;ar.position.copy(V2);V1.copy(w.elb[i]);ar.lookAt(w.cab.localToWorld(V1))}}
+      if(!(w.hmUpd&&w.hmUpd()))for(let i=0;i<2;i++){const ar=w.arms[i];ar.userData.wr.getWorldPosition(V2);w.cab.worldToLocal(V2);V2.z+=.03;V2.y-=.02;ar.position.copy(V2);V1.copy(w.elb[i]);ar.lookAt(w.cab.localToWorld(V1))}}
     else if(camMode===2){const hd=w.pd.hood;cam.position.set(s.x+pfx*hd[0],gy+hd[1]+s.heave,s.z+pfz*hd[0]);V1.set(s.x+pfx*30,hy(sS+30)+1,s.z+pfz*30)}
     else{const dist=(camMode===3?11:6.4)+k*1.4+(pg.L-4.5),hgt=(camMode===3?4.8:2.25)+(pg.H-1.2)*.75,czx=s.x-cfx*dist,czz=s.z-cfz*dist;
       cam.position.set(czx,Math.max(gy,hy(-czz))+hgt,czz);V1.set(s.x+cfx*7,gy+pg.H*.6+.4,s.z+cfz*7)}

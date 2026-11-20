@@ -8,3 +8,4 @@ NC = только некоммерческое использование.
 
 w210n.glb: "1998 Mercedes-Benz E55 AMG (W210)" — Sketchfab af8a496d11ac46b2b4cff23197e6992a, CC BY 4.0
 a8n.glb: "2008 Audi A8 W12" — Sketchfab 47237a28d7f548bd865c3b3552dc493f, CC BY 4.0
+hands.glb: "First Person Hands Rigged" — Sketchfab 547a45535f0c4fe787948f7a7a6a88db, CC BY 4.0
