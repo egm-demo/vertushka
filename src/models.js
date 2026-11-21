@@ -3,7 +3,7 @@ const WR={gb:/^(right_wheel_[23]|plastic5_1[56]|leather02_weave_21)\.001$/,c6z:/
   LR={gb:/^(plastic5_(9|10)|leather02_weave_(10|15|18|25|26))\.001$/,c6z:/^(Vehiclelights[12]|Lights[123]|Glass1)Mtl$/,caym:/2022LightA_Material$/,cay23:/^caenka_(headlight|dalniy|DXO|stop|FARIZAD|stop2)$/,gn:/emission|back_light/,vetten:/^$/,w210n:/^(L1Mtl|Meshesheadlights00021Mtl|Meshestaillights00011Mtl|B1Mtl)$/,a8n:/^(light_glass|lights_back_on|lights_glass)$/,w210:/Lights/,g:/^Light|red_glass/,vette:/Lights/,cay:/^light$|^Light_R$/,a8:/^$/};
 const W210T=[[/^Meshesheadlights00021Mtl$/,0xd9e2ec,.9,.06],[/^Meshestaillights00011Mtl$/,0x7a0a06,.2,.12],[/^Meshesbootok0021Mtl$/,0x9a9ca2,1,.18],[/^L4Mtl$/,0xb8bcc4,1,.15],[/^Meshesbodyshellbodyshell0021Mtl$/,0x9ea2a8,1,.2]];
 const CAYT=[[/^caenka_leather$/,0x1c1714,0,.62],[/^caenka_carpetORANGE$/,0x1a1a1c,0,.95],[/^caenka_stitch$/,0x8a7a66,0,.8],[/^caenka_chrome$/,0xc8ccd2,1,.18],[/^caenka_black$/,0x18191b,0,.7],[/^caenka$/,0x2a2b2e,.2,.55],[/^caenka_dashboardFULL$/,0x202124,0,.6],[/^caenka_tire$/,0x141415,0,.9],[/^caenka_chromewheels$/,0xb8bcc2,1,.25],[/^caenka_red$/,0x8a0a08,0,.4],[/^caenka_(optika|zadSTERLO)$/,0x3a0806,0,.15],[/^caenka_peredfari$/,0xd8dde4,.9,.08],[/^(caenka_gauge|caenka_strelochki|caenka_gauge_3)$/,0x9aa0a8,0,.4],[/^(caenka_dashboardFULL|caenka_full_black_def|caenka_muzlonax|leather_embossedch1_001_custom2|caenka_belt)$/,0x1d1e20,0,.65],[/^(caenka_bolt|caenka_gauge_knopka|mirror\.012)$/,0x55585e,.6,.4],[/^(?!caenka_body$|caenka_glass|glass_invisible|caenka_(headlight|dalniy|DXO|stop|FARIZAD|stop2)$).*/,0x26272a,.1,.6]];
-const MCFG={w210:{f:'w210n',tint:W210T,paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/},w210c:{f:'w210n',tint:W210T,paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/,open:.62},g:{f:'gb',paint:/^bodypaint/,glass:/^(ExtWindowsGlass|IntWindows)/},
+const MCFG={w210:{f:'w210n',tint:W210T,paintS:/^Meshesdoorrfok0061Mtl$/,paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/},w210c:{f:'w210n',tint:W210T,paintS:/^Meshesdoorrfok0061Mtl$/,paint:/^Paint1Mtl/,glassN:/windscreen/i,glass:/^(Meshesdoorlfok0101Mtl|Meshesbodyshellbodyshell0051Mtl)$/,open:.62},g:{f:'gb',paint:/^bodypaint/,glass:/^(ExtWindowsGlass|IntWindows)/},
   c6:{f:'c6z',ry:0,paint:/^Remapbody1Mtl$/,glass:/^Glass(2|6|10)Mtl$/},cay:{f:'cay23',tint:CAYT,paint:/^caenka_body$/,glass:/^(caenka_glass|caenka_glass_tinted|caenka_glass_prostoe|glass_invisible\.006)$/},a8:{f:'a8n',paint:/^body$/,glass:/^(vehicle_generic_glasswindows2|windows_int)$/}};
 // разрезать меш на части по треугольникам: key(cx,cy,cz)-> ключ или null; геометрия в координатах корня (g)
 function splitMesh(o,key){const ge=o.geometry,idx=ge.index?ge.index.array:null,n=idx?idx.length:ge.attributes.position.count,mw=o.matrixWorld,nm=new T.Matrix3().getNormalMatrix(mw);
@@ -66,6 +66,8 @@ function fitMdl(src,pg,cf){const g=new T.Group(),m=src.clone(true);g.add(m);m.up
   const paint=[];m.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;o.frustumCulled=false;const mt=o.material;
     if(mt&&((cf.glass&&cf.glass.test(mt.name||''))||(cf.glassN&&cf.glassN.test(o.name+' '+(o.parent&&o.parent.name||''))))){const gm=mt.clone();gm.map=null;gm.color=new T.Color(0x0a0d12);gm.transparent=true;gm.opacity=.28;gm.depthWrite=false;gm.metalness=0;gm.roughness=.05;gm.envMapIntensity=1;o.material=gm;o.renderOrder=2;o.castShadow=false}
     else if(mt&&cf.paint.test(mt.name||''))paint.push(o);else if(mt&&mt.transparent&&/glass|Translucent/i.test(mt.name||'')){o.renderOrder=2;mt.depthWrite=false}});
+  if(cf.paintS){g.updateMatrixWorld(true);const gi=new T.Matrix4().copy(g.matrixWorld).invert();m.traverse(o=>{if(!o.isMesh||!o.material||!cf.paintS.test(o.material.name||''))return;const b=new T.Box3().setFromObject(o).applyMatrix4(gi),sy=b.max.y-b.min.y;
+    if((b.min.x>pb.max.x*.78||b.max.x<pb.min.x*.78)&&sy>.25)paint.push(o)})}
   g.userData.paint=paint;g.updateMatrixWorld(true);
   const wr=WR[cf.f],lr=LR[cf.f],wl=[],ll=[];m.traverse(o=>{if(!o.isMesh||!o.material)return;const nm=o.material.name||'';if(wr.test(nm))wl.push(o);else if(lr.test(nm))ll.push(o)});
   // колёса: 4 группы по четвертям
@@ -77,7 +79,7 @@ function fitMdl(src,pg,cf){const g=new T.Group(),m=src.clone(true);g.add(m);m.up
   const fl=[],rl=[],fb=new T.Box3(),rb=new T.Box3();
   const LZ=(pb.max.z-pb.min.z)*.2,LY=pg.H*.75;for(const o of ll){const pr=splitMesh(o,(x,y,z)=>y>LY?'m':z<pb.min.z+LZ?'f':z>pb.max.z-LZ?'r':'m'),mt=o.material;if(pr.m){const q=new T.Mesh(pr.m,mt);g.add(q)}
     if(pr.f){const fm=mt.clone();fm.emissive=new T.Color(0xfff3e2);fm.emissiveMap=mt.map||null;fm.emissiveIntensity=1;fm.roughness=.05;fm.metalness=Math.max(fm.metalness||0,.6);fm.envMapIntensity=1.6;if(fm.transparent){fm.opacity=Math.min(fm.opacity,.35);fm.depthWrite=false}const q=new T.Mesh(pr.f,fm);g.add(q);fl.push(fm);fb.union(pr.f.boundingBox)}
-    if(pr.r){const rm=mt.clone();rm.emissive=new T.Color(0xff2412);rm.emissiveMap=mt.map||null;rm.emissiveIntensity=1;const q=new T.Mesh(pr.r,rm);g.add(q);rl.push(rm);rb.union(pr.r.boundingBox)}
+    if(pr.r){const rm=mt.clone();rm.emissive=new T.Color(0xff1408);rm.emissiveMap=mt.map||null;rm.emissiveIntensity=1;rm.color=new T.Color(0x5a0604);rm.roughness=.15;rm.transparent=false;rm.opacity=1;rm.depthWrite=true;const q=new T.Mesh(pr.r,rm);g.add(q);rl.push(rm);rb.union(pr.r.boundingBox)}
     o.parent.remove(o)}
   if(fb.isEmpty()){fb.set(new T.Vector3(-pg.W*.36,pg.H*.42,pb.min.z+.05),new T.Vector3(pg.W*.36,pg.H*.5,pb.min.z+.15))}
   if(rb.isEmpty()){rb.set(new T.Vector3(-pg.W*.38,pg.H*.5,pb.max.z-.15),new T.Vector3(pg.W*.38,pg.H*.58,pb.max.z-.05))}
@@ -105,7 +107,7 @@ w.useMdl=()=>{const id=w.pd.id,cf=MCFG[id];if(w.mdl){w.body.remove(w.mdl);w.mdl=
   loadMdl(cf.f).then(src=>{if(!src||tok!==w.mdlTok)return;const g=fitMdl(src,pg,cf);g.userData.id=id;w.fitC[id]=g;put(g)})};
 w.fitC={};
 // руки водителя: 3D-модель со скелетом (first-person hands rigged, CC BY), кисти на ободе руля через IK
-w.hp={tw:-.6,curl:.9,tc:.5,ax:'z',tax:1,thin:.8,wo:.075,sh:[0,-.38,.2],k:.95,sw:.17};
+w.hp={tw:-.6,curl:1.3,tc:.8,ax:'z',tax:1,thin:.8,wo:.075,sh:[0,-.38,.2],k:.95,sw:.17,ori:1,fz:1,fi:-.3,sf:1,cs:-1,cr:1,ga:1.15,hb:.75};
 w.hmUpd=()=>{const hm=w.hm;if(!hm||!w.hands||!w.eye)return false;const H=hm.userData,P=w.hp;
   if(hm.parent!==w.cab)w.cab.add(hm);for(const hd of w.hands)hd.visible=false;for(const a of w.arms)a.visible=false;
   const qc=w.cab.getWorldQuaternion(new T.Quaternion()),dn=new T.Vector3(0,-1,0).applyQuaternion(qc),sd=new T.Vector3(1,0,0).applyQuaternion(qc);
@@ -118,24 +120,41 @@ w.hmUpd=()=>{const hm=w.hm;if(!hm||!w.hands||!w.eye)return false;const H=hm.user
   const tq=new T.Quaternion(),Y=new T.Vector3(),wp=b=>b.getWorldPosition(new T.Vector3());
   const setW=(b,q)=>{b.quaternion.copy(b.parent.getWorldQuaternion(tq).invert().multiply(q));b.updateMatrixWorld(true)};
   const aim=(b,d)=>{const q=b.getWorldQuaternion(new T.Quaternion());Y.set(0,1,0).applyQuaternion(q);q.premultiply(new T.Quaternion().setFromUnitVectors(Y,d));setW(b,q)};
-  H.arms.forEach((A,i)=>{const T_=tg[i],S=wp(A.ua),L1=wp(A.fa).distanceTo(S),L2=wp(A.fe).distanceTo(wp(A.fa));
+  H.arms.forEach((A,i)=>{let T_=tg[i];let F=null,Sd=null;
+    if(P.ga&&w.sw){const sR=(w.sw.userData.R||.17),an=P.ga*(i?-1:1);T_=w.sw.localToWorld(new T.Vector3(Math.sin(an)*sR*(P.gr||1),Math.cos(an)*sR*(P.gr||1),P.gz||0))}
+    if(P.ori&&A.Fl&&w.sw){const sq=w.sw.getWorldQuaternion(new T.Quaternion()),C=w.sw.getWorldPosition(new T.Vector3());let Z=new T.Vector3(0,0,1).applyQuaternion(sq);if(Z.dot(eyeW.clone().sub(C))>0)Z.negate();
+      const Yw=new T.Vector3(0,1,0).applyQuaternion(sq),inw=C.clone().sub(T_).normalize();F=Z.clone().multiplyScalar(P.fz).addScaledVector(inw,P.fi).addScaledVector(Yw,P.fy||0).normalize();
+      if(P.ga){const tng=new T.Vector3(Math.cos(P.ga*(i?-1:1)),-Math.sin(P.ga*(i?-1:1)),0).applyQuaternion(sq);Yw.copy(tng.multiplyScalar(i?-1:1))}
+      Sd=Yw.clone().multiplyScalar(-(i?P.sf:(P.sfL??P.sf))).addScaledVector(inw,P.si||0);Sd.sub(F.clone().multiplyScalar(F.dot(Sd))).normalize();
+      if(A.hl0==null)A.hl0=wp(A.fing.find(f=>/^Finger_3_1/.test(f.name))||A.wr).distanceTo(wp(A.wr))/hm.scale.x;
+      T_=T_.clone().addScaledVector(F,-A.hl0*hm.scale.x*(P.hb??.8)).addScaledVector(eyeW.clone().sub(T_).normalize(),P.hu||0)}
+    const S=wp(A.ua),L1=wp(A.fa).distanceTo(S),L2=wp(A.fe).distanceTo(wp(A.fa));
     const restD=wp(A.fe).sub(wp(A.fa)).normalize();let dv=T_.clone().sub(S),d=dv.length();d=Math.min(Math.max(d,.05),(L1+L2)*.999);const n=dv.normalize();
     const ca=(L1*L1+d*d-L2*L2)/(2*L1*d),sa=Math.sqrt(Math.max(0,1-ca*ca));const pole=dn.clone().addScaledVector(sd,(i?1:-1)*.9),p=pole.sub(n.clone().multiplyScalar(n.dot(pole))).normalize();
     const E=S.clone().addScaledVector(n,L1*ca).addScaledVector(p,L1*sa);aim(A.ua,E.clone().sub(S).normalize());aim(A.fa,T_.clone().sub(E).normalize());
     const W=S.clone().addScaledVector(n,d),fd=W.clone().sub(E).normalize();
     // кисть: в конец предплечья, поворот как у предплечья + скрутка
     const hq=A.wr.getWorldQuaternion(new T.Quaternion()).premultiply(new T.Quaternion().setFromUnitVectors(restD,fd)).premultiply(new T.Quaternion().setFromAxisAngle(fd,(i?-1:1)*P.tw));
-    A.wr.position.copy(A.wr.parent.worldToLocal(W.clone()));setW(A.wr,hq);
-    const ax=P.ax==='z'?new T.Vector3(0,0,i?-1:1):new T.Vector3(1,0,0);for(const f of A.fing)f.quaternion.copy(f.userData.q0).multiply(new T.Quaternion().setFromAxisAngle(f.userData.th&&P.tax?new T.Vector3(1,0,0):ax,f.userData.th?P.tc:P.curl));
+    let hq2=hq;if(F){
+      const a=A.Fl.clone(),b=A.Sl.clone().sub(A.Fl.clone().multiplyScalar(A.Fl.dot(A.Sl))).normalize();
+      const Mw=new T.Matrix4().makeBasis(F,Sd,new T.Vector3().crossVectors(F,Sd)),Ml=new T.Matrix4().makeBasis(a,b,new T.Vector3().crossVectors(a,b)).transpose();
+      hq2=new T.Quaternion().setFromRotationMatrix(Mw.multiply(Ml))}
+    A.wr.position.copy(A.wr.parent.worldToLocal(W.clone()));setW(A.wr,hq2);
+    const ax=P.ax==='z'?new T.Vector3(0,0,i?-1:1):new T.Vector3(1,0,0);for(const f of A.fing){const ca=f.userData.cax;f.quaternion.copy(f.userData.q0).multiply(new T.Quaternion().setFromAxisAngle(ca?ca:(f.userData.th&&P.tax?new T.Vector3(1,0,0):ax),(f.userData.th?P.tc:P.curl)*(ca?(P.cs||1)*(i?(P.cr||1):1):1)))}
     if(P.thin){A.ua.scale.set(P.thin,1,P.thin);A.fa.scale.set(1,1,1);A.wr.scale.set(1/P.thin,1,1/P.thin)}
     A.wr.updateMatrixWorld(true)});
   return true};
-loadMdl('arms').then(src=>{if(!src)return;const hm=src;const H=hm.userData;H.all=[];const bn={};
-  hm.traverse(o=>{if(o.isBone){H.all.push(o);o.userData.q0=o.quaternion.clone();o.userData.p0=o.position.clone();bn[o.name]=o}
-    if(o.isMesh){o.frustumCulled=false;o.castShadow=false;const om=o.material;o.material=new T.MeshStandardMaterial({color:om.map?0xffffff:0xd9a58a,map:om.map||null,normalMap:om.normalMap||null,roughness:.55,metalness:0});o.renderOrder=3}});
+loadMdl('hands2').then(src=>{if(!src)return;const hm=src;const H=hm.userData;H.all=[];const bn={};
+  hm.traverse(o=>{if(o.isBone||/^Hand_1\.?[LR]$/.test(o.name)){H.all.push(o);o.userData.q0=o.quaternion.clone();o.userData.p0=o.position.clone();bn[o.name]=o}
+    if(o.isMesh){o.frustumCulled=false;o.castShadow=false;const om=o.material;o.material=new T.MeshStandardMaterial({color:om.map?0xffffff:(om.color?om.color.getHex():0xd9a58a),map:om.map||null,normalMap:om.normalMap||null,roughness:.6,metalness:0,side:T.DoubleSide});o.renderOrder=3}});
   const B=re=>H.all.find(b=>re.test(b.name));hm.updateMatrixWorld(true);
   H.arms=['L','R'].map(s=>{const wr=B(new RegExp('^Hand_1\\.?'+s)),fing=H.all.filter(b=>new RegExp('^Finger_\\d_[123]\\.?'+s+'_').test(b.name));
     fing.forEach(f=>f.userData.th=/^Finger_1_/.test(f.name));return{ua:B(new RegExp('^Arm_1\\.?'+s)),fa:B(new RegExp('^Arm_2\\.?'+s)),fe:wr,wr,fing}});
+  {const wq=b=>b.getWorldQuaternion(new T.Quaternion());for(const A of H.arms){const by=re=>A.fing.find(f=>re.test(f.name));const f2=by(/^Finger_2_1/),f5=by(/^Finger_5_1/);if(!f2||!f5)continue;
+    const side=f5.getWorldPosition(new T.Vector3()).sub(f2.getWorldPosition(new T.Vector3())).normalize();
+    for(const f of A.fing){const ch=f.children.find(c=>c.isBone)||null;let dir;if(ch)dir=ch.position.clone().normalize();else dir=f.position.clone().normalize().applyQuaternion(f.quaternion.clone().invert());
+      const sl=side.clone().applyQuaternion(wq(f).invert());f.userData.cax=new T.Vector3().crossVectors(dir,sl).normalize()}
+    const f3=by(/^Finger_3_1/)||f2,iq=wq(A.wr).invert();A.Fl=f3.getWorldPosition(new T.Vector3()).sub(A.wr.getWorldPosition(new T.Vector3())).applyQuaternion(iq).normalize();A.Sl=side.clone().applyQuaternion(iq)}}
   const wp=b=>b.getWorldPosition(new T.Vector3()),A=H.arms[0];H.L=wp(A.fa).distanceTo(wp(A.ua))+wp(A.fe).distanceTo(wp(A.fa));
   const c1=wp(B(/^Arm_1\.?L/)),c2=wp(B(/^Arm_1\.?R/));H.cl=c1.add(c2).multiplyScalar(.5);
   w.hm=hm;hm.visible=false}).catch(e=>console.warn('hands',e));
@@ -163,12 +182,12 @@ w.preload=async(prog)=>{const ids=PCARS.map(p=>p.id).filter(id=>MCFG[id]&&id===w
   await tick('Видеокарта');prog(1,'Готово')};
 // огни/нитро каждый кадр
 w.fxUpd=(s,dt,night)=>{const fx=w.mdl&&w.mdl.userData.fx;if(!fx)return;const t=performance.now()/1000,br=!!s.brk;
-  for(const m of fx.fl)m.emissiveIntensity=night?.55:.1;for(const m of fx.rl)m.emissiveIntensity=br?2.1:night?.75:.12;
+  for(const m of fx.fl)m.emissiveIntensity=night?.55:.1;for(const m of fx.rl)m.emissiveIntensity=br?1.9:night?.8:.15;
   const cv=(w._cv||(w._cv=new T.Vector3())).copy(w.cam.position);w.car.worldToLocal(cv);const front=cv.z<-w.pg.L*.3,fa=front?Math.min(1,(-cv.z-w.pg.L*.3)/3):0;for(const sp of fx.hg){sp.visible=night&&front&&camMode!==1&&camMode!==2;sp.material.opacity=fa*.22}fx.pool.visible=false;
-  for(const sp of fx.tg){sp.visible=br&&night;sp.material.opacity=.14;sp.scale.setScalar(.13)}
+  for(const sp of fx.tg){sp.visible=br&&night;sp.material.opacity=.1;sp.scale.setScalar(.08)}
   const on=!!s.nitroOn&&camMode!==1;fx.fl2.intensity=on?2.5+Math.random()*2:0;
   fx.fire.forEach((f,i)=>{f.visible=on;if(on){const k=.75+Math.random()*.5;f.scale.set(k,k,1.1+Math.random()*.9+Math.min(1,s.kmh/200)*.6);f.rotation.z=Math.random()*3}})};
-w.mdlPaint=()=>{if(!w.mdl)return;const pm=w.ppaint();pm.envMapIntensity=.7;w.mdl.userData.paint.forEach(o=>o.material=pm);w.mdl.traverse(o=>{if(o.isMesh&&o.material&&o.material!==pm&&o.material.envMapIntensity!==undefined)o.material.envMapIntensity=.6})};
+w.mdlPaint=()=>{if(!w.mdl)return;const pm=w.ppaint();pm.envMapIntensity=w.pd.hex<0x303030?1.25:.7;w.mdl.userData.paint.forEach(o=>o.material=pm);w.mdl.traverse(o=>{if(o.isMesh&&o.material&&o.material!==pm&&o.material.envMapIntensity!==undefined)o.material.envMapIntensity=.6})};
 
 // вид из салона: показываем настоящий салон модели, из самодельного оставляем только руль и руки
 w.findSW=g=>{if(!g||g!==w.mdl)return;if(g.userData.swF===undefined){g.userData.swF=null;const E=w.eyeO;if(E){w.car.updateMatrixWorld(true);const inv=new T.Matrix4().copy(w.car.matrixWorld).invert(),L=[];

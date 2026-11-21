@@ -16,7 +16,6 @@ caym (Cayenne Turbo GT 2022): "2022 Porsche Cayenne Turbo GT" by Maroi Mister Le
 arms (FPS Arms): "FREE [FPS Arms] GameReady - RIGGED" by BAMEN (https://sketchfab.com/bamenwo05), CC Attribution, https://sketchfab.com/3d-models/free-fps-arms-gameready-rigged-296d30fc705b4dff85c2c8a2d2724e7f
 
 
-Звук
-- V8 engine (v8a.wav, v8d.wav): "Generic V8 Engine Sound" by DerMeehdrescher / Meehdrescher Studios, https://opengameart.org/content/generic-v8-engine-sound — CC BY-SA 4.0 (обрезано до моно 24 кГц)
-
 - Porsche Cayenne 2023 (cay23.glb): "Porsche Cayenne 2023-2025", Sketchfab https://sketchfab.com/3d-models/porsche-cayenne-2023-2025-04da6cda1fc94ba89df200ddcef34a1e — CC BY 4.0
+
+- Руки (hands2.glb): "Free FPS-Hand's" by Askasknot (Askasknot), https://sketchfab.com/3d-models/free-fps-hands-2111009606fa4a07b355413ffa3c74f9 — CC Attribution

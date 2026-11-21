@@ -232,7 +232,7 @@ CARS.a8l={W:1.89,m:1950,wr:.35,ax:[1.6,-1.55],hy:.63,ty:.86,wh:[10,.12],cal:0x2a
     pstd(o,{seams:[1.25,-.32,-1.05],handles:[-.15,-.9],mx:1.0,belt:5,frame:5})}};
 const PLATES={w210:'S·LZ 3627',w210c:'S·LZ 1997',g:'G·500 08',c6:'Z·06 2006',cay:'S·GO 911',a8:'IN·A8 600'};
 
-const MB3=[['Чёрный',0x0a0a0c],['Белый',0xeeeeea],['Розовый',0xff5ea8]];
+const MB3=[['Чёрный',0x141518],['Белый',0xeeeeea],['Розовый',0xff5ea8]];
 const PCARS=[
   {id:'w210',tab:'W210',name:'Mercedes-Benz E 280 W210',sub:'седан · 1995–2002',kind:'w210',cols:MB3,hood:[1.1,1.02],st:[5,5,6],ph:{Tmax:470,Iz:2300,red:6200},
     cab:{dy:0,dash:0x2b2c30,soft:0x3c3e44,trim:0x5a2c14,wood:1,seat:0x2f3035,wheel:0x2a2a2e,sp4:1,cl:'merc'}},
@@ -326,48 +326,85 @@ const nowTitle=()=>{if(cap)return ['Звук из: '+cap.name,''];const tr=track
 /* --- трассы --- */
 const CARCOL=[0xc8c8cd,0x282c34,0x96181e,0x1e4696,0x5a6068,0xecece8,0x185a3c],NYS=['Manhattan','Brooklyn Bridge','Times Square','FDR Drive','Queens','JFK Airport'];
 /* --- звук машины: синтез двигателя по оборотам (WebAudio), шины, нитро, удар --- */
-const ESND=(()=>{let ac=null,o=null,last=0,crashed=false;
-  const VO={w210:{cyl:8,base:.9,cut:900,gr:.55},w210c:{cyl:8,base:.9,cut:900,gr:.55},g:{cyl:8,base:.75,cut:700,gr:.8},c6:{cyl:8,base:.85,cut:1300,gr:.9},cay:{cyl:8,base:.95,cut:1100,gr:.6},a8:{cyl:12,base:1,cut:1200,gr:.35}};
-  const unlock=()=>{try{if(!ac){ac=new (window.AudioContext||window.webkitAudioContext)();build()}if(ac.state==='suspended')ac.resume()}catch(e){}};
+const ESND=(()=>{let ac=null,o=null,last=0,crashed=false,gear=0,bst=0,ld=0,lmax=0;
+  // характер мотора: cyl — цилиндры, pat — сила вспышек по порядку работы (неровность = «бульканье» V8),
+  // tau — длина вспышки, rough — грязь, res — резонанс выхлопа, pipe — длина трубы (мс), turbo/sc — турбина/компрессор, pop — выстрелы при сбросе
+  const V8X=[1,.72,1.08,.95,.7,1.04,.78,.9];
+  const VO={w210:{cyl:8,pat:V8X,tau:.0034,rough:.55,res:105,pipe:4.2,cut:1500,drv:2.2,pop:.5},
+    w210c:{cyl:8,pat:V8X,tau:.0034,rough:.55,res:105,pipe:4.2,cut:1700,drv:2.2,pop:.5},
+    g:{cyl:8,pat:V8X,tau:.0042,rough:.85,res:82,pipe:5.4,cut:1200,drv:3,turbo:1,pop:1.4},
+    c6:{cyl:8,pat:[1,.62,1.15,.9,.6,1.1,.7,.95],tau:.003,rough:.9,res:95,pipe:3.6,cut:2200,drv:3.4,sc:1,pop:1.2},
+    cay:{cyl:8,pat:[1,.85,1,.95,.85,1,.88,.95],tau:.0028,rough:.45,res:120,pipe:3.2,cut:2000,drv:2.4,turbo:1,pop:.8},
+    a8:{cyl:12,pat:[1,.95,1,.97,1,.93,1,.96,1,.94,1,.97],tau:.0022,rough:.25,res:130,pipe:2.8,cut:1800,drv:1.6,pop:.2}};
+  // генератор вспышек цилиндров (по сэмплам): каждая вспышка — короткий грязный «удар» выхлопа
+  const DSP=`class Gen{constructor(sr){this.sr=sr;this.ph=0;this.k=-1;this.e1=0;this.e2=0;this.nz=0;this.rpm=800;this.tr=800;this.load=0;this.tl=0;this.s=12345;this.c={cyl:8,pat:[1],tau:.003,rough:.5,pop:0};this.cut=0}
+    rnd(){this.s=(this.s*16807)%2147483647;return this.s/1073741823.5-1}
+    fill(out){const sr=this.sr,c=this.c,n=out.length,P=c.pat;
+      const ff=this.rpm/120*c.cyl,t1=Math.min(c.tau,.9/ff),d1=Math.exp(-1/(sr*t1)),d2=Math.exp(-1/(sr*t1*.22));
+      for(let i=0;i<n;i++){this.rpm+=(this.tr-this.rpm)*.002;this.load+=(this.tl-this.load)*.003;
+        this.ph+=this.rpm/120/sr;if(this.ph>=1)this.ph-=1;const k=(this.ph*c.cyl)|0;
+        if(k!==this.k){this.k=k;let a=P[k%P.length]*(1+this.rnd()*.18*c.rough)*(.3+.7*this.load);
+          if(this.cut>0)a*=.15;
+          if(this.load<.12&&this.rpm>2600&&Math.random()<.012*c.pop)a*=3+Math.random()*3;
+          this.e1+=a;this.e2+=a}
+        this.e1*=d1;this.e2*=d2;this.nz=this.nz*.55+this.rnd()*.45;
+        out[i]=(this.e1-this.e2)*(1+this.nz*c.rough*1.4)}}}`;
+  const WK=DSP+`;registerProcessor('vt-eng',class extends AudioWorkletProcessor{constructor(){super();this.g=new Gen(sampleRate);this.port.onmessage=e=>{const d=e.data;if(d.c)this.g.c=d.c;if(d.r!=null){this.g.tr=d.r;this.g.tl=d.l;this.g.cut=d.cut}}}process(i,o){this.g.fill(o[0][0]);return true}})`;
+  const unlock=()=>{try{if(!ac){ac=new (window.AudioContext||window.webkitAudioContext)();build()}if(ac.state==='suspended')ac.resume()}catch(e){console.warn('snd',e)}};
   ['pointerdown','keydown','touchstart'].forEach(e=>addEventListener(e,unlock,{passive:true}));
   document.addEventListener('visibilitychange',()=>{if(ac&&document.hidden)ac.suspend()});
   function noiseBuf(){const n=ac.sampleRate*2,b=ac.createBuffer(1,n,ac.sampleRate),a=b.getChannelData(0);for(let i=0;i<n;i++)a[i]=Math.random()*2-1;return b}
   function build(){const N=noiseBuf(),mst=ac.createGain();mst.gain.value=0;
-    const comp=ac.createDynamicsCompressor();comp.threshold.value=-14;comp.ratio.value=4;mst.connect(comp);comp.connect(ac.destination);
-    const lp=ac.createBiquadFilter();lp.type='lowpass';lp.Q.value=2.2;lp.frequency.value=800;
-    const ws=ac.createWaveShaper(),cv=new Float32Array(1024);for(let i=0;i<1024;i++){const x=i/511.5-1;cv[i]=Math.tanh(x*2.4)}ws.curve=cv;
-    const eg=ac.createGain();eg.gain.value=0;ws.connect(lp);lp.connect(eg);eg.connect(mst);
-    const mk=(type,g)=>{const x=ac.createOscillator();x.type=type;const gg=ac.createGain();gg.gain.value=g;x.connect(gg);gg.connect(ws);x.start();return x};
-    const o1=mk('sawtooth',.45),o2=mk('sawtooth',.3),o3=mk('square',.22),o4=mk('triangle',.5);
-    // «рык»: шум, промодулированный частотой вспышек
-    const ns=ac.createBufferSource();ns.buffer=N;ns.loop=true;const nb=ac.createBiquadFilter();nb.type='bandpass';nb.Q.value=.8;const ng=ac.createGain();ng.gain.value=0;ns.connect(nb);nb.connect(ng);ng.connect(ws);ns.start();
-    const am=ac.createOscillator();am.type='square';const amg=ac.createGain();amg.gain.value=0;am.connect(amg);amg.connect(ng.gain);am.start();
+    const comp=ac.createDynamicsCompressor();comp.threshold.value=-16;comp.ratio.value=5;comp.attack.value=.004;mst.connect(comp);comp.connect(ac.destination);
+    // цепочка выхлопа: срез постоянки → труба (гребёнка) → резонанс корпуса → фильтр по газу → перегруз
+    const inp=ac.createGain(),hp=ac.createBiquadFilter();hp.type='highpass';hp.frequency.value=28;inp.connect(hp);
+    const dl=ac.createDelay(.05),fb=ac.createGain();fb.gain.value=.42;const pmix=ac.createGain();hp.connect(pmix);hp.connect(dl);dl.connect(fb);fb.connect(dl);dl.connect(pmix);
+    const b1=ac.createBiquadFilter();b1.type='peaking';b1.Q.value=1.1;b1.gain.value=9;const b2=ac.createBiquadFilter();b2.type='peaking';b2.Q.value=2;b2.gain.value=4;
+    const lo=ac.createBiquadFilter();lo.type='lowshelf';lo.frequency.value=160;lo.gain.value=6;
+    const lp=ac.createBiquadFilter();lp.type='lowpass';lp.Q.value=.9;lp.frequency.value=1500;
+    const pre=ac.createGain();pre.gain.value=2;const ws=ac.createWaveShaper(),cv=new Float32Array(2048);for(let i=0;i<2048;i++){const x=i/1023.5-1;cv[i]=Math.tanh(x*1.8)+.12*Math.tanh(x*6)*x}ws.curve=cv;ws.oversample='2x';
+    const eg=ac.createGain();eg.gain.value=.5;
+    pmix.connect(b1);b1.connect(b2);b2.connect(lo);lo.connect(lp);lp.connect(pre);pre.connect(ws);ws.connect(eg);eg.connect(mst);
+    let gen=null,post=null,sp=null;
+    const g0=new (Function(DSP+';return Gen'))();
+    const fallback=()=>{const G=new g0(ac.sampleRate);sp=ac.createScriptProcessor(1024,0,1);sp.onaudioprocess=e=>G.fill(e.outputBuffer.getChannelData(0));sp.connect(inp);post=m=>{if(m.c)G.c=m.c;if(m.r!=null){G.tr=m.r;G.tl=m.l;G.cut=m.cut}}};
+    if(ac.audioWorklet){const u=URL.createObjectURL(new Blob([WK],{type:'application/javascript'}));ac.audioWorklet.addModule(u).then(()=>{gen=new AudioWorkletNode(ac,'vt-eng',{numberOfInputs:0,outputChannelCount:[1]});gen.connect(inp);post=m=>gen.port.postMessage(m);if(o)o.cid=null}).catch(e=>{console.warn('worklet',e);fallback()})}else fallback();
+    // турбина: свист + сброс давления
+    const tu=ac.createOscillator();tu.type='sine';const tuG=ac.createGain();tuG.gain.value=0;tu.connect(tuG);tuG.connect(mst);tu.start();
+    // приводной компрессор: вой по оборотам
+    const sc=ac.createOscillator();sc.type='sawtooth';const scf=ac.createBiquadFilter();scf.type='bandpass';scf.Q.value=8;const scG=ac.createGain();scG.gain.value=0;sc.connect(scf);scf.connect(scG);scG.connect(mst);sc.start();
+    // впуск: шумный «вдох» по оборотам
+    const is=ac.createBufferSource();is.buffer=N;is.loop=true;const ib=ac.createBiquadFilter();ib.type='bandpass';ib.Q.value=1.2;const iG=ac.createGain();iG.gain.value=0;is.connect(ib);ib.connect(iG);iG.connect(mst);is.start();
     // шины
-    const ts=ac.createBufferSource();ts.buffer=N;ts.loop=true;const tb=ac.createBiquadFilter();tb.type='bandpass';tb.frequency.value=1700;tb.Q.value=6;const tg=ac.createGain();tg.gain.value=0;ts.connect(tb);tb.connect(tg);tg.connect(mst);ts.start();
+    const ts=ac.createBufferSource();ts.buffer=N;ts.loop=true;const tb=ac.createBiquadFilter();tb.type='bandpass';tb.frequency.value=1100;tb.Q.value=4;const tb2=ac.createBiquadFilter();tb2.type='peaking';tb2.frequency.value=2400;tb2.gain.value=8;const tg=ac.createGain();tg.gain.value=0;ts.connect(tb);tb.connect(tb2);tb2.connect(tg);tg.connect(mst);ts.start();
     // ветер/дорога
-    const rs=ac.createBufferSource();rs.buffer=N;rs.loop=true;const rb=ac.createBiquadFilter();rb.type='lowpass';rb.frequency.value=500;const rg=ac.createGain();rg.gain.value=0;rs.connect(rb);rb.connect(rg);rg.connect(mst);rs.start();
-    // нитро — шипение
+    const rs=ac.createBufferSource();rs.buffer=N;rs.loop=true;const rb=ac.createBiquadFilter();rb.type='lowpass';rb.frequency.value=400;const rg=ac.createGain();rg.gain.value=0;rs.connect(rb);rb.connect(rg);rg.connect(mst);rs.start();
+    // нитро
     const ns2=ac.createBufferSource();ns2.buffer=N;ns2.loop=true;const nh=ac.createBiquadFilter();nh.type='highpass';nh.frequency.value=2500;const nG=ac.createGain();nG.gain.value=0;ns2.connect(nh);nh.connect(nG);nG.connect(mst);ns2.start();
-    o={N,mst,lp,eg,o1,o2,o3,o4,ng,nb,am,amg,tg,tb,rg,rb,nG};
-    // запись настоящего V8 (CC BY-SA, DerMeehdrescher): разгон/сброс, тон по оборотам
-    const SD=window.VT_SND||{},dec=k=>{const s=SD[k];if(!s)return Promise.reject();const bin=atob(s),u=new Uint8Array(bin.length);for(let i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);return new Promise((res,rej)=>ac.decodeAudioData(u.buffer,res,rej))};
-    const smp=k=>dec(k).then(bf=>{const x=ac.createBufferSource();x.buffer=bf;x.loop=true;const g=ac.createGain();g.gain.value=0;const f=ac.createBiquadFilter();f.type='lowpass';f.frequency.value=6000;x.connect(f);f.connect(g);g.connect(mst);x.start();return {x,g,f}});
-    Promise.all([smp('v8a'),smp('v8d')]).then(([a,b])=>{o.sa=a;o.sd=b}).catch(()=>{})}
-  function hit(k){if(!ac||!o)return;const t=ac.currentTime,s=ac.createBufferSource();s.buffer=o.N;const f=ac.createBiquadFilter();f.type='lowpass';f.frequency.setValueAtTime(2400,t);f.frequency.exponentialRampToValueAtTime(120,t+.6);const g=ac.createGain();g.gain.setValueAtTime(.9*k,t);g.gain.exponentialRampToValueAtTime(.001,t+.8);s.connect(f);f.connect(g);g.connect(o.mst);s.start(t);s.stop(t+.9);
+    o={N,mst,dl,b1,b2,lp,pre,eg,tu,tuG,sc,scf,scG,ib,iG,tg,tb,rg,rb,nG,post:m=>post&&post(m),cid:null}}
+  function burst(k,f0,f1,dur,hp){const t=ac.currentTime,s=ac.createBufferSource();s.buffer=o.N;const f=ac.createBiquadFilter();f.type=hp?'highpass':'lowpass';f.frequency.setValueAtTime(f0,t);f.frequency.exponentialRampToValueAtTime(f1,t+dur);const g=ac.createGain();g.gain.setValueAtTime(k,t);g.gain.exponentialRampToValueAtTime(.001,t+dur);s.connect(f);f.connect(g);g.connect(o.mst);s.start(t,Math.random());s.stop(t+dur+.05)}
+  function hit(k){if(!ac||!o)return;const t=ac.currentTime;burst(.9*k,2400,120,.8);
     const b=ac.createOscillator();b.frequency.setValueAtTime(90,t);b.frequency.exponentialRampToValueAtTime(35,t+.3);const bg=ac.createGain();bg.gain.setValueAtTime(.8*k,t);bg.gain.exponentialRampToValueAtTime(.001,t+.4);b.connect(bg);bg.connect(o.mst);b.start(t);b.stop(t+.45)}
   setInterval(()=>{if(o&&ac&&performance.now()-last>250)o.mst.gain.setTargetAtTime(0,ac.currentTime,.08)},200);
-  return {upd(s,id,th){if(!ac||!o||ac.state!=='running')return;last=performance.now();const t=ac.currentTime,v=VO[id]||VO.w210,T=.035;
-      const rpm=Math.max(700,s.rpm||800),f=rpm/60*v.cyl/2*v.base,load=th?1:.25;
-      o.o1.frequency.setTargetAtTime(f,t,T);o.o2.frequency.setTargetAtTime(f*1.007,t,T);o.o3.frequency.setTargetAtTime(f/2,t,T);o.o4.frequency.setTargetAtTime(f/4,t,T);
-      o.am.frequency.setTargetAtTime(f/2,t,T);o.amg.gain.setTargetAtTime(.25*v.gr*load,t,T);o.nb.frequency.setTargetAtTime(f*3,t,T);
-      o.lp.frequency.setTargetAtTime(v.cut*(.55+.9*load)+f*2.2,t,.06);o.eg.gain.setTargetAtTime(.16+.14*load,t,.05);
-      const sl=Math.min(1,Math.max(0,(s.slip||0)-.12)*2.5+(s.drift||0)*.8)*Math.min(1,(s.kmh||0)/25);o.tg.gain.setTargetAtTime(sl*.35,t,.05);o.tb.frequency.setTargetAtTime(1400+sl*700,t,.1);
-      const sp=Math.min(1,(s.kmh||0)/220);o.rg.gain.setTargetAtTime(sp*sp*.22,t,.2);o.rb.frequency.setTargetAtTime(300+sp*900,t,.2);
-      o.nG.gain.setTargetAtTime(s.nitroOn?.12:0,t,.05);
-      if(o.sa){const r=Math.min(2.2,Math.max(.45,rpm/(v.cyl===12?5200:4300)*v.base*1.05)),la=th?1:0;
-        for(const [q,gn] of [[o.sa,.85*la+.08],[o.sd,.75*(1-la)+.05]]){q.x.playbackRate.setTargetAtTime(r,t,T);q.g.gain.setTargetAtTime(gn,t,.09);q.f.frequency.setTargetAtTime(v.cut*3+r*2500,t,.1)}
-        o.eg.gain.setTargetAtTime((.16+.14*load)*.35,t,.05)}
-      o.mst.gain.setTargetAtTime(s.crashed&&s.crashT>1.2?0:(window.VT_SNDVOL??.55),t,.1);
+  return {upd(s,id,th,cm){if(!ac||!o||ac.state!=='running')return;last=performance.now();const t=ac.currentTime,v=VO[id]||VO.w210;
+      if(o.cid!==id){o.cid=id;o.post({c:v});o.dl.delayTime.value=v.pipe/1000;o.b1.frequency.value=v.res;o.b2.frequency.value=v.res*2.7;o.pre.gain.value=v.drv}
+      const rpm=Math.max(650,s.rpm||800);lmax=Math.max(lmax*.9995,rpm);
+      const shift=s.shiftT>0,load=th&&!shift?1:0,lim=th&&rpm>lmax*.99&&rpm>5000;
+      if(s.gear!==gear){gear=s.gear}
+      o.post({r:rpm+(lim?(Math.random()-.5)*300:0),l:load,cut:lim&&(t*18|0)%2?1:0});
+      // в салоне — глуше и ниже, снаружи — открытый выхлоп
+      const inC=cm===1,cut=v.cut*(inC?.55:1)*(.5+.6*load)+rpm*(inC?.12:.28);o.lp.frequency.setTargetAtTime(Math.min(9000,cut),t,.05);
+      o.eg.gain.setTargetAtTime((inC?.42:.55)*(.55+.45*load),t,.06);
+      const fr=rpm/60;
+      if(v.turbo){const tgt=load*Math.min(1,Math.max(0,(rpm-1800)/3500));const pb=bst;bst+=(tgt-bst)*(tgt>bst?.04:.25);
+        o.tu.frequency.setTargetAtTime(1800+bst*5200,t,.05);o.tuG.gain.setTargetAtTime(bst*bst*.018,t,.05);
+        if(pb>.45&&!load&&ld)burst(.16*pb,4000,900,.45,1)}else o.tuG.gain.setTargetAtTime(0,t,.1);
+      if(v.sc){o.sc.frequency.setTargetAtTime(fr*6.5,t,.03);o.scf.frequency.setTargetAtTime(fr*6.5,t,.03);o.scG.gain.setTargetAtTime(.05*(.3+.7*load)*Math.min(1,rpm/5000),t,.05)}
+      o.ib.frequency.setTargetAtTime(300+fr*6,t,.05);o.iG.gain.setTargetAtTime(load*.05*Math.min(1,rpm/6000)*(inC?1.4:.7),t,.06);ld=load;
+      const sl=Math.min(1,Math.max(0,(s.slip||0)-.12)*2.5+(s.drift||0)*.8)*Math.min(1,(s.kmh||0)/25);o.tg.gain.setTargetAtTime(sl*.3,t,.05);o.tb.frequency.setTargetAtTime(900+sl*500,t,.1);
+      const sp=Math.min(1,(s.kmh||0)/220);o.rg.gain.setTargetAtTime(sp*sp*(inC?.12:.2),t,.2);o.rb.frequency.setTargetAtTime(250+sp*800,t,.2);
+      o.nG.gain.setTargetAtTime(s.nitroOn?.1:0,t,.05);
+      o.mst.gain.setTargetAtTime(s.crashed&&s.crashT>1.2?0:(window.VT_SNDVOL??.6),t,.1);
       if(s.crashed&&!crashed)hit(1);crashed=!!s.crashed}}})();
 const NY={id:'ny',name:'Шоссе: Нью-Йорк',night:true,half:10.9,lim:9.7,lanes:[[-8.75,1],[-5.25,1],[-1.75,1],[1.75,1],[5.25,1],[8.75,1]],home:3,gap:[10,20],oncoming:0,cruise:[21,30],fastV:28,crashV:15,vtop:78,wallE:.25,wallLoss:.035,wallDrag:.2,
   cx:s=>70*Math.sin(s/520)+22*Math.sin(s/190+1.3),dcx:s=>70/520*Math.cos(s/520)+22/190*Math.cos(s/190+1.3),hy:s=>4*Math.sin(s/380)+1.5*Math.sin(s/150+1),dhy:s=>4/380*Math.cos(s/380)+1.5/150*Math.cos(s/150+1),
@@ -436,7 +473,7 @@ function make(cfg){
     w.m={glass:new T.MeshPhysicalMaterial({color:0x26313d,roughness:.04,metalness:.15,clearcoat:1,clearcoatRoughness:.02,envMapIntensity:1.6,side:T.DoubleSide}),dark:S({color:0x1b1c20,roughness:.8,side:T.DoubleSide}),tire:S({color:0x121214,roughness:.88,side:T.DoubleSide}),plate:S({map:plateTex('VT·2026'),roughness:.45}),head:S({color:0xffffff,emissive:0xfff0c8,emissiveIntensity:night?2.2:.35,roughness:.3}),
       tail:S({color:0x550808,emissive:0xff1a10,emissiveIntensity:night?1.6:.2,roughness:.4}),aux:S({color:0xc4c8ce,roughness:.45,metalness:.7}),rim:S({color:0xb4b9c0,roughness:.22,metalness:.9}),paint:{}};
     w.paint=hex=>w.m.paint[hex]||(w.m.paint[hex]=S({color:hex,roughness:.34,metalness:.35}));
-    w.ppaint=()=>{const pd=w.pd,k='p'+pd.hex;return w.m.paint[k]||(w.m.paint[k]=new T.MeshPhysicalMaterial({color:pd.hex,roughness:pd.met?.3:.2,metalness:pd.met?.8:.25,clearcoat:1,clearcoatRoughness:.05}))};w.plth=S({color:0xd8c3a0,roughness:.6});w.pcal=S({color:0xd01818,roughness:.35,metalness:.2});w.pplate=S({map:plateTex(''),roughness:.45});
+    w.ppaint=()=>{const pd=w.pd,k='p'+pd.hex;return w.m.paint[k]||(w.m.paint[k]=new T.MeshPhysicalMaterial({color:pd.hex,roughness:pd.met?.3:.2,metalness:pd.met?.8:.25,clearcoat:1,clearcoatRoughness:.04,sheen:pd.hex<0x303030?.35:0,sheenColor:new T.Color(0x6a7080)}))};w.plth=S({color:0xd8c3a0,roughness:.6});w.pcal=S({color:0xd01818,roughness:.35,metalness:.2});w.pplate=S({map:plateTex(''),roughness:.45});
     w.garL=new T.PointLight(0xfff4e8,0,22,1);sc.add(w.garL);w.garR=new T.PointLight(0xff8a3a,0,22,1);sc.add(w.garR);w.garH=new T.HemisphereLight(0xcfd8ff,0x2a2230,0);sc.add(w.garH);w.garF=new T.PointLight(0xdfe8ff,0,14,1);sc.add(w.garF);
     w.root=new T.Group();sc.add(w.root);w.dyn=new T.Group();sc.add(w.dyn);
     w.mkPts=(n,size,color,vc,parent)=>{const ge=new T.BufferGeometry();ge.setAttribute('position',new T.BufferAttribute(new Float32Array(n*3),3));if(vc)ge.setAttribute('color',new T.BufferAttribute(new Float32Array(n*3),3));ge.setDrawRange(0,0);
@@ -715,7 +752,7 @@ function make(cfg){
     s.heave=s.surf<1?Math.sin(t*37)*.025*Math.min(1,s.kmh/40):Math.sin(t*23)*.004*Math.min(1,s.kmh/120);
     w.body.rotation.set(s.pitch,0,s.roll);w.body.position.y=s.heave;s.spin+=s.u/C.rw*dt;
     w.wh.forEach(([piv,ms],i)=>{piv.rotation.y=i<2?-s.steer*1.6:0;ms.rotation.x=-s.spin});
-    w.ptail.emissiveIntensity=s.brk?3.2:cfg.night?1.3:.2;if(w.fxUpd)w.fxUpd(s,dt,!!cfg.night);ESND.upd(s,w.pd&&w.pd.id,!!keys.u);
+    w.ptail.emissiveIntensity=s.brk?3.2:cfg.night?1.3:.2;if(w.fxUpd)w.fxUpd(s,dt,!!cfg.night);ESND.upd(s,w.pd&&w.pd.id,!!keys.u,camMode);
     w.glow.material.color.set(col(.6+A.beat*.3));w.glow.material.opacity=Math.min(.7,.2+A.beat*.35+A.bass*.15);w.glow.visible=camMode!==1;
     s.wheelA+=(clamp(s.steer/Math.max(.02,s.dmax),-1.3,1.3)*.72-s.wheelA)*Math.min(1,dt*12);w.sw.rotation.z=-s.wheelA;
     let shi=0;setI(w.shad,shi++,s.x,gy+.03,s.z,-s.psi,pg.W*1.55,1,pg.L*1.25,0);for(const c of s.cars){const p=pt(c.s,c.d,0);c.mesh.position.set(p.x,p.y,p.z);c.mesh.rotation.set(p.pitch*c.dir,p.yaw+(c.dir<0?Math.PI:0)-c.yawOff,0);if(shi<48)setI(w.shad,shi++,p.x,p.y+.03,p.z,p.yaw-c.yawOff,c.W*1.5,1,c.L*1.25,p.pitch)}
